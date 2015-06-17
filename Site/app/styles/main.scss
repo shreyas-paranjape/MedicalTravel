@@ -1,0 +1,85 @@
+$icon-font-path: "fonts/bootstrap/";
+@import "../app/styles/stylesheets/_bootstrap.scss";
+/* Colour */
+
+$primary-color: #413f98;
+$secondary-color: #0fb0cf;
+$shadow-color: #882a84;
+/* Fonts */
+
+@font-face {
+    font-family: 'BrandonGrotReg';
+    src: url('/styles/fonts/Brandon_reg.otf');
+}
+
+@font-face {
+    font-family: 'BrandonGrotBold';
+    src: url('/styles/fonts/Brandon_bld.otf');
+}
+
+@font-face {
+    font-family: 'BrandonGrotLight';
+    src: url('/styles/fonts/Brandon_light.otf');
+}
+
+@mixin border-radius($radius) {
+    @include border-top-radius( $radius);
+    @include border-bottom-radius( $radius);
+}
+
+body {
+    font-family: 'BrandonGrotReg';
+    font-size: 20px;
+}
+
+.navbar-header{
+    font-family: 'BrandonGrotBold';
+}
+
+.slide,.section{
+    text-align: center;
+}
+
+.cd-top{
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+}
+
+.cd-top.cd-is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-fade-out {
+  opacity: .5;
+}
+
+.thumbnail {
+    position: relative;
+}
+ 
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    h1 {
+        color: white;
+    }
+}
+
+.section {
+    position: relative;
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+.active-section{
+    text-decoration: underline;
+}
