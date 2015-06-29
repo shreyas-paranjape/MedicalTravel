@@ -42,14 +42,6 @@ body {
     padding: 15 0 0 15;
 }
 
-//#hi{
-// padding-left: 157px;   
-//}
-header {
-    width: 80%;
-    margin: 0 auto;
-}
-
 .navbar-header {
     font-family: 'BrandonGrotBold';
 }
@@ -66,10 +58,13 @@ header {
     padding-top: 10px;
 }
 
-.pink {
-    background-color: $new-color;
+.quote {
+    background-color: $secondary-color;
     color: white;
-    padding: 5 15 5 15;
+    padding: 5px;
+    :hover {
+        background-color: $new-color;
+    }
 }
 
 .para {
@@ -226,4 +221,12 @@ td {
     margin-left: auto;
     height: 7%;
     font-weight: 500;
+}
+
+.navbar-custom {
+    height: 120px;
+}
+
+.about-us {
+    height: 500px;
 }
