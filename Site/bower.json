@@ -1,8 +1,8 @@
 {
-  "name": "dhanvantari",
+  "name": "Medical Travel",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
-    "fullpage.js": "~2.6.5"
+    "fullpage.js": "~2.6.6"
   }
 }

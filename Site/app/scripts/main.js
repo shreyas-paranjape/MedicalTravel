@@ -4,17 +4,12 @@ $(document).ready(function(){
         anchors: ['goa', 'facilities', 'price', 'procedures', 'quote'],
         menu: '#menu',
         autoScrolling: false,
+        fitToSection: false,
         scrollBar: true,
-        normalScrollElements:'#goa , #facilities',
+        responsive: 2000,
         afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
             $('#menu li').removeClass('active-section');
             $('#menu li:nth-child('+index+')').addClass('active-section');
-            if (index === 1) {
-                $('.cd-top').hide();
-            } else {
-                $('.cd-top').show();
-            }
-            
         },
     });
 });
