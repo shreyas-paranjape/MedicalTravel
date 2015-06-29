@@ -5,6 +5,7 @@ $icon-font-path: "fonts/bootstrap/";
 $primary-color: #413f98;
 $secondary-color: #0fb0cf;
 $shadow-color: #882a84;
+$new-color:#F78181;
 /* Fonts */
 
 @font-face {
@@ -29,18 +30,57 @@ $shadow-color: #882a84;
 
 body {
     font-family: 'BrandonGrotReg';
-    font-size: 20px;
 }
 
-.navbar-header{
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 15 0 0 15;
+}
+
+//#hi{
+// padding-left: 157px;   
+//}
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar-header {
     font-family: 'BrandonGrotBold';
 }
 
-.slide,.section{
-    text-align: center;
+.top-nav-collapse {
+    background-color: white;
+    border: 0px;
 }
 
-.cd-top{
+.slide,
+.section {
+    text-align: center;
+    background-color: white;
+    padding-top: 10px;
+}
+
+.pink {
+    background-color: $new-color;
+    color: white;
+    padding: 5 15 5 15;
+}
+
+.para {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    font-size: 20px;
+}
+
+.cd-top {
     z-index: 999;
     position: absolute;
     bottom: 0;
@@ -49,37 +89,141 @@ body {
 }
 
 .cd-top.cd-is-visible {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .cd-top.cd-fade-out {
-  opacity: .5;
+    opacity: .5;
 }
 
 .thumbnail {
     position: relative;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 0;
+    
 }
- 
+
+    
 .caption {
+    background-color: #79D6DE;
     position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    h1 {
+    top: 95%;
+    left: 3;
+    width: 97%;
+    height: 40%;
+    
+    h4 {
         color: white;
+        font-weight: bolder;
+    }
+}
+.caption:hover{
+    background-color:$new-color;
+}
+.caption1 {
+    background-color: #79D6DE;
+    position: absolute;
+    top: 3;
+    left: 3;
+    width: 95%;
+    height: 250px;
+    
+    h4 {
+        color: white;
+        font-weight: bolder;
+        margin-top:35px;
+        
     }
 }
 
 .section {
     position: relative;
     footer {
-        position: absolute;
+        //        position: absolute;
         bottom: 0;
-        width: 100%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #0B2039;
+        ul li {
+            list-style: none;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        //    a:hover {
+        //        color: $secondary-color;
+        //    }
     }
 }
 
-.active-section{
+.active-section {
+    color:blue;
     text-decoration: underline;
+}
+
+.hosp {
+    margin-top: 150px;
+    //    background-color: orange;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+.col-md-8 {
+    h3 {
+        margin-top: 0px;
+        font-weight: bolder;
+    }
+    address {
+        font-size: 23px;
+        display: block;
+    }
+    .num {
+        font-size: 23px;
+        padding-left: 20px;
+        font-style: italic;
+    }
+    p {
+        font-size: 20px;
+        text-align: justify;
+    }
+    .info {
+        margin-top: 27px;
+        background-color: $new-color;
+        color: white;
+        width: 150px;
+        text-align: center;
+        //        padding-left: 10px;
+        //        padding-right: 10px;
+        //    
+    }
+}
+
+.boxes {
+    background-color: #79D6DE;
+    color: white;
+    padding: 10 35 10 40;
+    text-align: center;
+    font-weight: 400;
+}
+
+td {
+    padding-bottom: 1.8em;
+}
+
+.enq {
+    background-color: $new-color;
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    width: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 7%;
+    font-weight: 500;
 }
