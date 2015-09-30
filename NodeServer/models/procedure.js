@@ -2,17 +2,17 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Facility Model
+ * Procedure Model
  * ==================
  */
 
-var Facility = new keystone.List('Facility', {
+var Procedure = new keystone.List('Procedure', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
 
-Facility.add({
+Procedure.add({
 	name: { type: String, required: true },
 	description: { type: Types.Html, wysiwyg: true, height: 400 }
 });
 
-Facility.register();
+Procedure.register();
