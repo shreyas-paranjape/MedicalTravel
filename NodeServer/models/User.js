@@ -6,9 +6,9 @@ var Types = keystone.Field.Types;
  * ==========
  */
 
-var Traveller = new keystone.List('Traveller');
+var User = new keystone.List('User');
 
-Traveller.add({
+User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true }
@@ -17,7 +17,7 @@ Traveller.add({
 });
 
 // Provide access to Keystone
-Traveller.schema.virtual('canAccessKeystone').get(function() {
+User.schema.virtual('canAccessKeystone').get(function() {
 	return this.isAdmin;
 });
 
@@ -26,12 +26,12 @@ Traveller.schema.virtual('canAccessKeystone').get(function() {
  * Relationships
  */
 
-Traveller.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
+User.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
 
 
 /**
  * Registration
  */
 
-Traveller.defaultColumns = 'name, email, isAdmin';
-Traveller.register();
+User.defaultColumns = 'name, email, isAdmin';
+User.register();

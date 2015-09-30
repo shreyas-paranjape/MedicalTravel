@@ -14,13 +14,13 @@ keystone.init({
 
 	'name': 'MedicalTravel',
 	'brand': 'MedicalTravel',
-	
+
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
-	
+
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -28,11 +28,11 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs'
 	}).engine,
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'Traveller'
+	'user model': 'User'
 
 });
 
@@ -58,10 +58,7 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'posts': ['posts', 'post-categories'],
-	'galleries': 'galleries',
-	'enquiries': 'enquiries',
-	'travellers': 'travellers'
+	'users': 'users'
 });
 
 // Start Keystone to connect to your database and initialise the web server
