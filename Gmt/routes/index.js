@@ -10,7 +10,8 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/facility', routes.views.facility);
-
+	app.get('/provider', routes.views.provider);
+  app.get('/treatment',routes.views.treatment);
+	app.get('/doctor',routes.views.doctor);
 	app.all('/contact', routes.views.contact);
 };

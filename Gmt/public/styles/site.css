@@ -4916,3 +4916,8 @@ button.close {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.circle {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px; }

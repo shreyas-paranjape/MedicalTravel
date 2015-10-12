@@ -56,6 +56,6 @@ keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
 	'enquiries': 'enquiries',
 	'admins': 'admins',
-	'site-data': ['medical-facilities']
+	'site-data': ['providers']
 });
 keystone.start();
