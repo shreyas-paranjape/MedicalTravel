@@ -1,83 +1,103 @@
 <div class="container">
 
 
-	  <div class="row"  style="margin-left: 15px;">
-	  <div class="col-lg-9" style="border-right:2px solid #e5e5e5">
-		<img src="images/hosp3.png" style="width: 800px; height: 350px;margin-left: -28px; margin-top: 15px;">
-	  <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-		<div id="navbar-example">
-		<ul class="nav nav-pills nav-justified" role="tablist" style="margin-left: -48px;">
-				<li class="active"><a href="#about">About</a></li>
-				<li class=""><a href="#doctors">Doctors</a></li>
-				<li class=""><a href="#procedures">Procedures</a></li>
-				<li class=""><a href="#reviews">Reviews</a></li>
-				</ul>
+	<div class="row treatment">
+		<div class="col-lg-9" style="border-right:2px solid #e5e5e5">
+			<img src="images/hosp3.png">
+
+			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
+
+				<div id="navbar-example">
+					<ul class="nav nav-pills nav-justified pills" role="tablist" >
+						{{#each doctor_nav}}
+							<li class="active"><a href="#about">{{name}}</a></li>
+						{{/each}}
+					</ul>
+				</div>
+
+
+				<h4 id="about"></h4>
+				<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 40px; margin-left: -40px;">
+					Manipal Hospital, Goa is one of the largest private hospitals in the state, offering the highest number of specialities, having the highest number of full time doctors and provide 24/7 services of Pharmacy, Laboratory, Paediatric and Neonatal emergency.
+					It has 6 world class operation theatres and is a 235 bed facility. It also has the highest standards of clinical expertise, nursing care and state-of-the-art hospital facilities. We provide rapid assessment, intervention and treatment for numerous
+					common and complex conditions. We provide customized and individual care to every patient.</p>
+
+
+				<h4 id="doctors" style="margin-left:-32px">Doctors</h4>
+				<div class="row treat">
+					<div class="col-lg-3 ">
+						<img class="circle" src="images/logo.png">
+					</div>
+
+					{{#each treatment_doctors}}
+						<div class="col-lg-6  treatment-doc">
+							<h3>{{name}}</h3>
+							<p>{{desc}}</p>
+							<p>{{speciality}}</p>
+						</div>
+					{{/each}}
+
+					<div class="col-lg-3">
+						<button type="button" class="btn btn-default">Verified</button>
+					</div>
+				</div>
+
+				<h4 id="procedures" style="margin-left:-32px">Procedures</h4>
+				<div class="row proc">
+					{{#each doctor_pro}}
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-default">{{name}}</button>
+						</div>
+					{{/each}}
+				</div>
 			</div>
-			<h4 id="about" ></h4>
-		<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 40px; margin-left: -40px;">
-			Manipal Hospital, Goa is one of the largest private hospitals in the state, offering the highest
-			number of specialities, having the highest number of full time doctors and provide 24/7 services
-			of Pharmacy, Laboratory, Paediatric and Neonatal emergency. It has 6 world class operation
-			theatres and is a 235 bed facility. It also has the highest standards of clinical expertise, nursing
-			care and state-of-the-art hospital facilities. We provide rapid assessment, intervention and
-			treatment for numerous common and complex conditions. We provide customized and individual care to every patient.</p>
-
-
-		<h4 id="doctors" style="margin-left:-32px">Doctors</h4>
-		<div class="row"  style="margin-top: 45px;border-bottom:2px solid #e5e5e5; padding-bottom: 40px; margin-left:-45px;width:843px;">
-		<div class="col-lg-3 ">
-		<img class="circle" src="images/logo.png" style="margin-top: -10px;">
 		</div>
-		<div class="col-lg-6 " style="margin-top: -20px;">
-		<h3 style="padding-left: 8px; margin-left: -10px;">Dr. Arjun Mehta</h3>
-    <p>MBBS, KLE.</p>
-		<p>Cardiologist, Edinburgh, Scotland</p>
-		</div>
+
 		<div class="col-lg-3">
-		<button type="button" class="btn btn-default">Verified</button>
-		</div>
-    </div>
-		<h4 id="procedures" style="margin-left:-32px" >Procedures</h4>
-		  <div class="row" style="margin-top:45px;margin-left:-45px;">
-			<div class="col-lg-4">
-			<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;">Bones & Joints</button>
-			</div>
-			<div class="col-lg-4">
-			<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;">Dentistry</button>
-			</div>
-			<div class="col-lg-4">
-		<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;">Eye Care</button>
-			</div>
-		</div>
-		<div class="row" style="margin-top:30px;margin-left:-45px; border-bottom:2px solid #e5e5e5;padding-bottom:40px; width:843px;">
-		<div class="col-lg-4">
-		<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;">Cosmetics</button>
-		</div>
-		<div class="col-lg-4">
-		<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;margin-left:6px;">Bariatrics</button>
-		</div>
-		<div class="col-lg-4">
-		<button type="button" class="btn btn-default" style="background-color:#e5e5e5;width:150px;height:50px;margin-left:12px;">Ayurveda</button>
-		</div>
-		</div>
-    </div>
-	  </div>
+			<h3 style="background-color:#e5e5e5;font-size:18px;width: 320px;height:40px; margin-left: -10px;padding-top:12px;text-align:left;padding-left:10px">Manipal Hospital,Goa</h3>
+			<br>
+			<br>
 
-	  <div class="col-lg-3">
-		<h3 style="background-color:#e5e5e5;font-size:18px;width: 320px;height:40px; margin-left: -10px;padding-top:12px;text-align:left;padding-left:10px">Manipal Hospital,Goa</h3>
-		<br><br><br><br><br><br><br><br><br>
-		<p><span class="glyphicon glyphicon-phone"></span>0832 271 4370</p>
-    <p style="margin-left:15px">0832 274 4376</p>
-    <p style="margin-left:15px">91 9822568680</p>
-    <p style="margin-left:15px">info@manipalgoa.com</p>
-  	<br><br>
+			<form>
+				<div class="form-group">
+					<input type="name" class="form-control" id="name" placeholder="Name:" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="email" placeholder="Email:" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+			  <!-- <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Treatment
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">A</a></li>
+    <li><a href="#">B</a></li>
+    <li><a href="#">C</a></li>
+
+  </ul>
+</div> -->
+					<input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="5" placeholder="Questions/Comments" style="width: 300px;"></textarea>
+			</form>
+			<!-- <p><span class="glyphicon glyphicon-phone"></span>0832 271 4370</p>
+<p style="margin-left:15px">0832 274 4376</p>
+<p style="margin-left:15px">91 9822568680</p>
+<p style="margin-left:15px">info@manipalgoa.com</p>
+<br><br>
 
 
 <p style="margin-left:15px">Dona Paula, Goa</p>
-<p style="margin-left:15px">403001</p>
-<br><br><br>
-<button type="button" class="btn btn-default" style="margin-left:15px">Enquire</button>
-	</div>
-	</div>
-
-</div>
+<p style="margin-left:15px">403001</p> -->
+			<br>
+			<br>
+			<br>
+			<button type="button" class="btn btn-default" style="margin-left:15px;width:170px;height:40px;margin-left: 0px">Enquire</button>
+			</div>
+		</div>

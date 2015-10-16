@@ -1,39 +1,53 @@
 <div class="container">
 
 
-	 <div class="row" style="margin-left:15px;">
-		<div class="col-lg-9"  style="border-right:2px solid #e5e5e5">
-		<div class="row" style="border:1px solid black;width:830px">
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-		<img style="padding: 20px; width: 250px; height: 225px;" src="images/hosp3.png">
-		</div>
-		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-	<h3 >Manipal Hospital,Goa</h3>
-    <br><br><br><br><br>
-		<p><button type="button" class="btn btn-default">Know More</button></p>
-    </div>
-    </div>
+	  <div class="row" style="margin-left:15px;">
+	  <div class="col-lg-9" style="border-right:2px solid #e5e5e5">
+		    {{#each providers}}
+		  	<div class="row provider-box">
+				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				<img  class="provider-img" src="{{cloudinaryUrl imageOuter}}">
+				</div>
 
-		<div class="row" style="border:1px solid black; margin-top:20px;width:830px;">
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-		<img style="padding: 20px; width: 250px; height: 225px;" src="images/hosp3.png">
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+				<h3>{{name}}</h3>
+				<p><button type="button" class="btn btn-default">Know More</button></p>
+				</div>
+	      </div>
+        {{/each}}
+
+			<!-- <div class="row" style="border:1px solid black; margin-top:20px;width:830px;">
+				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+					<img style="padding: 20px; width: 250px; height: 225px;" src="images/hosp3.png">
+				</div>
+
+				<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+					<h3>{{name}}</h3>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p>
+						<button type="button" class="btn btn-default">Know More</button>
+					</p>
+				</div>
+			</div>
+	 -->
+
+
 		</div>
-		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-	<h3 >Wokhardt Hospital,Goa</h3>
-    <br><br><br><br><br>
-		<p><button type="button" class="btn btn-default">Know More</button></p>
-    </div>
-    </div>
-		</div>
+    {{#each provider_categories}}
 		<div class="col-lg-3">
-		<ul class="nav nav-pills nav-stacked" >
-		<li role="presentation" class="active"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Hospitals</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Speciality Clinics</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Dentists & Ayur Centers</a></li>
+	  <ul class="nav nav-pills nav-stacked tabs">
+		<li role="presentation" class="active"><a href="#">{{name}}</a></li>
+		<!-- <li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Speciality Clinics</a></li>
+	  <li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Ayur centers</a></li> -->
 		</ul>
+		</div>
+   {{/each}}
 	  </div>
-	  </div>
 
 
 
-</div>
+    </div>

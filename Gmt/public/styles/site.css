@@ -4921,3 +4921,84 @@ button.close {
   border-radius: 50%;
   width: 120px;
   height: 120px; }
+
+.provider-box {
+  border: 1px solid black;
+  width: 830px;
+  margin-bottom: 20px; }
+
+.provider-img {
+  padding: 20px;
+  width: 250px;
+  height: 225px; }
+
+.pills {
+  margin-left: -48px; }
+  .pills li {
+    margin-right: 20px;
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    padding-top: 10px;
+    font-size: 18px; }
+
+.tabs {
+  margin-right: 20px;
+  margin-top: 15px;
+  width: 250px;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 18px; }
+  .tabs li {
+    margin-bottom: 20px; }
+
+.treatment {
+  margin-left: 15px; }
+  .treatment img {
+    width: 800px;
+    height: 350px;
+    margin-left: -28px;
+    margin-top: 15px; }
+
+.treatment-box {
+  margin-left: -45px;
+  margin-top: 20px; }
+  .treatment-box h3 {
+    font-size: 16px;
+    background-color: #e5e5e5;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    padding-left: 10px; }
+  .treatment-box img {
+    height: 180px;
+    width: 280px; }
+
+.treat {
+  margin-top: 45px;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 40px;
+  margin-left: -45px;
+  width: 843px; }
+  .treat img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: -10px; }
+
+.treatment-doc {
+  margin-top: -20px; }
+  .treatment-doc h3 {
+    padding-left: 8px;
+    margin-left: -10px; }
+
+.proc {
+  margin-top: 45px;
+  margin-left: -45px;
+  border-bottom: 2px solid #e5e5e5;
+  width: 843px; }
+  .proc button {
+    background-color: #e5e5e5;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px; }

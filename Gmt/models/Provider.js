@@ -6,6 +6,10 @@ Provider.add({
 		type: Types.Name,
 		required: true,
 		index: true
-	}
+	},
+	imageOuter: {
+		type: Types.CloudinaryImage
+	},
+
 });
 Provider.register();
