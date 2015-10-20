@@ -7,9 +7,20 @@ Provider.add({
 		required: true,
 		index: true
 	},
-	imageOuter: {
+	image: {
 		type: Types.CloudinaryImage
 	},
-
+	providerCategory: {
+		type: Types.Relationship,
+		ref: 'ProviderCategory'
+	},
+	doctors: {
+		type: Types.Relationship,
+		ref: 'Doctor',
+		many: true
+	}
 });
+
+Provider.relationship({ ref: 'Treatment', path: 'providers' });
+
 Provider.register();
