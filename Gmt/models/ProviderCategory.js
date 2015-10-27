@@ -3,7 +3,7 @@ var Types = keystone.Field.Types;
 var ProviderCategory = new keystone.List('ProviderCategory');
 ProviderCategory.add({
 	name: {
-		type: Types.Name,
+		type: String,
 		required: true,
 		index: true
 	}

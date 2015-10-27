@@ -27,4 +27,5 @@ Treatment.add({
     many:true
   }
 });
+
 Treatment.register();

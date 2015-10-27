@@ -4992,6 +4992,18 @@ button.close {
     padding-left: 8px;
     margin-left: -10px; }
 
+.doc {
+  margin-top: 45px;
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 40px;
+  margin-left: -45px;
+  width: 843px; }
+  .doc img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: -10px; }
+
 .proc {
   margin-top: 45px;
   margin-left: -45px;
@@ -5002,3 +5014,8 @@ button.close {
     width: 150px;
     height: 50px;
     margin-bottom: 20px; }
+
+.post_img {
+  height: auto;
+  width: 50%;
+  margin: 0 auto; }

@@ -3,98 +3,70 @@
 
 		  <div class="row treatment">
 		  <div class="col-lg-9" style="border-right:2px solid #e5e5e5">
-			<img src="images/hosp3.png" >
+			{{#each treat}}
+			<img class="provider-img" src="{{cloudinaryUrl image}}" style="border:1px solid black">
+			{{/each}}
 
 			    <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
 
        	  <div id="navbar-example">
           <ul class="nav nav-pills nav-justified pills" role="tablist">
-
-					{{#each treatment_nav}}
-
-					<li class="active"><a href="#about">{{name}}</a></li>
+          {{#each treatment_nav}}
+          <li class="active"><a href="#about">{{name}}</a></li>
           {{/each}}
-
-					</ul>
+          </ul>
 		      </div>
 
 
-				<h4 id="about" ></h4>
-			<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 30px; margin-left: -40px;">
-	A cancer diagnosis turns a person’s world upside down--emotionally, physically and financially.
-	CancerCare® can help. We provide telephone, online and face-to-face counseling, support groups,
-	education, publications and financial and co-payment assistance. Professional oncology social
-	workers offer personalized care, and all of our services are free of charge. Lorem Ipsum dolor
-	ahabbdhbh cancer is the abnormal mutation of cells in a certain part of the body which later
-	spreads throughout the body if not treated at the right time can be fatal. </p>
+			 <h4 id="about" ></h4>
+			 <p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 30px; margin-left: -40px;">
+				{{{treatment.description}}}
+			 </p>
 
-			  <h4 id="providers" style="margin-left: -32px;" >Featured Providers</h4>
-        {{#each treatment_providers}}
+			  <h4 id="providers" style="margin-left: -32px;">Featured Providers</h4>
+        {{#each providers}}
 		   	<div class="row treatment-box">
 				<div class="col-lg-5">
-				<img src="images/dent.png">
+				<img src="{{cloudinaryUrl image}}" style="border:1px solid black">
 				</div>
 				<div class="col-lg-7" >
 				<h3 style="">{{name}}</h3>
 				<button type="button" class="btn btn-default">Know More</button>
 				</div>
 			  </div>
-				 <!-- <div class="row" style="padding-top: 50px;border-bottom:2px solid #e5e5e5; padding-bottom: 30px;margin-left: -45px; width:843px;">
-				 <div class="col-lg-5">
-				 <img src="images/dent.png" style="height: 180px; width: 280px;">
-				 </div>
-				 <div class="col-lg-7" >
-				 <h3 style="font-size:16px; background-color:#e5e5e5;padding-top:12px;padding-bottom:12px;text-align:left;padding-left:10px;">Wokhardt Hospital,goa</h3><br><br><br>
-				 <button type="button" class="btn btn-default">Know More</button>
-				 </div>
-				</div> -->
 				{{/each}}
 
-		  <h4 id="doctors" style="margin-left:-32px;border-top:2px solid #e5e5e5;">Doctors</h4>
-
+		  <h4 id="doctors" style="margin-left:-32px;border-top:2px solid #e5e5e5;margin-top:15px;padding-top:12px">Doctors</h4>
+       {{#each doctors}}
       <div class="row treat">
       <div class="col-lg-3">
-			<img  src="images/logo.png">
+      <img  src="images/logo.png">
 			</div>
 
-       {{#each treatment_doctors}}
-			<div class="col-lg-6 treatment-doc">
-			<h3 >{{name}}</h3>
-      <p>{{desc}}</p>
-			<p>{{speciality}}</p>
-			</div>
-        {{/each}}
+      <div class="col-lg-6 treatment-doc">
+      <p>{{name}} </p>
+			<p>{{description}}</p>
+			<p>{{data}}</p>
+      </div>
 
-
-			<div class="col-lg-3">
+     	<div class="col-lg-3">
 			<button type="button" class="btn btn-default">Verified</button>
-     </div>
-    </div>
+      </div>
+      </div>
+			{{/each}}
 
-    	<h4 id="procedures" style="margin-left:-32px" >Procedures</h4>
-
-
-		  </div>
+     <h4 id="procedures" style="margin-left:-32px" >Procedures</h4>
+      </div>
 		  </div>
 
 
 		 <div class="col-lg-3">
 		 <ul class="nav nav-pills nav-stacked tabs" >
-
-			 {{#each treatment_categories}}
-			 
-       <li role="presentation" class="active"><a href="#">{{name}}</a></li>
-
-       {{/each}}
-
-
-		<!-- <li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px; width:250px;height:50px;padding-top:10px;font-size:18px;">Dentistry</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px; width:250px;height:50px;padding-top:10px;font-size:18px;">Eye Care</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px; width:250px;height:50px;padding-top:10px;font-size:18px;">Cosmetics</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px; width:250px;height:50px;padding-top:10px;font-size:18px;">Bariatrics</a></li>
-		<li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px; width:250px;height:50px;padding-top:10px;font-size:18px;">Ayurveda</a></li> -->
-   	</ul>
-		</div>
+     {{#each categories}}
+     <li role="presentation" class="active"><a href="#">{{name}}</a></li>
+     {{/each}}
+     </ul>
+		 </div>
 
 		</div>
 

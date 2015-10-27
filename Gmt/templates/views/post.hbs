@@ -11,9 +11,13 @@
 						{{#if author.name.first}}by {{author.name.first}}{{/if}}
 					</h5>
 				</header>
+				<div>
+					<img  class="post_img" src="{{cloudinaryUrl data.post.image}}">
+				</div>
 				<div class="post">
 					{{{data.post.content.extended}}}
 				</div>
+
 			</article>
 		</div>
 	</div>

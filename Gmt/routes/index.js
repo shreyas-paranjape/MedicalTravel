@@ -13,5 +13,6 @@ exports = module.exports = function(app) {
 	app.get('/provider', routes.views.provider);
   app.get('/treatment',routes.views.treatment);
 	app.get('/doctor',routes.views.doctor);
+	app.get('/user',routes.views.user);
 	app.all('/contact', routes.views.contact);
 };

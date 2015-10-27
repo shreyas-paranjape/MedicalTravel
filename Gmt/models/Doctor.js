@@ -11,6 +11,9 @@ Doctor.add({
   description:{
     type: Types.Html,
   },
+  data:{
+    type:Types.Html
+  },
 });
 
 Doctor.relationship({ ref: 'Treatment', path: 'doctors' });

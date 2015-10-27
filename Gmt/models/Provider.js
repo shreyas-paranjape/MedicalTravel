@@ -3,12 +3,15 @@ var Types = keystone.Field.Types;
 var Provider = new keystone.List('Provider');
 Provider.add({
 	name: {
-		type: Types.Name,
+		type: String,
 		required: true,
 		index: true
 	},
 	image: {
 		type: Types.CloudinaryImage
+	},
+	description:{
+		type:Types.Html
 	},
 	providerCategory: {
 		type: Types.Relationship,

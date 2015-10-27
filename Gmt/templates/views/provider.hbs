@@ -3,10 +3,10 @@
 
 	  <div class="row" style="margin-left:15px;">
 	  <div class="col-lg-9" style="border-right:2px solid #e5e5e5">
-		    {{#each providers}}
+		    {{#each hospitals}}
 		  	<div class="row provider-box">
 				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-				<img  class="provider-img" src="{{cloudinaryUrl imageOuter}}">
+				<img  class="provider-img" src="{{cloudinaryUrl image}}">
 				</div>
 
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -16,28 +16,11 @@
 	      </div>
         {{/each}}
 
-			<!-- <div class="row" style="border:1px solid black; margin-top:20px;width:830px;">
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-					<img style="padding: 20px; width: 250px; height: 225px;" src="images/hosp3.png">
-				</div>
 
-				<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-					<h3>{{name}}</h3>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<p>
-						<button type="button" class="btn btn-default">Know More</button>
-					</p>
-				</div>
-			</div>
-	 -->
 
 
 		</div>
-    {{#each provider_categories}}
+    {{#each providers}}
 		<div class="col-lg-3">
 	  <ul class="nav nav-pills nav-stacked tabs">
 		<li role="presentation" class="active"><a href="#">{{name}}</a></li>
