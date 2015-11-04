@@ -1,0 +1,159 @@
+<div class="container">
+
+<div class="row">
+  <div class="col-xs-3">
+    <ul class="nav nav-tabs nav-stacked">
+      <li class="active"><a href="#details" data-toggle="tab">Personal Details</a></li>
+      <li><a href="#docs" data-toggle="tab">docs</a></li>
+      <li><a href="#not" data-toggle="tab">Notifications</a></li>
+
+    </ul>
+  </div>
+  <div class="col-xs-9">
+  <div class="tab-content">
+ <div class="tab-pane active" id="details">
+<div>
+<label for="Name" style="font-size:16px" >Name</label>&nbsp;
+<label id="blank"></label><input type="button" value="Edit" id="Edit" style="width: 70px;margin-left:150px"/><br>
+</div><br>
+
+<div>
+<label for="Email"style="font-size:16px" >Email</label>&nbsp;
+<label id="blanks"></label><input type="button" value="Edit" id="Edits" style="width: 70px;margin-left:150px"/><br>
+</div><br>
+
+
+<div>
+<label for="Mobile" style="font-size:16px;margin-left:-7px">Mobile</label>&nbsp;
+<label id="blankss"></label><input type="button" value="Edit" id="Editss" style="width: 70px;margin-left:150px"/><br>
+</div><br>
+<!-- <input type="button" value="Edit" id="Edit" style="width: 70px;"/> -->
+<!-- <input type="button" value="View" id="View" style="width: 70px;" /> -->
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/pro.js"></script>
+
+<!-- <div class="control-group">
+<label for="Name" style="font-size:16px">Name</label>
+<label for="name" id="blank" class="control-label"></label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div><br>
+
+<div class="control-group">
+<label for="Email" style="font-size:16px">Email</label>
+<label for="email" id="blank" class="control-label">  </label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div><br>
+
+<div class="control-group">
+<label for="Mobile" style="font-size:16px">Mobile</label>
+<label for="mobile" id="blank" class="control-label">  </label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/pro.js"></script> -->
+</div>
+
+
+
+<div class="tab-pane" id="docs">
+<button type="upload" class="btn btn-default">UPLOAD</button>
+<br><br>
+<div class="example">
+{{#each pro}}
+<table class="table table-bordered">
+<thead>
+    <tr>
+    <th>Sr.no</th>
+    <th> Name</th>
+    <th>Date</th>
+    <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>{{name}}</td>
+<td>{{date}}</td>
+<td><span class="glyphicon glyphicon-download-alt"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-remove"></span></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="tab-pane" id="not">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="row">
+          <div class="col-sm-3">
+          <img src="images/logo.png" style="border-radius:50%;height:90px;width:90px">
+          </div>
+          <div class="col-sm-6">
+            <p>Title</p>
+            <p>Subtitle</p>
+          </div>
+            <div class="col-sm-3">
+              <p>27-Oct-2015</p>
+            </div>
+            </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body" style="background-color: lightgrey;width: 800px;margin: 25px;">
+<p>hi</p>
+<textarea class="form-control" rows="2" placeholder="reply"></textarea><br>
+<button type="submit" class="btn btn-default">Send </button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div class="row">
+          <div class="col-sm-3">
+            <img src="images/logo.png" style="border-radius:50%;height:90px;width:90px">
+          </div>
+          <div class="col-sm-6">
+            <p>Title</p>
+            <p>Subtitle</p>
+          </div>
+          <div class="col-sm-3">
+            <p>27-Oct-2015</p>
+            </div>
+        </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body" style="background-color: lightgrey;width: 800px;margin: 25px;">
+        <p>hi</p>
+        <textarea class="form-control" rows="2" placeholder="reply"></textarea><br>
+        <button type="submit" class="btn btn-default">Send </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>

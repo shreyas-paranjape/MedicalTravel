@@ -5019,3 +5019,6 @@ button.close {
   height: auto;
   width: 50%;
   margin: 0 auto; }
+
+.edit-input {
+  display: none; }
