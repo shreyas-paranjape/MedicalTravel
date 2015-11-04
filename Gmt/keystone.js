@@ -20,7 +20,7 @@ keystone.init({
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'Admin'
+	'user model': 'User'
 });
 keystone.import('models');
 keystone.set('locals', {
@@ -55,7 +55,7 @@ keystone.set('email tests', require('./routes/emails'));
 keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
 	'enquiries': 'enquiries',
-	'admins': 'admins',
+	'admins': 'users',
 	'site-data': ['providers', 'provider-categories', 'treatments', 'treatment-categories', 'doctors']
 });
 keystone.start();

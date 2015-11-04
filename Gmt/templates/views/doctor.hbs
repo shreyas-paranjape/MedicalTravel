@@ -1,97 +1,82 @@
 <div class="container">
-
-
-	  <div class="row treatment">
+	<div class="row treatment">
 		<div class="col-lg-9" style="border-right:2px solid #e5e5e5;">
-
-		<div class="row doc" style="height:350px">
-		<div class="col-lg-4 ">
-		<img  src="images/logo.png" style="margin-left:50px">
+			<div class="row doc" style="height:350px">
+				<div class="col-lg-4 ">
+					<img src="images/logo.png" style="margin-left:50px">
+				</div>
+				<div class="col-lg-4">
+					{{#each doctors}}
+						<h3>{{name}}</h3>
+						<p style="font-size: 18px;">{{description}}</p>
+						<p style="font-size: 18px;">{{data}}</p>
+					{{/each}}
+				</div>
+				<div class="col-lg-4">
+					<button class="btn btn-default" style="margin-top: 60px; margin-left: 30px;" type="button">Verified</button>
+				</div>
+			</div>
+			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
+				<div id="navbar-example">
+					<ul class="nav nav-pills nav-justified pills" role="tablist">
+						{{#each doctor_nav}}
+							<li class="active"><a href="#bio">{{name}}</a></li>
+						{{/each}}
+					</ul>
+				</div>
+				<h4 id="bio"></h4>
+				<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 40px; margin-left: -40px;">
+					{{{provider.description}}}
+				</p>
+				<h4 id="education" style="margin-left: -32px;">Education</h4>
+				<h3 style="margin-left: -30px;font-size:18px;">{{education.description}}</h3>
+				<p style="margin-left: -30px;">{{education.data}}</p>
+				<p style="margin-left: -30px;border-bottom:2px solid #e5e5e5;">2004</p>
+				<h4 id="awards" style="margin-left:-32px;border-bottom:2px solid #e5e5e5;">Awards</h4>
+				<h4 id="reviews" style="margin-left:-32px;">Reviews</h4>
+				<span class="glyphicon glyphicon-star" style="margin-left:-30px"></span>
+				<span class="glyphicon glyphicon-star"></span>
+				<span class="glyphicon glyphicon-star"></span>
+				<p style="margin-left: -30px;" style="margin-left: -30px;">Lorem Ipsum,</p>
+				<p style="margin-left: -30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
+				<p style="margin-left: -30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
+				<p style="margin-left: -30px;">help all over.</p>
+				<button type="submit" class="btn btn-default" style="margin-left:-30px; ">Write a review</button>
+			</div>
 		</div>
-
-		 <div class="col-lg-4">
-			 {{#each doctors}}
-			 <h3>{{name}}</h3>
-       <p style="font-size: 18px;">{{description}}</p>
-			 <p style="font-size: 18px;">{{data}}</p>
-       {{/each}}
-		 </div>
-
-		 <div class="col-lg-4">
-		 <button class="btn btn-default" style="margin-top: 60px; margin-left: 30px;" type="button">Verified</button>
-		 </div>
-		 </div>
-
-		 <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-
-		 <div id="navbar-example">
-		 <ul class="nav nav-pills nav-justified pills" role="tablist">
-		 {{#each doctor_nav}}
-		 <li class="active"><a href="#bio">{{name}}</a></li>
-		 {{/each}}
-		 </ul>
-		 </div>
-
-
-	<h4 id="bio" ></h4>
-	<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 40px; margin-left: -40px;">
-	 {{{provider.description}}}
-	</p>
-
-	 <h4 id="education" style="margin-left: -32px;">Education</h4>
-	 <h3 style="margin-left: -30px;font-size:18px;">{{education.description}}</h3>
-	 <p style="margin-left: -30px;">{{education.data}}</p>
-	 <p style="margin-left: -30px;border-bottom:2px solid #e5e5e5;">2004</p>
-
-
-  <h4 id="awards" style="margin-left:-32px;border-bottom:2px solid #e5e5e5;">Awards</h4>
-
-
-	<h4 id="reviews" style="margin-left:-32px;">Reviews</h4>
-	<span class="glyphicon glyphicon-star" style="margin-left:-30px"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-	<p  style="margin-left: -30px;"  style="margin-left: -30px;">Lorem Ipsum,</p>
-	<p  style="margin-left: -30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
-	<p  style="margin-left: -30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
-	<p style="margin-left: -30px;" >help all over.</p>
-	<button type="submit" class="btn btn-default" style="margin-left:-30px; ">Write a review</button>
- </div>
- </div>
-
-
 		<div class="col-lg-3">
-		{{#each treatments}}
-		<h3 style="background-color:#e5e5e5;font-size:18px;width: 320px;height:40px; margin-left: -10px;padding-top:12px;text-align:left;padding-left:10px">{{name}}</h3>
-		{{/each}}
-		<br><br>
-
+			<!--{{#each treatments}}
+				<h3 style="background-color:#e5e5e5;font-size:18px;width: 320px;height:40px; margin-left: -10px;padding-top:12px;text-align:left;padding-left:10px">{{name}}</h3>
+			{{/each}}-->
+			<br>
 			<form>
-			<div class="form-group">
-			<input type="name" class="form-control" id="name" placeholder="Name:" style="width: 300px; height: 45px;">
-			</div>
-			<div class="form-group">
-			<input type="email" class="form-control" id="email" placeholder="Email:" style="width: 300px; height: 45px;">
-			</div>
-			<div class="form-group">
-			<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)" style="width: 300px; height: 45px;">
-			</div>
-			<div class="form-group">
-			  <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-         Treatment
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" >
-        <li><a href="#">A</a></li>
-        <li><a href="#">B</a></li>
-        <li><a href="#">C</a></li>
-        </ul>
-        </div>
-		   	</div>
-				<br>
+				<div class="form-group">
+					<input type="name" class="form-control" id="name" placeholder="Name:" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="email" placeholder="Email:" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)" style="width: 300px; height: 45px;">
+				</div>
+				<div class="form-group">
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							Treatment
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							{{#each treatments}}
+								<li><a href="#">{{name}}</a></li>
+							{{/each}}
 
-			<div class="form-group">
-			<textarea class="form-control" rows="5" placeholder="Questions/Comments" style="width: 300px;"></textarea>
-		  </div>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div class="form-group">
+					<textarea class="form-control" rows="5" placeholder="Questions/Comments" style="width: 300px;"></textarea>
+				</div>
 			</form>
 			<!-- <p><span class="glyphicon glyphicon-phone"></span>0832 271 4370</p>
 <p style="margin-left:15px">0832 274 4376</p>
@@ -106,5 +91,5 @@
 			<br>
 			<br>
 			<button type="button" class="btn btn-default" style="margin-left:15px;width:170px;height:40px;margin-left: 0px">Enquire</button>
-			</div>
 		</div>
+	</div>

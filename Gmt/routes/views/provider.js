@@ -1,52 +1,22 @@
 var keystone = require('keystone');
+var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
-	var locals = res.locals;
-	locals.section = 'provider';
-	// locals.provider_categories = [{
-	// 	"name": "hospital"
-	// }, {
-	// 	"name": "Speciality clinics"
-	// }, {
-	// 	"name": "ayur.."
-	// }];
-	view.query('hospitals',keystone.list('Provider').model.find());
-  view.query('providers',keystone.list('ProviderCategory').model.find());
-/*	locals.providers = [{
-		"name": "Manipal hospital"
-	}, {
-		"name": "wokhardt hospital"
-	}];*/
+	var currentProviderCategoryQuery = keystone.list('ProviderCategory').model.find();
+	view.on('init', function(next) {
+		currentProviderCategoryQuery.exec(function(err, provCatsRes) {
+			res.locals.providerCategories = provCatsRes;
 
+			var currentProvCat = fnjs.filter(function(provCat) {
+				return provCat.key == req.params.key;
+			}, provCatsRes);
 
+			currentProvCat[0].getProviders(function(e, providersResult) {
+				res.locals.providers = providersResult;
+				next();
+			});
 
-	/*locals.data = [{
-		"category": {
-			"name": "hospital",
-			"providers": [{
-				"name": "Manipal hospital"
-			}, {
-				"name": "wokhardt hospital"
-			}]
-		}
-	}, {
-		"category": {
-			"name": "Speciality clinics",
-			"providers": [{
-				"name": "Manipal hospital"
-			}, {
-				"name": "wokhardt hospital"
-			}]
-		}
-	}, {
-		"category": {
-			"name": "Dentist and ayur center",
-			"providers": [{
-				"name": "Manipal hospital"
-			}, {
-				"name": "wokhardt hospital"
-			}]
-		}
-	}];*/
+		});
+	});
 	view.render('provider');
 };

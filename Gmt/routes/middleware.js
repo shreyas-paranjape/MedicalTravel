@@ -16,15 +16,15 @@ exports.initLocals = function(req, res, next) {
 	}, {
 		label: 'Provider',
 		key: 'provider',
-		href: '/provider'
+		href: '/provider/hospital'
 	}, {
 		label: 'Treatment',
 		key: 'treatment',
-		href: '/treatment'
+		href: '/treatment/orthopedics'
 	}, {
 		label: 'Doctor',
 		key: 'doctor',
-		href: '/doctor'
+		href: '/doctor/dr-raju'
 	},{
 		label: 'User',
 		key: 'user',

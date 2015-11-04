@@ -23,7 +23,7 @@ Post.add({
 	},
 	author: {
 		type: Types.Relationship,
-		ref: 'Admin',
+		ref: 'User',
 		index: true
 	},
 	publishedDate: {
