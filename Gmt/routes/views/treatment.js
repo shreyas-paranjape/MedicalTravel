@@ -1,66 +1,55 @@
 var keystone = require('keystone');
+var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
-	var locals = res.locals;
-	locals.section = 'treatment';
-	// locals.treatment_categories=[{
-	// 	"name":"Bones & Joints"
-	// },{
-	// 	"name":"Dentistry"
-	// },{
-	// 	"name":"Eye Care"
-	// },{
-	// 	"name":"Cosmetics"
-	// },{
-	// 	"name":"Bariatrics"
-	// },{
-	// 	"name":"Ayurveda"
-	// }];
-	locals.treatment = {};
-	locals.providers = [];
-	locals.doctors = [];
 
-	var treatmentQuery = keystone
-		.list('Treatment').model.findOne()
-		.populate('providers')
-		.populate('doctors');
+	var currentTreatmentCategoryQuery = keystone.list('TreatmentCategory').model.find();
+
+	res.locals.doctors = [];
+	res.locals.providers = [];
+	res.locals.treatments = [];
+
+	var contains = function(aValue, aArray) {
+		var idx;
+		for (idx = 0; idx < aArray.length; idx++) {
+			if (aValue._id.equals(aArray[idx]._id)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	view.on('init', function(next) {
-		treatmentQuery.exec(function(err, tr) {
-			locals.treatment = tr;
-			var counter;
-			for(counter=0;counter<tr.providers.length;counter++){
-				locals.providers.push(tr.providers[counter]);
-			}
-			for(counter=0;counter<tr.doctors.length;counter++){
-				locals.doctors.push(tr.doctors[counter]);
-			}
+		currentTreatmentCategoryQuery.exec(function(err, treatCatsRes) {
+			res.locals.treatmentCategories = treatCatsRes;
+
+			var currentCat = fnjs.filter(function(treatCat) {
+				return treatCat.key == req.params.key;
+			}, treatCatsRes);
+
+			res.locals.treatmentCategory = currentCat;
+
+			currentCat[0].getTreatments(function(e, treatmentsRes) {
+				fnjs.each(function(treatment) {
+					res.locals.treatments.push(treatment);
+					fnjs.each(function(provider) {
+						if (!contains(provider, res.locals.providers)) {
+							res.locals.providers.push(provider);
+						}
+					}, treatment.providers);
+
+					fnjs.each(function(doctor) {
+						if (!contains(doctor, res.locals.doctors)) {
+							res.locals.doctors.push(doctor);
+						}
+					}, treatment.doctors);
+
+				}, treatmentsRes);
+			});
 			next();
 		});
 	});
-	view.query('treat',keystone.list('Treatment').model.find());
 
- view.query('categories', keystone.list('TreatmentCategory').model.find());
-	locals.treatment_nav = [{
-		"name": "About"
-	}, {
-		"name": "Providers"
-	}, {
-		"name": "Doctors"
-	}, {
-		"name": "procedures"
-	}];
-	// locals.treatment_doctors=[{
-	// 	"name":" Dr. Arjun Mehta,panjim,sgfs"
-	// 	},{
-	// 	"name":"dr afedg,dsgf,sgfd"
-	// }];
-
-
-	// locals.treatment_providers=[{
-	// 	"name":"Manipal hospital,goa"
-	// },{
-	// 	"name":"wokhardt hospital,goa"
-	// }];
 	view.render('treatment');
+
 };

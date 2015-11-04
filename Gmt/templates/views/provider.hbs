@@ -1,36 +1,27 @@
 <div class="container">
+	<div class="row" style="margin-left:15px;">
+		<div class="col-lg-9" style="border-right:2px solid #e5e5e5">
+			{{#each providers}}
+				<div class="row provider-box">
+					<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+						<img class="provider-img" src="{{cloudinaryUrl image}}">
+					</div>
 
-
-	  <div class="row" style="margin-left:15px;">
-	  <div class="col-lg-9" style="border-right:2px solid #e5e5e5">
-		    {{#each hospitals}}
-		  	<div class="row provider-box">
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-				<img  class="provider-img" src="{{cloudinaryUrl image}}">
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+						<h3>{{name}}</h3>
+						<p>
+							<button type="button" class="btn btn-default">Know More</button>
+						</p>
+					</div>
 				</div>
-
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-				<h3>{{name}}</h3>
-				<p><button type="button" class="btn btn-default">Know More</button></p>
-				</div>
-	      </div>
-        {{/each}}
-
-
-
-
+			{{/each}}
 		</div>
-    {{#each providers}}
-		<div class="col-lg-3">
-	  <ul class="nav nav-pills nav-stacked tabs">
-		<li role="presentation" class="active"><a href="#">{{name}}</a></li>
-		<!-- <li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Speciality Clinics</a></li>
-	  <li role="presentation"><a href="#" style="margin-right: 20px; margin-top: 15px;width:250px;height:50px;padding-top:10px;font-size:18px;">Ayur centers</a></li> -->
-		</ul>
-		</div>
-   {{/each}}
-	  </div>
-
-
-
-    </div>
+		{{#each providerCategories}}
+			<div class="col-lg-3">
+				<ul class="nav nav-pills nav-stacked tabs">
+					<li role="presentation" class="active"><a href="/provider/{{key}}">{{name}}</a></li>
+				</ul>
+			</div>
+		{{/each}}
+	</div>
+</div>

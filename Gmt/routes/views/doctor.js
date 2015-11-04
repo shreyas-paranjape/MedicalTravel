@@ -1,56 +1,24 @@
 var keystone = require('keystone');
+var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
-	var locals = res.locals;
-	locals.section = 'doctor';
 
+	res.locals.treatments = [];
 
-locals.doctors = {};
-locals.provider={};
-locals.education={}
-
-var doctorQuery=keystone
-.list('Doctor').model.findOne()
-view.on('init',function(next){
-	doctorQuery.exec(function(err,dr){
-		locals.doctors=dr;
-		locals.education=dr;
-		next();
+	var doctorQuery = keystone.list('Doctor').model.findOne({
+		key: req.params.key
 	});
-});
 
-
-	var providerQuery = keystone
-		.list('Provider').model.findOne()
-	  view.on('init', function(next) {
-		providerQuery.exec(function(err, pr) {
-			locals.provider = pr;
-
-
+	view.on('init', function(next) {
+		doctorQuery.exec(function(err, dr) {
+			res.locals.doctor = dr;
+			dr.getTreatments(function(er, treatRes) {
+				fnjs.each(function(treat) {
+					res.locals.treatments.push(treat);
+				}, treatRes);
+			});
 			next();
 		});
 	});
-  view.query('treatments',keystone.list('Treatment').model.find());
-
-
-
-	// locals.treatment_doctors=[{
-	// 	"name":" Dr. Arjun Mehta"
-	// },{
-	// 	"desc":"MBBS, KLE."
-	// },{
-	// 	"speciality":"Cardiologist, Edinburgh, Scotland"
-	// }];
-	locals.doctor_nav=[{
-		"name":"Bio"
-	},{
-		"name":"Education"
-	},{
-		"name":"Awards"
-	},{
-		"name":"Reviews"
-  }];
-
-
 	view.render('doctor');
 };

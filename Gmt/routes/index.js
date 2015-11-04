@@ -10,9 +10,9 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/provider', routes.views.provider);
-  app.get('/treatment',routes.views.treatment);
-	app.get('/doctor',routes.views.doctor);
+	app.get('/provider/:key', routes.views.provider);
+  app.get('/treatment/:key',routes.views.treatment);
+	app.get('/doctor/:key',routes.views.doctor);
 	app.get('/user',routes.views.user);
   app.get('/profile',routes.views.profile);
 	app.all('/contact', routes.views.contact);
