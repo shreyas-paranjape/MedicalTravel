@@ -24,7 +24,7 @@ exports.initLocals = function(req, res, next) {
 	}, {
 		label: 'Doctor',
 		key: 'doctor',
-		href: '/doctor/dr-raju'
+		href: '/doctor/dr-berta'
 	},{
 		label: 'User',
 		key: 'user',
