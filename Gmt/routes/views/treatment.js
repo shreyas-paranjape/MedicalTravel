@@ -3,7 +3,7 @@ var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 
-	var currentTreatmentCategoryQuery = keystone.list('TreatmentCategory').model.find();
+	var TreatCatQuery = keystone.list('TreatmentCategory').model.find();
 
 	res.locals.doctors = [];
 	res.locals.providers = [];
@@ -20,18 +20,19 @@ exports = module.exports = function(req, res) {
 	}
 
 	view.on('init', function(next) {
-		currentTreatmentCategoryQuery.exec(function(err, treatCatsRes) {
+		TreatCatQuery.exec(function(err, treatCatsRes) {
 			res.locals.treatmentCategories = treatCatsRes;
 
-			var currentCat = fnjs.filter(function(treatCat) {
+			var treatCat = fnjs.filter(function(treatCat) {
 				return treatCat.key == req.params.key;
 			}, treatCatsRes);
 
-			res.locals.treatmentCategory = currentCat;
+			res.locals.treatmentCategory = treatCat;
 
-			currentCat[0].getTreatments(function(e, treatmentsRes) {
+			treatCat[0].getTreatments(function(e, treatmentsRes) {
 				fnjs.each(function(treatment) {
 					res.locals.treatments.push(treatment);
+
 					fnjs.each(function(provider) {
 						if (!contains(provider, res.locals.providers)) {
 							res.locals.providers.push(provider);
@@ -49,7 +50,5 @@ exports = module.exports = function(req, res) {
 			next();
 		});
 	});
-
 	view.render('treatment');
-
 };

@@ -8,13 +8,11 @@ exports = module.exports = function(req, res) {
 	var doctorQuery = keystone.list('Doctor').model.findOne({
 		key: req.params.key
 	});
-	view.query('doctor',doctorQuery);
 
 	view.on('init', function(next) {
-		doctorQuery.exec(function(err, dr) {
-			//res.locals.doctor = dr;
-			//console.log(dr);
-			dr.getTreatments(function(er, treatRes) {
+		doctorQuery.exec(function(err, docRes) {
+			res.locals.doctor = docRes;
+			docRes.getTreatments(function(er, treatRes) {
 				fnjs.each(function(treat) {
 					res.locals.treatments.push(treat);
 				}, treatRes);
