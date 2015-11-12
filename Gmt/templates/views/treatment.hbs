@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="row treatment">
-		<div class="col-lg-9" style="border-right:2px solid #e5e5e5">
-			<img class="provider-img" src="{{cloudinaryUrl treatmentCategory.image}}" style="border:1px solid black">
+		<div class="col-lg-8 border">
 
-			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
+				<img class="image" src="{{cloudinaryUrl treatmentCategory.image}}">
 
-				<div id="navbar-example">
+       <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
+        <div id="navbar-example">
 					<ul class="nav nav-pills nav-justified pills" role="tablist">
 						{{#each treatment_nav}}
 							<li class="active"><a href="#about">{{name}}</a></li>
@@ -15,45 +15,45 @@
 
 
 				<h4 id="about"></h4>
-				<p style="font-size: 16px; margin-top: 45px; border-bottom: 2px solid #e5e5e5; padding-bottom: 30px; margin-left: -40px;">
-					{{{treatmentCategory.description}}}
+				<p>
+				{{{treatmentCategory.description}}}
 				</p>
 
-				<h4 id="providers" style="margin-left: -32px;">Featured Providers</h4>
+				<h4 id="providers">Featured Providers</h4>
 				{{#each providers}}
 					<div class="row treatment-box">
-						<div class="col-lg-5">
-							<img src="{{cloudinaryUrl image}}" style="border:1px solid black">
+						<div class="col-lg-4">
+							<img src="{{cloudinaryUrl image}}">
 						</div>
-						<div class="col-lg-7">
+						<div class="col-lg-6">
 							<h3 style="">{{name}}</h3>
-							<button type="button" class="btn btn-default">Know More</button>
+							<button type="button" class="button">Know More</button>
 						</div>
 					</div>
 				{{/each}}
 
-				<h4 id="doctors" style="margin-left:-32px;border-top:2px solid #e5e5e5;margin-top:15px;padding-top:12px">Doctors</h4>
+				<h4 id="doctors">Doctors</h4>
 				{{#each doctors}}
 					<div class="row treat">
 						<div class="col-lg-3">
 							<img src="images/logo.png">
 						</div>
 
-						<div class="col-lg-6 treatment-doc">
+						<div class="col-lg-5 treatment-doc">
 							<p>{{name}} </p>
 							<p>{{description}}</p>
 							<p>{{data}}</p>
 						</div>
 
-						<div class="col-lg-3">
-							<button type="button" class="btn btn-default">Verified</button>
+						<div class="col-lg-2">
+							<button type="button" class="bttn">Verified</button>
 						</div>
 					</div>
 				{{/each}}
 
-				<h4 id="procedures" style="margin-left:-32px">Procedures</h4>
+				<!-- <h4 id="procedures" style="margin-left:-32px;border-top:2px solid #e5e5e5;padding-top:20px;">Procedures</h4>
 				{{#each treatments}}
-					<div class="row treat">
+					<div class="row treat"  style="border-bottom-width: 0px;">
 						<div class="col-lg-3">
 							<img src="images/logo.png">
 						</div>
@@ -68,14 +68,14 @@
 							<button type="button" class="btn btn-default">Verified</button>
 						</div>
 					</div>
-				{{/each}}
+				{{/each}} -->
 
 			</div>
 		</div>
 
 
-		<div class="col-lg-3">
-			<ul class="nav nav-pills nav-stacked tabs">
+		<div class="col-lg-4">
+			<ul class="nav nav-stacked tabs">
 				{{#each treatmentCategories}}
 					<li role="presentation" class="active"><a href="/treatment/{{key}}">{{name}}</a></li>
 				{{/each}}
