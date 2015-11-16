@@ -4946,15 +4946,15 @@ button.close {
   margin-right: 20px;
   margin-top: 15px;
   width: 280px;
-  height: 70px;
   padding-top: 10px;
   font-size: 20px;
-  margin-left: 20px;
+  margin-left: -15px;
   border-bottom-width: 0px; }
   .tabs li {
     margin-bottom: 20px;
     border: 1px solid #e5e5e5;
-    background-color: #ededed; }
+    background-color: #ededed;
+    height: 60px; }
 
 .treatment {
   margin-left: 15px; }
@@ -5076,12 +5076,12 @@ p {
     margin-left: 20px;
     width: 170px;
     height: 40px;
-    background-color: #df5f69;
+    background-color: #ff6c6f;
     color: white;
     font-size: 20px; }
 
 .button {
-  background-color: #df5f69;
+  background-color: #ff6c6f;
   color: white;
   font-size: 14px;
   height: 30px; }
@@ -5093,3 +5093,46 @@ p {
 
 .edit-input {
   display: none; }
+
+a {
+  color: black; }
+
+a:hover {
+  color: black; }
+
+.box {
+  width: 700px;
+  height: 300px;
+  border: 1px solid #e5e5e5;
+  margin: 100px 200px; }
+  .box .col {
+    border-left: 1px solid #e5e5e5;
+    margin-top: 20px; }
+  .box .form-horizontal {
+    margin-top: 50px;
+    padding-left: 5px; }
+  .box #Email, .box #Password {
+    width: 300px;
+    margin-left: 15px; }
+  .box button {
+    background-color: #2984d1;
+    color: white;
+    margin-left: -58px;
+    margin-top: 10px; }
+
+.square {
+  border: 1px solid #e5e5e5;
+  width: 470px;
+  margin-left: 300px;
+  margin-top: 70px; }
+  .square #fname, .square #lname {
+    margin-left: 20px;
+    margin-top: 20px; }
+  .square #email, .square #password, .square #pass {
+    width: 420px;
+    margin-left: 20px; }
+  .square button {
+    background-color: #2984d1;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px; }

@@ -48,17 +48,19 @@
 	margin-right: 20px;
 	margin-top: 15px;
 	width:280px;
-	height:70px;
+	// height:20px;
 	padding-top:10px;
 	font-size:20px;
-  margin-left: 20px;
+  margin-left: -15px;
 border-bottom-width:0px;
 
   li{
     margin-bottom: 20px;
     border:1px solid #e5e5e5;
     background-color: rgb(237,237,237);
-    
+    height:60px;
+
+
 }
 
 }
@@ -205,13 +207,13 @@ h3{
     margin-left:20px;
     width:170px;
     height:40px;
-    background-color:rgb(223,95,105);
+    background-color:rgb(255,108,111);
     color:white;
     font-size: 20px;
   }
 }
 .button{
-  background-color:rgb(223,95,105);
+  background-color:rgb(255,108,111);
   color:white;
   font-size:14px;
   height:30px;
@@ -224,4 +226,55 @@ h3{
 
 .edit-input {
     display:none;
+}
+a{
+  color: black;
+
+}
+a:hover{
+  color: black;
+}
+.box{
+width: 700px;
+height: 300px;
+border: 1px solid rgb(229, 229, 229);
+margin: 100px 200px;
+.col{
+  border-left:1px solid #e5e5e5;
+  margin-top:20px;
+}
+.form-horizontal{
+  margin-top: 50px;
+  padding-left:5px;
+}
+#Email,#Password{
+  width: 300px;
+  margin-left:15px;
+}
+button{
+  background-color:rgb(41,132,209);
+  color:white;
+  margin-left:-58px;
+  margin-top:10px;
+}
+}
+.square{
+  border:1px solid #e5e5e5;
+  width:470px;
+  margin-left:300px;
+  margin-top:70px;
+  #fname,#lname{
+    margin-left:20px;
+    margin-top:20px;
+  }
+  #email,#password,#pass{
+    width:420px;
+    margin-left:20px;
+  }
+  button{
+    background-color:rgb(41,132,209);
+    color:white;
+    margin-left:20px;
+    margin-bottom:20px;
+  }
 }

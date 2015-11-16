@@ -15,5 +15,7 @@ exports = module.exports = function(app) {
 	app.get('/doctor/:key',routes.views.doctor);
 	app.get('/user',routes.views.user);
   app.get('/profile',routes.views.profile);
+	app.get('/login',routes.views.login);
+	app.get('/signup',routes.views.signup);
 	app.all('/contact', routes.views.contact);
 };
