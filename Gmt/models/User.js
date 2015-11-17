@@ -26,6 +26,15 @@ User.add({
 		required: true
 	},
 
+	boxId: {
+		type: String,
+		required: false
+	},
+
+	boxFolder: {
+		type: String,
+		required: false
+	}
 
 }, 'Permissions', {
 	isAdmin: {

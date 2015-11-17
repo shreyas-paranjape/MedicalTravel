@@ -1,92 +1,82 @@
 <div class="container">
-
-
-	  <div class="row treatment">
+	<div class="row treatment">
 		<div class="col-lg-8 border">
-		<img src="images/hosp3.png" >
-    <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-    <div id="navbar-example">
-			<ul class="nav nav-pills nav-justified pills" role="tablist" >
-			{{#each doctor_nav}}
-			<li class="active"><a href="#about">{{name}}</a></li>
-			{{/each}}
-			</ul>
-		</div>
-
-    <h4 id="about"></h4>
-		<p>{{{provider.description}}}</p>
-
-    <h4 id="doctors">Doctors</h4>
-     {{#each doctors}}
-		<div class="row treat">
-		<div class="col-lg-2 ">
-		<img src="images/logo.png">
-		</div>
-
-    <div class="col-lg-5  treatment-doc">
-    <h3>{{name}}</h3>
-		<p>{{description}}</p>
-		<p>{{data}}</p>
-    </div>
-
-    <div class="col-lg-2">
-		<button type="button" class="bttn ">Verified</button>
-		</div>
-	  </div>
-    {{/each}}
-
-		<h4 id="procedures">Procedures</h4>
-		<div class="row proc">
-		{{#each doctor_pro}}
-		<div class="col-lg-4">
-		<button type="button" class="btn btn-default">{{name}}</button>
-	  </div>
-		{{/each}}
-		</div>
-		</div>
-		</div>
-
-		<div class="col-lg-4 name">
-		<h3>{{providers.name}}</h3>
-		 <br><br>
-
-      <div class="form">
-			<form>
-      <div class="form-group nm" >
-			<input type="name" class="form-control" id="name" placeholder="Name:">
-			</div>
-			<div class="form-group">
-			<input type="email" class="form-control" id="email" placeholder="Email:">
-			</div>
-			<div class="form-group">
-			<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)" >
-			</div>
-			<div class="form-group">
-			  <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-         Treatment
-        <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">A</a></li>
-        <li><a href="#">B</a></li>
-        <li><a href="#">C</a></li>
-        </ul>
-        </div>
-		   	</div>
-				 <br>
-				<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
-				</div> -->
-			<div class="form-group">
-			<textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
-		  </div>
-
-			</form>
-
-			<br>
-			<br>
-			<br>
-			<button type="button" class="button" style="">Enquire</button>
-			</div>
+			<img src="images/hosp3.png">
+			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
+				<div id="navbar-example">
+					<ul class="nav nav-pills nav-justified pills" role="tablist">
+						{{#each doctor_nav}}
+							<li class="active"><a href="#about">{{name}}</a></li>
+						{{/each}}
+					</ul>
 				</div>
+				<h4 id="about"></h4>
+				<p>{{{provider.description}}}</p>
+				<h4 id="doctors">Doctors</h4>
+				{{#each doctors}}
+					<div class="row treat">
+						<div class="col-lg-2 ">
+							<img src="images/logo.png">
+						</div>
+						<div class="col-lg-5  treatment-doc">
+							<h3>{{name}}</h3>
+							<p>{{description}}</p>
+							<p>{{data}}</p>
+						</div>
+						<div class="col-lg-2">
+							<button type="button" class="bttn ">Verified</button>
+						</div>
+					</div>
+				{{/each}}
+				<h4 id="procedures">Procedures</h4>
+				<div class="row proc">
+					{{#each doctor_pro}}
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-default">{{name}}</button>
+						</div>
+					{{/each}}
+				</div>
+			</div>
 		</div>
+		<div class="col-lg-4 name">
+			<h3>{{providers.name}}</h3>
+			<br>
+			<br>
+			<div class="form">
+				<form>
+					<div class="form-group nm">
+						<input type="name" class="form-control" id="name" placeholder="Name:">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" placeholder="Email:">
+					</div>
+					<div class="form-group">
+						<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+					</div>
+					<div class="form-group">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Treatment
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								{{#each treatments}}
+									<li><a href="#">{{name}}</a></li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+					<br>
+					<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
+				</div> -->
+					<div class="form-group">
+						<textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
+					</div>
+				</form>
+				<br>
+				<br>
+				<br>
+				<button type="button" class="button" style="">Enquire</button>
+			</div>
+		</div>
+	</div>
