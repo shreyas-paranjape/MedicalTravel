@@ -16,7 +16,7 @@ exports = module.exports = function(req, res) {
 			if (user) {
 				user._.password.compare(req.body.password, function(err, isMatch) {
 					if (!err && isMatch) {
-						res.redirect('/profile')
+						res.redirect('/profile');
 						console.log("Success");
 					} else {
 						res.redirect('/login');
@@ -24,7 +24,7 @@ exports = module.exports = function(req, res) {
 					}
 				});
 			} else {
-				res.redirect('/login')
+				res.redirect('/login');
 				locals.notLoggedInSuccessfully = true;
 			}
 		});

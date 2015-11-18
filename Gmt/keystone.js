@@ -1,6 +1,7 @@
 require('dotenv').load();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
+
 keystone.init({
 	'name': 'Goa medical travel',
 	'brand': 'Goa medical travel',
@@ -58,4 +59,5 @@ keystone.set('nav', {
 	'admins': 'users',
 	'site-data': ['providers', 'provider-categories', 'treatments', 'treatment-categories', 'doctors']
 });
+
 keystone.start();

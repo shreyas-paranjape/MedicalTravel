@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"goa-medical-travel.admins"},{"v":1,"key":{"email":1},"name":"email_1","ns":"goa-medical-travel.admins","background":true,"safe":null},{"v":1,"key":{"isAdmin":1},"name":"isAdmin_1","ns":"goa-medical-travel.admins","background":true,"safe":null}]}
