@@ -3,7 +3,7 @@ var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 
-	var SpecialQuery = keystone.list('Speciality').model.find();
+	var SpecialityQuery = keystone.list('Speciality').model.find();
 
 	res.locals.doctors = [];
 	res.locals.providers = [];
@@ -20,33 +20,28 @@ exports = module.exports = function(req, res) {
 	}
 
 	view.on('init', function(next) {
-		SpecialQuery.exec(function(err, specialitiesRes) {
-			res.locals.specialities = specialitiesRes;
-			console.log("specialitiesRes: "+specialitiesRes);
+		SpecialityQuery.exec(function(err, specialityRes) {
+			res.locals.specialities = specialityRes;
 
-			var special = fnjs.filter(function(special) {
-				return special.key == req.params.key;
-			}, specialitiesRes);
-    console.log("special: "+special);
-			res.locals.speciality = special;
+			var speciality = fnjs.filter(function(speciality) {
+				return speciality.key == req.params.key;
+			}, specialityRes);
+			res.locals.speciality = speciality;
 
-			special[0].getProcedures(function(e, proceduresRes) {
+			speciality[0].getProcedures(function(e, proceduresRes) {
 				fnjs.each(function(procedure) {
 					res.locals.procedures.push(procedure);
 
-					console.log("procedure: "+procedure);
 
 					fnjs.each(function(provider) {
 						if (!contains(provider, res.locals.providers)) {
 							res.locals.providers.push(provider);
-							console.log("provider: "+provider);
 						}
 					}, procedure.providers);
 
 					fnjs.each(function(doctor) {
 						if (!contains(doctor, res.locals.doctors)) {
 							res.locals.doctors.push(doctor);
-							console.log("procedure: "+doctor);
 
 						}
 					}, procedure.doctors);

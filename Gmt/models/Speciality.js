@@ -26,12 +26,12 @@ Speciality.add({
 
 Speciality.relationship({
 	ref: 'Procedure',
-	path: 'Speciality'
+	path: 'specialities'
 });
 
 Speciality.schema.methods.getProcedures = function(done) {
 	return keystone.list('Procedure').model.find()
-		.where('specialities', this._id)
+		.where('speciality', this._id)
 		.populate('providers')
 		.populate('doctors')
 		.exec(done);

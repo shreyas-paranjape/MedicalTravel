@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="row procedure">
 		<div class="col-lg-8 border">
-     <img  src="http://placehold.it/450x150">
-     <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
-        <!-- <div id="navbar-example">
+			<img src="http://placehold.it/450x150">
+			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
+				<!-- <div id="navbar-example">
 					<ul class="nav nav-pills nav-justified pills" role="tablist">
 						{{#each treatment_nav}}
 							<li class="active"><a href="#about">{{name}}</a></li>
@@ -11,19 +11,19 @@
 					</ul>
 				</div> -->
 				<div id="navbar-example">
-    <ul class="nav nav-tabs" style="border:none;margin-top:-5px; background-color: rgb(237, 237, 237); width: 768px; height: 70px; margin-left: -45px;padding-left:100px;padding-top:15px;" role="tablist">
-      <li class="active" ><a href="#overview">Overview</a></li>
-			<li><a href="#providers">Featured Providers</a></li>
-      <li><a href="#doctors" style="background-color:rgb(237,237,237);border:none;color:black;">Specialists</a></li>
-    </ul>
-  </div>
+					<ul class="nav nav-tabs" style="border:none;margin-top:-5px; background-color: rgb(237, 237, 237); width: 768px; height: 70px; margin-left: -45px;padding-left:100px;padding-top:15px;" role="tablist">
+						<li class="active"><a href="#overview">Overview</a></li>
+						<li><a href="#providers">Featured Providers</a></li>
+						<li><a href="#doctors" style="background-color:rgb(237,237,237);border:none;color:black;">Specialists</a></li>
+					</ul>
+				</div>
 
 
 				<h4 id="overview"></h4>
 				{{#each speciality}}
-				<p>
-				{{{discription}}}
-				</p>
+					<p>
+						{{{discription}}}
+					</p>
 				{{/each}}
 
 				<h4 id="providers">Featured Providers</h4>
@@ -85,7 +85,7 @@
 		<div class="col-lg-4">
 			<ul class="nav nav-stacked tabs">
 				{{#each specialities}}
-	      <li role="presentation" class="active"><a href="/procedure/{{key}}">{{name}}</a></li>
+					<li role="presentation" class="active"><a href="/procedure/{{key}}">{{name}}</a></li>
 				{{/each}}
 			</ul>
 		</div>
