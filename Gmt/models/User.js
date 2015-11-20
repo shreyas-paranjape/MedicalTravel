@@ -31,11 +31,20 @@ User.add({
 		required: false
 	},
 
-	boxFolder: {
-		type: String,
-		required: false
+	boxFile: {
+		fileId: {
+			type: String,
+			required: false,
+			many: true,
+			index: true
+		},
+		fileName: {
+			type: String,
+			required: false,
+			many: true,
+			index: true
+		}
 	}
-
 }, 'Permissions', {
 	isAdmin: {
 		type: Boolean,
