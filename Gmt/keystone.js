@@ -57,7 +57,7 @@ keystone.set('nav', {
 	'posts': ['posts', 'post-categories'],
 	'enquiries': 'enquiries',
 	'admins': 'users',
-	'site-data': ['providers', 'provider-categories', 'treatments', 'treatment-categories', 'doctors']
+	'site-data': ['providers', 'provider-categories', 'procedures', 'specialities', 'doctors']
 });
 
 keystone.start();

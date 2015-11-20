@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var Treatment = new keystone.List('Treatment', {
+var Procedure = new keystone.List('Procedure', {
 	autokey: {
 		from: 'name',
 		path: 'key',
@@ -9,7 +9,7 @@ var Treatment = new keystone.List('Treatment', {
 });
 
 
-Treatment.add({
+Procedure.add({
 	name: {
 		type: String,
 		required: true
@@ -27,9 +27,9 @@ Treatment.add({
 		ref: 'Provider',
 		many: true
 	},
-	treatmentCategory: {
+	specialities: {
 		type: Types.Relationship,
-		ref: 'TreatmentCategory',
+		ref: 'Speciality',
 	},
 	doctors: {
 		type: Types.Relationship,
@@ -46,4 +46,4 @@ Treatment.add({
 
 
 
-Treatment.register();
+Procedure.register();

@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row treatment">
+	<div class="row procedure">
 		<div class="col-lg-8 border">
      <img  src="http://placehold.it/450x150">
      <div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
@@ -20,7 +20,7 @@
 
 
 				<h4 id="overview"></h4>
-				{{#each treatmentCategory}}
+				{{#each speciality}}
 				<p>
 				{{{discription}}}
 				</p>
@@ -28,7 +28,7 @@
 
 				<h4 id="providers">Featured Providers</h4>
 				{{#each providers}}
-					<div class="row treatment-box">
+					<div class="row procedure-box">
 						<div class="col-lg-4">
 							<img src="{{cloudinaryUrl image}}">
 						</div>
@@ -41,12 +41,12 @@
 
 				<h4 id="doctors">Doctors</h4>
 				{{#each doctors}}
-					<div class="row treat">
+					<div class="row proc">
 						<div class="col-lg-3">
 							<img src="http://placehold.it/120x120">
 						</div>
 
-						<div class="col-lg-5 treatment-doc">
+						<div class="col-lg-5 procedure-doc">
 							<p><a href="/doctor/{{key}}">{{name}}</a></p>
 							<p>{{description}}</p>
 							<p>{{data}}</p>
@@ -84,8 +84,8 @@
 
 		<div class="col-lg-4">
 			<ul class="nav nav-stacked tabs">
-				{{#each treatmentCategories}}
-	      <li role="presentation" class="active"><a href="/treatment/{{key}}">{{name}}</a></li>
+				{{#each specialities}}
+	      <li role="presentation" class="active"><a href="/procedure/{{key}}">{{name}}</a></li>
 				{{/each}}
 			</ul>
 		</div>

@@ -4,7 +4,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 	locals.section = 'user';
 
-
+/*
 	locals.doctors = [];
 	locals.provider = {};
 	locals.providers = {}
@@ -64,7 +64,7 @@ exports = module.exports = function(req, res) {
 		"name": "Bariatrics"
 	}, {
 		"name": "Ayurveda"
-	}];
+	}];*/
 
 	view.render('user');
 };

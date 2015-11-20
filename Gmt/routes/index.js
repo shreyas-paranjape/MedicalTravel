@@ -13,7 +13,7 @@ exports = module.exports = function(app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/provider/:key', routes.views.provider);
-	app.get('/treatment/:key', routes.views.treatment);
+	app.get('/procedure/:key', routes.views.procedure);
 	app.get('/doctor/:key', routes.views.doctor);
 	app.get('/user', routes.views.user);
 	app.all('/profile', routes.views.profile);

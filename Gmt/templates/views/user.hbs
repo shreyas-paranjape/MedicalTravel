@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row treatment">
+	<div class="row procedure">
 		<div class="col-lg-8 border">
 			<img src="images/hosp3.png">
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
@@ -14,11 +14,11 @@
 				<p>{{{provider.description}}}</p>
 				<h4 id="doctors">Doctors</h4>
 				{{#each doctors}}
-					<div class="row treat">
+					<div class="row proc">
 						<div class="col-lg-2 ">
 							<img src="images/logo.png">
 						</div>
-						<div class="col-lg-5  treatment-doc">
+						<div class="col-lg-5  procedure-doc">
 							<h3><a href="/doctor/{{key}}">{{name}}</a></h3>
 							<p>{{description}}</p>
 							<p>{{data}}</p>
@@ -61,7 +61,7 @@
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								{{#each treatments}}
+								{{#each procedures}}
 									<li><a href="#">{{name}}</a></li>
 								{{/each}}
 							</ul>

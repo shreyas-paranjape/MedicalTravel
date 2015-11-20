@@ -4974,11 +4974,11 @@ button.close {
     height: 60px;
     margin-top: 10px; }
 
-.treatment {
+.procedure {
   margin-left: 15px; }
-  .treatment .border {
+  .procedure .border {
     border-right: 2px solid #e5e5e5; }
-  .treatment img {
+  .procedure img {
     width: 770px;
     height: 400px;
     margin-left: -25px;
@@ -5002,43 +5002,43 @@ p {
   padding-bottom: 40px;
   margin-left: -40px; }
 
-.treatment-box {
+.procedure-box {
   margin-left: -35px;
   margin-top: 20px;
   margin-bottom: 40px; }
-  .treatment-box h3 {
+  .procedure-box h3 {
     font-size: 16px;
     background-color: #e5e5e5;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     padding-left: 10px; }
-  .treatment-box img {
+  .procedure-box img {
     height: 180px;
     width: 250px;
     margin-top: 20px; }
-  .treatment-box button {
+  .procedure-box button {
     margin-top: 95px;
     background-color: #ff6c6f;
     color: white;
     box-shadow: 0px 1px 0px #df5f69; }
 
-.treat {
+.proc {
   margin-top: 45px;
   border-bottom: 2px solid #e5e5e5;
   padding-bottom: 40px;
   margin-left: -45px;
   width: 843px;
   border-bottom-width: 0px; }
-  .treat img {
+  .proc img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-top: -10px; }
 
-.treatment-doc {
+.procedure-doc {
   margin-top: -30px; }
-  .treatment-doc p {
+  .procedure-doc p {
     padding-left: 8px;
     margin-left: -90px; }
 

@@ -14,9 +14,9 @@ exports.initLocals = function(req, res, next) {
 		key: 'provider',
 		href: '/provider/hospital'
 	}, {
-		label: 'Treatment',
-		key: 'treatment',
-		href: '/treatment/orthopedics'
+		label: 'Procedure',
+		key: 'procedure',
+		href: '/procedure/orthopedics'
 	}, {
 		label: 'Connect',
 		key: 'contact',

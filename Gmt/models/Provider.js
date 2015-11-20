@@ -39,6 +39,6 @@ Provider.add({
 	}
 });
 
-Provider.relationship({ ref: 'Treatment', path: 'providers' });
+Provider.relationship({ ref: 'Procedure', path: 'providers' });
 
 Provider.register();

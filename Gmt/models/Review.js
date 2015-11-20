@@ -32,7 +32,7 @@ Review.relationship({
 	path: 'reviews'
 });
 Review.relationship({
-	ref: 'Treatment',
+	ref: 'Procedure',
 	path: 'reviews'
 });
 Review.relationship({

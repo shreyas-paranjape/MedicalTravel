@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var TreatmentCategory = new keystone.List('TreatmentCategory', {
+var Speciality = new keystone.List('Speciality', {
 	autokey: {
 		from: 'name',
 		path: 'key',
@@ -8,7 +8,7 @@ var TreatmentCategory = new keystone.List('TreatmentCategory', {
 	}
 });
 
-TreatmentCategory.add({
+Speciality.add({
 	name: {
 		type: String,
 		required: true,
@@ -24,17 +24,17 @@ TreatmentCategory.add({
 	}
 });
 
-TreatmentCategory.relationship({
-	ref: 'Treatment',
-	path: 'treatmentCategory'
+Speciality.relationship({
+	ref: 'Procedure',
+	path: 'Speciality'
 });
 
-TreatmentCategory.schema.methods.getTreatments = function(done) {
-	return keystone.list('Treatment').model.find()
-		.where('treatmentCategory', this._id)
+Speciality.schema.methods.getProcedures = function(done) {
+	return keystone.list('Procedure').model.find()
+		.where('specialities', this._id)
 		.populate('providers')
 		.populate('doctors')
 		.exec(done);
 };
 
-TreatmentCategory.register();
+Speciality.register();

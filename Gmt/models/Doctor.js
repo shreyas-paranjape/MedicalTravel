@@ -29,7 +29,7 @@ Doctor.add({
 });
 
 Doctor.relationship({
-	ref: 'Treatment',
+	ref: 'Procedure',
 	path: 'doctors'
 });
 Doctor.relationship({
@@ -37,8 +37,8 @@ Doctor.relationship({
 	path: 'doctors'
 });
 
-Doctor.schema.methods.getTreatments = function(callback){
-	return keystone.list('Treatment')
+Doctor.schema.methods.getProcedures = function(callback){
+	return keystone.list('Procedure')
 		.model
 		.find({
 			doctors:{ $in:[this._id]}
