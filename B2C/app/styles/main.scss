@@ -3,3 +3,135 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+.header{
+  height:50px;
+}
+.image{
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.block{
+  position:relative;
+  top: -290px;
+  left: 160px;
+  strong{
+  color: white;
+  font-size: 22px;
+  font-style: normal;
+  }
+  .btn-default{
+    width:100px;
+    height:40px;
+    -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              border:1px solid white;
+              background-color: inherit;
+              color: white;
+              font-size: 14px;
+              }
+.btn-default:hover{
+border-color: green;
+color:green;
+}
+}
+.form{
+  width: 400px;
+  height:370px;
+  margin: 20px auto;
+-webkit-box-sizing: border-box;
+position: relative;
+}
+
+.lead{
+  width: 800px;
+  height:250px;
+  margin: 20px auto;
+-webkit-box-sizing: border-box;
+  position: relative;
+    border:2px solid black;
+}
+.tabs{
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+.text{
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+.scrolls{
+  position: relative;
+  border-bottom: 2px solid #e5e5e5;
+h4{
+    padding-left: 10px;
+
+  }
+  p{
+  padding-left: 10px;
+  }
+}
+.procedure
+{
+  border-bottom: 2px solid #e5e5e5;
+.box{
+  width: 410px;
+  height:230px;
+  border: 1px solid black;
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+// position: relative;
+}
+img{
+
+  width:190px;
+  height:210px;
+  margin-top: 8px;
+   margin-left: -8px;
+}
+h4{
+  font-size: 20px;
+  font-family:monospace;
+  font-style: normal;
+
+
+}
+p{
+  font-size: 16px;
+  font-family: serif;
+}
+}
+.b{
+  width: 350px;
+  height:250px;
+  margin: 20px auto;
+-webkit-box-sizing: border-box;
+  position: relative;
+  border:2px solid #e5e5e5;
+  text-align: center;
+}
+.dropdown{
+  position: relative;
+}
+.doc{
+  width: 800px;
+  height:300px;
+margin-left: 10px;
+-webkit-box-sizing: border-box;
+  position: relative;
+  border:2px solid #e5e5e5;
+
+}
+.circle{
+  // background-repeat: no-repeat;
+
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+.scrolls{
+  position: relative;
+}
