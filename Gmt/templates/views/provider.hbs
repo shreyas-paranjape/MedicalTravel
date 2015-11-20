@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row" style="margin-left:15px;">
+	<div class="row" style="margin-left:0px;">
 		<div class="col-lg-9" style="border-right:2px solid #e5e5e5">
 			{{#each providers}}
 				<div class="row provider-box">
@@ -10,7 +10,8 @@
 					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
 						<h3>{{name}}</h3>
 						<p>
-							<button type="button" class="btn btn-default">Know More</button>
+							<button type="button" class="btn btn-default" onclick="location.href='/user/'">Know More</button>
+							<!-- <script src="/js/btn.js"></script> -->
 						</p>
 					</div>
 				</div>
@@ -18,7 +19,7 @@
 		</div>
 		{{#each providerCategories}}
 			<div class="col-lg-3">
-				<ul class="nav nav-stacked tabs">
+				<ul class="nav nav-stacked tab">
 					<li role="presentation" class="active"><a href="/provider/{{key}}">{{name}}</a></li>
 				</ul>
 			</div>

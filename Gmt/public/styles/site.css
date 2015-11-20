@@ -4944,37 +4944,56 @@ button.close {
 
 .tabs {
   margin-right: 20px;
-  margin-top: 15px;
-  width: 280px;
+  margin-top: -30px;
   padding-top: 10px;
   font-size: 20px;
   margin-left: -15px;
   border-bottom-width: 0px; }
   .tabs li {
     margin-bottom: 20px;
+    background-color: #ededed;
+    height: 60px;
+    margin-top: 0px;
+    width: 365px;
+    padding-top: 5px;
+    box-shadow: 0px 5px 0px #cdc9c9; }
+  .tabs a {
+    outline: none; }
+
+.tab {
+  margin-right: 20px;
+  margin-top: -20px;
+  width: 275px;
+  font-size: 20px;
+  margin-left: -15px;
+  border-bottom-width: 0px; }
+  .tab li {
+    margin-bottom: 20px;
     border: 1px solid #e5e5e5;
     background-color: #ededed;
-    height: 60px; }
+    height: 60px;
+    margin-top: 10px; }
 
 .treatment {
   margin-left: 15px; }
   .treatment .border {
     border-right: 2px solid #e5e5e5; }
   .treatment img {
-    width: 750px;
-    height: 380px;
-    margin-left: -28px;
-    margin-top: 15px; }
+    width: 770px;
+    height: 400px;
+    margin-left: -25px;
+    margin-top: -20px; }
 
 p {
   margin-top: 40px;
   margin-bottom: 40px; }
 
 #providers, #doctors, #procedures {
-  margin-left: -32px;
+  margin-left: -45px;
   padding-top: 20px;
   margin-top: 15px;
-  border-top: 2px solid #e5e5e5; }
+  border-top: 2px solid #e5e5e5;
+  width: 770px; }
 
 #bio {
   font-size: 16px;
@@ -4984,7 +5003,7 @@ p {
   margin-left: -40px; }
 
 .treatment-box {
-  margin-left: -45px;
+  margin-left: -35px;
   margin-top: 20px;
   margin-bottom: 40px; }
   .treatment-box h3 {
@@ -4996,9 +5015,13 @@ p {
     padding-left: 10px; }
   .treatment-box img {
     height: 180px;
-    width: 250px; }
+    width: 250px;
+    margin-top: 20px; }
   .treatment-box button {
-    margin-top: 80px; }
+    margin-top: 95px;
+    background-color: #ff6c6f;
+    color: white;
+    box-shadow: 0px 1px 0px #df5f69; }
 
 .treat {
   margin-top: 45px;
@@ -5014,14 +5037,17 @@ p {
     margin-top: -10px; }
 
 .treatment-doc {
-  margin-top: -20px; }
-  .treatment-doc h3 {
+  margin-top: -30px; }
+  .treatment-doc p {
     padding-left: 8px;
-    margin-left: -10px; }
+    margin-left: -90px; }
 
-.bttn {
-  color: #00cc9d;
-  height: 30px; }
+#text {
+  width: 75px;
+  border-color: #89d8c4;
+  margin-top: 20px;
+  margin-left: -50px;
+  color: #89d8c4; }
 
 .doc {
   margin-top: 45px;
@@ -5034,6 +5060,8 @@ p {
     height: 180px;
     border-radius: 50%;
     margin-top: -10px; }
+  .doc #text {
+    margin-top: 40px; }
 
 .proc {
   margin-top: 45px;
@@ -5050,38 +5078,40 @@ p {
 .name h3 {
   background-color: #e5e5e5;
   font-size: 18px;
-  width: 400px;
+  width: 365px;
   height: 50px;
   padding-top: 15px;
   padding-left: 10px;
-  margin-left: -15px; }
+  margin-left: -15px;
+  margin-top: -20px; }
 
 .form {
   background-color: #e5e5e5;
-  width: 400px;
+  width: 365px;
   height: 600px;
   margin-left: -15px; }
   .form .nm {
     padding-top: 30px; }
   .form .form-control {
-    width: 350px;
+    width: 300px;
     height: 45px;
     margin-left: 20px; }
   .form .textarea {
-    width: 350px;
+    width: 300px;
     margin-left: 20px; }
   .form .dropdown {
-    margin-left: 20px; }
+    margin-left: 20px;
+    width: 100px; }
   .form .button {
     margin-left: 20px;
-    width: 170px;
+    width: 150px;
     height: 40px;
     background-color: #ff6c6f;
     color: white;
-    font-size: 20px; }
+    font-size: 20px;
+    border-radius: 6px; }
 
 .button {
-  background-color: #ff6c6f;
   color: white;
   font-size: 14px;
   height: 30px; }
@@ -5134,5 +5164,4 @@ a:hover {
   .square button {
     background-color: #2984d1;
     color: white;
-    margin-left: 20px;
-    margin-bottom: 20px; }
+    margin-left: 20px; }

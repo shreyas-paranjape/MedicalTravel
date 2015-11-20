@@ -19,12 +19,13 @@
 							<img src="images/logo.png">
 						</div>
 						<div class="col-lg-5  treatment-doc">
-							<h3>{{name}}</h3>
+							<h3><a href="/doctor/{{key}}">{{name}}</a></h3>
 							<p>{{description}}</p>
 							<p>{{data}}</p>
 						</div>
 						<div class="col-lg-2">
-							<button type="button" class="bttn ">Verified</button>
+							<!-- <button type="button" class="bttn ">Verified</button> -->
+								<input type="text" class="form-control" id="txt" placeholder="Verified" >
 						</div>
 					</div>
 				{{/each}}

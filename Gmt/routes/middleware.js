@@ -9,11 +9,7 @@ exports.initLocals = function(req, res, next) {
 		label: 'Blog',
 		key: 'blog',
 		href: '/blog'
-	}, {
-		label: 'Contact',
-		key: 'contact',
-		href: '/contact'
-	}, {
+	},{
 		label: 'Provider',
 		key: 'provider',
 		href: '/provider/hospital'
@@ -22,23 +18,21 @@ exports.initLocals = function(req, res, next) {
 		key: 'treatment',
 		href: '/treatment/orthopedics'
 	}, {
-		label: 'Doctor',
-		key: 'doctor',
-		href: '/doctor/dr-berta'
-	},{
-		label: 'User',
-		key: 'user',
-		href: '/user'
-	},{
+		label: 'Connect',
+		key: 'contact',
+		href: '/contact'
+
+	// 	label: 'User',
+	// 	key: 'user',
+	// 	href: '/user'
+	}];
+
+	locals.navs =[{
 		label: 'Profile',
 		key: 'profile',
 		href: '/profile'
-	
-
-
-	}];
-	locals.navs =[{
-		label: 'Login',
+	},{
+		label: 'Login/Sign Up',
 		key: 'login',
 		href: '/login'
 	}];

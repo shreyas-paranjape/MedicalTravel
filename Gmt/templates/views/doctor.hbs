@@ -6,28 +6,56 @@
 					<img src="images/logo.png" style="margin-left:50px">
 				</div>
 				<div class="col-lg-4">
-					<!-- {{#each doctors}} -->
-						<h3>{{doctor.name}}</h3>
-						<p style="font-size: 18px;">{{doctor.description}}</p>
-						<p style="font-size: 18px;">{{data}}</p>
-					<!-- {{/each}} -->
+					{{#each doctor}}
+						<h3>{{name}}</h3>
+						<p style="font-size: 18px;">{{description}}</p>
+						<!-- <p style="font-size: 18px;">{{data}}</p> -->
+					{{/each}}
 				</div>
 				<div class="col-lg-4">
-					<button class="btn btn-default" style="margin-top: 60px; margin-left: 30px;" type="button">Verified</button>
+					<input type="text" class="form-control" id="text" value="Verified">
 				</div>
 			</div>
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-				<div id="navbar-example">
+				<!-- <div id="navbar-example">
 					<ul class="nav nav-pills nav-justified pills" role="tablist">
 						{{#each doctor_nav}}
 							<li class="active"><a href="#bio">{{name}}</a></li>
 						{{/each}}
 					</ul>
-				</div>
+				</div> -->
+				<!-- <div id="navbar-example">
+		<ul class="nav nav-tabs" style="border:none;margin-top:-5px; background-color: rgb(237, 237, 237); width: 788px; height: 70px; margin-left: -65px;padding-left:100px;padding-top:15px;" role="tablist">
+			<li ><a href="#bio">Overview</a></li>
+			<li><a href="#education">Featured Providers</a></li>
+			<li><a href="#awards" style="background-color:rgb(237,237,237);border:none;color:black;">Specialists</a></li>
+		 <li><a href="#reviews">Reviews</a></li>
+		</ul>
+	</div> -->
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bio</a>
+			<a class="navbar-brand" href="#">eductaion</a>
+			<a class="navbar-brand" href="#">awards</a>
+		  <a class="navbar-brand" href="#">reviews</a>
+    </div>
+	</div>
+</nav>
+
 				<h4 id="bio"></h4>
+				{{#each provider}}
 				<p>
-					{{{provider.description}}}
+					{{{description}}}
 				</p>
+				{{/each}}
 				<h4 id="education" style="margin-left: -32px;">Education</h4>
 				<h3 style="margin-left: -30px;font-size:18px;">{{education.description}}</h3>
 				<p style="margin-left: -30px;">{{education.data}}</p>
@@ -61,7 +89,15 @@
 					<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
 				</div>
 				<div class="form-group">
-					<div class="dropdown">
+					<select id="sel1" class="form-control" name="trip">
+<option>Trip type</option>
+<option value="Honeymoon">Honeymoon</option>
+<option value="family">Family</option>
+<option value="friends">Friends</option>
+<option value="adventure">Adventure</option>
+</select>
+
+					<!-- <div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 							Treatment
 							<span class="caret"></span>
@@ -72,7 +108,8 @@
 							{{/each}}
 
 						</ul>
-					</div>
+					</div> -->
+
 				</div>
 				<br>
 				<div class="form-group">
