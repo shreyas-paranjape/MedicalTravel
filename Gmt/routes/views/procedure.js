@@ -23,29 +23,21 @@ exports = module.exports = function(req, res) {
 		SpecialityQuery.exec(function(err, specialityRes) {
 			res.locals.specialities = specialityRes;
 
-			var speciality = fnjs.filter(function(speciality) {
+			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
 			}, specialityRes);
-			res.locals.speciality = speciality;
 
-			speciality[0].getProcedures(function(e, proceduresRes) {
+			Speciality[0].getDoctorsAndProviders(function(doctors, providers) {
+				fnjs.each(function(doctor) {
+					res.locals.doctors.push(doctor);
+				}, doctors);
+				fnjs.each(function(provider) {
+					res.locals.providers.push(provider);
+				}, providers);
+			});
+			Speciality[0].getProcedures(function(e, proceduresRes) {
 				fnjs.each(function(procedure) {
 					res.locals.procedures.push(procedure);
-
-
-					fnjs.each(function(provider) {
-						if (!contains(provider, res.locals.providers)) {
-							res.locals.providers.push(provider);
-						}
-					}, procedure.providers);
-
-					fnjs.each(function(doctor) {
-						if (!contains(doctor, res.locals.doctors)) {
-							res.locals.doctors.push(doctor);
-
-						}
-					}, procedure.doctors);
-
 				}, proceduresRes);
 			});
 			next();

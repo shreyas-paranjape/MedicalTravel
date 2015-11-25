@@ -8,7 +8,6 @@ var Procedure = new keystone.List('Procedure', {
 	}
 });
 
-
 Procedure.add({
 	name: {
 		type: String,
@@ -37,13 +36,11 @@ Procedure.add({
 		many: true
 	},
 	reviews: {
-			type: Types.Relationship,
-			ref: 'Review',
-			many: true
+		type: Types.Relationship,
+		ref: 'Review',
+		many: true
 	}
 
 });
-
-
 
 Procedure.register();

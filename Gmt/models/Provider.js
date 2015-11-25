@@ -8,7 +8,6 @@ var Provider = new keystone.List('Provider', {
 	}
 });
 
-
 Provider.add({
 	name: {
 		type: String,
@@ -18,7 +17,7 @@ Provider.add({
 	image: {
 		type: Types.CloudinaryImage
 	},
-	description:{
+	description: {
 		type: Types.Html,
 		wysiwyg: true,
 		height: 400
@@ -33,12 +32,22 @@ Provider.add({
 		many: true
 	},
 	reviews: {
-			type: Types.Relationship,
-			ref: 'Review',
-			many: true
+		type: Types.Relationship,
+		ref: 'Review',
+		many: true
 	}
 });
 
-Provider.relationship({ ref: 'Procedure', path: 'providers' });
+Provider.relationship({
+	ref: 'Procedure',
+	path: 'providers'
+});
+
+Provider.schema.methods.getProcedures = function(done) {
+	return keystone.list('Procedure').model.find()
+		.where('providers', this._id)
+		.populate('doctors')
+		.exec(done);
+};
 
 Provider.register();
