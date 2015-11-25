@@ -3,35 +3,38 @@
 		<div class="col-lg-8 border">
 			<img src="images/hosp3.png">
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-				<div id="navbar-example">
-					<ul class="nav nav-pills nav-justified pills" role="tablist">
-						{{#each doctor_nav}}
-							<li class="active"><a href="#about">{{name}}</a></li>
-						{{/each}}
-					</ul>
-				</div>
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav">
+					 <li><a href="#about" >About</a></li>
+					<li><a href="#doctors">Doctors</a></li>
+					<li><a href="#procedures">procedures</a></li>
+					<li><a href="#reviews">Reviews</a></li>
+				</ul>
+			</nav>
 				<h4 id="about"></h4>
-				<p>{{{provider.description}}}</p>
+				{{#each provider}}
+				<p>{{description}}</p>
+				{{/each}}
+
 				<h4 id="doctors">Doctors</h4>
-				{{#each doctors}}
+				{{#each provider.doctors}}
 					<div class="row proc">
-						<div class="col-lg-2 ">
+						<div class="col-lg-3 ">
 							<img src="images/logo.png">
 						</div>
 						<div class="col-lg-5  procedure-doc">
-							<h3><a href="/doctor/{{key}}">{{name}}</a></h3>
+							<p><a href="/doctor/{{key}}">{{name}}</a></p>
 							<p>{{description}}</p>
 							<p>{{data}}</p>
 						</div>
 						<div class="col-lg-2">
-							<!-- <button type="button" class="bttn ">Verified</button> -->
-								<input type="text" class="form-control" id="txt" placeholder="Verified" >
+							<input type="text" class="form-control" id="text" placeholder="Verified">
 						</div>
 					</div>
 				{{/each}}
 				<h4 id="procedures">Procedures</h4>
 				<div class="row proc">
-					{{#each doctor_pro}}
+					{{#each procedures}}
 						<div class="col-lg-4">
 							<button type="button" class="btn btn-default">{{name}}</button>
 						</div>
@@ -40,7 +43,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 name">
-			<h3>{{providers.name}}</h3>
+			<h3>{{provider.name}}</h3>
 			<br>
 			<br>
 			<div class="form">
@@ -55,17 +58,14 @@
 						<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
 					</div>
 					<div class="form-group">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								Treatment
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								{{#each procedures}}
-									<li><a href="#">{{name}}</a></li>
-								{{/each}}
-							</ul>
-						</div>
+						<select id="pro" class="form-control" name="procedure">
+	        {{#each procedures}}
+	       <option value="Honeymoon">{{name}}</option>
+	<!-- <option value="family">Family</option>
+	<option value="friends">Friends</option>
+	<option value="adventure">Adventure</option> -->
+	        {{/each}}
+	        </select>
 					</div>
 					<br>
 					<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">

@@ -40,5 +40,10 @@ Provider.add({
 });
 
 Provider.relationship({ ref: 'Procedure', path: 'providers' });
-
+Provider.schema.methods.getProcedure = function(done) {
+	return keystone.list('Procedure').model.find()
+		.where('providers', this._id)
+		.populate('doctors')
+		.exec(done);
+};
 Provider.register();

@@ -3,26 +3,20 @@
 		<div class="col-lg-8 border">
 			<img src="http://placehold.it/450x150">
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
-				<!-- <div id="navbar-example">
-					<ul class="nav nav-pills nav-justified pills" role="tablist">
-						{{#each treatment_nav}}
-							<li class="active"><a href="#about">{{name}}</a></li>
-						{{/each}}
+
+			    <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+						 <li><a href="#overview" >Overview</a></li>
+			 			<li><a href="#providers">Featured Providers</a></li>
+			 			<li><a href="#doctors">Specialists</a></li>
 					</ul>
-				</div> -->
-				<div id="navbar-example">
-					<ul class="nav nav-tabs" style="border:none;margin-top:-5px; background-color: rgb(237, 237, 237); width: 768px; height: 70px; margin-left: -45px;padding-left:100px;padding-top:15px;" role="tablist">
-						<li class="active"><a href="#overview">Overview</a></li>
-						<li><a href="#providers">Featured Providers</a></li>
-						<li><a href="#doctors" style="background-color:rgb(237,237,237);border:none;color:black;">Specialists</a></li>
-					</ul>
-				</div>
+			  </nav>
 
 
 				<h4 id="overview"></h4>
-				{{#each speciality}}
+				{{#each specialities}}
 					<p>
-						{{{discription}}}
+						{{discription}}
 					</p>
 				{{/each}}
 
@@ -34,7 +28,8 @@
 						</div>
 						<div class="col-lg-6">
 							<h3>{{name}}</h3>
-							<button type="button" class="bttn" onclick=location.href="/user/">Know More</button>
+							<a href=""><p>Know More</p></a>
+							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 						</div>
 					</div>
 				{{/each}}
@@ -84,9 +79,15 @@
 
 		<div class="col-lg-4">
 			<ul class="nav nav-stacked tabs">
-				{{#each specialities}}
-					<li role="presentation" class="active"><a href="/procedure/{{key}}">{{name}}</a></li>
-				{{/each}}
+
+      {{#each specialities}}
+				{{#if active}}
+		    	<li role="presentation" class="active"><a href="/procedure/{{key}}" style="height: 60px;margin-left:80px;"><img src="/images/{{key}}.jpg" style="width:50px;height:30px;margin-left:-60px;margin-top:0px;">{{name}}</a></li>
+				{{else}}
+					<li role="presentation"><a href="/procedure/{{key}}" style="height:60px;">{{name}}</a></li>
+				{{/if}}
+			{{/each}}
+
 			</ul>
 		</div>
 

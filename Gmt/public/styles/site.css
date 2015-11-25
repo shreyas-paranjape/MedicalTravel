@@ -4932,15 +4932,18 @@ button.close {
   width: 250px;
   height: 225px; }
 
-.pills {
-  margin-left: -48px; }
-  .pills li {
-    margin-right: 20px;
-    margin-top: 15px;
-    width: 250px;
-    height: 50px;
-    padding-top: 10px;
-    font-size: 18px; }
+.navbar-default {
+  margin-left: -45px;
+  margin-top: -5px;
+  width: 770px;
+  height: 60px;
+  background-color: #e8e8e8; }
+  .navbar-default li {
+    margin-left: 60px;
+    margin-top: 5px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: black; }
 
 .tabs {
   margin-right: 20px;
@@ -4948,17 +4951,18 @@ button.close {
   padding-top: 10px;
   font-size: 20px;
   margin-left: -15px;
-  border-bottom-width: 0px; }
+  border-bottom-width: 0px;
+  height: 60px; }
   .tabs li {
     margin-bottom: 20px;
     background-color: #ededed;
-    height: 60px;
     margin-top: 0px;
     width: 365px;
-    padding-top: 5px;
-    box-shadow: 0px 5px 0px #cdc9c9; }
+    box-shadow: 0px 5px 0px #cac6c6; }
   .tabs a {
     outline: none; }
+  .tabs .active {
+    background-color: #cccccc; }
 
 .tab {
   margin-right: 20px;
@@ -4998,7 +5002,6 @@ p {
 #bio {
   font-size: 16px;
   margin-top: 45px;
-  border-bottom: 2px solid #e5e5e5;
   padding-bottom: 40px;
   margin-left: -40px; }
 
@@ -5017,11 +5020,19 @@ p {
     height: 180px;
     width: 250px;
     margin-top: 20px; }
-  .procedure-box button {
+  .procedure-box p {
     margin-top: 95px;
     background-color: #ff6c6f;
     color: white;
-    box-shadow: 0px 1px 0px #df5f69; }
+    box-shadow: 0px 3px 0px #df5f69;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 5px; }
+  .procedure-box a {
+    outline: none;
+    text-decoration: none; }
 
 .proc {
   margin-top: 45px;
@@ -5051,7 +5062,6 @@ p {
 
 .doc {
   margin-top: 45px;
-  border-bottom: 2px solid #e5e5e5;
   padding-bottom: 40px;
   margin-left: -45px;
   width: 843px; }
@@ -5109,12 +5119,8 @@ p {
     background-color: #ff6c6f;
     color: white;
     font-size: 20px;
-    border-radius: 6px; }
-
-.button {
-  color: white;
-  font-size: 14px;
-  height: 30px; }
+    border-radius: 6px;
+    border-color: #ff6c6f; }
 
 .post_img {
   height: auto;
@@ -5165,3 +5171,10 @@ a:hover {
     background-color: #2984d1;
     color: white;
     margin-left: 20px; }
+
+#education, #awards, #reviews {
+  margin-left: -45px;
+  padding-top: 20px;
+  margin-top: 15px;
+  border-top: 2px solid #e5e5e5;
+  width: 770px; }

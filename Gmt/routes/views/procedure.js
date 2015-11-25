@@ -8,6 +8,7 @@ exports = module.exports = function(req, res) {
 	res.locals.doctors = [];
 	res.locals.providers = [];
 	res.locals.procedures = [];
+	res.locals.section = req.params.key;
 
 	var contains = function(aValue, aArray) {
 		var idx;
@@ -21,12 +22,16 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		SpecialityQuery.exec(function(err, specialityRes) {
-			res.locals.specialities = specialityRes;
+			res.locals.specialities = fnjs.map(function(spec){
+				if(spec.key === req.params.key){
+					spec.active = true;
+				}
+				return spec;
+			},specialityRes);
 
-			var speciality = fnjs.filter(function(speciality) {
-				return speciality.key == req.params.key;
-			}, specialityRes);
-			res.locals.speciality = speciality;
+			 var speciality = fnjs.filter(function(speciality) {
+			 	return speciality.key == req.params.key;
+			 }, specialityRes);
 
 			speciality[0].getProcedures(function(e, proceduresRes) {
 				fnjs.each(function(procedure) {
