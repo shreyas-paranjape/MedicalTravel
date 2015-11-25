@@ -8,6 +8,7 @@ var Provider = new keystone.List('Provider', {
 	}
 });
 
+
 Provider.add({
 	name: {
 		type: String,

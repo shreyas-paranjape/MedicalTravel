@@ -35,6 +35,7 @@ exports = module.exports = function(req, res) {
 					res.locals.providers.push(provider);
 				}, providers);
 			});
+
 			Speciality[0].getProcedures(function(e, proceduresRes) {
 				fnjs.each(function(procedure) {
 					res.locals.procedures.push(procedure);

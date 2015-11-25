@@ -26,7 +26,7 @@ Procedure.add({
 		ref: 'Provider',
 		many: true
 	},
-	speciality: {
+	specialities: {
 		type: Types.Relationship,
 		ref: 'Speciality',
 	},

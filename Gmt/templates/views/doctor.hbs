@@ -5,7 +5,7 @@
 				<div class="col-lg-4">
 					<img src="images/logo.png" style="margin-left:50px">
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-4" style="margin-top:-30px;">
 					{{#each doctor}}
 						<h3>{{name}}</h3>
 						<p style="font-size: 18px;">{{description}}</p>
@@ -17,35 +17,30 @@
 				</div>
 			</div>
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-				<!-- <div id="navbar-example">
-					<ul class="nav nav-pills nav-justified pills" role="tablist">
-						{{#each doctor_nav}}
-							<li class="active"><a href="#bio">{{name}}</a></li>
-						{{/each}}
-					</ul>
-				</div> -->
-				<div id="navbar-example">
-		<ul class="nav nav-tabs" style="border:none;margin-top:-5px; background-color: rgb(237, 237, 237); width: 788px; height: 70px; margin-left: -65px;padding-left:100px;padding-top:15px;" role="tablist">
-			<li ><a href="#bio">Overview</a></li>
-			<li><a href="#education">Featured Providers</a></li>
-			<li><a href="#awards" style="background-color:rgb(237,237,237);border:none;color:black;">Specialists</a></li>
-		 <li><a href="#reviews">Reviews</a></li>
+
+
+	<nav class="navbar navbar-default">
+			<ul class="nav navbar-nav">
+			 <li><a href="#bio">Overview</a></li>
+			<li><a href="#education">Education</a></li>
+			<li><a href="#awards">Awards</a></li>
+			<li><a href="#reviews">Reviews</a></li>
 		</ul>
-	</div>
+	</nav>
 
 
 				<h4 id="bio"></h4>
 				{{#each provider}}
 				<p>
-					{{{description}}}
+					{{description}}
 				</p>
 				{{/each}}
-				<h4 id="education" style="margin-left: -32px;">Education</h4>
-				<h3 style="margin-left: -30px;font-size:18px;">{{education.description}}</h3>
-				<p style="margin-left: -30px;">{{education.data}}</p>
-				<p style="margin-left: -30px;border-bottom:2px solid #e5e5e5;">2004</p>
-				<h4 id="awards" style="margin-left:-32px;border-bottom:2px solid #e5e5e5;">Awards</h4>
-				<h4 id="reviews" style="margin-left:-32px;">Reviews</h4>
+				<h4 id="education" style="">Education</h4>
+				<h3 style="margin-left: -30px;font-size:18px;">{{doctor.description}}</h3>
+				<p style="margin-left: -30px;"></p>
+				<p style="margin-left: -30px;">2004</p>
+				<h4 id="awards" style="">Awards</h4>
+				<h4 id="reviews" style="">Reviews</h4>
 				<span class="glyphicon glyphicon-star" style="margin-left:-30px"></span>
 				<span class="glyphicon glyphicon-star"></span>
 				<span class="glyphicon glyphicon-star"></span>
@@ -74,12 +69,14 @@
 				</div>
 				<div class="form-group">
 					<select id="sel1" class="form-control" name="trip">
-<option>Trip type</option>
-<option value="Honeymoon">Honeymoon</option>
-<option value="family">Family</option>
+<!-- <option>Treatment</option> -->
+        {{#each procedures}}
+       <option value="Honeymoon">{{name}}</option>
+<!-- <option value="family">Family</option>
 <option value="friends">Friends</option>
-<option value="adventure">Adventure</option>
-</select>
+<option value="adventure">Adventure</option> -->
+        {{/each}}
+        </select>
 
 					<!-- <div class="dropdown">
 						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -97,24 +94,16 @@
 				</div>
 				<br>
 				<div class="form-group">
-					<textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
+			  <textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
 				</div>
 			</form>
-			<!-- <p><span class="glyphicon glyphicon-phone"></span>0832 271 4370</p>
-<p style="margin-left:15px">0832 274 4376</p>
-<p style="margin-left:15px">91 9822568680</p>
-<p style="margin-left:15px">info@manipalgoa.com</p>
-<br><br>
 
-
-<p style="margin-left:15px">Dona Paula, Goa</p>
-<p style="margin-left:15px">403001</p> -->
 			<br>
 			<br>
 			<br>
 			<button type="button" class="button">Enquire</button>
 		</div>
-	</div>
+	  </div>
 
 
 	</div>
