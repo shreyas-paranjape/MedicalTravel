@@ -28,8 +28,30 @@
 		</ul>
 	</nav>
 
+	<h4 id="providers">Featured Providers</h4>
+	{{#each providers}}
+		<div class="row procedure-box">
+			<div class="col-lg-4">
+				<img src="{{cloudinaryUrl image}}">
+			</div>
+			<div class="col-lg-6">
+				<h3>{{name}}</h3>
+				<a href=""><p>Know More</p></a>
+				<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+			</div>
+		</div>
+	{{/each}}
+	<h4 id="procedures">Procedure</h4>
+	<div class="row proc">
+		{{#each procedures}}
+			<div class="col-lg-4">
+				<button type="button" class="btn btn-default">{{name}}</button>
+			</div>
+		{{/each}}
+	</div>
 
-				<h4 id="bio"></h4>
+
+			<h4 id="bio"></h4>
 				{{#each provider}}
 				<p>
 					{{description}}

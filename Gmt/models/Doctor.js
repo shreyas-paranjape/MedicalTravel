@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var Doctor = new keystone.List('Doctor' , {
+var Doctor = new keystone.List('Doctor', {
 	autokey: {
 		from: 'name',
 		path: 'key',
@@ -37,12 +37,10 @@ Doctor.relationship({
 	path: 'doctors'
 });
 
-Doctor.schema.methods.getProcedures = function(callback){
-	return keystone.list('Procedure')
-		.model
-		.find({
-			doctors:{ $in:[this._id]}
-		}).exec(callback);
+Doctor.schema.methods.getProcedures = function(callback) {
+	return keystone.list('Procedure').model.find({
+		doctors: this._id
+	}).populate('providers').exec(callback);
 };
 
 
