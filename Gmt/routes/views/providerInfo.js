@@ -10,6 +10,7 @@ exports = module.exports = function(req, res) {
 
 	res.locals.doctors = [];
 	res.locals.procedures = [];
+	res.locals.specialities = [];
 
 	//Display the Current provider with Procedures and Doctor
 	view.query("provider", keystone.list('Provider').model.findOne({
@@ -30,10 +31,13 @@ exports = module.exports = function(req, res) {
 	}).populate('doctors');
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, provRes) {
-			provRes.getProcedures(function(e, procedureRes) {
+			provRes.getSpecialites(function(e, procedureRes) {
 				fnjs.each(function(procedure) {
 					if (!contains(procedure, res.locals.procedures)) {
 						locals.procedures.push(procedure);
+					}
+					if (!contains(procedure.speciality, res.locals.specialities)) {
+						locals.specialities.push(procedure.speciality);
 					}
 				}, procedureRes);
 			});

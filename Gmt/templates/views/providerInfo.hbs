@@ -30,7 +30,15 @@
 						</div>
 					</div>
 				{{/each}}
-				<h4 id="procedures">Procedures</h4>
+				<h4 id="procedures">Speciality</h4>
+				<div class="row proc">
+					{{#each specialities}}
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-default">{{name}}</button>
+						</div>
+					{{/each}}
+				</div>
+				<h4 id="procedures">Procedure</h4>
 				<div class="row proc">
 					{{#each procedures}}
 						<div class="col-lg-4">
