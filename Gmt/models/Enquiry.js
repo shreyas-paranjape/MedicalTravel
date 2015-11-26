@@ -1,9 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var Enquiry = new keystone.List('Enquiry', {
-	nocreate: true,
-	noedit: true
-});
+var Enquiry = new keystone.List('Enquiry', {});
 Enquiry.add({
 	name: {
 		type: Types.Name,
@@ -11,9 +8,16 @@ Enquiry.add({
 	},
 	email: {
 		type: Types.Email,
-		required: true
+		// required: true,
+		// initial: false
 	},
 	phone: {
+		type: String
+	},
+	procedures: {
+		type: String
+	},
+	doctors: {
 		type: String
 	},
 	enquiryType: {
@@ -31,7 +35,8 @@ Enquiry.add({
 	},
 	message: {
 		type: Types.Markdown,
-		required: true
+		// required: true,
+		// initial: false
 	},
 	createdAt: {
 		type: Date,
@@ -55,7 +60,9 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 	keystone.list('User').model.find().where('isAdmin', true).exec(function(err, admins) {
 		if (err) return callback(err);
 		new keystone.Email('enquiry-notification').send({
-			to: admins,
+			to: {
+				email: 'manjeet959@gmail.com'
+			},
 			from: {
 				name: 'Goa medical travel',
 				email: 'contact@goa-medical-travel.com'

@@ -40,7 +40,6 @@ Procedure.add({
 		ref: 'Review',
 		many: true
 	}
-
 });
 
 Procedure.register();

@@ -45,40 +45,67 @@
 			<br>
 			<br>
 			<div class="form">
-				<form>
+				<form class="form-inline" method="post" style="margin-left:25px;">
+					<input type="hidden" name="action" value="enquire">
 					<div class="form-group nm">
-						<input type="name" class="form-control" id="name" placeholder="Name:">
+						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
 					</div>
 					<div class="form-group">
-						<input type="email" class="form-control" id="email" placeholder="Email:">
+						<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
 					</div>
 					<div class="form-group">
-						<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+						<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
 					</div>
 					<div class="form-group">
+						<input type="text" name="procedures" class="form-control" id="procedure" placeholder="Procedure">
+					</div>
+					<div class="form-group">
+						<input type="text" name="doctors" class="form-control" id="doctor" placeholder="Doctor">
+					</div>
+					<div class="form-group">
+						<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments"></textarea>
+					</div>
+					<br>
+					<input type="submit" value="Enquire" class="button" style="" />
+				</form>
+				{{#if enquirySent}}
+					<br>
+					<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
+				{{/if}}
+
+				<!-- <div class="form-group">
+						<div class="dropdown">
+							<form class="form-inline" method="post" style="margin-left:25px;">
+								<input type="hidden" name="action" value="list">
+								<button class="btn btn-default dropdown-toggle" name = "procedure" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Procedure
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									{{#each procedures}}
+										<li><a href="#">{{name}}</a></li>
+									{{/each}}
+								</ul>
+							</form>
+						</div>
+					</div> -->
+				<!-- <div class="form-group">
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								Treatment
+								Doctor
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								{{#each procedures}}
+								{{#each doctors}}
 									<li><a href="#">{{name}}</a></li>
 								{{/each}}
 							</ul>
 						</div>
-					</div>
-					<br>
-					<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
+					</div> -->
+				<br>
+				<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
 				</div> -->
-					<div class="form-group">
-						<textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
-					</div>
-				</form>
-				<br>
-				<br>
-				<br>
-				<button type="button" class="button" style="">Enquire</button>
+
 			</div>
 		</div>
 	</div>
