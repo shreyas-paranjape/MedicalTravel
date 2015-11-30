@@ -8,14 +8,11 @@ exports = module.exports = function(req, res) {
 	locals.enquirySent = false;
 	locals.section = 'providerInfo';
 
+
 	res.locals.doctors = [];
 	res.locals.procedures = [];
 	res.locals.specialities = [];
-
-	//Display the Current provider with Procedures and Doctor
-	view.query("provider", keystone.list('Provider').model.findOne({
-		key: req.params.key
-	}).populate('doctors'));
+	res.locals.proceduresPrice = [];
 
 	var contains = function(aValue, aArray) {
 		var idx;
@@ -26,20 +23,33 @@ exports = module.exports = function(req, res) {
 		}
 		return false;
 	}
+
+	//Display the Current provider with Procedures and Doctor
+	view.query("provider", keystone.list('Provider').model.findOne({
+		key: req.params.key
+	}).populate('doctors'));
+
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
-	}).populate('doctors');
+	});
 	view.on('init', function(next) {
-		ProvQuery.exec(function(err, provRes) {
-			provRes.getSpecialites(function(e, procedureRes) {
+		ProvQuery.exec(function(err, currentProvider) {
+			currentProvider.getProcedures(function(e, procedures) {
 				fnjs.each(function(procedure) {
-					if (!contains(procedure, res.locals.procedures)) {
-						locals.procedures.push(procedure);
-					}
 					if (!contains(procedure.speciality, res.locals.specialities)) {
 						locals.specialities.push(procedure.speciality);
 					}
-				}, procedureRes);
+					keystone.list('Price').model.find({
+						procedure: procedure.id,
+						provider: currentProvider.id
+					}).exec(function(er, priceRes) {
+						fnjs.each(function(price) {
+							procedure.price = price.price;
+							locals.procedures.push(procedure);
+						}, priceRes)
+					})
+				}, procedures);
+
 			});
 		});
 		next();
@@ -53,10 +63,11 @@ exports = module.exports = function(req, res) {
 
 		var newQuery = new Enquiry.model(),
 			updater = newQuery.getUpdateHandler(req);
-
+		req.body.provider = req.params.key;
+		req.body.flag = "Enquiry";
 		updater.process(req.body, {
 			flashErrors: false,
-			fields: 'name, email, phone, procedures, doctors, message',
+			fields: 'name, email, phone, provider, procedures, doctors, flag, message',
 			errorMessage: 'Cannot load'
 		}, function(err) {
 			if (err) {
@@ -67,8 +78,6 @@ exports = module.exports = function(req, res) {
 			}
 			next();
 		});
-
 	});
-
 	view.render('providerInfo');
 };

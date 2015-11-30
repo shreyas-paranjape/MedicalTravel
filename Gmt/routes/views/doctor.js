@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var fnjs = require('fn.js');
+var Enquiry = keystone.list('Enquiry');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -27,7 +28,6 @@ exports = module.exports = function(req, res) {
 				fnjs.each(function(procedure) {
 					if (!contains(procedure, res.locals.procedures)) {
 						res.locals.procedures.push(procedure);
-
 					}
 					fnjs.each(function(provider) {
 						if (!contains(provider, res.locals.providers)) {
@@ -36,6 +36,31 @@ exports = module.exports = function(req, res) {
 					}, procedure.providers);
 				}, procedureRes);
 			});
+			next();
+		});
+	});
+
+	// Enquiry form Data submission
+	view.on('post', {
+		action: 'enquire'
+	}, function(next) {
+		console.log(req.body);
+
+		var newQuery = new Enquiry.model(),
+			updater = newQuery.getUpdateHandler(req);
+		req.body.doctors = req.params.key;
+		req.body.flag = "Consultation";
+		updater.process(req.body, {
+			flashErrors: false,
+			fields: 'name, email, phone, procedures, doctors, flag, message',
+			errorMessage: 'Cannot load'
+		}, function(err) {
+			if (err) {
+				locals.validationErrors = err.errors;
+				console.log(err.errors);
+			} else {
+				locals.consultationSent = true;
+			}
 			next();
 		});
 	});

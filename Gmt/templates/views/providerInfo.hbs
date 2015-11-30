@@ -41,8 +41,8 @@
 				<h4 id="procedures">Procedure</h4>
 				<div class="row proc">
 					{{#each procedures}}
-						<div class="col-lg-4">
-							<button type="button" class="btn btn-default">{{name}}</button>
+						<div>
+							<label>{{name}}: ₹ {{price}} </label>
 						</div>
 					{{/each}}
 				</div>
@@ -66,9 +66,11 @@
 					</div>
 					<div class="form-group">
 						<input type="text" name="procedures" class="form-control" id="procedure" placeholder="Procedure">
+						<input type="hidden" id="procedureId" name="procedureId" value="">
 					</div>
 					<div class="form-group">
 						<input type="text" name="doctors" class="form-control" id="doctor" placeholder="Doctor">
+						<input type="hidden" id="doctorId" name="doctorId" value="">
 					</div>
 					<div class="form-group">
 						<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments"></textarea>
@@ -81,38 +83,7 @@
 					<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
 				{{/if}}
 
-				<!-- <div class="form-group">
-						<div class="dropdown">
-							<form class="form-inline" method="post" style="margin-left:25px;">
-								<input type="hidden" name="action" value="list">
-								<button class="btn btn-default dropdown-toggle" name = "procedure" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									Procedure
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-									{{#each procedures}}
-										<li><a href="#">{{name}}</a></li>
-									{{/each}}
-								</ul>
-							</form>
-						</div>
-					</div> -->
-				<!-- <div class="form-group">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-								Doctor
-								<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-								{{#each doctors}}
-									<li><a href="#">{{name}}</a></li>
-								{{/each}}
-							</ul>
-						</div>
-					</div> -->
 				<br>
-				<!-- <input type="treatment" class="form-control" id="treatment" placeholder="Treatment" style="width: 300px; height: 45px;">
-				</div> -->
 
 			</div>
 		</div>

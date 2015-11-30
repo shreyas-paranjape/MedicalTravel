@@ -14,10 +14,16 @@ Enquiry.add({
 	phone: {
 		type: String
 	},
+	provider: {
+		type: String
+	},
 	procedures: {
 		type: String
 	},
 	doctors: {
+		type: String
+	},
+	flag: {
 		type: String
 	},
 	enquiryType: {

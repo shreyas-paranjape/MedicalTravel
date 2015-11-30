@@ -21,4 +21,5 @@ exports = module.exports = function(app) {
 	app.all('/login', routes.views.login);
 	app.all('/signup', routes.views.signup);
 	app.all('/contact', routes.views.contact);
+	app.get('/autocomplete/:model', routes.views.autocomplete);
 };
