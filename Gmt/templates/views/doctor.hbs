@@ -1,14 +1,14 @@
-<div class="container">
+<!-- <div class="container"> -->
 	<div class="row procedure">
-		<div class="col-lg-8 border">
-			<div class="row doc" style="height:350px">
+		<div class="col-lg-8 borders">
+			<div class="row doc" style="">
 				<div class="col-lg-4">
 					<img src="images/logo.png" style="margin-left:50px">
 				</div>
 				<div class="col-lg-4" style="margin-top:-30px;">
 					{{#each doctor}}
 						<h3>{{name}}</h3>
-						<p style="font-size: 18px;">{{description}}</p>
+						<p style="font-size: 18px;">{{{description}}}</p>
 						<!-- <p style="font-size: 18px;">{{data}}</p> -->
 					{{/each}}
 				</div>
@@ -28,16 +28,20 @@
 		</ul>
 	</nav>
 
-	<h4 id="providers">Featured Providers</h4>
+	<!-- <h4 id="providers"><span>Featured Providers</span></h4>
 	{{#each providers}}
 		<div class="row procedure-box">
+			<div class="col-lg-1">
+			</div>
 			<div class="col-lg-4">
 				<img src="{{cloudinaryUrl image}}">
 			</div>
 			<div class="col-lg-6">
 				<h3>{{name}}</h3>
 				<a href=""><p>Know More</p></a>
-				<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+
+			</div>
+			<div class="col-lg-1">
 			</div>
 		</div>
 	{{/each}}
@@ -48,84 +52,65 @@
 				<button type="button" class="btn btn-default">{{name}}</button>
 			</div>
 		{{/each}}
-	</div>
+	</div> -->
 
 
 			<h4 id="bio"></h4>
-				{{#each provider}}
+				{{#each speciality}}
 				<p>
 					{{description}}
 				</p>
 				{{/each}}
-				<h4 id="education" style="">Education</h4>
-				<h3 style="margin-left: -30px;font-size:18px;">{{doctor.description}}</h3>
-				<p style="margin-left: -30px;"></p>
-				<p style="margin-left: -30px;">2004</p>
-				<h4 id="awards" style="">Awards</h4>
-				<h4 id="reviews" style="">Reviews</h4>
-				<span class="glyphicon glyphicon-star" style="margin-left:-30px"></span>
+				<h4 id="education" style=""><span>Education</span></h4>
+				<h3 style="margin-left:60px;font-size:18px;">{{{doctor.description}}}</h3>
+
+				<p style="margin-left: 30px;">2004</p>
+				<h4 id="awards" style=""><span>Awards</span></h4>
+				<h4 id="reviews" style=""><span>Reviews</span></h4>
+				<span class="glyphicon glyphicon-star" style="margin-left:30px"></span>
 				<span class="glyphicon glyphicon-star"></span>
 				<span class="glyphicon glyphicon-star"></span>
-				<p style="margin-left: -30px;" style="margin-left: -30px;">Lorem Ipsum,</p>
-				<p style="margin-left: -30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
-				<p style="margin-left: -30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
-				<p style="margin-left: -30px;">help all over.</p>
-				<button type="submit" class="btn btn-default" style="margin-left:-30px; ">Write a review</button>
+				<p style="margin-left: 30px;">Lorem Ipsum,</p>
+				<p style="margin-left: 30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
+				<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
+				<p style="margin-left: 30px;">help all over.</p>
+				<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button>
 			</div>
 		</div>
-		<div class="col-lg-4">
-			<!--{{#each treatments}}
-				<h3 style="background-color:#e5e5e5;font-size:18px;width: 320px;height:40px; margin-left: -10px;padding-top:12px;text-align:left;padding-left:10px">{{name}}</h3>
-			{{/each}}-->
-
+		<div class="col-lg-4 name">
+			<h3>{{speciality}}</h3>
+			<br>
+			<br>
 			<div class="form">
-			<form>
-				<div class="form-group nm">
-					<input type="name" class="form-control" id="name" placeholder="Name:" >
-				</div>
-				<div class="form-group">
-					<input type="email" class="form-control" id="email" placeholder="Email:">
-				</div>
-				<div class="form-group">
-					<input type="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
-				</div>
-				<div class="form-group">
-					<select id="sel1" class="form-control" name="trip">
-<!-- <option>Treatment</option> -->
-        {{#each procedures}}
-       <option value="Honeymoon">{{name}}</option>
-<!-- <option value="family">Family</option>
-<option value="friends">Friends</option>
-<option value="adventure">Adventure</option> -->
-        {{/each}}
-        </select>
+				<form class="form-inline" method="post">
+					<input type="hidden" name="action" value="enquire">
+					<div class="form-group nm">
+						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
+					</div>
+					<div class="form-group">
+						<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+					</div>
+					<div class="form-group">
+						<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+					</div>
+					<div class="form-group">
+						<input type="text" name="procedures" class="form-control" id="procedure" placeholder="Procedure">
+					</div>
 
-					<!-- <div class="dropdown">
-						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							Treatment
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							{{#each treatments}}
-								<li><a href="#">{{name}}</a></li>
-							{{/each}}
-
-						</ul>
-					</div> -->
-
-				</div>
+					<div class="form-group">
+						<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments"></textarea>
+					</div>
+					<br>
+					<input type="submit" value="Enquire" class="button" style="" />
+				</form>
+				{{#if enquirySent}}
+					<br>
+					<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
+				{{/if}}
 				<br>
-				<div class="form-group">
-			  <textarea class="textarea" rows="5" placeholder="Questions/Comments"></textarea>
-				</div>
-			</form>
-
-			<br>
-			<br>
-			<br>
-			<button type="button" class="button">Enquire</button>
+			</div>
 		</div>
-	  </div>
 
 
 	</div>
+<!-- </div> -->

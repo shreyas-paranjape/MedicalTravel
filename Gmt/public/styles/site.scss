@@ -1,7 +1,12 @@
 // Bootstrap
 // =========
 // Bootstrap can be removed entirely by deleting this line.
+$icon-font-path: "font/bootstrap/";
 @import "bootstrap/bootstrap";
+@font-face {
+				font-family: SourceSansProRegular;
+				src: url("fonts/SourceSansPro-Regular.otf");
+}
 
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
@@ -16,22 +21,31 @@
 // Add your own site style includes here
 @import "site/layout";
 .circle {
-     // background-repeat: no-repeat;
-       border-radius: 50%;
-				width: 120px;
-				height:120px;
-			}
 
+				// background-repeat: no-repeat;
+				border-radius: 50%;
+				width: 120px;
+				height: 120px;
+}
 .provider-box {
 				border: 1px solid black;
 				width: 830px;
-        margin-bottom: 20px;
+				margin-bottom: 20px;
 }
-.provider-img{
-  padding: 20px;
-   width: 250px;
-    height: 225px;
+.provider-img {
+				padding: 20px;
+				width: 250px;
+				height: 225px;
 }
+.q {
+				height: 250px;
+}
+.p {
+				height: 250px;
+				overflow-y: scroll;
+				overflow-x: hidden;
+}
+
 // .pills {
 //   margin-left: -48px;
 //   li{
@@ -44,318 +58,373 @@
 //
 //   }
 // }
-.navbar-default{
-  margin-left: -45px;
-  margin-top: -5px;
-  width:770px;
-  height:60px;
-  background-color: rgb(232,232,232);
-  li{
-    margin-left: 60px;
-    margin-top: 5px;
-    }
+.navbar-default {
+				margin-left: -50px;
+				margin-top: -5px;
+				width: 872px;
+				height: 60px;
+				background-color: rgb(232,232,232);
+				li {
+								margin-left: 60px;
+								margin-top: 5px;
+				}
+				a {
+								margin-left: 25px;
+				}
+}
+.navbar-default .navbar-nav > li > a {
+				color: black;
+}
+.tabs {
+				margin-right: 20px;
+				margin-top: -30px;
+				padding-top: 10px;
+				font-size: 20px;
+				margin-left: -15px;
+				border-bottom-width: 0;
+				height: 60px;
+				li {
+								margin-bottom: 20px;
+								font-family: SourceSansPro-Regular;
 
-  }
-  .navbar-default .navbar-nav > li > a {
-      color:black;
+								// border:1px solid #e5e5e5;
+								background-color: rgb(237,237,237);
+
+								// height:60px;
+								margin-top: 0;
+								width: 410px;
+								margin-left: -1px;
+								box-shadow: 0 5px 0 rgb(202,198,198);
+				}
+				a {
+								outline: none;
+				}
+
+				.active {
+								background-color: rgb(204,204,204);
+				}
+}
+.tab {
+				margin-right: 20px;
+				margin-top: -20px;
+				width: 275px;
+
+				// height:20px;
+				// padding-top:-60px;
+				font-size: 20px;
+				margin-left: -15px;
+				border-bottom-width: 0;
+				li {
+								margin-bottom: 20px;
+								border: 1px solid #e5e5e5;
+								background-color: rgb(237,237,237);
+								height: 60px;
+								margin-top: 10px;
+				}
+}
+.procedure {
+				margin-left: 15px;
+				.border {
+								border-right: 2px solid #e5e5e5;
+				}
+				.borders {
+								border-right: 2px solid #e5e5e5;
+								margin-top: -20px;
+				}
+				img {
+								width: 872px;
+								height: 400px;
+								margin-left: -29px;
+								margin-top: -20px;
+				}
+}
+p {
+				margin-top: -10px;
+				margin-bottom: 40px;
+				margin-left: -20px;
+				text-align: justify;
+}
+#providers,
+#doctors,
+#procedures,
+#speciality {
+				margin-left: -60px;
+				padding-top: 20px;
+				margin-top: 15px;
+				border-top: 2px solid #e5e5e5;
+				width: 882px;
+				span {
+								margin-left: 100px;
+				}
+}
+#bio {
+				font-size: 16px;
+				margin-top: 45px;
+
+				// border-bottom: 2px solid #e5e5e5;
+				padding-bottom: 40px;
+				margin-left: -40px;
+}
+.procedure-box {
+				margin-top: 20px;
+				margin-bottom: 40px;
+				h3 {
+								margin-left: -40px;
+								font-size: 16px;
+								background-color: #e5e5e5;
+								padding-top: 12px;
+								padding-bottom: 12px;
+								text-align: left;
+								padding-left: 10px;
+				}
+				img {
+								height: 180px;
+								width: 250px;
+								margin-top: 20px;
+				}
+
+				//   .pbb{
+				// margin-left:-40px;
+				//     margin-top:95px;
+				//     background-color: rgb(255,108,111);
+				//     border-color: rgb(255,108,111);
+				//     color:white;
+				//     // box-shadow: 0 3px 0 0 rgb(223,95,105);
+				//     width:100px;
+				//     height:25px;
+				//     text-align: center;
+				//     border-radius: 4px;
+				//     padding-top:3px;
+				// }
+				a {
+								outline: none;
+								text-decoration: none;
+				}
+}
+.proc {
+				margin-top: 45px;
+				border-bottom: 2px solid #e5e5e5;
+				padding-bottom: 40px;
+				width: 843px;
+				border-bottom-width: 0;
+				img {
+								width: 120px;
+								height: 120px;
+								border-radius: 50%;
+								margin-top: -10px;
+				}
+}
+.procedure-doc {
+				margin-top: 10px;
+				p {
+								padding-left: 8px;
+								margin-left: -90px;
+				}
+}
+#text {
+				width: 75px;
+				border-color: rgb(137,216,196);
+				margin-top: 20px;
+				margin-left: -80px;
+				color: rgb(137,216,196);
+}
+.doc {
+				margin-top: 45px;
+				height: 350px;
+
+				// border-bottom:2px solid #e5e5e5;
+				padding-bottom: 40px;
+				margin-left: 40px;
+				width: 843px;
+				img {
+								width: 180px;
+								height: 180px;
+								border-radius: 50%;
+								margin-top: -10px;
+				}
+				h3 {
+								margin-top: 50px;
+				}
+				p {
+								margin-left: 0;
+								margin-top: 20px;
+				}
+				#text {
+								margin-top: 40px;
+								margin-left: 0;
+				}
+}
+.proc {
+				margin-top: 45px;
+				margin-left: -45px;
+				border-bottom: 2px solid #e5e5e5;
+				width: 843px;
+				border-bottom-width: 0;
+				button {
+								background-color: #e5e5e5;
+								width: 150px;
+								height: 50px;
+								margin-bottom: 20px;
+				}
+}
+.name {
+				h3 {
+								background-color: #e5e5e5;
+								font-size: 18px;
+								width: 415px;
+								height: 70px;
+								padding-top: 25px;
+								font-weight: bold;
+								padding-left: 10px;
+								margin-left: -15px;
+								margin-top: -20px;
+				}
+}
+.form {
+				background-color: #e5e5e5;
+				width: 415px;
+				height: 600px;
+				margin-left: -15px;
+				margin-top: -30px;
+				.nm {
+								padding-top: 30px;
+				}
+				.form-control {
+								width: 350px;
+								height: 45px;
+								margin-top: 15px;
+								margin-left: 30px;
+				}
+				.textarea {
+								width: 350px;
+								margin-top: 15px;
+								margin-left: 30px;
+				}
+				.dropdown {
+								margin-left: 20px;
+								width: 100px;
+								margin-left: 30px;
+				}
+				.button {
+								margin-left: 30px;
+								width: 150px;
+								height: 40px;
+								background-color: rgb(255,108,111);
+								color: white;
+								font-size: 20px;
+								border-radius: 6px;
+								margin-top: 30px;
+								border-color: rgb(255,108,111);
+
+								// box-shadow: 0 2px 0 0 rgb(223,95,105);
+				}
 }
 
-
-
-.tabs{
-	margin-right: 20px;
-	margin-top: -30px;
-  padding-top:10px;
-	font-size:20px;
-  margin-left: -15px;
-  border-bottom-width:0px;
-  height:60px;
-li{
-    margin-bottom: 20px;
-    // border:1px solid #e5e5e5;
-    background-color: rgb(237,237,237);
-    // height:60px;
-    margin-top:0px;
-    width:365px;
-    // padding-top:5px;
-    box-shadow: 0px 5px 0px rgb(202,198,198);
-
-    }
-    a{
-      outline:none;
-    }
-    .active{
-      background-color: rgb(204,204,204);
-    }
-    }
-.tab{
-	margin-right: 20px;
-	margin-top: -20px;
-	 width:275px;
-	// height:20px;
-	// padding-top:-60px;
-	font-size:20px;
-  margin-left: -15px;
- border-bottom-width:0px;
-
-  li{
-    margin-bottom: 20px;
-    border:1px solid #e5e5e5;
-    background-color: rgb(237,237,237);
-    height:60px;
-    margin-top: 10px;
-
-
-}
-}
-
-.procedure{
-	margin-left: 15px;
-  .border{
-    border-right:2px solid #e5e5e5;
-  }
-	img{
-		width: 770px;
-		height: 400px;
-		margin-left: -25px;
-		margin-top: -20px;
-	}
-}
-
-  p{
-    margin-top:40px;
-   margin-bottom: 40px;
-  }
-
-#providers,#doctors,#procedures{
-  margin-left:-45px;
-  padding-top:20px;
-  margin-top:15px;
-  border-top:2px solid #e5e5e5;
-  width:770px;
-}
-#bio{
-  font-size: 16px;
-  margin-top: 45px;
-  // border-bottom: 2px solid #e5e5e5;
-  padding-bottom: 40px;
-  margin-left: -40px;
-}
-.procedure-box{
-margin-left: -35px;
-margin-top: 20px;
-margin-bottom:40px;
-
-h3{
-	font-size:16px;
-	background-color:#e5e5e5;
-	padding-top:12px;
-	padding-bottom:12px;
-	text-align:left;
-	padding-left:10px
-	}
-	img{
-		height: 180px;
-		width: 250px;
-    margin-top: 20px;
-
-	}
-  p{
-    margin-top:95px;
-    background-color: rgb(255,108,111);
-    color:white;
-    box-shadow: 0px 3px 0px rgb(223,95,105);
-    width:100px;
-    height:30px;
-    text-align: center;
-    border-radius: 4px;
-    padding-top:5px;
-}
-a{
-  outline: none;
-  text-decoration: none;
-}
-}
-
-.proc{
-	margin-top: 45px;
-	border-bottom:2px solid #e5e5e5;
-	 padding-bottom: 40px;
-	  margin-left:-45px;
-		width:843px;
-    border-bottom-width: 0px;
-	img{
-		width:120px;
-		height:120px;
-		border-radius:50%;
-		margin-top: -10px;
-}
-}
-.procedure-doc{
-	margin-top: -30px;
-	p{
-		padding-left: 8px;
-		margin-left: -90px;
-	}
-}
-
-#text{
-  width:75px;
-  border-color:rgb(137,216,196);
-  margin-top: 20px;
- margin-left: -50px;
-  color:rgb(137,216,196);
-}
-.doc{
-  margin-top: 45px;
-	// border-bottom:2px solid #e5e5e5;
-	 padding-bottom: 40px;
-	  margin-left:-45px;
-		width:843px;
-  img{
-    width:180px;
-		height:180px;
-		border-radius:50%;
-		margin-top: -10px;
-  }
-  #text{
-    margin-top: 40px;
-  }
-}
-.proc{
-	margin-top:45px;
-	margin-left:-45px;
-	border-bottom: 2px solid #e5e5e5;
-	width:843px;
-  border-bottom-width: 0px;
-	button{
-		background-color:#e5e5e5;
-		width:150px;
-		height:50px;
-		margin-bottom: 20px;
-
-	}
-}
-.name{
-  h3{
-  background-color:#e5e5e5;
-  font-size:18px;
-  width: 365px;
-  height:50px;
-  padding-top:15px;
-  padding-left:10px;
-  margin-left: -15px;
-  margin-top:-20px;
-}
-}
-.form{
-  background-color:#e5e5e5;
-  width:365px;
-  height:600px;
-  margin-left:-15px;
-  .nm{
-    padding-top:30px;
-  }
-
-  .form-control{
-    width: 300px;
-    height:45px;
-    margin-left:20px;
-  }
-  .textarea{
-    width: 300px;
-    margin-left:20px;
-  }
-  .dropdown{
-    margin-left: 20px;
-    width:100px;
-    }
-  .button{
-    margin-left:20px;
-    width:150px;
-    height:40px;
-    background-color:rgb(255,108,111);
-    color:white;
-    font-size: 20px;
-    border-radius: 6px;
-
-    border-color: rgb(255,108,111);
-
-
-  }
-}
 // .button{
 //   background-color:rgb(223,95,105);
 //   color:white;
 //   font-size:14px;
 //   height:30px;
 // }
-.post_img{
-  height:auto;
-  width:50%;
-  margin:0 auto;
+.post_img {
+				height: auto;
+				width: 50%;
+				margin: 0 auto;
 }
-
 .edit-input {
-    display:none;
+				display: none;
 }
-a{
+a {
+				color: black;
+}
+a:hover {
+				color: black;
+        background-color: inherit;
+}
+.nav > li > a:hover, .nav > li > a:focus {
   color: black;
+  background-color: inherit;
+}
+a:focus {
+				background-color: none;
+}
+.box {
+				width: 700px;
+				height: 300px;
+				border: 1px solid rgb(229, 229, 229);
+				margin: 100px 200px;
+				.col {
+								border-left: 1px solid #e5e5e5;
+								margin-top: 20px;
+				}
+				.form-horizontal {
+								margin-top: 50px;
+								padding-left: 5px;
+				}
+				#Email,
+				#Password {
+								width: 300px;
+								margin-left: 15px;
+				}
+				button {
+								background-color: rgb(41,132,209);
+								color: white;
+								margin-left: -58px;
+								margin-top: 10px;
+				}
+}
+.square {
+				border: 1px solid #e5e5e5;
+				width: 470px;
+				margin-left: 300px;
+				margin-top: 70px;
+				#fname,
+				#lname {
+								margin-left: 20px;
+								margin-top: 20px;
+				}
+				#email,
+				#password,
+				#pass {
+								width: 420px;
+								margin-left: 20px;
+				}
+				button {
+								background-color: rgb(41,132,209);
+								color: white;
+								margin-left: 20px;
+				}
+}
+#education,
+#awards,
+#reviews {
 
+				// margin-left: -32px;
+				// border-top:2px solid #e5e5e5;
+				// width:770px;
+				margin-left: -60px;
+				padding-top: 20px;
+				margin-top: 15px;
+				border-top: 2px solid #e5e5e5;
+				width: 882px;
+				span {
+								margin-left: 100px;
+				}
 }
-a:hover{
-  color: black;
+.btn-primary.raised {
+				box-shadow: 0 4px 0 0 rgb(223,95,105);
+				background-color: rgb(255,108,111);
+				border-color: rgb(255,108,111);
+				margin-left: -40px;
+				margin-top: 90px;
 }
-.box{
-width: 700px;
-height: 300px;
-border: 1px solid rgb(229, 229, 229);
-margin: 100px 200px;
-.col{
-  border-left:1px solid #e5e5e5;
-  margin-top:20px;
+.btn-primary.raised.active {
+
+				// background: #33a6cc;
+				box-shadow: none;
+				margin-bottom: -3px;
+				margin-top: 3px;
 }
-.form-horizontal{
-  margin-top: 50px;
-  padding-left:5px;
-}
-#Email,#Password{
-  width: 300px;
-  margin-left:15px;
-}
-button{
-  background-color:rgb(41,132,209);
-  color:white;
-  margin-left:-58px;
-  margin-top:10px;
-}
-}
-.square{
-  border:1px solid #e5e5e5;
-  width:470px;
-  margin-left:300px;
-  margin-top:70px;
-  #fname,#lname{
-    margin-left:20px;
-    margin-top:20px;
-  }
-  #email,#password,#pass{
-    width:420px;
-    margin-left:20px;
-  }
-  button{
-    background-color:rgb(41,132,209);
-    color:white;
-    margin-left: 20px;
-  }
-}
-#education,#awards,#reviews{
-  // margin-left: -32px;
-  // border-top:2px solid #e5e5e5;
-  // width:770px;
-  margin-left:-45px;
-  padding-top:20px;
-  margin-top:15px;
-  border-top:2px solid #e5e5e5;
-  width:770px;
+.spec {
+
 }

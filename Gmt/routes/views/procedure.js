@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
-
+	var locals = res.locals;
 	var SpecialityQuery = keystone.list('Speciality').model.find();
 
 	res.locals.doctors = [];
@@ -21,7 +21,12 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		SpecialityQuery.exec(function(err, specialityRes) {
-			res.locals.specialities = specialityRes;
+			res.locals.specialities = fnjs.map(function(speciality){
+				if(speciality.key == req.params.key){
+					speciality.active = true;
+				}
+				return speciality;
+			},specialityRes);
 
 			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
@@ -33,14 +38,18 @@ exports = module.exports = function(req, res) {
 				}, doctors);
 				fnjs.each(function(provider) {
 					res.locals.providers.push(provider);
+					res.locals.procedures.push(provider);
 				}, providers);
 			});
 
-			Speciality[0].getProcedures(function(e, proceduresRes) {
-				fnjs.each(function(procedure) {
-					res.locals.procedures.push(procedure);
-				}, proceduresRes);
-			});
+			// Speciality[0].getProcedures(function(e, proceduresRes) {
+			// 	fnjs.each(function(procedure) {
+			// 		if (!contains(procedure, res.locals.procedures)) {
+			// 			res.locals.procedures.push(procedure);
+			// 		}
+			//
+			// 	}, proceduresRes);
+			// });
 			next();
 		});
 	});

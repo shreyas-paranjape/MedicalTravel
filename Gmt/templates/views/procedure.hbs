@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container"> -->
 	<div class="row procedure">
 		<div class="col-lg-8 border">
 			<img src="http://placehold.it/450x150">
@@ -9,34 +9,54 @@
 						 <li><a href="#overview" >Overview</a></li>
 			 			<li><a href="#providers">Featured Providers</a></li>
 			 			<li><a href="#doctors">Specialists</a></li>
+						<li><a href="#procedures">Procedures</a></li>
 					</ul>
 			  </nav>
 
 
 				<h4 id="overview"></h4>
-				{{#each specialities}}
-					<p>
-						{{discription}}
-					</p>
-				{{/each}}
 
-				<h4 id="providers">Featured Providers</h4>
+	    <div class="row">
+		  <div class="col-lg-1">
+		  </div>
+	     <div class="col-lg-10">
+				{{#each specialities}}
+	      <p>
+					{{{discription}}}
+				</p>
+		   {{/each}}
+				</div>
+
+				<div class="col-lg-1">
+				</div>
+			</div>
+
+				<h4 id="providers"><span>Featured Providers</span></h4>
 				{{#each providers}}
 					<div class="row procedure-box">
+						<div class="col-lg-1">
+						</div>
 						<div class="col-lg-4">
 							<img src="{{cloudinaryUrl image}}">
 						</div>
 						<div class="col-lg-6">
 							<h3>{{name}}</h3>
-							<a href=""><p>Know More</p></a>
+							<button type="button" class="btn btn-primary btn-md raised" style=" height: 30px;  outline: none;">Know More</button>
+							<!-- <a href=""><p>Know More</p></a> -->
 							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+						</div>
+						<div class="col-lg-1">
 						</div>
 					</div>
 				{{/each}}
 
-				<h4 id="doctors">Doctors</h4>
+				<h4 id="doctors"><span>Doctors</span></h4>
+				<div class="q">
+					<div class="p">
 				{{#each doctors}}
-					<div class="row proc">
+					<div class="row proc" style="margin-left:0px;">
+						<div class="col-lg-1">
+						</div>
 						<div class="col-lg-3">
 							<img src="http://placehold.it/120x120">
 						</div>
@@ -49,44 +69,59 @@
 
 						<div class="col-lg-2">
 							<input type="text" class="form-control" id="text" value="Verified">
-
-						</div>
+           </div>
+					 <div class="col-lg-1">
+					 </div>
 					</div>
 				{{/each}}
-				<h4 id="procedures">Procedure</h4>
-				<div class="row proc">
+			</div>
+		</div>
+				<h4 id="procedures"><span>Procedure</span></h4>
+				<!-- <div class="row proc">
 					{{#each procedures}}
 						<div class="col-lg-4">
 							<button type="button" class="btn btn-default">{{name}}</button>
 						</div>
 					{{/each}}
 				</div>
+			 -->
+{{#each procedures}}
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-				<!-- <h4 id="procedures" style="margin-left:-32px;border-top:2px solid #e5e5e5;padding-top:20px;">Procedures</h4>
-				{{#each treatments}}
-					<div class="row treat"  style="border-bottom-width: 0px;">
-						<div class="col-lg-3">
-							<img src="images/logo.png">
-						</div>
+    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne">
+        {{name}}
+        </a>
+      </h4>
+    </div>
+    <div id="{{key}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						{{{description}}}
 
-						<div class="col-lg-6 treatment-doc">
-							<p>{{name}} </p>
-							<p>{{description}}</p>
-							<p>{{data}}</p>
-						</div>
-
-						<div class="col-lg-3">
-							<button type="button" class="btn btn-default">Verified</button>
-						</div>
 					</div>
-				{{/each}} -->
-
+        <div class="col-lg-3">
+					rs werfregf
+				</div>
+				<div class="col-lg-3">
+				<input class="btn btn-default" type="submit" value="Submit">
 			</div>
-		</div>
+			</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+	{{/each}}
+</div>
+</div>
 
 
 		<div class="col-lg-4">
-			<ul class="nav nav-stacked tabs">
+			<!-- <ul class="nav nav-stacked tabs">
 
       {{#each specialities}}
 				{{#if active}}
@@ -96,9 +131,25 @@
 				{{/if}}
 			{{/each}}
 
+			</ul> -->
+			<ul class="nav nav-stacked tabs">
+
+      {{#each specialities}}
+				{{#if active}}
+		    	<li role="presentation" class="active">
+						<a href="/procedure/{{key}}" style="height: 60px;margin-left:80px;">
+							<img  src="/images/{{key}}.png" style="width:35px;height:35px;margin-left:-60px;margin-top:0px;margin-right:20px;">
+							<span>{{name}}</span>
+						</a>
+					</li>
+				{{else}}
+					<li role="presentation"><a href="/procedure/{{key}}" style="height:60px;margin-left:80px;"><img src="/images/{{key}}.png" style="width:35px;height:35px;margin-left:-60px;margin-top:0px;margin-right:20px;">{{name}}</a></li>
+				{{/if}}
+			{{/each}}
+
 			</ul>
 		</div>
 
 	</div>
 
-</div>
+<!-- </div> -->

@@ -6,13 +6,15 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 	locals.section = 'home';
 
-	res.locals.doctors = {};
+	res.locals.doctors = [];
 
 	var procQuery = keystone.list('Doctor').model.find();
 
-	view.on('init', function(next) {
+	view.on('get', function(next) {
 		procQuery.exec(function(err, docRes) {
-			console.log("Doctors: "+docRes);
+			fnjs.each(function(doc) {
+				res.locals.doctors.push(doc);
+			}, docRes);
 		});
 		next();
 	});
@@ -20,11 +22,14 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'search1'
 	}, function(next) {
-
 		keystone.list('Procedure').model.find({
 			key: req.body.procedure
 		}).populate('doctors').exec(function(err, procedureRes) {
-			console.log("Doctors: " + procedureRes[0].doctors);
+			fnjs.each(function(doc) {
+				fnjs.each(function(doctor) {
+					res.locals.doctors.push(doctor);
+				}, doc.doctors);
+			}, procedureRes);
 		});
 		next();
 	});
@@ -36,8 +41,10 @@ exports = module.exports = function(req, res) {
 			key: req.body.speciality
 		}).exec(function(err, sepcialityRes) {
 			sepcialityRes[0].getDoctorsAndProviders(function(doctors, providers) {
-				fnjs.each(function(doctor) {
-					console.log("Doctors: " + doctor);
+				fnjs.each(function(doc) {
+					res.locals.doctors.push(doc);
+					console.log("Doctors: " + locals.doctors);
+
 				}, doctors);
 			});
 		});
@@ -47,11 +54,14 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'search3'
 	}, function(next) {
-		console.log("req.body.provider :" + req.body.provider);
 		keystone.list('Provider').model.find({
 			key: req.body.provider
 		}).populate('doctors').exec(function(err, providerRes) {
-			console.log("Doctors: " + providerRes[0].doctors);
+			fnjs.each(function(doc) {
+				fnjs.each(function(doctor) {
+					res.locals.doctors.push(doctor);
+				}, doc.doctors);
+			}, providerRes);
 		});
 		next();
 	});
