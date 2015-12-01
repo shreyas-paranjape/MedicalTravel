@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"goa-medical-travel.enquiries"},{"v":1,"key":{"procedures":1},"name":"procedures_1","ns":"goa-medical-travel.enquiries","background":true,"safe":null},{"v":1,"key":{"doctors":1},"name":"doctors_1","ns":"goa-medical-travel.enquiries","background":true,"safe":null}]}
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"goa-medical-travel.enquiries"}]}

@@ -52,8 +52,12 @@ Speciality.schema.methods.getProcedures = function(done) {
 Speciality.schema.methods.getDoctorsAndProviders = function(callback) {
 	var doctors = [];
 	var providers = [];
-	this.getProcedures(function(err, procedures) {
+	var procedures = [];
+	this.getProcedures(function(err, procedureRes) {
 		fnjs.each(function(procedure) {
+			if (!contains(procedure, procedures)) {
+				procedures.push(procedure);
+			}
 			fnjs.each(function(doctor) {
 				if (!contains(doctor, doctors)) {
 					doctors.push(doctor);
@@ -64,8 +68,8 @@ Speciality.schema.methods.getDoctorsAndProviders = function(callback) {
 					providers.push(provider);
 				}
 			}, procedure.providers);
-		}, procedures);
-		callback(doctors, providers);
+		}, procedureRes);
+		callback(doctors, providers, procedures);
 	});
 };
 

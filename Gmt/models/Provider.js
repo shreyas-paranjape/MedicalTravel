@@ -44,10 +44,24 @@ Provider.relationship({
 	path: 'providers'
 });
 
+Provider.relationship({
+	ref: 'Price',
+	path: 'provider'
+});
+
+Provider.schema.methods.getPrice = function(done) {
+	return keystone.list('Price').model.find()
+		.where('provider', this._id)
+		.populate('procedure')
+		.populate('doctors')
+		.exec(done);
+};
 Provider.schema.methods.getProcedures = function(done) {
 	return keystone.list('Procedure').model.find()
 		.where('providers', this._id)
 		.populate('doctors')
+		.populate('speciality')
+//		.lean()
 		.exec(done);
 };
 

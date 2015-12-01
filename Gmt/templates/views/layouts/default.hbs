@@ -151,8 +151,31 @@
 	</div>
 	{{!-- //- jQuery 1.11.1 is included by default, and required by both Bootstrap //- and the KeystoneJS Content Editor. If you are not targeting IE8, //- you can upgrade to 2.1.3 (also bundled) for better performance. --}}
 	<script src="/js/jquery/jquery-1.11.2.min.js"></script>
+	<script src="/js/jquery/jquery.autocomplete.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#procedure').autocomplete({
+				serviceUrl: '/autocomplete/Procedure',
+				onSelect: function(suggestion) {
+					$('#procedureId').val(suggestion.data);
+				}
+			});
+			$('#doctor').autocomplete({
+				serviceUrl: '/autocomplete/Doctor',
+				onSelect: function(suggestion) {
+					$('#doctorId').val(suggestion.data);
+				}
+			});
+			$('#global').autocomplete({
+				serviceUrl: '/autocomplete/global',
+				onSelect: function(suggestion) {
+					$('#globalId').val(suggestion.data);
+				}
+			});
+		});
+	</script>
 	{{!-- //- Customise which Bootstrap javascript files are served by including //- them specifically here, instead of bootstrap-3.3.4.min.js --}}
-	<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
+	<!-- <script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script> -->
 	{{{isAdminEditorJS user}}}
 </body>
 

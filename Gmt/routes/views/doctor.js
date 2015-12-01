@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var fnjs = require('fn.js');
+var Enquiry = keystone.list('Enquiry');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -38,6 +39,33 @@ exports = module.exports = function(req, res) {
 				}, procedureRes);
 			});
 			next();
+		});
+	});
+
+	// Enquiry form Data submission
+	view.on('post', {
+		action: 'enquire'
+	}, function(next) {
+		var newQuery = new Enquiry.model(),
+			updater = newQuery.getUpdateHandler(req);
+		keystone.list('Doctor').model.findOne({
+			key: req.params.key
+		}).exec(function(err, result) {
+			req.body.doctors = result.name;
+			req.body.flag = "Consultation";
+			updater.process(req.body, {
+				flashErrors: false,
+				fields: 'name, email, phone, procedure, doctor, flag, message',
+				errorMessage: 'Cannot load'
+			}, function(err) {
+				if (err) {
+					locals.validationErrors = err.errors;
+					console.log(err.errors);
+				} else {
+					locals.consultationSent = true;
+				}
+				next();
+			});
 		});
 	});
 	view.render('doctor');

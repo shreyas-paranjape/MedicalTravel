@@ -42,4 +42,17 @@ Procedure.add({
 	}
 });
 
+Procedure.relationship({
+	ref: 'Price',
+	path: 'procedure'
+});
+
+Procedure.schema.methods.getPrice = function(done) {
+	return keystone.list('Price').model.find()
+		.where('procedure', this._id)
+		.populate('provider')
+		.populate('doctors')
+		.exec(done);
+};
+
 Procedure.register();

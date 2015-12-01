@@ -1,0 +1,25 @@
+<div class="container">
+
+	<form class="form-inline" method="post" style="margin-left:25px;">
+		<input type="hidden" name="action" value="search">
+		<input type="text" style="height: 35px; width: 50%;" name="procedure" id="global" class="form-control" placeholder="Enter Procedure/Speciality/Doctor">
+		<input type="hidden" id="globalId" name="globalId" value="">
+		<input type="submit" style="height: 35px; width: 80px;" value="Search">
+	</form>
+
+	<div class="row">
+		{{#each doctors}}
+			<div class="col-md-4" style="border:1px solid black;width: 300px;height:200px; margin-left:25px;">
+				<div class="row">
+					<div class="col-lg-4">
+						<img src="http://placehold.it/120x120" style="border-radius:120%;margin-top:40px">
+					</div>
+					<div class="col-lg-8">
+						<p style="margin-left:30px;margin-top:60px">{{name}}</p>
+						<p style="margin-left:30px;margin-top:-25px">{{{description}}}</p>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</div>
