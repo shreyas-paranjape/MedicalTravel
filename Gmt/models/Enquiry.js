@@ -17,10 +17,10 @@ Enquiry.add({
 	provider: {
 		type: String
 	},
-	procedures: {
+	procedure: {
 		type: String
 	},
-	doctors: {
+	doctor: {
 		type: String
 	},
 	flag: {
@@ -41,8 +41,8 @@ Enquiry.add({
 	},
 	message: {
 		type: Types.Markdown,
-		// required: true,
-		// initial: false
+		required: true,
+		initial: false
 	},
 	createdAt: {
 		type: Date,
@@ -62,21 +62,25 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 	if ('function' !== typeof callback) {
 		callback = function() {};
 	}
-	var enquiry = this;
-	keystone.list('User').model.find().where('isAdmin', true).exec(function(err, admins) {
-		if (err) return callback(err);
-		new keystone.Email('enquiry-notification').send({
-			to: {
-				email: 'manjeet959@gmail.com'
-			},
-			from: {
-				name: 'Goa medical travel',
-				email: 'contact@goa-medical-travel.com'
-			},
-			subject: 'New Enquiry for Goa medical travel',
-			enquiry: enquiry
-		}, callback);
-	});
+
+	var mailBody = {};
+	mailBody.name = this.name;
+	mailBody.phone = this.phone;
+	mailBody.email = this.email;
+	mailBody.message = this.message;
+	mailBody.createdAt = this.createdAt;
+	mailBody.procedure = this.procedure;
+	mailBody.provider = this.provider;
+	mailBody.doctor = this.doctor;
+	mailBody.flag = this.flag;
+
+	new keystone.Email('enquiry').send({
+		to: 'manjeet959@gmail.com',
+		fromName: 'Goa medical travel',
+		fromEmail: 'contact@goa-medical-travel.com',
+		subject: 'New Enquiry for Goa medical travel',
+		mailBody: mailBody
+	}, callback);
 };
 Enquiry.defaultSort = '-createdAt';
 Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';

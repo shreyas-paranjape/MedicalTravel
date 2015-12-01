@@ -2,6 +2,9 @@ require('dotenv').load();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+keystone.Email.defaults.templateExt = 'hbs';
+keystone.Email.defaults.templateEngine = require('handlebars');;
+
 keystone.init({
 	'name': 'Goa medical travel',
 	'brand': 'Goa medical travel',

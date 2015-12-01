@@ -44,24 +44,26 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'enquire'
 	}, function(next) {
-		console.log(req.body);
-
 		var newQuery = new Enquiry.model(),
 			updater = newQuery.getUpdateHandler(req);
-		req.body.doctors = req.params.key;
-		req.body.flag = "Consultation";
-		updater.process(req.body, {
-			flashErrors: false,
-			fields: 'name, email, phone, procedures, doctors, flag, message',
-			errorMessage: 'Cannot load'
-		}, function(err) {
-			if (err) {
-				locals.validationErrors = err.errors;
-				console.log(err.errors);
-			} else {
-				locals.consultationSent = true;
-			}
-			next();
+		keystone.list('Doctor').model.findOne({
+			key: req.params.key
+		}).exec(function(err, result) {
+			req.body.doctors = result.name;
+			req.body.flag = "Consultation";
+			updater.process(req.body, {
+				flashErrors: false,
+				fields: 'name, email, phone, procedure, doctor, flag, message',
+				errorMessage: 'Cannot load'
+			}, function(err) {
+				if (err) {
+					locals.validationErrors = err.errors;
+					console.log(err.errors);
+				} else {
+					locals.consultationSent = true;
+				}
+				next();
+			});
 		});
 	});
 	view.render('doctor');

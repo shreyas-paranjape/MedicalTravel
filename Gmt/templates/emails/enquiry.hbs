@@ -1,0 +1,31 @@
+<h1>New Enquiry</h1>
+{{#if mailBody.email}}
+	{{#if mailBody.flag}}
+		<p class="text-larger">Type: {{mailBody.flag}}</p>
+	{{/if}}
+	<p class="text-larger">From
+		{{#if mailBody.name}}
+			<strong>{{mailBody.name}}</strong>
+		{{/if}}
+	</p>
+	{{#if mailBody.email}}
+		<a href="mailto:{{enquiry.email}}">Email: {{mailBody.email}}</a>
+	{{/if}}
+	{{#if mailBody.phone}}
+		<p class="text-larger">Phone: {{mailBody.phone}}</p>
+	{{/if}}
+	{{#if mailBody.procedure}}
+		<p class="text-larger">Procedure: {{mailBody.procedure}}</p>
+	{{/if}}
+	{{#if mailBody.provider}}
+		<p class="text-larger">Provider: {{mailBody.provider}}</p>
+	{{/if}}
+	{{#if mailBody.doctor}}
+		<p class="text-larger">Doctor: {{mailBody.doctor}}</p>
+	{{/if}}
+
+	{{#if mailBody.message}}
+		{{{mailBody.message.html}}}
+	{{/if}}
+	<p class="text-muted">Sent {{mailBody.createdAt}}</p>
+{{/if}}

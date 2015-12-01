@@ -166,6 +166,12 @@
 					$('#doctorId').val(suggestion.data);
 				}
 			});
+			$('#global').autocomplete({
+				serviceUrl: '/autocomplete/global',
+				onSelect: function(suggestion) {
+					$('#globalId').val(suggestion.data);
+				}
+			});
 		});
 	</script>
 	{{!-- //- Customise which Bootstrap javascript files are served by including //- them specifically here, instead of bootstrap-3.3.4.min.js --}}
