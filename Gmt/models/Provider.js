@@ -64,12 +64,6 @@ Provider.schema.methods.getProcedures = function(done) {
 		.exec(done);
 };
 
-Provider.schema.methods.getProceduresforSpeciality = function(done) {
-	return keystone.list('Procedure').model.find()
-		.where('speciality', this._id)
-		.exec(done);
-};
-
 Provider.schema.methods.getSpecialites = function(done) {
 	return keystone.list('Procedure').model.find()
 		.where('providers', this._id)
