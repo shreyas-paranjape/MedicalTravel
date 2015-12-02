@@ -34,8 +34,11 @@ exports = module.exports = function(req, res) {
 							res.locals.providers.push(provider);
 						}
 					}, procedure.providers);
-					console.log("procedure: " + procedure);
-					res.locals.speciality.push(procedure.speciality.name);
+				}, procedureRes);
+				fnjs.each(function(sp) {
+					if (!contains(sp.speciality, res.locals.speciality)) {
+						res.locals.speciality.push(sp.speciality);
+					}
 				}, procedureRes);
 			});
 			next();

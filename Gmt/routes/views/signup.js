@@ -14,7 +14,6 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'signup'
 	}, function(next) {
-		console.log(req.body);
 
 		var newUser = new User.model(),
 			updater = newUser.getUpdateHandler(req);

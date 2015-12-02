@@ -1,57 +1,68 @@
-<!-- <div class="container"> -->
+<div class="container">
 	<div class="row procedure">
 		<div class="col-lg-8 border">
 			<img src="images/hosp3.png">
 			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top: 4px;margin-left:20px">
-				<nav class="navbar navbar-default">
-					<ul class="nav navbar-nav">
-						<li><a href="#about">About</a></li>
-						<li><a href="#doctors">Dcotors</a></li>
-						<li><a href="#procedures">Procedures</a></li>
-						<li><a href="#reviews">Reviews</a></li>
+				<div id="navbar-example">
+					<ul class="nav nav-pills nav-justified pills" role="tablist">
+						<!-- {{#each provider}} -->
+						<!-- <li class="active"><a href="#about">{{provider}}</a></li> -->
+						<!-- {{/each}} -->
 					</ul>
-				</nav>
-				<h4 id="about"></h4>
-				<div class="row">
-					<div class="col-lg-1">
-					</div>
-					<div class="col-lg-10">
-       <p>{{{provider.description}}}</p>
-			  </div>
-				<div class="col-lg-1">
 				</div>
-			</div>
-				<h4 id="doctors"><span>Doctors</span></h4>
+				<h4 id="about"></h4>
+				<p>{{{provider.description}}}</p>
+
+				<h4 id="doctors">Doctors</h4>
 				{{#each provider.doctors}}
-					<div class="row proc">
+<<<<<<< HEAD
+					<div class="row proc" style="margin-left:0px;">
 						<div class="col-lg-1">
 						</div>
 						<div class="col-lg-3 ">
+=======
+					<div class="row proc">
+						<div class="col-lg-2 ">
+>>>>>>> 13e02343fc86994e794e8c16fa0b8b8487742dbb
 							<img src="images/logo.png">
 						</div>
 						<div class="col-lg-5  procedure-doc">
-							<p><a href="/doctor/{{key}}">{{name}}</a></p>
-							<p>{{description}}</p>
+							<h3><a href="/doctor/{{key}}">{{name}}</a></h3>
+							<p>{{{bio}}}</p>
 							<p>{{data}}</p>
 						</div>
 						<div class="col-lg-2">
 							<!-- <button type="button" class="bttn ">Verified</button> -->
-							<input type="text" class="form-control" id="text" placeholder="Verified">
-						</div>
-						<div class="col-lg-1">
+							<input type="text" class="form-control" id="txt" placeholder="Verified">
 						</div>
 					</div>
 				{{/each}}
-				<!-- <h4 id="procedures">Speciality</h4>
+				<h4 id="procedures">Speciality</h4>
 				<div class="row proc">
 					{{#each specialities}}
 						<div class="col-lg-4">
 							<button type="button" class="btn btn-default">{{name}}</button>
 						</div>
 					{{/each}}
-				</div> -->
-				<h4 id="procedures"><span>Procedure</span></h4>
+				</div>
+				<h4 id="procedures">Procedure</h4>
 				<div class="row proc">
+<<<<<<< HEAD
+					<!-- {{#each procedures}}
+					<div class="row">
+						<div class="col-lg-6">
+
+							{{name}}
+
+						</div>
+					<div class="col-lg-3">
+						{{price}}
+					</div>
+					<div class="col-lg-3">
+					<input class="btn btn-default" type="submit" value="Submit">
+				</div>
+				</div>
+				{{/each}} -->
 					{{#each specialities}}
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
@@ -83,6 +94,14 @@
 						<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
 						<p style="margin-left: 30px;">help all over.</p>
 						<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button>
+=======
+					{{#each procedures}}
+						<div>
+							<label>{{name}}: ₹ {{price}} </label>
+						</div>
+					{{/each}}
+				</div>
+>>>>>>> 13e02343fc86994e794e8c16fa0b8b8487742dbb
 			</div>
 		</div>
 		<div class="col-lg-4 name">
@@ -90,7 +109,7 @@
 			<br>
 			<br>
 			<div class="form">
-				<form class="form-inline" method="post" >
+				<form class="form-inline" method="post" style="margin-left:25px;">
 					<input type="hidden" name="action" value="enquire">
 					<div class="form-group nm">
 						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
@@ -124,4 +143,4 @@
 
 			</div>
 		</div>
-	<!-- </div> -->
+	</div>
