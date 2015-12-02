@@ -63,7 +63,7 @@
 
 						<div class="col-lg-5 procedure-doc">
 							<p><a href="/doctor/{{key}}">{{name}}</a></p>
-							<p>{{description}}</p>
+							<p>{{{description}}}</p>
 							<p>{{data}}</p>
 						</div>
 
@@ -85,7 +85,7 @@
 					{{/each}}
 				</div>
 			 -->
-<!-- {{#each procedures}}
+{{#each procedures}}
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
     <div class="panel panel-default">
@@ -100,6 +100,7 @@
       <div class="panel-body">
 				<div class="row">
 					<div class="col-lg-6">
+
 						{{{description}}}
 
 					</div>
@@ -115,8 +116,8 @@
   </div>
 
 </div>
-	{{/each}} -->
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	{{/each}}
+	<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	  <div class="panel panel-default">
 	    <div class="panel-heading" role="tab" id="headingOne">
 	      <h4 class="panel-title">
@@ -131,7 +132,7 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
+	</div> -->
 
 </div>
 </div>

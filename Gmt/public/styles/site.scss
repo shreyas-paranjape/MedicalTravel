@@ -6,6 +6,7 @@ $icon-font-path: "font/bootstrap/";
 @font-face {
 				font-family: SourceSansProRegular;
 				src: url("fonts/SourceSansPro-Regular.otf");
+
 }
 
 // The easiest way to customise Bootstrap variables while
@@ -27,6 +28,7 @@ $icon-font-path: "font/bootstrap/";
 				width: 120px;
 				height: 120px;
 }
+
 .provider-box {
 				border: 1px solid black;
 				width: 830px;
@@ -144,6 +146,9 @@ p {
 				margin-bottom: 40px;
 				margin-left: -20px;
 				text-align: justify;
+				font-size: 14px;
+				// font-family:SourceSansPro-Bold
+
 }
 #providers,
 #doctors,
@@ -295,11 +300,14 @@ p {
 								height: 45px;
 								margin-top: 15px;
 								margin-left: 30px;
+								border-radius: 8px;
 				}
 				.textarea {
 								width: 350px;
 								margin-top: 15px;
 								margin-left: 30px;
+
+
 				}
 				.dropdown {
 								margin-left: 20px;

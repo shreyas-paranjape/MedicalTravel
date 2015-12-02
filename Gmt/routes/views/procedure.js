@@ -47,6 +47,7 @@ exports = module.exports = function(req, res) {
 						fnjs.each(function(price) {
 							procedure.price = price.price;
 							locals.procedures.push(procedure);
+							console.log(locals.procedures);
 						}, priceRes)
 					})
 				}, procedures);

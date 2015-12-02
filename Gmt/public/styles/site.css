@@ -5012,7 +5012,8 @@ p {
   margin-top: -10px;
   margin-bottom: 40px;
   margin-left: -20px;
-  text-align: justify; }
+  text-align: justify;
+  font-size: 14px; }
 
 #providers, #doctors, #procedures, #speciality {
   margin-left: -60px;
@@ -5128,7 +5129,8 @@ p {
     width: 350px;
     height: 45px;
     margin-top: 15px;
-    margin-left: 30px; }
+    margin-left: 30px;
+    border-radius: 8px; }
   .form .textarea {
     width: 350px;
     margin-top: 15px;
