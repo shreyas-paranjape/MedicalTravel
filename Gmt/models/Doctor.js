@@ -16,6 +16,11 @@ Doctor.add({
 	imageOuter: {
 		type: Types.CloudinaryImage
 	},
+	bio: {
+		type: Types.Html,
+		wysiwyg: true,
+		height: 200
+	},
 	description: {
 		type: Types.Html,
 		wysiwyg: true,

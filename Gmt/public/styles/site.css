@@ -4903,6 +4903,10 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+@font-face {
+  font-family: SourceSansProRegular;
+  src: url("fonts/SourceSansPro-Regular.otf"); }
+
 #header {
   margin-top: 30px; }
 
@@ -4932,15 +4936,25 @@ button.close {
   width: 250px;
   height: 225px; }
 
+.q {
+  height: 250px; }
+
+.p {
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
 .navbar-default {
-  margin-left: -45px;
+  margin-left: -50px;
   margin-top: -5px;
-  width: 770px;
+  width: 872px;
   height: 60px;
   background-color: #e8e8e8; }
   .navbar-default li {
     margin-left: 60px;
     margin-top: 5px; }
+  .navbar-default a {
+    margin-left: 25px; }
 
 .navbar-default .navbar-nav > li > a {
   color: black; }
@@ -4951,18 +4965,21 @@ button.close {
   padding-top: 10px;
   font-size: 20px;
   margin-left: -15px;
-  border-bottom-width: 0px;
+  border-bottom-width: 0;
   height: 60px; }
   .tabs li {
     margin-bottom: 20px;
+    font-family: SourceSansPro-Regular;
     background-color: #ededed;
-    margin-top: 0px;
-    width: 365px;
-    box-shadow: 0px 5px 0px #cac6c6; }
+    margin-top: 0;
+    width: 410px;
+    margin-left: -1px;
+    box-shadow: 0 5px 0 #c6c2c2; }
   .tabs a {
     outline: none; }
   .tabs .active {
-    background-color: #cccccc; }
+    background-color: #cccccc;
+    margin-left: -1px; }
 
 .tab {
   margin-right: 20px;
@@ -4970,7 +4987,7 @@ button.close {
   width: 275px;
   font-size: 20px;
   margin-left: -15px;
-  border-bottom-width: 0px; }
+  border-bottom-width: 0; }
   .tab li {
     margin-bottom: 20px;
     border: 1px solid #e5e5e5;
@@ -4982,22 +4999,29 @@ button.close {
   margin-left: 15px; }
   .procedure .border {
     border-right: 2px solid #e5e5e5; }
+  .procedure .borders {
+    border-right: 2px solid #e5e5e5;
+    margin-top: -20px; }
   .procedure img {
-    width: 770px;
+    width: 872px;
     height: 400px;
-    margin-left: -25px;
+    margin-left: -29px;
     margin-top: -20px; }
 
 p {
-  margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-top: -10px;
+  margin-bottom: 40px;
+  margin-left: -20px;
+  text-align: justify; }
 
-#providers, #doctors, #procedures {
-  margin-left: -45px;
+#providers, #doctors, #procedures, #speciality {
+  margin-left: -60px;
   padding-top: 20px;
-  margin-top: 15px;
+  margin-top: 10px;
   border-top: 2px solid #e5e5e5;
-  width: 770px; }
+  width: 882px; }
+  #providers span, #doctors span, #procedures span, #speciality span {
+    margin-left: 100px; }
 
 #bio {
   font-size: 16px;
@@ -5006,10 +5030,10 @@ p {
   margin-left: -40px; }
 
 .procedure-box {
-  margin-left: -35px;
   margin-top: 20px;
   margin-bottom: 40px; }
   .procedure-box h3 {
+    margin-left: -40px;
     font-size: 16px;
     background-color: #e5e5e5;
     padding-top: 12px;
@@ -5020,16 +5044,6 @@ p {
     height: 180px;
     width: 250px;
     margin-top: 20px; }
-  .procedure-box p {
-    margin-top: 95px;
-    background-color: #ff6c6f;
-    color: white;
-    box-shadow: 0px 3px 0px #df5f69;
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    border-radius: 4px;
-    padding-top: 5px; }
   .procedure-box a {
     outline: none;
     text-decoration: none; }
@@ -5038,9 +5052,8 @@ p {
   margin-top: 45px;
   border-bottom: 2px solid #e5e5e5;
   padding-bottom: 40px;
-  margin-left: -45px;
   width: 843px;
-  border-bottom-width: 0px; }
+  border-bottom-width: 0; }
   .proc img {
     width: 120px;
     height: 120px;
@@ -5048,7 +5061,7 @@ p {
     margin-top: -10px; }
 
 .procedure-doc {
-  margin-top: -30px; }
+  margin-top: 10px; }
   .procedure-doc p {
     padding-left: 8px;
     margin-left: -90px; }
@@ -5057,28 +5070,35 @@ p {
   width: 75px;
   border-color: #89d8c4;
   margin-top: 20px;
-  margin-left: -50px;
+  margin-left: -80px;
   color: #89d8c4; }
 
 .doc {
   margin-top: 45px;
+  height: 350px;
   padding-bottom: 40px;
-  margin-left: -45px;
+  margin-left: 40px;
   width: 843px; }
   .doc img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     margin-top: -10px; }
+  .doc h3 {
+    margin-top: 50px; }
+  .doc p {
+    margin-left: 0;
+    margin-top: 20px; }
   .doc #text {
-    margin-top: 40px; }
+    margin-top: 40px;
+    margin-left: 0; }
 
 .proc {
   margin-top: 45px;
   margin-left: -45px;
   border-bottom: 2px solid #e5e5e5;
   width: 843px;
-  border-bottom-width: 0px; }
+  border-bottom-width: 0; }
   .proc button {
     background-color: #e5e5e5;
     width: 150px;
@@ -5088,38 +5108,44 @@ p {
 .name h3 {
   background-color: #e5e5e5;
   font-size: 18px;
-  width: 365px;
-  height: 50px;
-  padding-top: 15px;
+  width: 415px;
+  height: 70px;
+  padding-top: 25px;
+  font-weight: bold;
   padding-left: 10px;
-  margin-left: -15px;
+  margin-left: -16px;
   margin-top: -20px; }
 
 .form {
   background-color: #e5e5e5;
-  width: 365px;
+  width: 415px;
   height: 600px;
-  margin-left: -15px; }
+  margin-left: -15px;
+  margin-top: -30px; }
   .form .nm {
     padding-top: 30px; }
   .form .form-control {
-    width: 300px;
+    width: 350px;
     height: 45px;
-    margin-left: 20px; }
+    margin-top: 15px;
+    margin-left: 30px; }
   .form .textarea {
-    width: 300px;
-    margin-left: 20px; }
+    width: 350px;
+    margin-top: 15px;
+    margin-left: 30px; }
   .form .dropdown {
     margin-left: 20px;
-    width: 100px; }
+    width: 100px;
+    margin-left: 30px; }
   .form .button {
-    margin-left: 20px;
+    margin-left: 30px;
     width: 150px;
     height: 40px;
     background-color: #ff6c6f;
     color: white;
     font-size: 20px;
     border-radius: 6px;
+    margin-top: 30px;
     border-color: #ff6c6f; }
 
 .post_img {
@@ -5134,7 +5160,15 @@ a {
   color: black; }
 
 a:hover {
-  color: black; }
+  color: black;
+  background-color: inherit; }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  color: black;
+  background-color: inherit; }
+
+a:focus {
+  background-color: none; }
 
 .box {
   width: 700px;
@@ -5173,8 +5207,46 @@ a:hover {
     margin-left: 20px; }
 
 #education, #awards, #reviews {
-  margin-left: -45px;
+  margin-left: -60px;
   padding-top: 20px;
   margin-top: 15px;
   border-top: 2px solid #e5e5e5;
-  width: 770px; }
+  width: 882px; }
+  #education span, #awards span, #reviews span {
+    margin-left: 100px; }
+
+.btn-primary.raised {
+  box-shadow: 0 4px 0 0 #df5f69;
+  background-color: #ff6c6f;
+  border-color: #ff6c6f;
+  margin-left: -40px;
+  margin-top: 90px; }
+
+.btn-primary.raised.active {
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px; }
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto; }
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.autocomplete-selected {
+  background: #F0F0F0; }
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF; }
+
+.autocomplete-group {
+  padding: 2px 5px; }
+
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #000; }

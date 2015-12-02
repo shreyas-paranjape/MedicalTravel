@@ -94,7 +94,7 @@ $icon-font-path: "font/bootstrap/";
 								margin-top: 0;
 								width: 410px;
 								margin-left: -1px;
-								box-shadow: 0 5px 0 rgb(202,198,198);
+								box-shadow: 0 5px 0 rgb(198,194,194);
 				}
 				a {
 								outline: none;
@@ -102,6 +102,7 @@ $icon-font-path: "font/bootstrap/";
 
 				.active {
 								background-color: rgb(204,204,204);
+								margin-left: -1px;
 				}
 }
 .tab {
@@ -150,7 +151,7 @@ p {
 #speciality {
 				margin-left: -60px;
 				padding-top: 20px;
-				margin-top: 15px;
+				margin-top: 10px;
 				border-top: 2px solid #e5e5e5;
 				width: 882px;
 				span {
@@ -276,7 +277,7 @@ p {
 								padding-top: 25px;
 								font-weight: bold;
 								padding-left: 10px;
-								margin-left: -15px;
+								margin-left: -16px;
 								margin-top: -20px;
 				}
 }

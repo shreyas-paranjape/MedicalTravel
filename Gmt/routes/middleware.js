@@ -18,6 +18,10 @@ exports.initLocals = function(req, res, next) {
 		key: 'procedure',
 		href: '/procedure/orthopedics'
 	}, {
+		label: 'Doctors',
+		key: 'doctors',
+		href: '/doctors'
+	}, {
 		label: 'Connect',
 		key: 'contact',
 		href: '/contact'
