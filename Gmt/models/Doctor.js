@@ -49,7 +49,7 @@ Doctor.relationship({
 Doctor.schema.methods.getProcedures = function(callback) {
 	return keystone.list('Procedure').model.find({
 		doctors: this._id
-	}).populate('providers').exec(callback);
+	}).populate('providers').populate('speciality').exec(callback);
 };
 
 

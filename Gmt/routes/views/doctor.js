@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 	res.locals.procedures = [];
 	res.locals.providers = [];
-
+	res.locals.speciality = [];
 	var contains = function(aValue, aArray) {
 		var idx;
 		for (idx = 0; idx < aArray.length; idx++) {
@@ -34,6 +34,11 @@ exports = module.exports = function(req, res) {
 							res.locals.providers.push(provider);
 						}
 					}, procedure.providers);
+				}, procedureRes);
+				fnjs.each(function(sp) {
+					if (!contains(sp.speciality, res.locals.speciality)) {
+						res.locals.speciality.push(sp.speciality);
+					}
 				}, procedureRes);
 			});
 			next();

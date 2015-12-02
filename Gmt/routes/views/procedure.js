@@ -10,9 +10,24 @@ exports = module.exports = function(req, res) {
 	res.locals.providers = [];
 	res.locals.procedures = [];
 
+	var contains = function(aValue, aArray) {
+		var idx;
+		for (idx = 0; idx < aArray.length; idx++) {
+			if (aValue._id.equals(aArray[idx]._id)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	view.on('init', function(next) {
 		SpecialityQuery.exec(function(err, specialityRes) {
-			res.locals.specialities = specialityRes;
+			res.locals.specialities = fnjs.map(function(speciality){
+				if(speciality.key == req.params.key){
+					speciality.active = true;
+				}
+				return speciality;
+			},specialityRes);
 
 			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
