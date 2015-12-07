@@ -36,20 +36,19 @@ exports = module.exports = function(req, res) {
 		ProvQuery.exec(function(err, currentProvider) {
 			currentProvider.getProcedures(function(e, procedures) {
 				fnjs.each(function(procedure) {
-					if (!contains(procedure.speciality, res.locals.specialities)) {
-						locals.specialities.push(procedure.speciality);
-					}
 					keystone.list('Price').model.find({
 						procedure: procedure.id,
 						provider: currentProvider.id
 					}).exec(function(er, priceRes) {
 						fnjs.each(function(price) {
 							procedure.price = price.price;
-							locals.procedures.push(procedure);
+						//	if (!contains(procedure.speciality, res.locals.specialities)) {
+								procedure.speciality = procedure;
+								locals.specialities.push(procedure.speciality);
+					//		}
 						}, priceRes)
 					})
 				}, procedures);
-
 			});
 		});
 		next();

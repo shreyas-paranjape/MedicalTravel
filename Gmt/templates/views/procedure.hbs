@@ -1,12 +1,14 @@
 <!-- <div class="container"> -->
-	<div class="row procedure">
+	<div class="row procedure" style="margin:0px;">
 		<div class="col-lg-8 border">
-			<img src="http://placehold.it/450x150">
-			<div class="scrolls" data-spy="scroll" data-target="#navbar-example" style="margin-top:4px;margin-left:20px">
+
+			<img src="../images/cancer_Treatments(1).jpg">
+
+			<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
 
 			    <nav class="navbar navbar-default">
             <ul class="nav navbar-nav">
-						 <li><a href="#overview" >Overview</a></li>
+						 <li><a href="#overview">Overview</a></li>
 			 			<li><a href="#providers">Featured Providers</a></li>
 			 			<li><a href="#doctors">Specialists</a></li>
 						<li><a href="#procedures">Procedures</a></li>
@@ -20,11 +22,7 @@
 		  <div class="col-lg-1">
 		  </div>
 	     <div class="col-lg-10">
-				{{#each specialities}}
-	      <p>
-					{{{discription}}}
-				</p>
-		   {{/each}}
+		<p>	{{{speciality}}}</p>
 				</div>
 
 				<div class="col-lg-1">
@@ -36,16 +34,16 @@
 					<div class="row procedure-box">
 						<div class="col-lg-1">
 						</div>
-						<div class="col-lg-4">
-							<img src="{{cloudinaryUrl image}}">
+						<div class="col-lg-3">
+							<img src="">
 						</div>
 						<div class="col-lg-6">
 							<h3>{{name}}</h3>
-							<button type="button" class="btn btn-primary btn-md raised" style=" height: 30px;  outline: none;">Know More</button>
+							<button type="button" class="btn btn-primary btn-md raised" style=" height: 30px;  outline: none;margin-left:0px">Know More</button>
 							<!-- <a href=""><p>Know More</p></a> -->
 							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 						</div>
-						<div class="col-lg-1">
+						<div class="col-lg-2">
 						</div>
 					</div>
 				{{/each}}
@@ -58,17 +56,18 @@
 						<div class="col-lg-1">
 						</div>
 						<div class="col-lg-3">
-							<img src="http://placehold.it/120x120">
+							<img src="http://placehold.it/104x104">
 						</div>
 
 						<div class="col-lg-5 procedure-doc">
-							<p><a href="/doctor/{{key}}">{{name}}</a></p>
-							<p>{{description}}</p>
+							<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
+							<p>{{{description}}}</p>
 							<p>{{data}}</p>
 						</div>
 
 						<div class="col-lg-2">
-							<input type="text" class="form-control" id="text" value="Verified">
+							<input type="text" class="form-control" id="text" value="View Profile">
+								<!-- <button type="button" id="text" style="width:120px;height:30px;background-color:white;border-radius:5px;box-shadow:none;border-width: 1px;">View Profile</button> -->
            </div>
 					 <div class="col-lg-1">
 					 </div>
@@ -77,91 +76,71 @@
 			</div>
 		</div>
 				<h4 id="procedures"><span>Procedure</span></h4>
-				<!-- <div class="row proc">
-					{{#each procedures}}
-						<div class="col-lg-4">
-							<button type="button" class="btn btn-default">{{name}}</button>
-						</div>
-					{{/each}}
-				</div>
-			 -->
-{{#each procedures}}
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-    <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
+			 <div class="row" style="border:1px solid #e5e5e5;width: 700px; margin-left: 45px;border-radius:4px;">
+
+{{#each procedures}}
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+
+    <div class="panel panel-default" style="border-width: 0px;margin-left:20px;width:650px">
+    <div class="panel-heading" role="tab" id="headingOne" style="margin-top:20px">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne">
-        {{name}}
+
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+					<div class="row">
+						<div class="col-lg-8" style="padding-top:5px;">
+
+							{{name}}
+<!-- <span class="fa fa-plus-square-o"></span> -->
+						</div>
+					<div class="col-lg-2"  style="padding-top:5px;text-align:right">
+						{{price}}
+					</div>
+					<div class="col-lg-2">
+					<input class="btn btn-default" type="submit" value="Enquiry" style="height: 30px; width: 80px; padding-top: 4px;">
+				</div>
         </a>
       </h4>
     </div>
-    <div id="{{key}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-				<div class="row">
-					<div class="col-lg-6">
+     <span style="margin-left:10px;margin-right:10px">{{{description}}}</span>
 
-						{{{description}}}
 
-					</div>
-        <div class="col-lg-3">
-					{{price}}
-				</div>
-				<div class="col-lg-3">
-				<input class="btn btn-default" type="submit" value="Submit">
-			</div>
-			</div>
+
       </div>
     </div>
   </div>
 
 </div>
 	{{/each}}
-	<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-	  <div class="panel panel-default">
-	    <div class="panel-heading" role="tab" id="headingOne">
-	      <h4 class="panel-title">
-	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-	          Collapsible Group Item #1
-	        </a>
-	      </h4>
-	    </div>
-	    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-	      <div class="panel-body">
-	        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-	      </div>
-	    </div>
-	  </div>
-	</div> -->
+</div>
+
 
 </div>
 </div>
 
 
 		<div class="col-lg-4">
-			<!-- <ul class="nav nav-stacked tabs">
 
-      {{#each specialities}}
-				{{#if active}}
-		    	<li role="presentation" class="active"><a href="/procedure/{{key}}" style="height: 60px;margin-left:80px;"><img src="/images/{{key}}.jpg" style="width:50px;height:30px;margin-left:-60px;margin-top:0px;">{{name}}</a></li>
-				{{else}}
-					<li role="presentation"><a href="/procedure/{{key}}" style="height:60px;">{{name}}</a></li>
-				{{/if}}
-			{{/each}}
-
-			</ul> -->
 			<ul class="nav nav-stacked tabs">
 
       {{#each specialities}}
 				{{#if active}}
 		    	<li role="presentation" class="active">
-						<a href="/procedure/{{key}}" style="height: 60px;margin-left:80px;">
-							<img  src="/images/{{key}}.png" style="width:35px;height:35px;margin-left:-60px;margin-top:0px;margin-right:20px;">
+						<a href="/procedure/{{key}}" style="">
+							<img  src="/images/{{key}}.png" style="width:27px;height:28.1px;margin-left:-60px;margin-top:0px;margin-right:20px;position:relative;top:8px">
 							<span>{{name}}</span>
 						</a>
 					</li>
 				{{else}}
-					<li role="presentation"><a href="/procedure/{{key}}" style="height:60px;margin-left:80px;"><img src="/images/{{key}}.png" style="width:35px;height:35px;margin-left:-60px;margin-top:0px;margin-right:20px;">{{name}}</a></li>
+					<li role="presentation">
+						<a href="/procedure/{{key}}" style="">
+							<img src="/images/{{key}}.png" style="width:27px;height:28.1px;margin-left:-60px;margin-top:0px;margin-right:20px;position:relative;top:8px">
+							<span >{{name}}</span>
+						</a>
+					</li>
 				{{/if}}
 			{{/each}}
 

@@ -9,6 +9,7 @@ exports = module.exports = function(req, res) {
 	res.locals.doctors = [];
 	res.locals.providers = [];
 	res.locals.procedures = [];
+	res.locals.speciality = [];
 
 	var contains = function(aValue, aArray) {
 		var idx;
@@ -22,17 +23,20 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		SpecialityQuery.exec(function(err, specialityRes) {
-			res.locals.specialities = fnjs.map(function(speciality){
-				if(speciality.key == req.params.key){
+			res.locals.specialities = fnjs.map(function(speciality) {
+				if (speciality.key == req.params.key) {
 					speciality.active = true;
 				}
 				return speciality;
-			},specialityRes);
-
+			}, specialityRes);
+			res.locals.specialities = specialityRes;
 			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
 			}, specialityRes);
-
+			fnjs.each(function(speciality) {
+				res.locals.speciality.push(speciality.discription);
+				console.log(res.locals.speciality);
+			}, Speciality);
 			Speciality[0].getDoctorsAndProviders(function(doctors, providers, procedures) {
 				fnjs.each(function(doctor) {
 					res.locals.doctors.push(doctor);
@@ -47,7 +51,6 @@ exports = module.exports = function(req, res) {
 						fnjs.each(function(price) {
 							procedure.price = price.price;
 							locals.procedures.push(procedure);
-							console.log(locals.procedures);
 						}, priceRes)
 					})
 				}, procedures);

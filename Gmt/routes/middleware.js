@@ -16,20 +16,21 @@ exports.initLocals = function(req, res, next) {
 	}, {
 		label: 'Procedure',
 		key: 'procedure',
-		href: '/procedure/orthopedics'
+		href: '/procedure/bones-and-joints'
 	}, {
 		label: 'Doctors',
 		key: 'doctors',
 		href: '/doctors'
-	}, {
-		label: 'Connect',
-		key: 'contact',
-		href: '/contact'
+	// }, {
+	// 	label: 'Connect',
+	// 	key: 'contact',
+	// 	href: '/contact'
 
 	// 	label: 'User',
 	// 	key: 'user',
 	// 	href: '/user'
-	}];
+	}
+];
 
 	locals.navs =[{
 		label: 'Profile',
