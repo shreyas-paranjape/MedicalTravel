@@ -17,10 +17,11 @@ exports = module.exports = function(req, res) {
 
 		var newUser = new User.model(),
 			updater = newUser.getUpdateHandler(req);
-
+		req.body.lastLogin = Date.now;
 		updater.process(req.body, {
+
 			flashErrors: false,
-			fields: 'name, email, password',
+			fields: 'name, email, password, lastLogin',
 			errorMessage: 'Cannot Login:'
 		}, function(err) {
 			if (err) {

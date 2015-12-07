@@ -25,7 +25,9 @@ User.add({
 		initial: true,
 		required: true
 	},
-
+	lastLogin: {
+		type: Date,
+	},
 	boxId: {
 		type: String,
 		required: false
@@ -62,5 +64,38 @@ User.relationship({
 	path: 'posts',
 	refPath: 'author'
 });
+User.relationship({
+	ref: 'Feedback',
+	path: 'user',
+});
+
+User.schema.pre('save', function(next) {
+	this.wasNew = this.isNew;
+	next();
+});
+User.schema.post('save', function() {
+	if (this.wasNew) {
+		this.sendNotificationEmail();
+	}
+});
+User.schema.methods.sendNotificationEmail = function(callback) {
+	if ('function' !== typeof callback) {
+		callback = function() {};
+	}
+
+	var mailBody = {};
+	mailBody.name = this.name;
+	mailBody.email = this.email;
+
+	new keystone.Email('signup').send({
+		to: this.email,
+		fromName: 'Goa medical travel',
+		fromEmail: 'contact@goa-medical-travel.com',
+		subject: 'New Enquiry for Goa medical travel',
+		mailBody: mailBody
+	}, callback);
+};
+
+
 User.defaultColumns = 'name, email, isAdmin';
 User.register();

@@ -21,9 +21,10 @@ exports = module.exports = function(req, res) {
 		var newEnquiry = new Enquiry.model(),
 			updater = newEnquiry.getUpdateHandler(req);
     req.body.flag = "Connect";
+		req.body.state = "N";
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'name, email, phone, flag, message',
+			fields: 'name, email, phone, flag, state, message',
 			errorMessage: 'There was a problem submitting your enquiry:'
 		}, function(err) {
 			if (err) {

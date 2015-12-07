@@ -26,6 +26,9 @@ Enquiry.add({
 	flag: {
 		type: String
 	},
+	state: {
+		type: String
+	},
 	enquiryType: {
 		type: Types.Select,
 		options: [{
