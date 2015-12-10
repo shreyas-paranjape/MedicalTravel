@@ -1,5 +1,5 @@
 <!-- <div class="container"> -->
-	<div class="row procedure" style="margin:0px;">
+	<div class="row procedure" >
 		<div class="col-lg-8 border no-padding" style="padding:0px;">
 
 
@@ -63,10 +63,10 @@
 					<div class="row">
 						<div class="col-lg-1">
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-3">
 					<span>Doctors</span>
 				  </div>
-					<div class="col-lg-3">
+					<div class="col-lg-8">
 					</div>
 				</div>
 				</h4>
@@ -107,36 +107,53 @@
 					<div class="row">
 						<div class="col-lg-1">
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-3">
 					<span>Speciality</span>
 				</div>
-					<div class="col-lg-3">
+					<div class="col-lg-8">
 					</div>
 				</div>
 				</h4>
-				<div class="row">
-					{{#each specialities}}
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-					    <div class="panel-heading" role="tab" id="headingOne">
-					      <h4 class="panel-title">
-					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne">
-					        {{name}}
-					        </a>
-					      </h4>
-					    </div>
 
-					    <div id="{{key}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-					      <div class="panel-body">
-								uytfgyugtu                hghtyu            gtytyjt
-					      </div>
-					    </div>
+						<div class="row">
+							<div class="col-lg-1">
+							</div>
+							<div class="col-lg-10" style="border:1px solid #e5e5e5;border-radius:4px;">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							{{#each specialities}}
 
-					  </div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+													<div class="row accordion" >
+														<div class="col-lg-8 title">
+															{{name}}
+															<!-- <span class="fa fa-plus-square-o"></span> -->
+														</div>
+														<div class="col-lg-2 price">
+															{{price}}
+														</div>
+														<div class="col-lg-2">
+															<input class="btn btn-default" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
+														</div>
+													</div>
+												</a>
+											</h4>
+											</div>
+											<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+												<div class="panel-body">
+													{{{description}}}
+												</div>
+											</div>
+										</div>
 
-					</div>
-						{{/each}}
+							{{/each}}
+							</div>
 						</div>
+							<div class="col-lg-1">
+							</div>
+							</div>
 						<h4 id="reviews">
 							<div class="row">
 								<div class="col-lg-1">
@@ -163,10 +180,14 @@
 			<br>
 			<br>
 			<div class="form">
+				<div class="row">
+					<div class="col-lg-1">
+					</div>
+					<div class="col-lg-10">
 				<form class="form-inline" method="post" >
 					<input type="hidden" name="action" value="enquire">
 					<div class="form-group nm">
-						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
+						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" >
 					</div>
 					<div class="form-group">
 						<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
@@ -193,9 +214,11 @@
 					<br>
 					<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
 				{{/if}}
-
+</div>
 				<br>
-
+				<div class="col-lg-1">
+				</div>
+</div>
 			</div>
 		</div>
 	</div>

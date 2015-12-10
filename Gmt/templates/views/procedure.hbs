@@ -42,7 +42,7 @@
 					</div>
 					<div class="col-lg-5">
 						<h3>{{name}}</h3>
-						<button type="button" class="btn btn-primary btn-md raised" style=" ">Know More</button>
+						<button type="button" class="btn btn-primary btn-md raised">Know More</button>
 						<!-- <a href=""><p>Know More</p></a> -->
 						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 					</div>
@@ -99,8 +99,9 @@
 				<div class="col-lg-1">
 				</div>
 				<div class="col-lg-10" style="border:1px solid #e5e5e5;border-radius:4px;">
-				{{#each procedures}}
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				{{#each procedures}}
+
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="headingOne">
 								<h4 class="panel-title">
@@ -114,7 +115,7 @@
 												{{price}}
 											</div>
 											<div class="col-lg-2">
-												<input class="btn btn-default" type="submit" value="Enquiry">
+												<input class="btn btn-default" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
 											</div>
 										</div>
 									</a>
@@ -126,8 +127,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
+
 				{{/each}}
+				</div>
 			</div>
 				<div class="col-lg-1">
 				</div>
@@ -141,15 +143,32 @@
 				{{#if active}}
 					<li role="presentation" class="active">
 						<a href="/procedure/{{key}}" >
-							<img src="/images/{{key}}.png" style="width:27px;height:28.1px;margin-left:-60px;margin-top:0px;margin-right:20px;position:relative;top:8px">
-							<span>{{name}}</span>
+					<div class="row">
+						<div class="col-lg-1">
+						</div>
+						<div class="col-lg-2">
+							<img src="/images/{{key}}.png" style="width:27px;height:28.1px;position:relative;top:8px">
+
+						</div>
+						<div class="col-lg-7"><span>{{name}}</span></div>
+						<div class="col-lg-1">
+						</div>
+						</div>
 						</a>
 					</li>
 				{{else}}
 					<li role="presentation">
-						<a href="/procedure/{{key}}" style="">
-							<img src="/images/{{key}}.png" style="width:27px;height:28.1px;margin-left:-60px;margin-top:0px;margin-right:20px;position:relative;top:8px">
-							<span>{{name}}</span>
+						<a href="/procedure/{{key}}" >
+							<div class="row">
+								<div class="col-lg-1">
+								</div>
+								<div class="col-lg-2">
+							<img src="/images/{{key}}.png" style="width:27px;height:28.1px;position:relative;top:8px">
+						</div>
+						<div class="col-lg-7"><span>{{name}}</span></div>
+						<div class="col-lg-1">
+						</div>
+						</div>
 						</a>
 					</li>
 				{{/if}}
