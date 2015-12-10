@@ -7,7 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Goa medical travel</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link href="/styles/site.css" rel="stylesheet"> {{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //- Safely
+	<link href="/styles/site.css" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+	{{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //- Safely
 	remove this block if you are not targeting IE8 --}}
 	<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
@@ -41,7 +45,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								{{# each navs}}
 								<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16px;">
-									<a href="{{ href }}">{{ label }}</a>
+									<a href="{{ href }}" style="">{{ label }}</a>
 								</li>
 								{{/each}}
 							</ul>
@@ -52,7 +56,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							{{# each navLinks}}
 							<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:17px;margin-left:-10px;">
-								<a href="{{ href }}">{{ label }}</a>
+								<a href="{{ href }}" style="outline:none;">{{ label }}</a>
 							</li>
 							{{/each}}
 

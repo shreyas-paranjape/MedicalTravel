@@ -29,5 +29,5 @@ Price.add({
 		type: String
 	}
 });
-
+Price.defaultSort = '-price';
 Price.register();

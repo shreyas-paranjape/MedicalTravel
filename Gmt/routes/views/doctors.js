@@ -7,8 +7,9 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 
 	res.locals.doctors = [];
-
+	res.locals.speciality = [];
 	var procQuery = keystone.list('Doctor').model.find();
+
 
 	var procedureSearch = function(q) {
 		keystone.list('Procedure').model.find({
@@ -59,6 +60,14 @@ exports = module.exports = function(req, res) {
 			fnjs.each(function(doc) {
 				res.locals.doctors.push(doc);
 			}, docRes);
+
+			keystone.list('Speciality').model.find().exec(function(er, spRes) {
+				fnjs.each(function(sp) {
+					res.locals.speciality.push(sp);
+				}, spRes);
+
+			});
+
 		});
 		next();
 	});

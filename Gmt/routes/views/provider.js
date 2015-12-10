@@ -31,24 +31,25 @@ exports = module.exports = function(req, res) {
 
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
-	});
+	}).populate('doctors');
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, currentProvider) {
 			currentProvider.getProcedures(function(e, procedures) {
 				fnjs.each(function(procedure) {
+					if (!contains(procedure.speciality, res.locals.specialities)) {
+						locals.specialities.push(procedure.speciality);
+					}
 					keystone.list('Price').model.find({
 						procedure: procedure.id,
 						provider: currentProvider.id
 					}).exec(function(er, priceRes) {
 						fnjs.each(function(price) {
 							procedure.price = price.price;
-						//	if (!contains(procedure.speciality, res.locals.specialities)) {
-								procedure.speciality = procedure;
-								locals.specialities.push(procedure.speciality);
-					//		}
+							locals.procedures.push(procedure);
 						}, priceRes)
 					})
 				}, procedures);
+
 			});
 		});
 		next();

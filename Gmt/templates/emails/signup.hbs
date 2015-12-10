@@ -1,0 +1,13 @@
+<h3>New User</h1>
+{{#if mailBody.email}}
+
+	<p class="text-larger">From
+		{{#if mailBody.name}}
+			<strong>{{mailBody.name}}</strong>
+		{{/if}}
+	</p>
+	{{#if mailBody.email}}
+		<a href="mailto:{{enquiry.email}}">Email: {{mailBody.email}}</a>
+	{{/if}}
+
+{{/if}}

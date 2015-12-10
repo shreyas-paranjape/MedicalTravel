@@ -4932,119 +4932,79 @@ button.close {
 .no-padding {
   padding: 0; }
 
-.circle {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px; }
+.navbar {
+  margin-bottom: 0; }
 
 .provider-box {
-  border: 1px solid black;
-  width: 830px;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
   margin-bottom: 20px; }
 
 .provider-img {
-  padding: 20px;
-  width: 250px;
-  height: 225px; }
+  padding: 20px; }
+
+.provider-info h4 {
+  margin-left: 30px;
+  margin-top: 20px; }
+.provider-info p {
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-left: 0;
+  margin-right: 20px; }
+.provider-info .btn-default {
+  margin-top: 70px; }
 
 .q {
-  height: 250px; }
+  height: 400px; }
 
 .p {
-  height: 250px;
+  height: 350px;
   overflow-y: scroll;
   overflow-x: hidden; }
 
 .navbar-default {
-  margin-left: -50px;
-  margin-top: -4px;
-  width: 854px;
-  height: 72px;
   background-color: #e8e8e8;
   border-radius: 0; }
   .navbar-default li {
-    margin-left: 60px;
-    margin-top: 10px;
     font-family: SourceSansPro-Regular;
     font-size: 16px; }
   .navbar-default a {
-    margin-left: 23px; }
+    outline: none; }
 
 .navbar-default .navbar-nav > li > a {
   color: black; }
 
-.tabs {
-  margin-right: 20px;
-  margin-top: -30px;
-  padding-top: 10px;
-  font-size: 24px;
-  margin-left: -15px;
-  border-bottom-width: 0;
-  width: 434px; }
-  .tabs li {
-    margin-bottom: 20px;
-    font-family: SourceSansPro-Regular;
-    background-color: #ededed;
-    margin-top: 0;
-    box-shadow: 0 5px 0 #CAC6C6; }
-  .tabs a {
-    outline: none;
-    height: 75.21px;
-    margin-left: 80px; }
-  .tabs span {
-    position: relative;
-    top: 11px;
-    margin-left: 20px; }
-  .tabs .active {
-    background-color: #cccccc; }
-
-.tab {
-  margin-right: 20px;
-  margin-top: -20px;
-  width: 275px;
-  font-size: 20px;
-  margin-left: -14px;
-  border-bottom-width: 0; }
-  .tab li {
-    margin-bottom: 20px;
-    border: 1px solid #e5e5e5;
-    background-color: #ededed;
-    height: 60px;
-    margin-top: 10px; }
+.tabs li {
+  margin-bottom: 20px;
+  font-family: SourceSansPro-Regular;
+  background-color: #ededed;
+  font-size: 22px;
+  margin-top: 0;
+  box-shadow: 0 5px 0 #cac6c6; }
+.tabs a {
+  outline: none;
+  height: 75.21px; }
+.tabs span {
+  position: relative;
+  top: 11px; }
+.tabs .active {
+  background-color: #cccccc;
+  margin-left: -2px; }
 
 .procedure {
-  margin-left: 15px; }
+  margin: 0; }
   .procedure .border {
-    border-right: 2px solid #e5e5e5;
-    padding-left: 35px;
-    margin-left: -5px; }
-  .procedure .borders {
-    border-right: 2px solid #e5e5e5;
-    margin-top: -20px;
-    padding-left: 35px;
-    margin-left: -5px; }
+    border-right: 2px solid #e5e5e5; }
   .procedure img {
-    width: 854px;
-    height: 446px;
-    margin-left: -30px;
-    margin-top: -20px; }
+    width: 100%;
+    height: auto; }
 
-p {
-  margin-top: -10px;
-  margin-bottom: 40px;
-  margin-left: -20px;
-  text-align: justify;
-  font-size: 16px;
-  font-family: SourceSansPro-Regular; }
-
-#providers, #doctors, #procedures, #speciality {
-  margin-left: -60px;
-  padding-top: 20px;
-  margin-top: 10px;
-  border-top: 2px solid #e5e5e5;
-  width: 863px; }
-  #providers span, #doctors span, #procedures span, #speciality span {
-    margin-left: 110px;
+#providers, #doctors, #procedures, #speciality, #reviews {
+  border-top: 2px solid #e5e5e5; }
+  #providers span, #doctors span, #procedures span, #speciality span, #reviews span {
+    position: relative;
+    top: 10px;
     font-family: SourceSansPro-Semibold;
     font-size: 18px; }
 
@@ -5055,144 +5015,100 @@ p {
   margin-left: -40px; }
 
 .procedure-box {
-  margin-top: 20px;
-  margin-bottom: 40px; }
+  margin-top: 40px; }
   .procedure-box h3 {
-    margin-left: 0px;
+    margin-top: 0;
+    width: 100%;
+    padding: 10px 0px 0px 10px;
     font-size: 16px;
-    background-color: #e5e5e5;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: left;
-    padding-left: 10px;
+    background-color: #EDEDED;
     font-family: SourceSansPro-Bold;
-    width: 312px;
     height: 52px; }
   .procedure-box img {
     height: 156px;
-    width: 208px;
-    margin-top: 20px;
-    margin-left: -20px; }
+    width: 100%; }
   .procedure-box a {
     outline: none;
     text-decoration: none; }
 
 .proc {
   margin-top: 45px;
-  border-bottom: 2px solid #e5e5e5;
-  padding-bottom: 40px;
-  width: 843px;
   border-bottom-width: 0; }
   .proc img {
     width: 104px;
     height: 104px;
-    border-radius: 50%;
-    margin-top: -10px; }
+    border-radius: 50%; }
 
-.procedure-doc {
-  margin-top: 10px; }
-  .procedure-doc h4 {
-    margin-left: -120px;
-    margin-top: -10px;
-    font-family: SourceSansPro-Regular; }
-  .procedure-doc p {
-    padding-left: 8px;
-    margin-left: -130px;
-    font-family: SourceSansPro-Regular;
-    margin-top: -20px; }
+.procedure-doc h4 {
+  font-family: SourceSansPro-Regular; }
+.procedure-doc p {
+  font-family: SourceSansPro-Regular; }
 
-.scrolls {
-  margin-top: 4px;
-  margin-left: 20px; }
-
-#text {
-  width: 105px;
-  border-color: #89d8c4;
-  margin-top: 50px;
-  margin-left: -100px;
-  color: #89d8c4; }
+#link {
+  border: 1px solid #53c8ab;
+  color: #53c8ab;
+  border-radius: 4px;
+  padding: 5px;
+  position: relative;
+  top: 60px;
+  text-decoration: none; }
 
 .doc {
   margin-top: 45px;
   height: 350px;
-  padding-bottom: 40px;
-  margin-left: 40px;
-  width: 843px; }
+  padding-bottom: 40px; }
   .doc img {
     width: 180px;
     height: 180px;
-    border-radius: 50%;
-    margin-top: -10px; }
-  .doc h3 {
-    margin-top: 50px; }
-  .doc p {
-    margin-left: 0;
-    margin-top: 20px; }
+    border-radius: 50%; }
   .doc #text {
     margin-top: 40px;
     margin-left: 0; }
 
-.proc {
-  margin-top: 45px;
-  margin-left: -45px;
-  border-bottom: 2px solid #e5e5e5;
-  width: 843px;
-  border-bottom-width: 0; }
-  .proc button {
-    background-color: #e5e5e5;
-    width: 150px;
-    height: 50px;
-    margin-bottom: 20px; }
-
 .name h3 {
-  background-color: #EDEDED;
+  background-color: #ededed;
   font-size: 18px;
-  width: 434px;
+  width: 100%;
   height: 70px;
   padding-top: 25px;
   font-weight: bold;
-  margin-left: -15px;
-  padding-left: 10px;
-  margin-top: -20px;
+  padding-left: 33px;
+  margin-top: 0;
   font-family: SourceSansPro-Regular; }
 
 .form {
-  background-color: #EDEDED;
-  width: 434px;
-  height: 600px;
-  margin-left: -15px;
+  background-color: #ededed;
+  width: 100%;
+  height: auto;
   margin-top: -30px; }
   .form .nm {
     padding-top: 30px; }
-  .form .form-control {
-    width: 365px;
-    height: 50px;
-    margin-top: 15px;
-    margin-left: 30px;
-    border-radius: 8px; }
-  .form .textarea {
-    width: 365px;
-    margin-top: 15px;
-    margin-left: 30px;
-    border-radius: 8px;
-    border: 1px solid #ccc; }
-  .form .dropdown {
-    margin-left: 20px;
-    width: 100px;
-    margin-left: 30px; }
+  .form .form-group {
+    display: block; }
+    .form .form-group .form-control {
+      width: 100%;
+      height: 50px;
+      margin-top: 15px;
+      border-radius: 8px; }
+    .form .form-group .textarea {
+      width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 8px;
+      padding: 8px 0px 0px 8px;
+      border: 1px solid #ccc; }
   .form .button {
-    margin-left: 30px;
     width: 150px;
     height: 40px;
     background-color: #ff6c6f;
     color: white;
     font-size: 20px;
     border-radius: 6px;
-    margin-top: 30px;
+    margin-top: 40px;
     border-color: #ff6c6f; }
 
 .connect {
-  border: 2px solid #D55F61;
+  border: 2px solid #d55f61;
   border-radius: 5px;
   margin-bottom: 0;
   margin-top: 9px; }
@@ -5255,39 +5171,47 @@ a:focus {
     color: white;
     margin-left: 20px; }
 
-#education, #awards, #reviews {
+#education, #awards {
   margin-left: -60px;
   padding-top: 20px;
   margin-top: 15px;
   border-top: 2px solid #e5e5e5;
   width: 863px; }
-  #education span, #awards span, #reviews span {
+  #education span, #awards span {
     margin-left: 100px; }
 
 .btn-primary.raised {
   box-shadow: 0 4px 0 0 #df5f69;
   background-color: #ff6c6f;
   border-color: #ff6c6f;
-  margin-left: -40px;
+  height: 30px;
   margin-top: 60px; }
 
 .btn-primary.raised.active {
-  box-shadow: none;
-  margin-bottom: -3px;
-  margin-top: 3px; }
+  outline: none;
+  box-shadow: none; }
 
-.panel-body span {
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-  font-size: 14px; }
+.panel-default {
+  border-width: 0; }
+  .panel-default .panel-heading {
+    margin-top: 20px;
+    background-color: #f9f9f9; }
+  .panel-default .panel-title a {
+    outline: none; }
+  .panel-default .panel-title .accordion .title {
+    padding-top: 5px; }
+  .panel-default .panel-title .accordion .price {
+    padding-top: 5px;
+    text-align: right; }
+  .panel-default .panel-title .accordion .btn-default {
+    padding-top: 4px; }
+  .panel-default .panel-body {
+    text-align: left;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular; }
 
 .thumbnail {
   height: 300px; }
-
-.thumbnail:hover {
-  position: absolute;
-  height: 330px; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;
@@ -5312,3 +5236,21 @@ a:focus {
 .autocomplete-group strong {
   display: block;
   border-bottom: 1px solid #000; }
+
+.form ::-webkit-input-placeholder {
+  font-family: SourceSansPro-Regular;
+  font-size: 16px; }
+.form :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: SourceSansPro-Regular;
+  font-size: 16px; }
+.form ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: SourceSansPro-Regular;
+  font-size: 16px; }
+.form :-ms-input-placeholder {
+  font-family: SourceSansPro-Regular;
+  font-size: 16px; }
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none; }

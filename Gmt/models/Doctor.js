@@ -45,7 +45,10 @@ Doctor.relationship({
 	ref: 'Price',
 	path: 'doctor'
 });
-
+Doctor.relationship({
+	ref: 'Feedback',
+	path: 'doctor'
+});
 Doctor.schema.methods.getProcedures = function(callback) {
 	return keystone.list('Procedure').model.find({
 		doctors: this._id
