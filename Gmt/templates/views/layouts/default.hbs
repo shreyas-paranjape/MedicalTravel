@@ -7,7 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Goa medical travel</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link href="/styles/site.css" rel="stylesheet"> {{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //- Safely
+	<link href="/styles/site.css" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+	{{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //- Safely
 	remove this block if you are not targeting IE8 --}}
 	<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
@@ -16,45 +20,47 @@
 </head>
 
 <body>
-	<div id="header" style="margin-top:0px">
+	<div id="header" style="margin-top:0px;">
 		<!-- <div class="container"> -->
-			<div role="navigation" class="navbar navbar-inverse">
+			<div role="navigation" class="navbar navbar-inverse" style="border-radius:0px;">
 				<div class="container-fluid">
 
-					<div class="row">
+					<div class="row" style="background-color:rgb(43,43,43); ">
 						<div class="col-lg-4">
-					<div class="navbar-header">
+					<div class="navbar-header" style="background-color:rgb(43,43,43);">
 						<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand" style="width:100%;height:auto;">
-							<img alt="Goa Medical Travel" src="/images/logo.png" />
+						<a href="/" class="navbar-brand" style="width:100%;height:auto; background-color:rgb(43,43,43);">
+							<img alt="Goa Medical Travel" src="/images/GMT Identity _Goa Medical Travel White.png"  style="width:160px;height:76.85px;margin-bottom: 5px; margin-top: 5px;"/>
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-8">
 					<div class="row">
-						<div class="collapse navbar-collapse">
+						<div class="collapse navbar-collapse"  style="margin-right:3px;">
 							<ul class="nav navbar-nav navbar-right">
 								{{# each navs}}
-								<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
-									<a href="{{ href }}">{{ label }}</a>
+								<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16px;">
+									<a href="{{ href }}" style="">{{ label }}</a>
 								</li>
 								{{/each}}
 							</ul>
 						</div>
 					</div>
 					<div class="row">
-					<div class="collapse navbar-collapse">
+					<div class="collapse navbar-collapse" style="margin-right:20px;">
 						<ul class="nav navbar-nav navbar-right">
 							{{# each navLinks}}
-							<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
-								<a href="{{ href }}">{{ label }}</a>
+							<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:17px;margin-left:-10px;">
+								<a href="{{ href }}" style="outline:none;">{{ label }}</a>
 							</li>
 							{{/each}}
+
+							<li > <a class="connect" style="padding: 3px 8px;color: #D55F61;" href="/contact">Connect</a></li>
 						</ul>
 					</div>
 				</div>

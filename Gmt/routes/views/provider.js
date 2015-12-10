@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 	locals.validationErrors = {};
 	locals.enquirySent = false;
-	locals.section = 'provider';
+	locals.section = 'providerInfo';
 
 
 	res.locals.doctors = [];
@@ -31,31 +31,29 @@ exports = module.exports = function(req, res) {
 
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
-	});
+	}).populate('doctors');
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, currentProvider) {
 			currentProvider.getProcedures(function(e, procedures) {
 				fnjs.each(function(procedure) {
-					procedure.speciality.proc = procedure;
 					if (!contains(procedure.speciality, res.locals.specialities)) {
-
 						locals.specialities.push(procedure.speciality);
 					}
-				}, procedures)
+					keystone.list('Price').model.find({
+						procedure: procedure.id,
+						provider: currentProvider.id
+					}).exec(function(er, priceRes) {
+						fnjs.each(function(price) {
+							procedure.price = price.price;
+							locals.procedures.push(procedure);
+						}, priceRes)
+					})
+				}, procedures);
+
 			});
 		});
 		next();
 	});
-
-	// keystone.list('Price').model.find({
-	// 	procedure: procedureA.id,
-	// 	provider: currentProvider.id
-	// }).exec(function(er, priceRes) {
-	// 	fnjs.each(function(price) {
-	// 		price = price.price;
-	// 			locals.specialities.push(procedureA.speciality);
-	// 	}, priceRes)
-
 
 	// Enquiry form Data submission
 	view.on('post', {

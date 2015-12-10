@@ -1,23 +1,39 @@
 var keystone = require('keystone');
+var util = require('util');
+
 var appAuth = require('box-appauth');
 var fs = require('fs');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.section = 'profile';
+	console.log("REQ Profile");
+	console.log(util.inspect(req.user.id, false, null));
 
-	keystone.list('Enquiry').model.find({
-		"state": "N",
+	keystone.list('User').model.findOne({
+		_id: req.user.id,
 	}).exec(function(err, resUser) {
+
 		console.log("resUser:" + resUser);
+		if (resUser.isUser == true) {
+			view.render('profile');
+		} else if (resUser.isDoctor == true) {
+			view.render('profileDoctor');
+		} else if (resUser.isProvider == true) {
+			view.render('profileProvider');
+		} else if (resUser.isAgent == true) {
+			view.render('profileAgent');
+		}
 	});
+
+
 	// Upload Code
 	view.on('post', {
 		action: 'upload'
 	}, function(next) {
 
 		keystone.list('User').model.findOne({
-			"key": "alan-harper"
+			"_id": req.user.id
 		}).exec(function(err, resUser) {
 
 			appAuth({
@@ -64,5 +80,4 @@ exports = module.exports = function(req, res) {
 		});
 		next();
 	});
-	view.render('profile');
 };

@@ -17,7 +17,7 @@ exports = module.exports = function(req, res) {
 				user._.password.compare(req.body.password, function(err, isMatch) {
 					if (!err && isMatch) {
 						res.redirect('/profile');
-						console.log("Success");
+
 					} else {
 						res.redirect('/login');
 						locals.notLoggedInSuccessfully = true;

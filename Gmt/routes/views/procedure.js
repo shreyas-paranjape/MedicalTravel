@@ -25,35 +25,33 @@ exports = module.exports = function(req, res) {
 		SpecialityQuery.exec(function(err, specialityRes) {
 			res.locals.specialities = fnjs.map(function(speciality) {
 				if (speciality.key == req.params.key) {
+					console.log("1");
 					speciality.active = true;
+					res.locals.speciality.push(speciality.discription);
+					console.log("speciality.discription" + speciality.discription);
 				}
-				console.log("1");
 				return speciality;
 			}, specialityRes);
-			res.locals.specialities = specialityRes;
+
 			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
 				console.log("2");
 			}, specialityRes);
-			fnjs.each(function(speciality) {
-				res.locals.speciality.push(speciality.discription);
-				console.log("3");
-			}, Speciality);
 			Speciality[0].getDoctorsAndProviders(function(doctors, providers, procedures) {
+				console.log("4");
 				fnjs.each(function(doctor) {
-					console.log("4");
+					console.log("5");
 					res.locals.doctors.push(doctor);
 				}, doctors);
 				fnjs.each(function(provider) {
-					console.log("5");
+					console.log("6");
 					res.locals.providers.push(provider);
 				}, providers);
 				fnjs.each(function(procedure) {
-					console.log("6");
+					console.log("7");
 					keystone.list('Price').model.find({
 						procedure: procedure.id,
 					}).sort('price').limit(1).exec(function(er, priceRes) {
-						console.log("7");
 						fnjs.each(function(price) {
 							console.log("8");
 							procedure.price = price.price;
@@ -61,9 +59,8 @@ exports = module.exports = function(req, res) {
 					});
 					locals.procedures.push(procedure);
 				}, procedures);
-				next();
 			});
-
+			next();
 		});
 	});
 	view.render('procedure');

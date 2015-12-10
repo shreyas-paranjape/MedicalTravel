@@ -6,7 +6,12 @@ exports = module.exports = function(req, res) {
 	var ProvCatQuery = keystone.list('ProviderCategory').model.find();
 	view.on('init', function(next) {
 		ProvCatQuery.exec(function(err, provCatsRes) {
-			res.locals.providerCategories = provCatsRes;
+			res.locals.providerCategories = fnjs.map(function(provider) {
+					if (provider.key == req.params.key) {
+						provider.active = true;
+					}
+					return provider;
+				}, provCatsRes);
 
 			var ProvCat = fnjs.filter(function(provCat) {
 				return provCat.key == req.params.key;

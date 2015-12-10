@@ -52,7 +52,28 @@ User.add({
 		type: Boolean,
 		label: 'Can access Keystone',
 		index: true
-	}
+	},
+	isUser: {
+		type: Boolean,
+		label: 'User',
+		index: true
+	},
+	isDoctor: {
+		type: Boolean,
+		label: 'Doctor',
+		index: true
+	},
+	isProvider: {
+		type: Boolean,
+		label: 'Provider',
+		index: true
+	},
+	isAgent: {
+		type: Boolean,
+		label: 'Agent',
+		index: true
+	},
+
 });
 
 User.schema.virtual('canAccessKeystone').get(function() {
