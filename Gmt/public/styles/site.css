@@ -4933,18 +4933,11 @@ button.close {
   padding: 0; }
 
 .navbar {
-<<<<<<< HEAD
-  margin-bottom: 0px; }
-
-.provider-box {
-  border-bottom: 1px solid #e5e5e5;
-=======
   margin-bottom: 0; }
 
 .provider-box {
   border-bottom: 1px solid #e5e5e5;
   width: 100%;
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
   margin-bottom: 20px; }
 
 .provider-img {
@@ -4991,38 +4984,18 @@ button.close {
   box-shadow: 0 5px 0 #cac6c6; }
 .tabs a {
   outline: none;
-<<<<<<< HEAD
-  height: 75.21px;
-  margin-left: 80px; }
-.tabs span {
-  position: relative;
-  top: 11px;
-  margin-left: 20px; }
-=======
   height: 75.21px; }
 .tabs span {
   position: relative;
   top: 11px; }
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
 .tabs .active {
   background-color: #cccccc;
   margin-left: -2px; }
 
 .procedure {
-<<<<<<< HEAD
-  margin: 0px; }
-  .procedure .border {
-    border-right: 2px solid #e5e5e5; }
-  .procedure .borders {
-    border-right: 2px solid #e5e5e5;
-    margin-top: -20px;
-    padding-left: 35px;
-    margin-left: -5px; }
-=======
   margin: 0; }
   .procedure .border {
     border-right: 2px solid #e5e5e5; }
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
   .procedure img {
     width: 100%;
     height: auto; }
@@ -5044,20 +5017,11 @@ button.close {
 .procedure-box {
   margin-top: 40px; }
   .procedure-box h3 {
-<<<<<<< HEAD
-    margin-top: 0px;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 10px;
-    font-size: 16px;
-    background-color: #e5e5e5;
-=======
     margin-top: 0;
     width: 100%;
     padding: 10px 0px 0px 10px;
     font-size: 16px;
     background-color: #EDEDED;
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
     font-family: SourceSansPro-Bold;
     height: 52px; }
   .procedure-box img {
@@ -5074,28 +5038,11 @@ button.close {
     width: 104px;
     height: 104px;
     border-radius: 50%; }
-<<<<<<< HEAD
 
 .procedure-doc h4 {
   font-family: SourceSansPro-Regular; }
 .procedure-doc p {
   font-family: SourceSansPro-Regular; }
-
-#link {
-  border: 1px solid #53c8ab;
-  color: #53c8ab;
-  border-radius: 4px;
-  padding: 5px;
-  position: relative;
-  top: 60px;
-  text-decoration: none; }
-=======
-
-.procedure-doc h4 {
-  font-family: SourceSansPro-Regular; }
-.procedure-doc p {
-  font-family: SourceSansPro-Regular; }
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
 
 #link {
   border: 1px solid #53c8ab;
@@ -5126,11 +5073,7 @@ button.close {
   padding-top: 25px;
   font-weight: bold;
   padding-left: 33px;
-<<<<<<< HEAD
-  margin-top: 0px;
-=======
   margin-top: 0;
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
   font-family: SourceSansPro-Regular; }
 
 .form {
@@ -5140,26 +5083,6 @@ button.close {
   margin-top: -30px; }
   .form .nm {
     padding-top: 30px; }
-<<<<<<< HEAD
-  .form .form-control {
-    width: 365px;
-    height: 50px;
-    margin-top: 15px;
-    margin-left: 30px;
-    border-radius: 8px; }
-  .form .textarea {
-    width: 365px;
-    margin-top: 15px;
-    margin-left: 30px;
-    border-radius: 8px;
-    padding-left: 8px;
-    padding-top: 8px;
-    border: 1px solid #ccc; }
-  .form .dropdown {
-    margin-left: 20px;
-    width: 100px;
-    margin-left: 30px; }
-=======
   .form .form-group {
     display: block; }
     .form .form-group .form-control {
@@ -5174,7 +5097,6 @@ button.close {
       border-radius: 8px;
       padding: 8px 0px 0px 8px;
       border: 1px solid #ccc; }
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
   .form .button {
     width: 150px;
     height: 40px;
@@ -5332,15 +5254,3 @@ a:focus {
 
 .carousel-control.left, .carousel-control.right {
   background-image: none; }
-<<<<<<< HEAD
-
-.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
-  font-size: 50px;
-  height: 30px;
-  margin-top: -15px;
-  background-image: none; }
-
-.rborder {
-  border-right: 2px solid #e5e5e5; }
-=======
->>>>>>> 789d188902b83836ae2855e99d3a9636d7db4966
