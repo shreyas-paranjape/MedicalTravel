@@ -45,12 +45,12 @@ var globalSearch = function(model, req, res) {
 			function(callback) {
 				searchDocs("Speciality",new RegExp(req.query.query, "i"),callback);
 			},
-			function(callback) {
-				searchDocs("Doctor",new RegExp(req.query.query, "i"),callback);
-			},
-			function(callback) {
-				searchDocs("Provider",new RegExp(req.query.query, "i"),callback);
-			},
+			// function(callback) {
+			// 	searchDocs("Doctor",new RegExp(req.query.query, "i"),callback);
+			// },
+			// function(callback) {
+			// 	searchDocs("Provider",new RegExp(req.query.query, "i"),callback);
+			// },
 		],
 		function(err, results) {
 			 var suggestions = [];

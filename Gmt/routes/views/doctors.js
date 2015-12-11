@@ -72,6 +72,17 @@ exports = module.exports = function(req, res) {
 		next();
 	});
 
+
+	var specialityQuery = keystone.list('Speciality').model.find()
+	view.on('init', function(next) {
+		specialityQuery.exec(function(err, spRes) {
+			fnjs.each(function(sp) {
+				res.locals.speciality.push(sp);
+			}, spRes);
+		});
+		next();
+	});
+
 	view.on('post', {
 		action: 'search'
 	}, function(next) {

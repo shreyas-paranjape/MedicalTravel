@@ -1,6 +1,6 @@
 <!-- <div class="container"> -->
 
-	<!-- <img src="../images/cancer_Treatments(1).jpg"  style="width:100%;height:447px;margin:0px;">
+<!-- <img src="../images/cancer_Treatments(1).jpg"  style="width:100%;height:447px;margin:0px;">
   <div class="row">
     <div class="col-lg-1">
     </div>
@@ -14,68 +14,74 @@
 </div>
 </div> -->
 <div id="mycarousel" class="carousel slide no-padding" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="item active">
-        <img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:447px;">
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:447px;">
 
-           <div class="carousel-caption" style="background-color:black;">
-             <div class="row" >
-               <div class="col-lg-1">
-               </div>
-               <div class="col-lg-7">
-             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="doctor" style="width:100%;height:50px;">
-           </div>
-           <div class="col-lg-2">
-             <button type="submit" class="btn btn-default" style="width:100%;height:50px;">Search</button>
-           </div>
-           <div class="col-lg-2">
-           </div>
-           </div>
-           </div>
+			<div class="carousel-caption" style="background-color:black;">
+				<div class="row">
+					<div class="col-lg-1">
+					</div>
+					<div class="form">
+						<form class="form-inline" method="post">
+							<input type="hidden" name="action" value="search">
+							<div class="col-lg-7">
+								<input type="text" name="global" class="form-control" id="global" placeholder="Procedure Sepciality ">
+								<input type="hidden" id="globalId" name="globalId" value="">
+							</div>
+							<div class="col-lg-2">
+								<input type="submit" class="btn btn-default" style="width:100%;height:50px;" value="Search">
+							</div>
+						</form>
 
-        </div>
-    </div>
-</div>
+						<div class="col-lg-2">
+						</div>
+					</div>
+				</div>
 
-<div class="row procedure">
-	<div class="col-lg-3" >
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  {{#each speciality}}
+			</div>
+		</div>
+	</div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingOne">
-          <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+	<div class="row procedure">
+		<div class="col-lg-3">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				{{#each speciality}}
+
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
               {{name}}
             </a>
-          </h4>
-          </div>
-          <div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              gfsdg
-            </div>
-          </div>
-        </div>
+							</h4>
+						</div>
+						<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								gfsdg
+							</div>
+						</div>
+					</div>
 
-  {{/each}}
-  </div>
-</div>
+				{{/each}}
+			</div>
+		</div>
 
-	<div class="col-lg-9" style="border-left:2px solid #e5e5e5;margin-top:5px;">
-		<div class="row ">
-  {{#each doctors}}
-  <div class="col-lg-4">
-    <a href="#" class="thumbnail">
-      <img src="" style="border-radius:50%;width:160px;height:160px;border-radius: 50%;margin-top:20px">
-    </a>
-  </div>
-{{/each}}
-</div>
+		<div class="col-lg-9" style="border-left:2px solid #e5e5e5;margin-top:5px;">
+			<div class="row ">
+				{{#each doctors}}
+					<div class="col-lg-4">
+						<a href="#" class="thumbnail">
+							<img src="" style="border-radius:50%;width:160px;height:160px;border-radius: 50%;margin-top:20px">
+						</a>
+					</div>
+				{{/each}}
+			</div>
 
+		</div>
 	</div>
-</div>
 
 
 
 
-<!-- </div> -->
+	<!-- </div> -->
