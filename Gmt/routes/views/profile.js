@@ -1,20 +1,16 @@
 var keystone = require('keystone');
-var util = require('util');
-
+var fnjs = require('fn.js');
 var appAuth = require('box-appauth');
 var fs = require('fs');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.section = 'profile';
-	console.log("REQ Profile");
-	console.log(util.inspect(req.user.id, false, null));
 
+	// initial nevigation
 	keystone.list('User').model.findOne({
 		_id: req.user.id,
 	}).exec(function(err, resUser) {
-
-		console.log("resUser:" + resUser);
 		if (resUser.isUser == true) {
 			view.render('profile');
 		} else if (resUser.isDoctor == true) {
@@ -26,16 +22,56 @@ exports = module.exports = function(req, res) {
 		}
 	});
 
+	//file display
+	var profileQuery = keystone.list('User').model.findOne({
+		"_id": req.user.id
+	});
+	view.on('init', function(next) {
+		profileQuery.exec(function(err, resUser) {
+			appAuth({
+					publicKey: fs.readFileSync('public_key.pem'),
+					privateKey: fs.readFileSync('private_key.pem'),
+					algorithm: 'RS256',
+					issuer: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					subject: resUser.boxId,
+					subjectType: 'user',
+					clientId: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					clientSecret: "xYSZp93vWNo0eqqwgBL83ZpD15YtHvsA",
+					publicKeyId: "42oxjqmg",
+					callRetryMax: 5,
+					minutesUntilTokenRefresh: 10,
+					options: {
+						debug: true
+					}
+				})
+				.then(function(api) {
+					api.folder.list({
+						id: 0,
+					}).then(function(listRes) {
+						fnjs.each(function(folderRes) {
+							if (folderRes.type == "folder") {
+								api.folder.list({
+									id: folderRes.id,
+								}).then(function(inFolderRes) {
+									fnjs.each(function(inFolder) {
+										// console.log("Names in folder : " + JSON.stringify(inFolder.name));
+									}, inFolderRes.entries)
+								});
+							}
+							// console.log("Names in Root : " + JSON.stringify(folderRes.name));
+						}, listRes.entries)
+					});
+				});
+		});
+		next();
+	});
 
-	// Upload Code
 	view.on('post', {
 		action: 'upload'
 	}, function(next) {
-
 		keystone.list('User').model.findOne({
 			"_id": req.user.id
 		}).exec(function(err, resUser) {
-
 			appAuth({
 					publicKey: fs.readFileSync('public_key.pem'),
 					privateKey: fs.readFileSync('private_key.pem'),
@@ -60,21 +96,41 @@ exports = module.exports = function(req, res) {
 						fields: [
 							'total_count'
 						]
-					}).then(function(rest) {
-						keystone.list('User').model.update({
-							key: resUser.key
-						}, {
-							$set: {
-								boxFile: {
-									fileId: rest.entries[0].id,
-									fileName: req.files.image_upload.originalname
-								}
-							}
-						}, {
+					}).then(function(uploadRes) {});
+				});
+		});
+		next();
+	});
 
-						}).exec(function(err, result1) {
-							console.log("Result1: " + result1);
-						});
+	// create folder code
+	view.on('post', {
+		action: 'create'
+	}, function(next) {
+		keystone.list('User').model.findOne({
+			"_id": req.user.id
+		}).exec(function(err, resUser) {
+			appAuth({
+					publicKey: fs.readFileSync('public_key.pem'),
+					privateKey: fs.readFileSync('private_key.pem'),
+					algorithm: 'RS256',
+					issuer: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					subject: resUser.boxId,
+					subjectType: 'user',
+					clientId: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					clientSecret: "xYSZp93vWNo0eqqwgBL83ZpD15YtHvsA",
+					publicKeyId: "42oxjqmg",
+					callRetryMax: 5,
+					minutesUntilTokenRefresh: 10,
+					options: {
+						debug: true
+					}
+				})
+				.then(function(api) {
+					api.folder.create({
+						parentId: 0,
+						name: req.body.procedure
+					}).then(function(rest) {
+						console.log(rest);
 					});
 				});
 		});
