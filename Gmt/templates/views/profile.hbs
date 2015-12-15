@@ -1,29 +1,6 @@
 <div class="container">
 
-	<form method="post" enctype="multipart/form-data">
-		<input type="hidden" name="action" value="upload">
-		<p>
-			<b> Please specify a file, or a set of files: </b>
-			<br>
-			<input type="file" name="image_upload" size="40">
-		</p>
-		<div>
-			<input name="submit" type="submit" value="Send">
-		</div>
-	</form>
-	</br>
-	</br>
-	<form class="form-inline" method="post">
-		<input type="hidden" name="action" value="create">
-		<div class="form-group">
-			<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
-			<input type="hidden" id="procedureId" name="procedureId" value="">
-		</div>
-		<input type="submit" value="Enquire" class="button" style="" />
-	</form>
-
-
-	<!-- <div class="row">
+	<div class="row">
 		<div class="col-xs-3">
 			<ul class="nav nav-tabs nav-stacked">
 				<li class="active"><a href="#details" data-toggle="tab">Personal Details</a></li>
@@ -59,9 +36,63 @@
 						<br>
 					</div>
 					<br>
-        	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+          <!-- Hamari file -->
+        <div class="col-sm-6 col">
+					<form method="post" enctype="multipart/form-data">
+						<input type="hidden" name="action" value="upload">
+						<p>
+						<b> Please specify a file, or a set of files: </b>
+							<br>
+							<input type="file" name="image_upload" size="40">
+						</p>
+						<div>
+							<input name="submit" type="submit" value="Send">
+						</div>
+					</form>
+        </div>
+				<div class="col-sm-6 col">
+					<form method="post" enctype="multipart/form-data">
+						<input type="hidden" name="action" value="download">
+							<input name="submit" type="submit" value="Download">
+					</form>
+        </div>
+					<!-- <input type="button" value="Edit" id="Edit" style="width: 70px;"/> -->
+					<!-- <input type="button" value="View" id="View" style="width: 70px;" /> -->
+					<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 					<script src="/js/pro.js"></script>
+
+					<!-- <div class="control-group">
+<label for="Name" style="font-size:16px">Name</label>
+<label for="name" id="blank" class="control-label"></label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div><br>
+
+<div class="control-group">
+<label for="Email" style="font-size:16px">Email</label>
+<label for="email" id="blank" class="control-label">  </label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div><br>
+
+<div class="control-group">
+<label for="Mobile" style="font-size:16px">Mobile</label>
+<label for="mobile" id="blank" class="control-label">  </label>
+<input type="text" class="edit-input" />
+<div class="controls">
+<a class="edit" href="#"><input type="button" value="Edit" id="Edit" /></a>
+</div>
+</div>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/pro.js"></script> -->
 				</div>
+
+
+
 				<div class="tab-pane" id="docs">
 					<button type="upload" class="btn btn-default">UPLOAD</button>
 					<br>
@@ -110,7 +141,10 @@
 												</div>
 											</div>
 										</div>
+
+
 										</a>
+
 								</h4>
 							</div>
 							<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -139,7 +173,10 @@
 							</div>
 						</div>
 					</div>
+
+
 				</div>
+
 				<div class="tab-pane" id="not">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel panel-default">
@@ -207,5 +244,5 @@
 
 			</div>
 		</div>
-	</div> -->
+	</div>
 </div>
