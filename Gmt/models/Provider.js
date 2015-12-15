@@ -17,6 +17,11 @@ Provider.add({
 	image: {
 		type: Types.CloudinaryImage
 	},
+	summary: {
+		type: Types.Html,
+		wysiwyg: true,
+		height: 100
+	},
 	description: {
 		type: Types.Html,
 		wysiwyg: true,

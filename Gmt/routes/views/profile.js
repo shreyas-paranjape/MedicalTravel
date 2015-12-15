@@ -130,7 +130,6 @@ exports = module.exports = function(req, res) {
 						parentId: 0,
 						name: req.body.procedure
 					}).then(function(rest) {
-						console.log(rest);
 					});
 				});
 		});

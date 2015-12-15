@@ -12,7 +12,7 @@ exports.initLocals = function(req, res, next) {
 	},{
 		label: 'Provider',
 		key: 'provider',
-		href: '/providers/hospital'
+		href: '/providers/hospitals'
 	}, {
 		label: 'Procedure',
 		key: 'procedure',

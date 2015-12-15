@@ -16,15 +16,25 @@ Doctor.add({
 	imageOuter: {
 		type: Types.CloudinaryImage
 	},
-	bio: {
+	summary: {
 		type: Types.Html,
 		wysiwyg: true,
-		height: 200
+		height: 100
 	},
 	description: {
 		type: Types.Html,
 		wysiwyg: true,
-		height: 400
+		height: 300
+	},
+	education: {
+		type: Types.Html,
+		wysiwyg: true,
+		height: 100
+	},
+	awards: {
+		type: Types.Html,
+		wysiwyg: true,
+		height: 100
 	},
 	reviews: {
 		type: Types.Relationship,
