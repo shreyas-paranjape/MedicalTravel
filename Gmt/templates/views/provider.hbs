@@ -1,222 +1,221 @@
 <!-- <div class="container"> -->
-	<div class="row procedure" >
-		<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding" >
+<div class="row procedure">
+	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
 
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 
-  </ol>
+			</ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox" >
-    <div class="item active">
-      <img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:auto" >
-      <div class="carousel-caption">
-      1
-      </div>
-    </div>
-    <div class="item">
-      <img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:auto">
-      <div class="carousel-caption">
-        2
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-			<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
-				<nav class="navbar navbar-default" >
-					<ul class="nav navbar-nav row" style="padding-top: 8px;">
-						<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
-						<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2 "><a href="#about">About</a></li>
-						<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2" ><a href="#doctors">Doctors</a></li>
-						<li class="col-lg-3 col-sm-3 col-xs-3 col-md-3"><a href="#speciality" style="margin-left:7px;" >Speciality</a></li>
-						<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#reviews" >Reviews</a></li>
-					</ul>
-				</nav>
-				<h4 id="about"></h4>
-				<div class="row ">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:auto">
+					<div class="carousel-caption">
+						1
 					</div>
-					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
-       {{{provider.description}}}
-			  </div>
+				</div>
+				<div class="item">
+					<img src="../images/cancer_Treatments(1).jpg" style="width:100%;height:auto">
+					<div class="carousel-caption">
+						2
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav row" style="padding-top: 8px;">
+					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2 "><a href="#about">About</a></li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#doctors">Doctors</a></li>
+					<li class="col-lg-3 col-sm-3 col-xs-3 col-md-3"><a href="#speciality" style="margin-left:7px;">Speciality</a></li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#reviews">Reviews</a></li>
+				</ul>
+			</nav>
+			<h4 id="about"></h4>
+			<div class="row ">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
+					{{{provider.description}}}
+				</div>
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 			</div>
-				<h4 id="doctors">
-					<div class="row">
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-					<span>Doctors</span>
-				  </div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-				</h4>
-				<div class="q">
-					<div class="p">
-				{{#each provider.doctors}}
-					<div class="row proc">
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
-						<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 ">
-							<img src="images/logo.png">
-						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5  procedure-doc">
-							<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
-							{{{description}}}
-
-						</div>
-						<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-
-						<!-- <input type="text" class="form-control" id="text" value="View Profile"> -->
-								<a href=""  id="link" style="">View Profile</a>
-						</div>
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
-					</div>
-				{{/each}}
-			</div>
-		</div>
-
-				<h4 id="speciality">
-					<div class="row">
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-					<span>Speciality</span>
-				</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-				</h4>
-
-						<div class="row">
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
-							<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10" style="border:1px solid #e5e5e5;border-radius:4px; margin-top:20px">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									{{#each specialities}}
-
-										<div class="panel panel-default">
-											<div class="panel-heading" role="tab" id="headingOne">
-												<h4 class="panel-title">
-													<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
-														<div class="row accordion">
-															<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
-																{{name}}
-																<!-- <span class="fa fa-plus-square-o"></span> -->
-															</div>
-															<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
-																{{price}}
-															</div>
-															<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-																<input class="btn btn-default" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
-															</div>
-														</div>
-													</a>
-												</h4>
-											</div>
-											<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-												<div class="panel-body">
-													{{#each procedure}}
-														<div>
-															{{name}}
-														</div>
-													{{/each}}
-												</div>
-											</div>
-										</div>
-
-									{{/each}}
-							</div>
-						</div>
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
-							</div>
-						<h4 id="reviews">
-							<div class="row">
-								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-								</div>
-								<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-							<span>Reviews</span>
-						</div>
-							<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-							</div>
-						</div>
-						</h4>
-						<span class="glyphicon glyphicon-star" style="margin-left:30px"></span>
-						<span class="glyphicon glyphicon-star"></span>
-						<span class="glyphicon glyphicon-star"></span>
-						<p style="margin-left: 30px;">Lorem Ipsum,</p>
-						<p style="margin-left: 30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
-						<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
-						<p style="margin-left: 30px;">help all over.</p>
-						<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button>
-			</div>
-		</div>
-			<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
-			<h3>{{provider.name}}</h3>
-			<br>
-			<br>
-			<div class="form">
+			<h4 id="doctors">
 				<div class="row">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
-				<form class="form-inline" method="post" >
-					<input type="hidden" name="action" value="enquire">
-					<div class="form-group nm">
-						<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" >
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<span>Doctors</span>
 					</div>
-					<div class="form-group">
-						<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
 					</div>
-					<div class="form-group">
-						<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+				</div>
+			</h4>
+			<div class="q">
+				<div class="p">
+					{{#each provider.doctors}}
+						<div class="row proc">
+							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</div>
+							<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 ">
+								<img src="images/logo.png">
+							</div>
+							<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5  procedure-doc">
+								<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
+								{{{description}}}
+
+							</div>
+							<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+
+								<!-- <input type="text" class="form-control" id="text" value="View Profile"> -->
+								<a href="" id="link" style="">View Profile</a>
+							</div>
+							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+
+			<h4 id="speciality">
+				<div class="row">
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="form-group">
-						<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
-						<input type="hidden" id="procedureId" name="procedureId" value="">
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<span>Speciality</span>
 					</div>
-					<div class="form-group">
-						<input type="text" name="doctor" class="form-control" id="doctor" placeholder="Doctor">
-						<input type="hidden" id="doctorId" name="doctorId" value="">
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
 					</div>
-					<div class="form-group">
-						<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments" ></textarea>
+				</div>
+			</h4>
+
+			<div class="row">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10" style="border:1px solid #e5e5e5;border-radius:4px; margin-top:20px">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						{{#each specialities}}
+
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+											<div class="row accordion">
+												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
+													{{name}}
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
+													{{price}}
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+													<input class="btn btn-default" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
+												</div>
+											</div>
+										</a>
+									</h4>
+								</div>
+								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+									<div class="panel-body">
+										{{#each procedures}}
+											<div>
+												<span>{{name}}</span>
+												<span>{{price}}</span>
+											</div>
+										{{/each}}
+									</div>
+								</div>
+							</div>
+						{{/each}}
 					</div>
-					<br>
-					<input type="submit" value="Enquire" class="btn btn-primary btn-md raisedss" style="" />
-					<!-- <button type="submit" class="button">Enquire</button> -->
-				</form>
-				{{#if enquirySent}}
-					<br>
-					<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
-				{{/if}}
-</div>
+				</div>
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+			</div>
+			<h4 id="reviews">
+				<div class="row">
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						<span>Reviews</span>
+					</div>
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+					</div>
+				</div>
+			</h4>
+			<span class="glyphicon glyphicon-star" style="margin-left:30px"></span>
+			<span class="glyphicon glyphicon-star"></span>
+			<span class="glyphicon glyphicon-star"></span>
+			<p style="margin-left: 30px;">Lorem Ipsum,</p>
+			<p style="margin-left: 30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
+			<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
+			<p style="margin-left: 30px;">help all over.</p>
+			<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button>
+		</div>
+	</div>
+	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
+		<h3>{{provider.name}}</h3>
+		<br>
+		<br>
+		<div class="form">
+			<div class="row">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+					<form class="form-inline" method="post">
+						<input type="hidden" name="action" value="enquire">
+						<div class="form-group nm">
+							<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+						</div>
+						<div class="form-group">
+							<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+						</div>
+						<div class="form-group">
+							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
+							<input type="hidden" id="procedureId" name="procedureId" value="">
+						</div>
+						<div class="form-group">
+							<input type="text" name="doctor" class="form-control" id="doctor" placeholder="Doctor">
+							<input type="hidden" id="doctorId" name="doctorId" value="">
+						</div>
+						<div class="form-group">
+							<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments"></textarea>
+						</div>
+						<br>
+						<input type="submit" value="Enquire" class="btn btn-primary btn-md raisedss" style="" />
+						<!-- <button type="submit" class="button">Enquire</button> -->
+					</form>
+					{{#if enquirySent}}
+						<br>
+						<h3 style="margin-left: 0px;">Enquiry Sent successfully</h3>
+					{{/if}}
+				</div>
 				<br>
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
-</div>
 			</div>
 		</div>
 	</div>
-	<!-- </div> -->
+</div>
+<!-- </div> -->

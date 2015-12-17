@@ -24,7 +24,7 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
-	//Display the Current provider with Procedures and Doctor
+	//Display the Current provider with Doctor and Procedure with doctor
 	view.query("provider", keystone.list('Provider').model.findOne({
 		key: req.params.key
 	}).populate('doctors'));
@@ -32,47 +32,32 @@ exports = module.exports = function(req, res) {
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
 	}).populate('doctors');
+
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, currentProvider) {
-			currentProvider.getProcedures(function(e, procedures) {
-				fnjs.each(function(proced) {
-
-
-					keystone.list('Speciality').model.find({
-						_id: proced.speciality.id
-					}).exec(function(er, specialityRes) {
-						fnjs.each(function(speciality) {
-							speciality.getProcedures(function(err, proceduress) {
-								speciality.procedure = proceduress;
-								if (!contains(speciality, res.locals.specialities)) {
-									locals.specialities.push(speciality);
-								}
-							}); // end of get procedure
-						}, specialityRes);
-					}); //end of Speciality query
-				}, procedures);
+			keystone.list('Speciality').model.find().exec(function(err, specialities) {
+				fnjs.each(function(spec) {
+					spec.procedures = [];
+					spec.getProcedures(function(err, procedures) {
+						fnjs.each(function(proced) {
+							if (contains(currentProvider, proced.providers)) {
+								proced.getPrice(function(err, p) {
+									if (undefined != p[0]) {
+										proced.price = p[0].price;
+									}
+									spec.procedures.push(proced);
+									if (!contains(spec, res.locals.specialities)) {
+										res.locals.specialities.push(spec);
+									}
+								});
+							}
+						}, procedures);
+					});
+				}, specialities);
+				next();
 			});
 		});
-		next();
 	});
-
-	// keystone.list('Price').model.find({
-	// 	procedure: procedure.id,
-	// 	provider: currentProvider.id
-	// }).exec(function(er, priceRes) {
-	// 	fnjs.each(function(price) {
-	// 		procedure.price = price.price;
-	// 		locals.procedures.push(procedure);
-	// 	}, priceRes)
-	// })
-
-
-	// keystone.list('Price').model.find({
-	// 	procedure: procedure.id,
-	// }).sort('price').limit(1).exec(function(er, priceRes) {
-	// 	fnjs.each(function(price) {
-	// 		procedure.price = price.price;
-	// 	}, priceRes);
 
 	// Enquiry form Data submission
 	view.on('post', {

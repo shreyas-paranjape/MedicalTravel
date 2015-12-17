@@ -2,30 +2,69 @@
 
 <section class="hero">
 	<section class="container">
-		<div class="row" style="margin-top:150px;padding-left:20px;">
+		<div class="row pp">
 			<h2>
-				<span style="border-bottom:5px solid #FF6C6F;line-height:200%">Meet T</span>he Doctors</h2>
-			<p >Choose the right doctor for your treatment</p>
+				Meet The Doctors</h2>
+			<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
+			<div class="border_doc">&nbsp;</div>
+			<p>Choose the right doctor for your treatment</p>
 			<p>Consult a specialist for a second opinion</p>
 		</div>
 		<div class="row">
-			<div class="col-md-5 col-lg-5 col-sm-5 col-xs-5"></div>
-			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-7 block">
+			<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
+			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 block">
+
+				<form role="form row" method="post">
+					<input type="hidden" name="action" value="search">
+					<div class="form-group">
+						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 no-padding">
+							<label id="proc">Procedure:</label>
+						</div>
+						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 no-padding" style="color:red">
+
+							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
+							<input type="hidden" id="procedureId" name="procedureId" value="" style="color:red;">
+						</div>
+						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10 no-padding main_button">
+							<button type="submit" class="btn btn-primary btn-md rais" style="">
+								<span class="search_doc">Search Doctors</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</section>
+
+<!-- <div class="doc_main">
+	<img src="../images/Meet the Doctors.jpg" style="width:100%;height:auto;">
+	<section class="container">
+		<div class="row pp">
+			<h2>
+				Meet The Doctors</h2>
+				 <span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
+				 <div class="border_doc">&nbsp;</div>
+			<p>Choose the right doctor for your treatment</p>
+			<p>Consult a specialist for a second opinion</p>
+		</div>
+		<div class="row">
+			<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
+			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 block">
 				<form role="form row">
 					<div class="form-group">
-						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
-						<label
-						style="font-family: SourceSansPro-Semibold; color: black; font-size: 22px; font-weight: 300; padding-bottom: 10px;">
-						Procedure:</label>
+						<div class="col-md-3 col-lg-3 col-sm-4 col-xs-12 no-padding">
+							<label id="proc">Procedure:</label>
 						</div>
-						<div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
-							<input type="email" class="form-control" id="email" style="margin-left:-50px;width:110%">
+						<div class="col-md-6 col-lg-6 col-sm-5 col-xs-12 no-padding">
+							<input type="email" class="form-control" id="email" style="">
 						</div>
-						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
-							<button type="submit" class="btn btn-primary btn-md rais"
-							style="width:100%;background-color: #ff6c6f;height:auto;border-color:#ff6c6f">
-							Search Doctors</button>
+						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10 no-padding main_button">
+							<button type="submit" class="btn btn-primary btn-md rais" style="">
+								<span class="search_doc">Search Doctors</span>
+							</button>
 						</div>
+
 					</div>
 				</form>
 
@@ -33,33 +72,13 @@
 			</div>
 		</div>
 	</section>
-</section>
 
-<!-- <div class="doc_main">
-	<img src="../images/Meet the Doctors.jpg">
-	<div class="data">
-		<h2>
-			<span style="border-bottom:5px solid #FF6C6F;">Meet T</span>he Doctors
-		</h2>
-		<div class="info">
-			<p>choose the right doctor for your treatment</p>
-			<p id="spec">consult a specialist for a second opinion</p>
-		</div>
-	</div>
-	<form class="form-inline search row" style=" " method="post">
-		<label for="speciality" class="label col-lg-2 col-sm-2 col-xs-2 col-md-2" style="margin-left:-10px;">Procedure:</label>
-		<input type="hidden" name="action" value="search">
-		<input id="global" class="form-control col-lg-6 col-sm-6 col-xs-6 col-md-6" type="text" style="width: 450px; height: 50px;" placeholder="Procedure ex: knee replacement" name="global" autocomplete="off">
-		<input type="hidden" id="globalId" name="globalId" value="">
-	<input class="btn btn-primary btn-md raiseds col-lg-4 col-sm-4 col-xs-4 col-md-4" type="submit" value="Search Doctors" style="height: 40px; width: 150px; margin-right: -200px; margin-left: 55px; background-color: rgb(255, 108, 111); color: white; margin-top: 3px; font-size: 18px; font-family: SourceSansPro-Semibold;">
-	</form>
+</div> -->
 
-</div>
- -->
 
 
 <div class="row procedure">
-	<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 " style="padding-left: 0px; padding-right: 0px;">
+	<div class="col-lg-3 col-sm-3 col-xs-0 col-md-3 qwe " style="">
 		<h4 class="specialities">Speciality</h4>
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			{{#each speciality}}
@@ -69,12 +88,12 @@
 
 						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none">
 							<h4 class="panel-title">
-								<div class="row">
-									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+								<div class="row accordion_doc">
+									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 pro" style="">
 										{{name}}
 									</div>
-									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-										<span class="glyphicon glyphicon-chevron-down" style="color:#D6D2D2;"></span>
+									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 icon">
+										<span class="glyphicon glyphicon-chevron-down" style=""></span>
 									</div>
 								</div>
 							</h4>
@@ -83,7 +102,14 @@
 					</div>
 					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 						<div class="panel-body">
-							gfsdg
+
+							{{#each procedures}}
+								<div>
+									<input type="radio">
+									<span>{{name}}</span>
+									<form>
+								</div>
+							{{/each}}
 						</div>
 					</div>
 				</div>
@@ -92,24 +118,29 @@
 		</div>
 	</div>
 
-	<div class="col-lg-9 col-sm-9 col-xs-9 col-md-9 " style="border-left:2px solid #e5e5e5;">
+	<div class="col-lg-9 col-sm-9 col-xs-12 col-md-9 " style="border-left:2px solid #e5e5e5;">
 		<div class="row ">
+			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
 			{{#each doctors}}
-				<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 doctor ">
+				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor ">
 					<div class="thumbnail">
 						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
-						<a href="#">
+						<!-- <a href="#"> -->
 							<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
-							<input class="btn btn-primary btn-md raise " type="submit" value="View Complete Profile" style="outline:none;">
-						</a>
+							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+							<input class="btn btn-primary btn-md raise "  type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+						<!-- </a> -->
 					</div>
 				</div>
 			{{/each}}
+			<!-- <div class="col-lg-8 col-md-8 col-xs-1 col-sm-8">
+			</div> -->
 		</div>
 
 	</div>
+
 </div>
 
 

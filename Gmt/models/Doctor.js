@@ -26,16 +26,6 @@ Doctor.add({
 		wysiwyg: true,
 		height: 300
 	},
-	education: {
-		type: Types.Html,
-		wysiwyg: true,
-		height: 100
-	},
-	awards: {
-		type: Types.Html,
-		wysiwyg: true,
-		height: 100
-	},
 	reviews: {
 		type: Types.Relationship,
 		ref: 'Review',
@@ -61,8 +51,11 @@ Doctor.relationship({
 });
 Doctor.schema.methods.getProcedures = function(callback) {
 	return keystone.list('Procedure').model.find({
-		doctors: this._id
-	}).populate('providers').populate('speciality').exec(callback);
+			doctors: this._id
+		})
+		.populate('providers')
+		.populate('speciality')
+		.exec(callback);
 };
 
 

@@ -6,28 +6,29 @@ var singleSearch = function(model, req, res) {
 	async.parallel(
 		[
 			function(callback) {
-				searchDocs(req.params.model,new RegExp(req.query.query, "i"),callback);
+				searchDocs(req.params.model, new RegExp(req.query.query, "i"), callback);
 			},
-		],function(err, results) {
-			 var suggestions = [];
-			 fnjs.each(function(result) {
-			 	fnjs.each(function(suggestion) {
-			 		suggestions.push(suggestion);
-			 	},result);
-			 }, results);
+		],
+		function(err, results) {
+			var suggestions = [];
+			fnjs.each(function(result) {
+				fnjs.each(function(suggestion) {
+					suggestions.push(suggestion);
+				}, result);
+			}, results);
 			res.json({
 				"suggestions": suggestions
 			});
 		});
 };
 
-var searchDocs = function(model,regex,callback) {
+var searchDocs = function(model, regex, callback) {
 	keystone.list(model)
 		.model.find({
 			name: regex
 		})
 		.exec(function(err, docs) {
-			callback(false,fnjs.map(function(doc) {
+			callback(false, fnjs.map(function(doc) {
 				return {
 					"value": doc.name,
 					"data": model + ":" + doc.id
@@ -40,25 +41,25 @@ var globalSearch = function(model, req, res) {
 	async.parallel(
 		[
 			function(callback) {
-				searchDocs("Procedure",new RegExp(req.query.query, "i"),callback);
+				searchDocs("Procedure", new RegExp(req.query.query, "i"), callback);
 			},
 			function(callback) {
-				searchDocs("Speciality",new RegExp(req.query.query, "i"),callback);
+				searchDocs("Speciality", new RegExp(req.query.query, "i"), callback);
 			},
-			// function(callback) {
-			// 	searchDocs("Doctor",new RegExp(req.query.query, "i"),callback);
-			// },
-			// function(callback) {
-			// 	searchDocs("Provider",new RegExp(req.query.query, "i"),callback);
-			// },
+			function(callback) {
+				searchDocs("Doctor", new RegExp(req.query.query, "i"), callback);
+			},
+			function(callback) {
+				searchDocs("Provider", new RegExp(req.query.query, "i"), callback);
+			},
 		],
 		function(err, results) {
-			 var suggestions = [];
-			 fnjs.each(function(result) {
-			 	fnjs.each(function(suggestion) {
-			 		suggestions.push(suggestion);
-			 	},result);
-			 }, results);
+			var suggestions = [];
+			fnjs.each(function(result) {
+				fnjs.each(function(suggestion) {
+					suggestions.push(suggestion);
+				}, result);
+			}, results);
 			res.json({
 				"suggestions": suggestions
 			});
