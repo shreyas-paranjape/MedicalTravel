@@ -4969,11 +4969,11 @@ button.close {
   font-size: 16px; }
 
 .q {
-  height: 400px; }
+  height: auto; }
 
 .p {
   height: 350px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden; }
 
 .navbar-default {
@@ -5003,6 +5003,7 @@ button.close {
   margin-left: -2px; }
 
 .procedure {
+  overflow: hidden;
   margin: 0; }
   .procedure .border {
     border-right: 2px solid #e5e5e5; }
@@ -5019,7 +5020,8 @@ button.close {
   padding: 20px 0; }
 
 #providers, #doctors, #procedures, #speciality, #reviews {
-  border-top: 2px solid #e5e5e5; }
+  border-top: 2px solid #e5e5e5;
+  padding-top: 10px; }
   #providers span, #doctors span, #procedures span, #speciality span, #reviews span {
     position: relative;
     top: 10px;
@@ -5033,7 +5035,8 @@ button.close {
   margin-left: -40px; }
 
 .procedure-box {
-  margin-top: 40px; }
+  margin-top: 40px;
+  padding-bottom: 20px; }
   .procedure-box h3 {
     margin-top: 0;
     width: 100%;
@@ -5048,6 +5051,18 @@ button.close {
   .procedure-box a {
     outline: none;
     text-decoration: none; }
+
+.btn-primary.raised {
+  box-shadow: 0 4px 0 0 #b24b4d;
+  background-color: #ff6c6f;
+  border-color: #ff6c6f;
+  margin-top: 48px;
+  font-family: SourceSansPro-Semibold;
+  font-size: 16px; }
+
+.btn-primary.raised.active {
+  outline: none;
+  box-shadow: none; }
 
 .proc {
   margin-top: 45px;
@@ -5079,6 +5094,12 @@ button.close {
     width: 180px;
     height: 180px;
     border-radius: 50%; }
+  .doc h3 {
+    font-family: SourceSansPro-Semibold;
+    font-size: 30px; }
+  .doc p {
+    font-family: SourceSansPro-Regular;
+    font-size: 16px; }
   .doc #text {
     margin-top: 40px;
     margin-left: 0; }
@@ -5202,21 +5223,23 @@ a:focus {
   #education span, #awards span {
     margin-left: 100px; }
 
-.btn-primary.raised {
-  box-shadow: 0 4px 0 0 #b24b4d;
-  background-color: #ff6c6f;
-  border-color: #ff6c6f;
-  margin-top: 48px;
-  font-family: SourceSansPro-Semibold;
-  font-size: 16px; }
-
-.btn-primary.raised.active {
-  outline: none;
-  box-shadow: none; }
-
 .btn-primary.raiseds {
   box-shadow: 0 4px 0 0 #df5f69;
   border-color: #ff6c6f; }
+
+.btn-primary.enquire {
+  box-shadow: 0 4px 0 0 #df5f69;
+  border-color: #ff6c6f;
+  background-color: #ff6c6f;
+  width: 50%;
+  height: auto; }
+
+.doc_proc {
+  padding-bottom: 20px; }
+  .doc_proc .doc_border {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-top: 20px; }
 
 .panel-default {
   border-width: 0; }
@@ -5230,16 +5253,27 @@ a:focus {
   .panel-default .panel-title .accordion .price {
     padding-top: 5px;
     text-align: right; }
-  .panel-default .panel-title .accordion .btn-default {
-    padding-top: 4px; }
+  .panel-default .panel-title .accordion .btn-primary.procedure_btn {
+    background-color: #ff6c6f;
+    color: white;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular;
+    height: auto;
+    padding: 3px 12px;
+    border-color: #ff6c6f;
+    box-shadow: 0 4px 0 0 #b24b4d; }
+  .panel-default .panel-title .accordion .btn-primary.doc_btn {
+    background-color: #53c8ab;
+    color: white;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular;
+    height: auto;
+    border-color: #53c8ab;
+    box-shadow: 0 4px 0 0 #317866; }
   .panel-default .panel-body {
     text-align: left;
     font-size: 16px;
     font-family: SourceSansPro-Regular; }
-
-.thumbnail {
-  height: auto;
-  width: auto; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;
@@ -5283,11 +5317,6 @@ a:focus {
   font-family: SourceSansPro-Regular;
   font-size: 16px; }
 
-.jumbotron {
-  background-image: url("../images/Meet the Doctors.jpg");
-  width: 100%;
-  height: 100%; }
-
 .carousel-control.left, .carousel-control.right {
   background-image: none;
   color: #cdcaca; }
@@ -5305,7 +5334,9 @@ a:focus {
   padding-left: 25px; }
   .doctor .thumbnail {
     border-bottom-width: 0;
-    margin-top: 30px; }
+    margin-top: 30px;
+    height: auto;
+    width: auto; }
     .doctor .thumbnail .doct {
       border-radius: 50%;
       width: 160px;
@@ -5345,22 +5376,15 @@ a:focus {
   .btn-primary.rais .search_doc {
     font-size: 15px; }
 
-.btn-primary.enquiry {
-  background-color: #53C8AB;
-  color: white;
-  height: auto;
-  border-color: #53C8AB;
-  box-shadow: 0 4px 0 0 #317866; }
-
 .qwe {
-  padding-left: 0px;
-  padding-right: 0px; }
+  padding-left: 0;
+  padding-right: 0; }
 
 .accordion_doc .pro {
   font-family: SourceSansPro-Regular;
   font-size: 18px; }
 .accordion_doc .icon {
-  color: #D6D2D2; }
+  color: #d6d2d2; }
 
 .hero {
   background: url("../images/Meet%20the%20Doctors.jpg") no-repeat center center;
@@ -5396,17 +5420,19 @@ a:focus {
       font-size: 20px;
       margin-bottom: 0;
       font-family: SourceSansPro-Regular; }
-    .hero .container .form-group .form-control {
-      width: 100%;
-      height: auto;
-      padding: 8px 12px 10px; }
-    .hero .container .form-group #proc {
-      font-family: SourceSansPro-Semibold;
-      color: black;
-      font-size: 22px;
-      font-weight: 300;
-      padding-bottom: 10px;
-      text-align: center; }
+    .hero .container .form-group {
+      padding: 0px 0px 0px 15px; }
+      .hero .container .form-group .form-control {
+        width: 100%;
+        height: auto;
+        padding: 8px 12px 10px;
+        margin-left: 3px; }
+      .hero .container .form-group #proc {
+        font-family: SourceSansPro-Semibold;
+        color: black;
+        font-size: 22px;
+        font-weight: 300;
+        padding-bottom: 10px; }
     .hero .container .block {
       background-color: #d6d2d2;
       padding: 5px 15px; }
@@ -5461,3 +5487,6 @@ a:focus {
   .hero .container .form-group #proc {
     text-align: center;
     margin: 0 auto; } }
+
+.form-horizontal {
+  margin-top: 20px; }

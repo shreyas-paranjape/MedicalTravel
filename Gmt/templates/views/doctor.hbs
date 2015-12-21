@@ -1,8 +1,8 @@
 <!-- <div class="container"> -->
 <div class="row procedure">
-	<div class="col-lg-8 border no-padding">
+	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
-		<div class="row doc" >
+		<div class="row doc " >
 			<div class="col-lg-1">
 			</div>
 			<div class="col-lg-3">
@@ -11,7 +11,7 @@
 			<div class="col-lg-4">
 				{{#each doctor}}
 					<h3>{{name}}</h3>
-					<p>{{{summary}}}</p>
+				{{{summary}}}
 				{{/each}}
 			</div>
 			<div class="col-lg-4">
@@ -56,10 +56,10 @@
 				</div>
 			</div>
 			</h4>
-			<div class="row">
+			<div class="row doc_proc" style="">
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
-				<div class="col-lg-10" style="border:1px solid #e5e5e5;border-radius:4px;margin-top:20px">
+				<div class="col-lg-10 doc_border" style="">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 				{{#each procedures}}
 
@@ -76,7 +76,7 @@
 												{{price}}
 											</div>
 											<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-												<input class="btn btn-default" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
+												<input class="btn btn-primary btn-md doc_btn" type="submit" value="Enquiry" style="outline:none">
 											</div>
 										</div>
 									</a>
@@ -116,7 +116,7 @@
 					</div>
 					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
 						<h3>{{name}}</h3>
-						<button type="button" class="btn btn-primary btn-md raised">Know More</button>
+						<button type="button" class="btn btn-primary btn-md raised" style="outline:none">Know More</button>
 						<!-- <a href=""><p>Know More</p></a> -->
 						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 					</div>
@@ -146,7 +146,7 @@
 			<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button> -->
 		</div>
 	</div>
-	<div class="col-lg-4 no-padding name">
+	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
 
 			{{#each speciality}}
 				<h3> {{name}} </h3>
