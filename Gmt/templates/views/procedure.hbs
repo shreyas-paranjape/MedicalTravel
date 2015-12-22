@@ -2,15 +2,15 @@
 <div class="row procedure">
 	<!-- row starts-->
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
-		<img src="../images/cancer_Treatments(1).jpg" class="image">
+		<img src="../images/cancercare1.jpg" class="image">
 		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav row" style="padding-top: 8px;">
 					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#overview">Overview</a></li>
-					<li class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;"><a href="#providers">Featured Providers</a></li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#doctors" style="margin-left:-28px;">Specialists</a></li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#procedures" style="margin-left: -11px;">Procedures</a></li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#overview" style="padding-top:12px;">Overview</a></li>
+					<li class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;"><a href="#providers" style="padding-top:12px;">Featured Providers</a></li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#doctors" style="margin-left:-28px;padding-top:12px;">Specialists</a></li>
+					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#procedures" style="margin-left: -11px;padding-top:12px;">Procedures</a></li>
 				</ul>
 			</nav>
 			<h4 id="overview"></h4>
@@ -39,7 +39,7 @@
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
 					<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
-						<img src="">
+						<img src="../images/nusi wockhardt goa - Copy.jpg">
 					</div>
 					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
 						<h3>{{name}}</h3>
@@ -67,7 +67,7 @@
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
 							<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-								<img src="http://placehold.it/104x104">
+								<img src="{{cloudinaryUrl imageOuter}}">
 							</div>
 							<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
 								<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
@@ -107,9 +107,14 @@
 										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
 											<div class="row accordion">
 												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
-													{{name}}
+													{{name}} <span style="padding-left: 5px; font-size:18px;font-family: SourceSansPro-Semibold;">+</span>
 													<!-- <span class="fa fa-plus-square-o"></span> -->
 												</div>
+													<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 ">
+														<span class="glyphicon glyphicon-plus"></span>
+													</div> -->
+													<!-- <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 ">
+													</div> -->
 												<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2 price">
 													{{price}}
 												</div>
@@ -141,7 +146,7 @@
 		<ul class="nav nav-stacked tabs">
 			{{#each specialities}}
 				{{#if active}}
-					<li role="presentation" class="active">
+					<li role="presentation" class="active" style="margin-top: 0px;">
 						<a href="/procedure/{{key}}">
 							<div class="row">
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
@@ -158,7 +163,7 @@
 						</a>
 					</li>
 				{{else}}
-					<li role="presentation">
+					<li role="presentation" style="margin-top: 0px;">
 						<a href="/procedure/{{key}}">
 							<div class="row">
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">

@@ -10,16 +10,16 @@
 			<p>Consult a specialist for a second opinion</p>
 		</div>
 		<div class="row">
-			<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
+			<!-- <div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div> -->
 			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 block">
 
 				<form role="form row" method="post">
 					<input type="hidden" name="action" value="search">
 					<div class="form-group">
-						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 ">
+						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 " style="padding-top: 2px;">
 							<label id="proc">Procedure:</label>
 						</div>
-						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 ">
+						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 " >
 
 							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
 							<input type="hidden" id="procedureId" name="procedureId" value="">
@@ -32,6 +32,7 @@
 					</div>
 				</form>
 			</div>
+				<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
 		</div>
 	</section>
 </section>
@@ -77,8 +78,28 @@
 
 
 <div class="row procedure">
+	<div class="col-lg-9 col-sm-9 col-xs-12 col-md-9 ">
+		<div class="row ">
+			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
+			{{#each doctors}}
+				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " >
+					<!-- style="padding-right: 25px;"" -->
+					<div class="thumbnail" style="border-bottom-width: 1px;">
+						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
+						<p>{{name}}</p>
+						<span>{{{summary}}}</span>
+						<!-- <a href="#"> -->
+							<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
+							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+						<span style="padding-left:40px;"><input class="btn btn-primary btn-md raise "  type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'"></span>
+						<!-- </a> -->
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
 	<div class="col-lg-3 col-sm-3 col-xs-0 col-md-3 qwe " style="">
-		<h4 class="specialities">Speciality</h4>
+		<h4 class="specialities">Filter Doctors by Procedure</h4>
 		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 			{{#each speciality}}
 
@@ -117,25 +138,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-9 col-sm-9 col-xs-12 col-md-9 " style="border-left:2px solid #e5e5e5;">
-		<div class="row ">
-			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
-			{{#each doctors}}
-				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor ">
-					<div class="thumbnail">
-						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
-						<p>{{name}}</p>
-						<span>{{{summary}}}</span>
-						<!-- <a href="#"> -->
-						<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
-						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
-						<input class="btn btn-primary btn-md raise " type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
-						<!-- </a> -->
-					</div>
-				</div>
-			{{/each}}
-		</div>
-	</div>
+
 
 </div>
 

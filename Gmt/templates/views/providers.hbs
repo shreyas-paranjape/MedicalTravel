@@ -1,45 +1,63 @@
 <!-- <div class="container"> -->
-	<div class="row procedure">
-		<div class="col-lg-8 border no-padding">
-			{{#each providers}}
-				<div class="row provider-box">
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+<div class="row procedure">
+	<div class="col-lg-8 border no-padding">
+		{{#each providers}}
+			<div class="row provider-box">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<img class="provider-img" width="auto" height="auto" style="margin-top: 10px; margin-bottom: 10px;" src="../images/Manipal goa.jpg">
-					</div>
-
-					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 provider-info">
-						<h3 style="">{{name}}</h3>
-
-							{{{summary}}}
-							<button type="button" class="btn btn-primary btn-md providers_btn" onclick="location.href='/provider/{{key}}'" style="outline:none;">Know More</button>
-
-
-					</div>
 				</div>
-			{{/each}}
-		</div>
 
-			<div class="col-lg-4 no-padding">
-				<ul class="nav nav-stacked tabs">
-					{{#each providerCategories}}
-					{{#if active}}
-						<li role="presentation" class="active">
-							<a href="/providers/{{key}}" style="">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 provider-info">
+					<h3 style="">{{name}}</h3>
 
-								<span>{{name}}</span>
-							</a>
-						</li>
-					{{else}}
-						<li role="presentation">
-							<a href="/providers/{{key}}" style="">
+					{{{summary}}}
+					<button type="button" class="btn btn-primary btn-md providers_btn" onclick="location.href='/provider/{{key}}'" style="outline:none;">Know More</button>
 
-								<span>{{name}}</span>
-							</a>
-						</li>
-					{{/if}}
-						{{/each}}
-				</ul>
+
+				</div>
 			</div>
-
+		{{/each}}
 	</div>
+
+	<div class="col-lg-4 no-padding">
+		<ul class="nav nav-stacked tabs">
+			{{#each providerCategories}}
+				{{#if active}}
+					<li role="presentation" class="active" style="margin-top: 0px;">
+						<a href="/providers/{{key}}" style="">
+							<div class="row">
+								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+								</div>
+								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+									<img src="">
+								</div>
+								<div class="col-lg-9">
+									<span>{{name}}</span>
+								</div>
+							</div>
+						</a>
+					</li>
+				{{else}}
+					<li role="presentation" style="margin-top: 0px;">
+						<a href="/providers/{{key}}" style="">
+							<div class="row">
+								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+								</div>
+								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+									<img src="">
+								</div>
+								<div class="col-lg-9">
+									<span>{{name}}</span>
+								</div>
+
+
+							</div>
+						</a>
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+
+</div>
 <!-- </div> -->

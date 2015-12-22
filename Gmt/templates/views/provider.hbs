@@ -120,15 +120,13 @@
 									<h4 class="panel-title">
 										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
 											<div class="row accordion">
-												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
+												<div class="col-lg-11 col-sm-11 col-xs-11 col-md-11 title">
 													{{name}}
 												</div>
-												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
-													{{price}}
+												<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 icon" style="color: #d6d2d2;">
+													<span class="glyphicon glyphicon-chevron-down" style=""></span>
 												</div>
-												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" style="background-color:#FF6C6F;color:white">
-												</div>
+
 											</div>
 										</a>
 									</h4>
@@ -136,9 +134,16 @@
 								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 									<div class="panel-body">
 										{{#each procedures}}
-											<div>
-												<span>{{name}}</span>
-												<span>{{price}}</span>
+											<div class="row provider_procedures">
+												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
+													<span>{{name}}</span>
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
+													<span>₹ {{price}}</span>
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry">
+												</div>
 											</div>
 										{{/each}}
 									</div>
@@ -163,12 +168,13 @@
 			</h4>
 			<!-- <span class="glyphicon glyphicon-star" style="margin-left:30px"></span>
 			<span class="glyphicon glyphicon-star"></span>
-			<span class="glyphicon glyphicon-star"></span>
-			<p style="margin-left: 30px;">Lorem Ipsum,</p>
-			<p style="margin-left: 30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
-			<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
-			<p style="margin-left: 30px;">help all over.</p>
-			<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button> -->
+			<span class="glyphicon glyphicon-star"></span> -->
+			{{#each provider.reviews}}
+
+				<div> {{{comments}}} --> {{hits}}
+				</div>
+			{{/each}}
+
 		</div>
 	</div>
 	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
@@ -217,6 +223,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 <!-- </div> -->

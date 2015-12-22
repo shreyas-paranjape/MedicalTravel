@@ -27,11 +27,11 @@ exports = module.exports = function(req, res) {
 	//Display the Current provider with Doctor and Procedure with doctor
 	view.query("provider", keystone.list('Provider').model.findOne({
 		key: req.params.key
-	}).populate('doctors'));
+	}).populate('doctors').populate('reviews'));
 
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
-	}).populate('doctors');
+	}).populate('doctors').populate('reviews');
 
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, currentProvider) {

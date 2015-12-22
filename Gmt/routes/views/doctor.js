@@ -20,10 +20,12 @@ exports = module.exports = function(req, res) {
 	var doctorQuery = keystone.list('Doctor').model.findOne({
 		key: req.params.key
 	});
+	// view.query("doctor",doctorQuery);
 
 	view.on('init', function(next) {
 		doctorQuery.exec(function(err, doctorRes) {
 			res.locals.doctor = doctorRes;
+			//console.log("res.locals.doctor" + res.locals.doctor);
 			doctorRes.getProcedures(function(er, procedureRes) {
 				fnjs.each(function(procedure) {
 					if (!contains(procedure, res.locals.procedures)) {

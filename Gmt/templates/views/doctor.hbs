@@ -2,23 +2,23 @@
 <div class="row procedure">
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
-		<div class="row doc " >
-			<div class="col-lg-1">
+<div class=" row doc">
+	<div class="col-lg-1">
 			</div>
 			<div class="col-lg-3">
-				<img src="images/logo.png" >
-			</div>
-			<div class="col-lg-4">
-				{{#each doctor}}
-					<h3>{{name}}</h3>
-				{{{summary}}}
-				{{/each}}
-			</div>
-			<div class="col-lg-4">
+		<img src="{{cloudinaryUrl doctor.imageOuter}}" class="doct">
+	</div>
+	<div class="col-lg-5">
+	<h3>	{{doctor.name}}</h3>
+		{{{doctor.summary}}}
+	</div>
+		<!-- {{{doctor.expertise}}} -->
+		<div class="col-lg-2">
 				<!-- <input type="text" class="form-control" id="text" value="Verified"> -->
 				<a href="" id="link">Verified</a>
 			</div>
-		</div>
+</div>
+
 		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
 				<nav class="navbar navbar-default" >
 				<ul class="nav navbar-nav row" style="padding-top: 8px;">

@@ -5,17 +5,16 @@ $icon-font-path: "../fonts/";
 @import "bootstrap/bootstrap";
 @font-face {
 				font-family: SourceSansPro-Regular;
-				src: url("../fonts/SourceSansPro-Regular.otf");
+				src: url(../fonts/SourceSansPro-Regular.otf);
 }
 @font-face {
 				font-family: SourceSansPro-Bold;
-				src: url("../fonts/SourceSansPro-Bold.otf");
+				src: url(../fonts/SourceSansPro-Bold.otf);
 }
 @font-face {
 				font-family: SourceSansPro-Semibold;
-				src: url("../fonts/SourceSansPro-Semibold.otf");
+				src: url(../fonts/SourceSansPro-Semibold.otf);
 }
-
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
 // versions is to override the ones you want in another file.
@@ -23,7 +22,6 @@ $icon-font-path: "../fonts/";
 // You can also add your own custom variables to this file for
 // use in your site stylesheets.
 @import "site/variables";
-
 // Site Styles
 // ===========
 // Add your own site style includes here
@@ -38,13 +36,11 @@ $icon-font-path: "../fonts/";
 				border-bottom: 1px solid #e5e5e5;
 				width: 100%;
 				margin-left: 2px;
-
 				// margin-bottom: 20px;
 }
 .provider-img {
 				padding: 20px;
 				border-radius: 8px;
-
 				// width: 350px;
 				// height: 300px;
 }
@@ -90,39 +86,47 @@ $icon-font-path: "../fonts/";
 				li {
 								font-family: SourceSansPro-Regular;
 								font-size: 16px;
+
 				}
 				a {
 								outline: none;
+
 				}
 }
 .navbar-default .navbar-nav > li > a {
 				color: black;
 }
+// .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+//     background-color: #2b2b2b;
+//     color: #D55F61;
+// }
+.navbar-inverse .navbar-nav > li > a {
+				color: white;
+}
 .tabs {
 				li {
-								margin-bottom: 20px;
+
 								font-family: SourceSansPro-Regular;
 								background-color: rgb(237,237,237);
 								font-size: 22px;
-
-								// 								margin-top: 0;
 								padding-top: 10px;
 								padding-bottom: 10px;
-								box-shadow: 0 5px 0 #cac6c6;
+								// box-shadow: 0 5px 0 #cac6c6;
+								border-bottom: 2px solid #cac6c6;
 				}
 				a {
 								outline: none;
 				}
 				.active {
-								background-color: rgb(204,204,204);
-								margin-left: -2px;
+								background-color: white;
+								// margin-left: -2px;
 				}
 }
 .procedure {
 				overflow: hidden;
 				margin: 0;
 				.border {
-								border-right: 2px solid #e5e5e5;
+								border-right: 1px solid #CAC6C6;
 				}
 }
 .image {
@@ -142,19 +146,17 @@ $icon-font-path: "../fonts/";
 #speciality,
 #reviews {
 				border-top: 2px solid #e5e5e5;
-				padding-top:10px;
+				padding-top: 10px;
 				span {
 								position: relative;
 								top: 10px;
 								font-family: SourceSansPro-Semibold;
 								font-size: 18px;
-
 				}
 }
 #bio {
 				font-size: 16px;
 				margin-top: 45px;
-
 				// border-bottom: 2px solid #e5e5e5;
 				padding-bottom: 40px;
 				margin-left: -40px;
@@ -213,46 +215,46 @@ $icon-font-path: "../fonts/";
 				border: 1px solid #53c8ab;
 				color: #53c8ab;
 				border-radius: 4px;
-				padding: 5px;
+				padding: 1px 10px;
 				position: relative;
-				top: 60px;
+				top: 12px;
 				text-decoration: none;
+				font-family: SourceSansPro-Regular;
+				font-size: 18px;
 }
-
 .doc {
-				margin-top: 45px;
+				padding-top: 45px;
 				height: 447px;
 				padding-bottom: 40px;
 				img {
 								width: 180px;
 								height: 180px;
 								border-radius: 50%;
-
 				}
 				h3 {
-          font-family: SourceSansPro-Semibold;
-					font-size: 30px;
+								font-family: SourceSansPro-Semibold;
+								font-size: 32px;
+								color: #959595;
+								margin-top: -5px;
 				}
-
-        p{
-					font-family: SourceSansPro-Regular;
-					font-size:16px;
+				p {
+								font-family: SourceSansPro-Regular;
+								font-size: 20px;
 				}
 				#text {
 								margin-top: 40px;
 								margin-left: 0;
 				}
 }
-
 .name {
 				h3 {
 								background-color: #ededed;
-								font-size: 18px;
+								font-size: 20px;
 								width: 100%;
 								height: auto;
 								padding: 25px 0 25px 33px;
 								margin-top: 0;
-								font-family: SourceSansPro-Semibold;
+								font-family: SourceSansPro-Bold;
 				}
 }
 .form {
@@ -281,7 +283,6 @@ $icon-font-path: "../fonts/";
 												padding: 8px 0 0 8px;
 												border: 1px solid #ccc;
 								}
-
 								// .dropdown {
 								// 				margin-left: 20px;
 								// 				width: 100px;
@@ -301,16 +302,15 @@ $icon-font-path: "../fonts/";
 								font-family: SourceSansPro-Regular;
 								box-shadow: 0 4px 0 0 rgb(223,95,105);
 								outline: none;
-
 								// box-shadow: 0 2px 0 0 rgb(223,95,105);
 				}
 }
-.connect {
-				border: 2px solid #d55f61;
-				border-radius: 5px;
-				margin-bottom: 0;
-				margin-top: 9px;
-}
+// .connect {
+// 				border: 2px solid #d55f61;
+// 				border-radius: 5px;
+// 				margin-bottom: 0;
+// 				margin-top: 9px;
+// }
 .post_img {
 				height: auto;
 				width: 50%;
@@ -383,7 +383,6 @@ a:focus {
 }
 #education,
 #awards {
-
 				// margin-left: -32px;
 				// border-top:2px solid #e5e5e5;
 				// width:770px;
@@ -396,7 +395,6 @@ a:focus {
 								margin-left: 100px;
 				}
 }
-
 .btn-primary.raiseds {
 				box-shadow: 0 4px 0 0 rgb(223,95,105);
 				border-color: rgb(255,108,111);
@@ -413,22 +411,21 @@ a:focus {
 				width: 50%;
 				height: auto;
 }
-.spec {
-
-}
-.doc_proc{
-	padding-bottom: 20px;
-	.doc_border{
-		border:1px solid #e5e5e5;
-		border-radius:4px;
-		margin-top:20px;
-	}
+.spec {}
+.doc_proc {
+				padding-bottom: 20px;
+				.doc_border {
+								border: 1px solid #e5e5e5;
+								border-radius: 4px;
+								margin-top: 20px;
+				}
 }
 .panel-default {
 				border-width: 0;
 				.panel-heading {
 								margin-top: 20px;
-								background-color: #f9f9f9;
+								background-color: #EDEDED;
+								padding: 12px 15px;
 				}
 				.panel-title {
 								a {
@@ -437,32 +434,32 @@ a:focus {
 								.accordion {
 												.title {
 																padding-top: 5px;
+																font-family: SourceSansPro-Regular;
+																font-size: 16px;
 												}
 												.price {
 																padding-top: 5px;
 																text-align: right;
 												}
-
 												.btn-primary.procedure_btn {
 																background-color: #ff6c6f;
 																color: white;
-                                font-size:16px;
+																font-size: 16px;
 																font-family: SourceSansPro-Regular;
 																height: auto;
-																padding: 3px 12px;
+																padding: 1px 12px;
 																border-color: #ff6c6f;
-																box-shadow: 0 4px 0 0 #b24b4d;
+																box-shadow: 0 3px 0 0 #b24b4d;
 												}
 												.btn-primary.doc_btn {
 																background-color: #53c8ab;
 																color: white;
-																font-size:16px;
+																font-size: 16px;
 																font-family: SourceSansPro-Regular;
 																height: auto;
 																border-color: #53c8ab;
 																box-shadow: 0 4px 0 0 #317866;
 												}
-
 								}
 				}
 				.panel-body {
@@ -471,7 +468,6 @@ a:focus {
 								font-family: SourceSansPro-Regular;
 				}
 }
-
 .autocomplete-suggestions {
 				border: 1px solid #999;
 				background: #fff;
@@ -491,7 +487,6 @@ a:focus {
 .autocomplete-suggestions strong {
 				font-weight: normal;
 				color: rgb(255,108,111);
-
 				// color: #39f;
 }
 .autocomplete-group {
@@ -518,7 +513,6 @@ a:focus {
 								font-size: 16px;
 				}
 				 :-ms-input-placeholder {
-
 								// color: red;
 								font-family: SourceSansPro-Regular;
 								font-size: 16px;
@@ -529,7 +523,6 @@ a:focus {
 // 				width: 100%;
 // 				height: 100%;
 // }
-
 .carousel-control.left,
 .carousel-control.right {
 				background-image: none;
@@ -539,10 +532,11 @@ a:focus {
 				background-color: rgb(214, 210, 210);
 				color: black;
 				margin-top: 0;
-				font-size: 22px;
+				font-size: 18px;
 				font-family: SourceSansPro-Regular;
 				width: 100%;
 				padding: 15px 13px;
+				text-align: center;
 }
 .doctor {
 				padding-left: 25px;
@@ -575,27 +569,38 @@ a:focus {
 				color: white;
 				background-color: rgb(83, 200, 171);
 				border-radius: 5px;
-				width: 103.5%;
-				margin-left: -5px;
+				width: 70%;
+			margin-bottom: 10px;
 				padding: 4px 12px;
 				font-family: SourceSansPro-Semibold;
 				font-size: 16px;
 				box-shadow: 0 3px 0 0 #317866;
+
 }
 .btn-primary.rais {
 				width: 80%;
+				padding: 4px 12px;
 				background-color: #ff6c6f;
 				height: auto;
 				border-color: #ff6c6f;
-				box-shadow: 0 4px 0 0 #b24b4d;
+				box-shadow: 0 3px 0 0 #b24b4d;
 				font-family: SourceSansPro-Semibold;
+				margin-top: 2px;
 				.search_doc {
 								font-size: 15px;
 				}
 }
-
+.connect {
+				background-color: #ff6c6f;
+				border-color: #ff6c6f;
+				box-shadow: 0 2px 0 0 #B24B4D;
+				font-family: SourceSansPro-Regular;
+				font-size: 16px;
+				padding: 1px 12px;
+				// width:80px;
+}
 .qwe {
-				padding-left: 0;
+				padding-left: 16px;
 				padding-right: 0;
 }
 .accordion_doc {
@@ -624,8 +629,9 @@ a:focus {
 								left: 0;
 								width: 100%;
 								.pp {
-											padding-left: 20px;
-											padding-bottom: 11px;
+												padding-left: 20px;
+												padding-bottom: 11px;
+												margin-bottom: 40px;
 												.border_doc {
 																border-bottom: 5px solid #ff6c6f;
 																width: 10%;
@@ -642,11 +648,9 @@ a:focus {
 												font-size: 20px;
 												margin-bottom: 0;
 												font-family: SourceSansPro-Regular;
-
-
 								}
 								.form-group {
-									padding: 0px 0px 0px 15px;
+												padding: 0 0 0 15px;
 												.form-control {
 																width: 100%;
 																height: auto;
@@ -659,7 +663,6 @@ a:focus {
 																font-size: 22px;
 																font-weight: 300;
 																padding-bottom: 10px;
-
 												}
 								}
 								display: table-cell;
@@ -689,7 +692,6 @@ a:focus {
 																				border-bottom: 5px solid #ff6c6f;
 																				width: 25%;
 																				margin: -15px auto 0;
-
 																				// margin-top: -15px;
 																				// margin-bottom: 10px;
 																				// margin-left:220px;
@@ -710,7 +712,6 @@ a:focus {
 																				display: block;
 																}
 																.main_button {
-
 																				// margin: 0 auto;
 																				// display: block;
 																				.btn-primary.rais {
@@ -723,7 +724,6 @@ a:focus {
 																								.search_doc {
 																												font-size: 18px;
 																												font-family: SourceSansPro-Semibold;
-
 																												// width: 100%;
 																								}
 																				}
@@ -737,7 +737,6 @@ a:focus {
 								display: none;
 				}
 				.doctor {
-
 								// width: 271px;
 								.thumbnail {
 												height: 321px;
@@ -750,10 +749,9 @@ a:focus {
 				.hero .container .form-group #proc {
 								text-align: center;
 								margin: 0 auto;
-
 								// margin-left: 200px;
 				}
 }
-.form-horizontal{
-	margin-top:20px;
+.form-horizontal {
+				margin-top: 20px;
 }
