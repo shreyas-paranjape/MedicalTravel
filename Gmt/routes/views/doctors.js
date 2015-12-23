@@ -1,6 +1,5 @@
 var keystone = require('keystone');
-var fnjs = require('fn.js');
-
+var async = require('async');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -12,9 +11,11 @@ exports = module.exports = function(req, res) {
 	var procQuery = keystone.list('Doctor').model.find().sort("-imageOuter");
 	view.on('get', function(next) {
 		procQuery.exec(function(err, docRes) {
-			fnjs.each(function(doc) {
+			async.each(docRes, function(doc, next) {
 				res.locals.doctors.push(doc);
-			}, docRes);
+			}, function(err) {
+				next(err);
+			});
 		});
 		next();
 	});
@@ -32,17 +33,21 @@ exports = module.exports = function(req, res) {
 	var specialityQuery = keystone.list('Speciality').model.find();
 	view.on('init', function(next) {
 		specialityQuery.exec(function(err, specialities) {
-			fnjs.each(function(spec) {
+			async.each(specialities, function(spec, next) {
 				spec.procedures = [];
 				spec.getProcedures(function(err, procedures) {
-					fnjs.each(function(proced) {
+					async.each(procedures, function(proced, next) {
 						spec.procedures.push(proced);
 						if (!contains(spec, res.locals.speciality)) {
 							res.locals.speciality.push(spec);
 						}
-					}, procedures);
+					}, function(err) {
+						next(err);
+					});
 				});
-			}, specialities);
+			}, function(err) {
+				next(err);
+			});
 		});
 		next();
 	});
@@ -54,11 +59,15 @@ exports = module.exports = function(req, res) {
 		keystone.list('Procedure').model.find({
 			name: req.body.procedure
 		}).populate('doctors').exec(function(err, procedureRes) {
-			fnjs.each(function(procedure) {
-				fnjs.each(function(doctor) {
+			async.each(procedureRes, function(procedure, next) {
+				async.each(procedure.doctors, function(doctor, next) {
 					res.locals.doctors.push(doctor);
-				}, procedure.doctors);
-			}, procedureRes);
+				}, function(err) {
+					next(err);
+				});
+			}, function(err) {
+				next(err);
+			});
 		});
 		next();
 	});

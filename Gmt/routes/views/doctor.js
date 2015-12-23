@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var fnjs = require('fn.js');
+var async = require('async');
 var Enquiry = keystone.list('Enquiry');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
@@ -7,6 +7,7 @@ exports = module.exports = function(req, res) {
 	res.locals.procedures = [];
 	res.locals.providers = [];
 	res.locals.speciality = [];
+
 	var contains = function(aValue, aArray) {
 		var idx;
 		for (idx = 0; idx < aArray.length; idx++) {
@@ -20,28 +21,31 @@ exports = module.exports = function(req, res) {
 	var doctorQuery = keystone.list('Doctor').model.findOne({
 		key: req.params.key
 	});
-	// view.query("doctor",doctorQuery);
-
 	view.on('init', function(next) {
 		doctorQuery.exec(function(err, doctorRes) {
 			res.locals.doctor = doctorRes;
-			//console.log("res.locals.doctor" + res.locals.doctor);
 			doctorRes.getProcedures(function(er, procedureRes) {
-				fnjs.each(function(procedure) {
+				async.each(procedureRes, function(procedure, next) {
 					if (!contains(procedure, res.locals.procedures)) {
 						res.locals.procedures.push(procedure);
 					}
-					fnjs.each(function(provider) {
+					async.each(procedure.providers, function(provider, next) {
 						if (!contains(provider, res.locals.providers)) {
 							res.locals.providers.push(provider);
 						}
-					}, procedure.providers);
-				}, procedureRes);
-				fnjs.each(function(sp) {
+					}, function(err) {
+						next(err);
+					});
+				}, function(err) {
+					next(err);
+				});
+				async.each(procedureRes, function(sp, next) {
 					if (!contains(sp.speciality, res.locals.speciality)) {
 						res.locals.speciality.push(sp.speciality);
 					}
-				}, procedureRes);
+				}, function(err) {
+					next(err);
+				});
 			});
 			next();
 		});
