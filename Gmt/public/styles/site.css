@@ -5252,6 +5252,10 @@ a:focus {
     padding-top: 5px;
     font-family: SourceSansPro-Regular;
     font-size: 16px; }
+    .panel-default .panel-title .accordion .title span {
+      padding-left: 5px;
+      font-size: 18px;
+      font-family: SourceSansPro-Semibold; }
   .panel-default .panel-title .accordion .price {
     padding-top: 5px;
     text-align: right; }
@@ -5336,7 +5340,6 @@ a:focus {
 .doctor {
   padding-left: 25px; }
   .doctor .thumbnail {
-    border-bottom-width: 0;
     margin-top: 30px;
     height: auto;
     width: auto; }
@@ -5393,11 +5396,16 @@ a:focus {
   padding-left: 16px;
   padding-right: 0; }
 
-.accordion_doc .pro {
-  font-family: SourceSansPro-Regular;
-  font-size: 18px; }
-.accordion_doc .icon {
-  color: #d6d2d2; }
+.panel_doc {
+  margin-top: -10px; }
+  .panel_doc .panel_heading {
+    margin-top: -5px;
+    border-bottom: 2px solid #cac6c6; }
+    .panel_doc .panel_heading .accordion_doc .pro {
+      font-family: SourceSansPro-Regular;
+      font-size: 16px; }
+    .panel_doc .panel_heading .accordion_doc .icon {
+      color: #d6d2d2; }
 
 .hero {
   background: url("../images/Meet%20the%20Doctors.jpg") no-repeat center center;

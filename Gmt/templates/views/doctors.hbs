@@ -84,7 +84,7 @@
 			{{#each doctors}}
 				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " >
 					<!-- style="padding-right: 25px;"" -->
-					<div class="thumbnail" style="border-bottom-width: 1px;">
+					<div class="thumbnail" style="">
 						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
@@ -98,22 +98,23 @@
 			{{/each}}
 		</div>
 	</div>
-	<div class="col-lg-3 col-sm-3 col-xs-0 col-md-3 qwe " style="">
+	<div class="col-lg-3 col-sm-3 col-xs-0 col-md-3 qwe ">
 		<h4 class="specialities">Filter Doctors by Procedure</h4>
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="">
 			{{#each speciality}}
 
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingOne">
+				<div class="panel panel-default" >
+					<div class="panel-heading panel_heading" role="tab" id="headingOne">
 
-						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne"
+						 style="outline:none;color:black;">
 							<h4 class="panel-title">
 								<div class="row accordion_doc">
 									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 pro" style="">
 										{{name}}
 									</div>
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 icon">
-										<span class="glyphicon glyphicon-chevron-down" style=""></span>
+										<span class="glyphicon glyphicon-chevron-down"  style="top: 5px;"></span>
 									</div>
 								</div>
 							</h4>
@@ -126,8 +127,7 @@
 							{{#each procedures}}
 								<div>
 									<input type="radio">
-									<span>{{name}}</span>
-									<form>
+									<span style="font-family:SourceSansPro-Regular">{{name}}</span>
 								</div>
 							{{/each}}
 						</div>

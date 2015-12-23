@@ -1,15 +1,17 @@
 var keystone = require('keystone');
+var async = require('async');
 var fnjs = require('fn.js');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-
+	var Speciality;
 	var SpecialityQuery = keystone.list('Speciality').model.find();
 
 	res.locals.doctors = [];
 	res.locals.providers = [];
 	res.locals.procedures = [];
 	res.locals.speciality = [];
+	res.locals.specialities = [];
 
 	var contains = function(aValue, aArray) {
 		var idx;
@@ -22,26 +24,46 @@ exports = module.exports = function(req, res) {
 	}
 
 	view.on('init', function(next) {
-		SpecialityQuery.exec(function(err, specialityRes) {
-			res.locals.specialities = fnjs.map(function(speciality) {
+		SpecialityQuery.exec(function(err_s, specialityRes) {
+			if (err_s || !specialityRes.length) {
+				return next(err_s);
+			}
+			async.map(specialityRes, function(speciality) {
+				res.locals.specialities.push(speciality);
 				if (speciality.key == req.params.key) {
 					speciality.active = true;
 					res.locals.speciality.push(speciality.discription);
 				}
 				return speciality;
-			}, specialityRes);
+			}, function(err) {
+				next(err);
+			});
 
 			var Speciality = fnjs.filter(function(speciality) {
 				return speciality.key == req.params.key;
 			}, specialityRes);
+			//
+			// async.filter(specialityRes, function(speciality, callback) {
+			// 	if (speciality.key == req.params.key) {
+			// 		callback(true);
+			// 	}
+			// }, function(results) {
+			// 	Speciality = results;
+			// 	console.log("Speciality:" + results);
+			// });
+
 			Speciality[0].getDoctorsAndProviders(function(doctors, providers, procedures) {
-				fnjs.each(function(doctor) {
+				async.each(doctors, function(doctor, next) {
 					res.locals.doctors.push(doctor);
-				}, doctors);
-				fnjs.each(function(provider) {
+				}, function(err) {
+					next(err);
+				});
+				async.each(providers, function(provider, next) {
 					res.locals.providers.push(provider);
-				}, providers);
-				fnjs.each(function(procedure) {
+				}, function(err) {
+					next(err);
+				});
+				async.each(procedures, function(procedure, next) {
 					keystone.list('Price').model.find({
 						procedure: procedure.id,
 					}).sort('price').limit(1).exec(function(er, priceRes) {
@@ -49,8 +71,10 @@ exports = module.exports = function(req, res) {
 							procedure.price = price.price;
 						}, priceRes);
 					});
-					locals.procedures.push(procedure);
-				}, procedures);
+					res.locals.procedures.push(procedure);
+				}, function(err) {
+					next(err);
+				});
 			});
 			next();
 		});

@@ -51,12 +51,12 @@
 							</ul>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" style="padding-top: 10px;">
 					<div class="collapse navbar-collapse" style="margin-right:20px;">
 						<ul class="nav navbar-nav navbar-right">
 							{{# each navLinks}}
 							<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:17px;padding-left:20px;">
-								<a href="{{ href }}" style="outline:none;">{{ label }}</a>
+								<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);">{{ label }}</a>
 							</li>
 							{{/each}}
              <li style="padding-left:35px;"><button type="submit" class="btn btn-primary btn-md connect" style="background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none;margin-top:10px;	">connect</button><li>

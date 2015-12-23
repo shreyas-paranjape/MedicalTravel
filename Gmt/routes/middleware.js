@@ -1,15 +1,17 @@
 var _ = require('underscore');
 exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
-	locals.navLinks = [{
-		label: 'Home',
-		key: 'home',
-		href: '/'
-	}, {
-		label: 'Blog',
-		key: 'blog',
-		href: '/blog'
-	},{
+	locals.navLinks = [
+	// 	{
+	// 	label: 'Home',
+	// 	key: 'home',
+	// 	href: '/'
+	// }, {
+	// 	label: 'Blog',
+	// 	key: 'blog',
+	// 	href: '/blog'
+	// },
+	{
 		label: 'Provider',
 		key: 'provider',
 		href: '/providers/hospitals'
@@ -29,7 +31,11 @@ exports.initLocals = function(req, res, next) {
 	// 	label: 'User',
 	// 	key: 'user',
 	// 	href: '/user'
-	}
+}, {
+	label: 'Services',
+	key: 'services',
+	href: 'services'
+},
 ];
 
 	locals.navs =[{

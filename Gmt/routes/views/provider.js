@@ -1,13 +1,12 @@
 var keystone = require('keystone');
-var fnjs = require('fn.js');
+var async = require('async');
 var Enquiry = keystone.list('Enquiry');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	locals.validationErrors = {};
 	locals.enquirySent = false;
-	locals.section = 'providerInfo';
-
+	locals.section = 'provider';
 
 	res.locals.doctors = [];
 	res.locals.procedures = [];
@@ -27,21 +26,30 @@ exports = module.exports = function(req, res) {
 	//Display the Current provider with Doctor and Procedure with doctor
 	view.query("provider", keystone.list('Provider').model.findOne({
 		key: req.params.key
-	}).populate('doctors').populate('reviews'));
+	}).populate('doctors'));
 
 	var ProvQuery = keystone.list('Provider').model.findOne({
 		key: req.params.key
-	}).populate('doctors').populate('reviews');
+	}).populate('doctors');
 
 	view.on('init', function(next) {
 		ProvQuery.exec(function(err, currentProvider) {
-			keystone.list('Speciality').model.find().exec(function(err, specialities) {
-				fnjs.each(function(spec) {
+			keystone.list('Speciality').model.find().exec(function(err_s, specialities) {
+				if (err_s || !specialities.length) {
+					return next(err_s);
+				}
+				async.each(specialities, function(spec, next) {
 					spec.procedures = [];
-					spec.getProcedures(function(err, procedures) {
-						fnjs.each(function(proced) {
+					spec.getProcedures(function(err_p, procedures) {
+						if (err_p || !procedures.length) {
+							return next(err_p);
+						}
+						async.each(procedures, function(proced, next) {
 							if (contains(currentProvider, proced.providers)) {
-								proced.getPrice(function(err, p) {
+								proced.getPrice(function(err_pc, p) {
+									if (err_pc) {
+										return next(err_pc);
+									}
 									if (undefined != p[0]) {
 										proced.price = p[0].price;
 									}
@@ -49,14 +57,22 @@ exports = module.exports = function(req, res) {
 									if (!contains(spec, res.locals.specialities)) {
 										res.locals.specialities.push(spec);
 									}
+									next(err_pc);
 								});
+							} else {
+								next();
 							}
-						}, procedures);
+						}, function(err) {
+							next(err);
+						});
 					});
-				}, specialities);
-				next();
+				}, function(err) {
+					next(err);
+				});
 			});
 		});
+		//console.log("calling next");
+		//
 	});
 
 	// Enquiry form Data submission
