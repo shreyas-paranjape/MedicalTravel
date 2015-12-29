@@ -1,0 +1,64 @@
+{
+  "name": "box-appauth",
+  "version": "1.6.5",
+  "description": "https://box-content.readme.io/v2.0/docs/app-auth",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": {
+    "name": "Sandro Pasquali",
+    "email": "spasquali@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "backoff": "^2.4.1",
+    "bluebird": "^2.10.0",
+    "chalk": "^1.1.1",
+    "jsonwebtoken": "^5.4.0",
+    "lodash": "^3.10.1",
+    "mime": "^1.3.4",
+    "moment": "^2.10.6",
+    "node-uuid": "^1.4.3",
+    "request": "^2.61.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "bootstrapt": "^1.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ehealthtech/box-appauth.git"
+  },
+  "keywords": [
+    "Box",
+    "jwt",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/ehealthtech/box-appauth/issues"
+  },
+  "homepage": "https://github.com/ehealthtech/box-appauth",
+  "gitHead": "f164a922b66a67e563228bdb53d61b3e738c0479",
+  "_id": "box-appauth@1.6.5",
+  "_shasum": "bc4fd0402bab5b64ac740890175bee8a6d47edae",
+  "_from": "box-appauth@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "ehealth",
+    "email": "sandro.pasquali@ehealthtechnologies.com"
+  },
+  "maintainers": [
+    {
+      "name": "ehealth",
+      "email": "sandro.pasquali@ehealthtechnologies.com"
+    }
+  ],
+  "dist": {
+    "shasum": "bc4fd0402bab5b64ac740890175bee8a6d47edae",
+    "tarball": "http://registry.npmjs.org/box-appauth/-/box-appauth-1.6.5.tgz"
+  },
+  "_resolved": "https://registry.npmjs.org/box-appauth/-/box-appauth-1.6.5.tgz"
+}
