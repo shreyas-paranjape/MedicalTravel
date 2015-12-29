@@ -2,27 +2,36 @@
 
 <section class="hero">
 	<section class="container">
+		<div class="row">
+			<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
+
 		<div class="row pp">
-			<h2>Meet The Doctors</h2>
+				<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
+				</div>
+				<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
+			<h2 style="margin-left: -2px;">Meet The Doctors</h2>
 			<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
 			<div class="border_doc">&nbsp;</div>
 			<p>Choose the right doctor for your treatment</p>
 			<p>Consult a specialist for a second opinion</p>
 		</div>
+		</div>
 		<div class="row">
-			<!-- <div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div> -->
-			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 block">
+			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
+			</div>
+
+			<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
 
 				<form role="form row" method="post">
 					<input type="hidden" name="action" value="search">
 					<div class="form-group">
-						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 " style="padding-top: 2px;">
+						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 " style="padding-top: 2px;padding-left: 0px;">
 							<label id="proc">Procedure:</label>
 						</div>
 						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 " >
 
-							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
-							<input type="hidden" id="procedureId" name="procedureId" value="">
+							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure" >
+							<input type="hidden" id="procedureId" name="procedureId" value="" >
 						</div>
 						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10  main_button">
 							<button type="submit" class="btn btn-primary btn-md rais" style="">
@@ -32,8 +41,13 @@
 					</div>
 				</form>
 			</div>
-				<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
+				<div class="col-md-1 col-lg-1 col-sm-1 col-xs-0"></div>
 		</div>
+		</div>
+
+		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+</div>
+
 	</section>
 </section>
 
@@ -78,7 +92,7 @@
 
 
 <div class="row procedure">
-	<div class="col-lg-9 col-sm-9 col-xs-12 col-md-9 ">
+	<div class="col-lg-8 col-sm-8 col-xs-12 col-md-8 ">
 		<div class="row ">
 			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
 			{{#each doctors}}
@@ -98,7 +112,7 @@
 			{{/each}}
 		</div>
 	</div>
-	<div class="col-lg-3 col-sm-3 col-xs-0 col-md-3 qwe ">
+	<div class="col-lg-4 col-sm-4 col-xs-0 col-md-4 qwe ">
 		<h4 class="specialities">Filter Doctors by Procedure</h4>
 		<div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="">
 			{{#each speciality}}
@@ -110,10 +124,13 @@
 						 style="outline:none;color:black;">
 							<h4 class="panel-title">
 								<div class="row accordion_doc">
-									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 pro" style="">
+									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 " style="">
+										<img src="/images/{{key}}.png" width="60%" height="auto">
+									</div>
+									<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 pro" style="padding-top:4px;">
 										{{name}}
 									</div>
-									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 icon">
+									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 icon" style="padding-left:30px;">
 										<span class="glyphicon glyphicon-chevron-down"  style="top: 5px;"></span>
 									</div>
 								</div>

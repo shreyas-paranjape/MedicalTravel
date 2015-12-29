@@ -31,6 +31,8 @@ var findByUsername = function(username, cb) {
 
 passport.use(new Strategy(
 	function(username, pass, cb) {
+		console.log("username" + username);
+		console.log("pass" + pass);
 		findByUsername(username, function(err, user) {
 			if (err) {
 				return cb(err);
