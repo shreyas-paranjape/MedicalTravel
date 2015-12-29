@@ -4935,6 +4935,29 @@ button.close {
 .navbar {
   margin-bottom: 0; }
 
+.footer {
+  background-color: #222222; }
+  .footer .foot {
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 15px; }
+    .footer .foot .f_img img {
+      width: 30%;
+      height: auto;
+      margin-top: 10px;
+      margin-left: 26px; }
+    .footer .foot .f_img p {
+      font-size: 12.5px;
+      font-family: SourceSansPro-Regular;
+      margin-left: 26px;
+      color: white; }
+    .footer .foot .foot_data {
+      margin-right: 0;
+      margin-left: 0; }
+      .footer .foot .foot_data li {
+        font-size: 12.5px;
+        font-family: SourceSansPro-Regular; }
+
 .provider-box {
   border-bottom: 1px solid #e5e5e5;
   width: 100%;

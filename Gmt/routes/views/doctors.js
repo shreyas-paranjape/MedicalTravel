@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var async = require('async');
+
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -33,23 +34,23 @@ exports = module.exports = function(req, res) {
 	var specialityQuery = keystone.list('Speciality').model.find();
 	view.on('init', function(next) {
 		specialityQuery.exec(function(err, specialities) {
-			async.each(specialities, function(spec, next) {
+			async.each(specialities, function(spec, cb1) {
 				spec.procedures = [];
 				spec.getProcedures(function(err, procedures) {
-					async.each(procedures, function(proced, next) {
+					async.each(procedures, function(proced, cb2) {
 						spec.procedures.push(proced);
 						if (!contains(spec, res.locals.speciality)) {
 							res.locals.speciality.push(spec);
 						}
+						cb2(err);
 					}, function(err) {
-						next(err);
+						cb1(err);
 					});
 				});
 			}, function(err) {
 				next(err);
 			});
 		});
-		next();
 	});
 
 	view.on('post', {

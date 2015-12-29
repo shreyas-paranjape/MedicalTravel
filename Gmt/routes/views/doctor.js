@@ -25,16 +25,16 @@ exports = module.exports = function(req, res) {
 		doctorQuery.exec(function(err, doctorRes) {
 			res.locals.doctor = doctorRes;
 			doctorRes.getProcedures(function(er, procedureRes) {
-				async.each(procedureRes, function(procedure, next) {
+				async.each(procedureRes, function(procedure, cb1) {
 					if (!contains(procedure, res.locals.procedures)) {
 						res.locals.procedures.push(procedure);
 					}
-					async.each(procedure.providers, function(provider, next) {
+					async.each(procedure.providers, function(provider, cb2) {
 						if (!contains(provider, res.locals.providers)) {
 							res.locals.providers.push(provider);
 						}
 					}, function(err) {
-						next(err);
+						cb1(err);
 					});
 				}, function(err) {
 					next(err);
