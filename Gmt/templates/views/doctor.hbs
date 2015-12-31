@@ -2,31 +2,31 @@
 <div class="row procedure">
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
-<div class=" row doc">
-	<div class="col-lg-1">
+		<div class=" row doc">
+			<div class="col-lg-1">
 			</div>
 			<div class="col-lg-3">
-		<img src="{{cloudinaryUrl doctor.imageOuter}}" class="doct">
-	</div>
-	<div class="col-lg-5">
-	<h3>	{{doctor.name}}</h3>
-		{{{doctor.summary}}}
-	</div>
-		<!-- {{{doctor.expertise}}} -->
-		<div class="col-lg-2">
+				<img src="{{cloudinaryUrl doctor.imageOuter}}">
+			</div>
+			<div class="col-lg-5">
+				<h3> {{doctor.name}}</h3>
+				{{{doctor.summary}}}
+			</div>
+			<!-- {{{doctor.expertise}}} -->
+			<div class="col-lg-2">
 				<!-- <input type="text" class="form-control" id="text" value="Verified"> -->
 				<a href="" id="link">Verified</a>
 			</div>
-</div>
+		</div>
 
 		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
-				<nav class="navbar navbar-default" >
+			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav row" style="padding-top: 8px;">
 					<li class="col-lg-1">&nbsp;</li>
 					<li class="col-lg-2"><a href="#bio">Bio</a></li>
-					<li class="col-lg-3" ><a href="#procedures">Procedure</a></li>
-					<li class="col-lg-3"><a href="#providers" style="margin-left:7px;" >Providers</a></li>
-					<li class="col-lg-2"><a href="#reviews" >Reviews</a></li>
+					<li class="col-lg-3"><a href="#procedures">Procedure</a></li>
+					<li class="col-lg-3"><a href="#providers" style="margin-left:7px;">Providers</a></li>
+					<li class="col-lg-2"><a href="#reviews">Reviews</a></li>
 				</ul>
 			</nav>
 
@@ -49,38 +49,38 @@
 				<div class="row">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-		<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-				<span >Procedures</span>
-			</div>
-				<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<span>Procedures</span>
+					</div>
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					</div>
 				</div>
-			</div>
 			</h4>
 			<div class="row doc_proc" style="">
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 				<div class="col-lg-10 doc_border" style="">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				{{#each procedures}}
+						{{#each procedures}}
 
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="headingOne">
-								<h4 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
-										<div class="row accordion" >
-											<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
-												{{name}}
-												<!-- <span class="fa fa-plus-square-o"></span> -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+											<div class="row accordion">
+												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
+													{{name}}
+													<!-- <span class="fa fa-plus-square-o"></span> -->
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
+													{{price}}
+												</div>
+												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+													<input class="btn btn-primary btn-md doc_btn" type="submit" value="Enquiry" style="outline:none">
+												</div>
 											</div>
-											<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 price">
-												{{price}}
-											</div>
-											<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-												<input class="btn btn-primary btn-md doc_btn" type="submit" value="Enquiry" style="outline:none">
-											</div>
-										</div>
-									</a>
-								</h4>
+										</a>
+									</h4>
 								</div>
 								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 									<div class="panel-body">
@@ -89,30 +89,30 @@
 								</div>
 							</div>
 
-				{{/each}}
+						{{/each}}
+					</div>
 				</div>
-			</div>
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
-				</div>
+			</div>
 			<h3 style="margin-left: 60px;font-size:18px;">{{{doctor.description}}}</h3>
 			<h4 id="providers" style="">
 				<div class="row">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-		<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-				<span >Affiliated Providers</span>
-			</div>
-				<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<span>Affiliated Providers</span>
+					</div>
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					</div>
 				</div>
-			</div>
 			</h4>
 			{{#each providers}}
 				<div class="row procedure-box ">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
 					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<img src="" >
+						<img src="">
 					</div>
 					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
 						<h3>{{name}}</h3>
@@ -128,34 +128,133 @@
 				<div class="row">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-		<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-				<span >Reviews</span>
-			</div>
-				<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<span>Reviews</span>
+					</div>
+					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+					</div>
 				</div>
-			</div>
-			</h4>
-			<!-- <span class="glyphicon glyphicon-star" style="margin-left:30px"></span>
-			<span class="glyphicon glyphicon-star"></span>
-			<span class="glyphicon glyphicon-star"></span>
-			<p style="margin-left: 30px;">Lorem Ipsum,</p>
-			<p style="margin-left: 30px;">dolor ahajfnnsnsAMnkjndj janangfgbdbd</p>
-			<p style="margin-left: 30px;">jjjajjaa ahnf go away somehwhere, best care and</p>
-			<p style="margin-left: 30px;">help all over.</p>
 
-			<button type="submit" class="btn btn-default" style="margin-left:30px; ">Write a review</button> -->
 		</div>
 	</div>
 	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
 
-			{{#each speciality}}
-				<h3> {{name}} </h3>
-			{{/each}}
+		{{#each speciality}}
+			<h3> {{name}} </h3>
+		{{/each}}
 
 		<br>
 		<br>
-		<div class="form">
+		<div class="form" style="margin-top:-55px;	background-color: rgb(237,237,237);">
+			<h4 style="background-color:rgb(202,198,198);padding: 18px 0px 18px 33px;font-family:SourceSansPro-Semibold;">Request a Consultation</h4>
 			<div class="row">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+				</div>
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+
+					<form method="post" enctype="multipart/form-data">
+						<input type="hidden" name="action" value="second">
+						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo"></textarea>
+						<!-- REPORT -->
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default" style="border:none;box-shadow:none;">
+								<div class="panel-heading" role="tab" id="headingOne" style="margin-top: 5px;">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="outline:none;">
+										<h4 class="panel-title">
+											<div class="row">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+													Report
+												</div>
+												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+												</div>
+											</div>
+										</h4>
+									</a>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
+										<input type="file" name="fileupload" size="80" value="Attach" multiple>
+									</div>
+								</div>
+							</div>
+							<!-- </div> -->
+							<!-- ALLERGIES -->
+							<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
+							<div class="panel panel-default" style="border:none;box-shadow:none;">
+								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
+										<h4 class="panel-title">
+											<div class="row">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+													Allergies
+												</div>
+												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+												</div>
+											</div>
+										</h4>
+									</a>
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
+										<input type="text" class="form-control" id="exampleInputName1" placeholder="Case Info">
+									</div>
+								</div>
+							</div>
+							<!-- </div> -->
+							<!-- SYMPTOMS -->
+							<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
+							<div class="panel panel-default" style="border:none;box-shadow:none;">
+								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
+										<h4 class="panel-title">
+											<div class="row">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+													Symptoms
+												</div>
+												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+												</div>
+											</div>
+										</h4>
+									</a>
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
+										<input type="text" class="form-control" id="exampleInputName2" placeholder="Case Info">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
+						</div>
+						<div class="form-group row">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+								<input type="text" class="form-control" id="age" placeholder="Age" name="age" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;">
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+								<input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;">
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+						</div>
+						<div class="form-group">
+
+							<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+						</div>
+
+
+						</br>
+						<input type="submit" name="submit" value="Get Second Opinion" style="padding-top: 5px; padding-bottom: 5px;" />
+					</form>
+				</div>
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+				</div>
+			</div>
+			<!-- <div class="row">
 				<div class="col-lg-1">
 				</div>
 				<div class="col-lg-10">
@@ -188,7 +287,7 @@
 			<br>
 			<div class="col-lg-1">
 			</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

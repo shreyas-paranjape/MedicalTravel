@@ -31,8 +31,6 @@ var findByUsername = function(username, cb) {
 
 passport.use(new Strategy(
 	function(username, pass, cb) {
-		console.log("username" + username);
-		console.log("pass" + pass);
 		findByUsername(username, function(err, user) {
 			if (err) {
 				return cb(err);
@@ -40,13 +38,13 @@ passport.use(new Strategy(
 			if (!user) {
 				return cb(null, false);
 			} else {
-				console.log("matching passwords");
+				// console.log("matching passwords");
 				user._.password.compare(pass, function(err, isMatch) {
 					if (!err && isMatch) {
-						console.log("passwords equal");
+						// console.log("passwords equal");
 						return cb(null, user);
 					} else {
-						console.log("passwords not equal");
+						// console.log("passwords not equal");
 						return cb(null, false);
 					}
 				});

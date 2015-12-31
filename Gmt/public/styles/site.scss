@@ -31,6 +31,21 @@ $icon-font-path: "../fonts/";
 .no-padding {
 				padding: 0;
 }
+
+// .panel-group{
+//     margin:0;
+// }
+//
+// .panel{
+//     border:none;
+//     box-shadow:none;
+// }
+// .panel-heading{
+//     padding:0;
+// }
+.iti-flag {
+				background-image: url(path/to/flags.png);
+}
 .navbar {
 				margin-bottom: 0;
 }
@@ -266,8 +281,8 @@ $icon-font-path: "../fonts/";
 				height: 447px;
 				padding-bottom: 40px;
 				img {
-								width: 180px;
-								height: 180px;
+								width: 200px;
+								height: 200px;
 								border-radius: 50%;
 				}
 				h3 {
@@ -639,7 +654,7 @@ a:focus {
 				border-color: #ff6c6f;
 				box-shadow: 0 3px 0 0 #b24b4d;
 				font-family: SourceSansPro-Regular;
-				margin-top: 2px;
+				margin-top: 4px;
 				.search_doc {
 								font-size: 15px;
 				}
@@ -673,6 +688,25 @@ a:focus {
 												}
 								}
 				}
+}
+.homepage {
+				background: url("../images/GMTHome(2).jpg")no-repeat center center;
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				display: table;
+				width: 100%;
+				height: 447px;
+}
+.jumbotron {
+				background: url("../images/GOAhome(1).jpg")no-repeat center center;
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 }
 .hero {
 				background: url("../images/Meet%20the%20Doctors.jpg")no-repeat center center;
@@ -715,17 +749,17 @@ a:focus {
 								.form-group {
 												padding: 0 0 0 15px;
 												.form-control {
-																width: 100%;
+																width: 105%;
 																height: auto;
 																padding: 8px 12px 10px;
-																margin-left: 3px;
+																margin-left: -15px;
 												}
 												#proc {
 																font-family: SourceSansPro-Semibold;
 																color: black;
-																font-size: 22px;
+																font-size: 18px;
 																font-weight: 300;
-																padding-bottom: 10px;
+																padding-top: 4px;
 												}
 								}
 								display: table-cell;

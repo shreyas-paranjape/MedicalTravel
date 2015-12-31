@@ -2,6 +2,8 @@ var keystone = require('keystone');
 var fnjs = require('fn.js');
 var appAuth = require('box-appauth');
 var fs = require('fs');
+var async = require('async');
+
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -69,6 +71,8 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'upload'
 	}, function(next) {
+		 console.log("File" + JSON.stringify(req.files));
+		// console.log("length" + (req.files.image_upload).length);
 		keystone.list('User').model.findOne({
 			"_id": req.user.id
 		}).exec(function(err, resUser) {
@@ -89,14 +93,22 @@ exports = module.exports = function(req, res) {
 					}
 				})
 				.then(function(api) {
-					api.file.upload({
-						name: req.files.image_upload.originalname,
-						file: req.files.image_upload.path,
-						parentId: "0",
-						fields: [
-							'total_count'
-						]
-					}).then(function(uploadRes) {});
+					var count = 1;
+					console.log("req.files" + JSON.stringify(req.files));
+					async.each(req.files.upload, function(file, cb1) {
+						api.file.upload({
+							name: resUser.key + 00 + count + 00 + file.originalname,
+							file: file.path,
+							parentId: "0",
+							fields: [
+								'total_count'
+							]
+						}).then(function(uploadRes) {});
+						count++;
+					}, function(err) {
+						cb1(err);
+					});
+
 				});
 		});
 		next();
@@ -129,8 +141,7 @@ exports = module.exports = function(req, res) {
 					api.folder.create({
 						parentId: 0,
 						name: req.body.procedure
-					}).then(function(rest) {
-					});
+					}).then(function(rest) {});
 				});
 		});
 		next();

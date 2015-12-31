@@ -14,6 +14,21 @@ Enquiry.add({
 	phone: {
 		type: String
 	},
+	caseinfo: {
+		type: String
+	},
+	allergies: {
+		type: String
+	},
+	symptoms: {
+		type: String
+	},
+	age: {
+		type: String
+	},
+	gender: {
+		type: String
+	},
 	provider: {
 		type: String
 	},

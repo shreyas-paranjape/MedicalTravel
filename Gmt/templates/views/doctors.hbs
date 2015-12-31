@@ -5,48 +5,48 @@
 		<div class="row">
 			<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
 
-		<div class="row pp">
-				<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
-				</div>
-				<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
-			<h2 style="margin-left: -2px;">Meet The Doctors</h2>
-			<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
-			<div class="border_doc">&nbsp;</div>
-			<p>Choose the right doctor for your treatment</p>
-			<p>Consult a specialist for a second opinion</p>
-		</div>
-		</div>
-		<div class="row">
-			<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
-			</div>
-
-			<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
-
-				<form role="form row" method="post">
-					<input type="hidden" name="action" value="search">
-					<div class="form-group">
-						<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 " style="padding-top: 2px;padding-left: 0px;">
-							<label id="proc">Procedure:</label>
-						</div>
-						<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 " >
-
-							<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure" >
-							<input type="hidden" id="procedureId" name="procedureId" value="" >
-						</div>
-						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10  main_button">
-							<button type="submit" class="btn btn-primary btn-md rais" style="">
-								<span class="search_doc">Search Doctors</span>
-							</button>
-						</div>
+				<div class="row pp">
+					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
-				</form>
-			</div>
-				<div class="col-md-1 col-lg-1 col-sm-1 col-xs-0"></div>
-		</div>
-		</div>
+					<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
+						<h2 style="margin-left: -2px;">Meet The Doctors</h2>
+						<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
+						<div class="border_doc">&nbsp;</div>
+						<p>Choose the right doctor for your treatment</p>
+						<p>Consult a specialist for a second opinion</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
+					</div>
 
-		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
-</div>
+					<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
+
+						<form role="form row" method="post">
+							<input type="hidden" name="action" value="search">
+							<div class="form-group">
+								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 " style="padding-top: 2px;padding-left: 0px;">
+									<label id="proc">Area of Expertise:</label>
+								</div>
+								<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 " style="margin-bottom: 10px;">
+
+									<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
+									<input type="hidden" id="procedureId" name="procedureId" value="">
+								</div>
+								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10  main_button">
+									<button type="submit" class="btn btn-primary btn-md rais" style="">
+										<span class="search_doc">Search Doctors</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-0"></div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+		</div>
 
 	</section>
 </section>
@@ -96,16 +96,18 @@
 		<div class="row ">
 			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
 			{{#each doctors}}
-				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " >
+				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor ">
 					<!-- style="padding-right: 25px;"" -->
 					<div class="thumbnail" style="">
 						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
 						<!-- <a href="#"> -->
-							<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
-							<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
-						<span style="padding-left:40px;"><input class="btn btn-primary btn-md raise "  type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'"></span>
+						<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
+						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
+						<span style="padding-left:40px;">
+							<input class="btn btn-primary btn-md raise " type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+						</span>
 						<!-- </a> -->
 					</div>
 				</div>
@@ -117,11 +119,10 @@
 		<div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="">
 			{{#each speciality}}
 
-				<div class="panel panel-default" >
+				<div class="panel panel-default">
 					<div class="panel-heading panel_heading" role="tab" id="headingOne">
 
-						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne"
-						 style="outline:none;color:black;">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none;color:black;">
 							<h4 class="panel-title">
 								<div class="row accordion_doc">
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 " style="">
@@ -131,7 +132,7 @@
 										{{name}}
 									</div>
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 icon" style="padding-left:30px;">
-										<span class="glyphicon glyphicon-chevron-down"  style="top: 5px;"></span>
+										<span class="glyphicon glyphicon-chevron-down" style="top: 5px;"></span>
 									</div>
 								</div>
 							</h4>
@@ -143,7 +144,7 @@
 
 							{{#each procedures}}
 								<div>
-									<input type="radio">
+									<input type="radio" multiple="none">
 									<span style="font-family:SourceSansPro-Regular">{{name}}</span>
 								</div>
 							{{/each}}
