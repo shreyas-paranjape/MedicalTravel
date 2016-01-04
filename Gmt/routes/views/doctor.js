@@ -60,6 +60,8 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'second'
 	}, function(next) {
+		console.log("req: " + JSON.stringify(req.body.gender));
+		console.log("req dfghjl : " + JSON.stringify(req.body));
 
 		var newQuery = new Enquiry.model(),
 			updater = newQuery.getUpdateHandler(req);

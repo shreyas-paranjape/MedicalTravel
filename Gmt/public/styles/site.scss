@@ -32,7 +32,7 @@ $icon-font-path: "../fonts/";
 				padding: 0;
 }
 
-// .panel-group{
+//.panel-group{
 //     margin:0;
 // }
 //
@@ -43,14 +43,30 @@ $icon-font-path: "../fonts/";
 // .panel-heading{
 //     padding:0;
 // }
-.iti-flag {
-				background-image: url(path/to/flags.png);
+.exp {
+				border: 1px solid rgb(202,198,198);
+				margin-left: 15px;
+				background-color: rgb(198,198,198);
+				color: white;
+				margin-top: -20px;
+				h4 {
+								padding: 10px 0;
+								font-family: SourceSansPro-Semibold;
+								font-size: 20px;
+								margin-top: 0;
+				}
+}
+.exp>p {
+				font-family: SourceSansPro-Regular;
+				font-size: 16px;
+				margin-top: -10px;
 }
 .navbar {
 				margin-bottom: 0;
+				background-color: rgb(43,43,43);
 }
 .footer {
-				background-color: rgb(34,34,34);
+				background-color: rgb(43,43,43);
 				.foot {
 								margin-right: 0;
 								margin-left: 0;
@@ -130,7 +146,9 @@ $icon-font-path: "../fonts/";
 				overflow-x: hidden;
 }
 .navbar-default {
-				background-color: rgb(232,232,232);
+				background-color: #ededed;
+
+				// background-color: rgb(232,232,232);
 				border-radius: 0;
 				li {
 								font-family: SourceSansPro-Regular;
@@ -170,7 +188,7 @@ $icon-font-path: "../fonts/";
 				overflow: hidden;
 				margin: 0;
 				.border {
-								border-right: 1px solid #CAC6C6;
+								border-right: 1px solid #ededed;
 				}
 }
 .image {
@@ -189,7 +207,7 @@ $icon-font-path: "../fonts/";
 #procedures,
 #speciality,
 #reviews {
-				border-top: 2px solid #e5e5e5;
+				border-top: 1px solid #ededed;
 				padding-top: 10px;
 				span {
 								position: relative;
@@ -268,7 +286,8 @@ $icon-font-path: "../fonts/";
 #link {
 				border: 1px solid #53c8ab;
 				color: #53c8ab;
-				border-radius: 4px;
+
+				// border-radius: 4px;
 				padding: 1px 10px;
 				position: relative;
 				top: 12px;
@@ -276,10 +295,33 @@ $icon-font-path: "../fonts/";
 				font-family: SourceSansPro-Regular;
 				font-size: 18px;
 }
+.consult_block {
+				background-color: #53c8ab;
+				width: auto;
+				.info {
+								text-align: center;
+								font-family: SourceSansPro-Regular;
+								font-size: 16px;
+								color: white;
+
+								// padding: 10px;
+				}
+}
+.consult_content {
+				border: solid 2px #53c8ab;
+				.consult_data {
+								color: #53c8ab;
+								text-align: center;
+								font-family: SourceSansPro-Regular;
+								font-size: 18px;
+				}
+}
 .doc {
 				padding-top: 45px;
 				height: 447px;
 				padding-bottom: 40px;
+}
+.doc_pro {
 				img {
 								width: 200px;
 								height: 200px;
@@ -524,7 +566,8 @@ a:focus {
 																font-family: SourceSansPro-Regular;
 																height: auto;
 																border-color: #53c8ab;
-																box-shadow: 0 4px 0 0 #317866;
+																box-shadow: 0 3px 0 0 #317866;
+																padding: 1px 12px;
 												}
 								}
 				}
@@ -666,11 +709,12 @@ a:focus {
 				font-family: SourceSansPro-Regular;
 				font-size: 16px;
 				padding: 1px 12px;
+				color: rgb(235,235,235);
 
 				// width:80px;
 }
 .qwe {
-				padding-left: 16px;
+				padding-left: 0;
 				padding-right: 0;
 }
 .panel_doc {

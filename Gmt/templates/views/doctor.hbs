@@ -3,21 +3,53 @@
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
 		<div class=" row doc">
-			<div class="col-lg-1">
+			<div class="row doc_pro">
+				<div class="col-lg-1">
+				</div>
+				<div class="col-lg-3">
+					<img src="{{cloudinaryUrl doctor.imageOuter}}">
+				</div>
+				<div class="col-lg-5">
+					<h3> {{doctor.name}}</h3>
+					{{{doctor.summary}}}
+
+				</div>
+
+				<div class="col-lg-2" style="padding:0px;">
+					<div class="consult_block">
+						<div class="info" style="margin-bottom:0px;">Consultation</div>
+						<div class="info">Fees</div>
+					</div>
+					<div class="consult_content">
+						<div class="consult_data">
+							USD 59
+						</div>
+					</div>
+					<!-- <input type="text" class="form-control" id="text" value="Verified"> -->
+					<!-- <a href="" id="link">Verified</a> -->
+				</div>
 			</div>
-			<div class="col-lg-3">
-				<img src="{{cloudinaryUrl doctor.imageOuter}}">
-			</div>
-			<div class="col-lg-5">
-				<h3> {{doctor.name}}</h3>
-				{{{doctor.summary}}}
-			</div>
-			<!-- {{{doctor.expertise}}} -->
-			<div class="col-lg-2">
-				<!-- <input type="text" class="form-control" id="text" value="Verified"> -->
-				<a href="" id="link">Verified</a>
+			<div class="row">
+				<div class="col-lg-4">
+				</div>
+
+				<div class="col-lg-5 exp" style="">
+					<h4 style="">Area of Expertise</h4>
+					{{{doctor.expertise}}}
+				</div>
 			</div>
 		</div>
+		<!-- <div class=" row">
+				<div class="col-lg-1">
+				</div>
+				<div class="col-lg-3">
+				</div>
+				<div class="col-lg-5">
+					{{{doctor.expertise}}}
+				</div>
+				<div class="col-lg-2">
+				</div>
+			</div> -->
 
 		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
 			<nav class="navbar navbar-default">
@@ -145,8 +177,8 @@
 
 		<br>
 		<br>
-		<div class="form" style="margin-top:-55px;	background-color: rgb(237,237,237);">
-			<h4 style="background-color:rgb(202,198,198);padding: 18px 0px 18px 33px;font-family:SourceSansPro-Semibold;">Request a Consultation</h4>
+		<div class="form" style="margin-top: -50px;	background-color: #f6f6f6; border: solid 2px rgb(198,198,198);">
+			<h4 style="margin-top:0px;background-color:rgb(198,198,198); padding: 20px 0px;font-family:SourceSansPro-Semibold;font-size:20px;color:white;text-align:center">Request a Consultation</h4>
 			<div class="row">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 				</div>
@@ -154,43 +186,41 @@
 
 					<form method="post" enctype="multipart/form-data">
 						<input type="hidden" name="action" value="second">
-						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo"></textarea>
-						<!-- REPORT -->
+						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
+
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<div class="panel panel-default" style="border:none;box-shadow:none;">
-								<div class="panel-heading" role="tab" id="headingOne" style="margin-top: 5px;">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="outline:none;">
-										<h4 class="panel-title">
+								<div class="panel-heading" role="tab" id="headingOne" style="margin-top: 10px;padding: 10px 15px;">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
+										<h4 class="panel-title" style="color:black">
 											<div class="row">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-													Report
+													<span style="font-family:SourceSansPro-Regular;font-size:16px;color:rgb(95,95,95);">Medical Reports</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+													<span style="color:rgb(95,95,95);" class="glyphicon glyphicon-chevron-down" style=""></span>
 												</div>
 											</div>
 										</h4>
 									</a>
 								</div>
-								<div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+								<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
 										<input type="file" name="fileupload" size="80" value="Attach" multiple>
 									</div>
 								</div>
 							</div>
-							<!-- </div> -->
-							<!-- ALLERGIES -->
-							<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
+
 							<div class="panel panel-default" style="border:none;box-shadow:none;">
-								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
-										<h4 class="panel-title">
+								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
+										<h4 class="panel-title" style="color:black">
 											<div class="row">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-													Allergies
+													<span style="font-family:SourceSansPro-Regular;font-size:16px;color:rgb(95,95,95);"> Allergies</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+													<span style="color:rgb(95,95,95);" class="glyphicon glyphicon-chevron-down" style=""></span>
 												</div>
 											</div>
 										</h4>
@@ -198,23 +228,22 @@
 								</div>
 								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
-										<input type="text" class="form-control" id="exampleInputName1" placeholder="Case Info">
+										<input type="text" class="form-control" id="exampleInputName1" placeholder="Allergies">
 									</div>
 								</div>
 							</div>
-							<!-- </div> -->
-							<!-- SYMPTOMS -->
-							<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
+
 							<div class="panel panel-default" style="border:none;box-shadow:none;">
-								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;">
-									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
-										<h4 class="panel-title">
+								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
+										<h4 class="panel-title" style="color:black">
 											<div class="row">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-													Symptoms
+													<span style="font-family:SourceSansPro-Regular;font-size:16px;color:rgb(95,95,95);">
+														Symptoms</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-													<span class="glyphicon glyphicon-chevron-down" style=""></span>
+													<span style="color:rgb(95,95,95);" class="glyphicon glyphicon-chevron-down" style=""></span>
 												</div>
 											</div>
 										</h4>
@@ -222,20 +251,29 @@
 								</div>
 								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;padding-top: 0px; padding-bottom: 0px;">
-										<input type="text" class="form-control" id="exampleInputName2" placeholder="Case Info">
+										<input type="text" class="form-control" id="exampleInputName2" placeholder="Symptoms">
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
+							<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" style="margin-top: -10px;">
 						</div>
 						<div class="form-group row">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 								<input type="text" class="form-control" id="age" placeholder="Age" name="age" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;">
 							</div>
-							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-								<input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;">
+							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+							</div>
+							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="padding-top: 10px;">
+								<label for="gender" style="font-family:SourceSansPro-Regular;font-weight:normal;font-size:16px;">Gender:</label>
+								<label class="radio-inline">
+									<input type="radio" name="gender" value="Male" style="font-family:SourceSansPro-Regular;font-weight:normal;font-size:16px;">M</label>
+								<label class="radio-inline">
+									<input type="radio" name="gender" value="Female" style="font-family:SourceSansPro-Regular;font-weight:normal;font-size:16px;">F</label>
+								<label class="radio-inline">
+									<input type="radio" name="gender" value="Other" style="font-family:SourceSansPro-Regular;font-weight:normal;font-size:16px;">O</label>
+								<!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
 							</div>
 						</div>
 						<div class="form-group">
@@ -245,49 +283,20 @@
 
 							<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
 						</div>
-
-
 						</br>
-						<input type="submit" name="submit" value="Get Second Opinion" style="padding-top: 5px; padding-bottom: 5px;" />
+						<div class="row">
+							<div class="col-lg-3"></div>
+							<div class="col-lg-6">
+								<button type="submit" class="btn btn-default" style="font-size:18px;font-family:SourceSansPro-Regular;margin-left: -6px;background-color:rgb(83,200,171);color:white;border-color:rgb(83,200,171);	box-shadow: 0 3px 0 0 rgb(49,120,102);">Get second Opinion</button>
+							</div>
+							<div class="col-lg-3"></div>
+						</div>
 					</form>
 				</div>
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 				</div>
 			</div>
-			<!-- <div class="row">
-				<div class="col-lg-1">
-				</div>
-				<div class="col-lg-10">
-			<form class="form-inline" method="post">
-				<input type="hidden" name="action" value="enquire">
-				<div class="form-group nm">
-					<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:">
-				</div>
-				<div class="form-group">
-					<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
-				</div>
-				<div class="form-group">
-					<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
-				</div>
-				<div class="form-group">
-					<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
-					<input type="hidden" id="procedureId" name="procedureId" value="">
-				</div>
-				<div class="form-group">
-					<textarea class="textarea" name="message" rows="5" placeholder="Questions/Comments"></textarea>
-				</div>
-				<br>
-				<input type="submit" value="Consultation" class="btn btn-primary btn-md provider_btn" style="" />
-			</form>
-			{{#if consultationSent}}
-				<br>
-				<h3 style="margin-left: 0px;">Consultation Sent successfully</h3>
-			{{/if}}
-		</div>
-			<br>
-			<div class="col-lg-1">
-			</div>
-			</div> -->
+
 		</div>
 	</div>
 </div>

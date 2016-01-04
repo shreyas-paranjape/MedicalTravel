@@ -93,7 +93,7 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 	mailBody.flag = this.flag;
 
 	new keystone.Email('enquiry').send({
-		to: 'manjeet959@gmail.com',
+		to: '',
 		fromName: 'Goa medical travel',
 		fromEmail: 'contact@goa-medical-travel.com',
 		subject: 'New Enquiry for Goa medical travel',

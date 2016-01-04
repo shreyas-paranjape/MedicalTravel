@@ -4932,14 +4932,29 @@ button.close {
 .no-padding {
   padding: 0; }
 
-.iti-flag {
-  background-image: url(path/to/flags.png); }
+.exp {
+  border: 1px solid #cac6c6;
+  margin-left: 15px;
+  background-color: #c6c6c6;
+  color: white;
+  margin-top: -20px; }
+  .exp h4 {
+    padding: 10px 0;
+    font-family: SourceSansPro-Semibold;
+    font-size: 20px;
+    margin-top: 0; }
+
+.exp > p {
+  font-family: SourceSansPro-Regular;
+  font-size: 16px;
+  margin-top: -10px; }
 
 .navbar {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  background-color: #2b2b2b; }
 
 .footer {
-  background-color: #222222; }
+  background-color: #2b2b2b; }
   .footer .foot {
     margin-right: 0;
     margin-left: 0;
@@ -5003,7 +5018,7 @@ button.close {
   overflow-x: hidden; }
 
 .navbar-default {
-  background-color: #e8e8e8;
+  background-color: #ededed;
   border-radius: 0; }
   .navbar-default li {
     font-family: SourceSansPro-Regular;
@@ -5033,7 +5048,7 @@ button.close {
   overflow: hidden;
   margin: 0; }
   .procedure .border {
-    border-right: 1px solid #CAC6C6; }
+    border-right: 1px solid #ededed; }
 
 .image {
   width: 100%;
@@ -5047,7 +5062,7 @@ button.close {
   padding: 20px 0; }
 
 #providers, #doctors, #procedures, #speciality, #reviews {
-  border-top: 2px solid #e5e5e5;
+  border-top: 1px solid #ededed;
   padding-top: 10px; }
   #providers span, #doctors span, #procedures span, #speciality span, #reviews span {
     position: relative;
@@ -5116,7 +5131,6 @@ button.close {
 #link {
   border: 1px solid #53c8ab;
   color: #53c8ab;
-  border-radius: 4px;
   padding: 1px 10px;
   position: relative;
   top: 12px;
@@ -5124,25 +5138,43 @@ button.close {
   font-family: SourceSansPro-Regular;
   font-size: 18px; }
 
+.consult_block {
+  background-color: #53c8ab;
+  width: auto; }
+  .consult_block .info {
+    text-align: center;
+    font-family: SourceSansPro-Regular;
+    font-size: 16px;
+    color: white; }
+
+.consult_content {
+  border: solid 2px #53c8ab; }
+  .consult_content .consult_data {
+    color: #53c8ab;
+    text-align: center;
+    font-family: SourceSansPro-Regular;
+    font-size: 18px; }
+
 .doc {
   padding-top: 45px;
   height: 447px;
   padding-bottom: 40px; }
-  .doc img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; }
-  .doc h3 {
-    font-family: SourceSansPro-Semibold;
-    font-size: 32px;
-    color: #959595;
-    margin-top: -5px; }
-  .doc p {
-    font-family: SourceSansPro-Regular;
-    font-size: 20px; }
-  .doc #text {
-    margin-top: 40px;
-    margin-left: 0; }
+
+.doc_pro img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; }
+.doc_pro h3 {
+  font-family: SourceSansPro-Semibold;
+  font-size: 32px;
+  color: #959595;
+  margin-top: -5px; }
+.doc_pro p {
+  font-family: SourceSansPro-Regular;
+  font-size: 20px; }
+.doc_pro #text {
+  margin-top: 40px;
+  margin-left: 0; }
 
 .name h3 {
   background-color: #ededed;
@@ -5310,7 +5342,8 @@ a:focus {
     font-family: SourceSansPro-Regular;
     height: auto;
     border-color: #53c8ab;
-    box-shadow: 0 4px 0 0 #317866; }
+    box-shadow: 0 3px 0 0 #317866;
+    padding: 1px 12px; }
   .panel-default .panel-body {
     text-align: left;
     font-size: 16px;
@@ -5425,10 +5458,11 @@ a:focus {
   box-shadow: 0 2px 0 0 #B24B4D;
   font-family: SourceSansPro-Regular;
   font-size: 16px;
-  padding: 1px 12px; }
+  padding: 1px 12px;
+  color: #ebebeb; }
 
 .qwe {
-  padding-left: 16px;
+  padding-left: 0;
   padding-right: 0; }
 
 .panel_doc {
