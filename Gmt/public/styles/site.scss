@@ -641,8 +641,8 @@ a:focus {
 				color: #cdcaca;
 }
 .specialities {
-				background-color: rgb(214, 210, 210);
-				color: black;
+				background-color: rgb(198, 198,198);
+				color: white;
 				margin-top: 0;
 				font-size: 18px;
 				font-family: SourceSansPro-Regular;
@@ -734,13 +734,14 @@ a:focus {
 				}
 }
 .homepage {
-				background: url("../images/GMTHome(2).jpg")no-repeat center center;
+				background: url("../images/GMTHomeHD1.jpg")no-repeat center center;
 				background-repeat: no-repeat;
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
 				background-size: cover;
 				display: table;
+				// margin-top: 100px;
 				width: 100%;
 				height: 447px;
 }
@@ -809,7 +810,7 @@ a:focus {
 								display: table-cell;
 								text-align: left;
 								.block {
-												background-color: rgb(214, 210, 210);
+												background-color: rgb(198,198,198);
 												padding: 5px 15px;
 								}
 				}

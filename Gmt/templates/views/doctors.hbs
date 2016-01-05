@@ -23,14 +23,14 @@
 					<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
 
 						<form role="form row" method="post">
-							<input type="hidden" name="action" value="search">
+							<input type="hidden" name="action" value="testSearch">
 							<div class="form-group">
-								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 " style="padding-top: 2px;padding-left: 0px;">
-									<label id="proc">Area of Expertise:</label>
+								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 " style="padding-top: 2px;">
+									<label id="proc" style="color:white">Area of Expertise:</label>
 								</div>
-								<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 " style="margin-bottom: 10px;">
+								<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 " style="margin-bottom: 10px; margin-left:0px">
 
-									<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure">
+									<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure" style="margin-left: -8px;">
 									<input type="hidden" id="procedureId" name="procedureId" value="">
 								</div>
 								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10  main_button">
@@ -115,13 +115,11 @@
 		</div>
 	</div>
 	<div class="col-lg-4 col-sm-4 col-xs-0 col-md-4 qwe ">
-		<h4 class="specialities">Filter Doctors by Procedure</h4>
+		<h4 class="specialities" style="">Filter Doctors by Procedure</h4>
 		<div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="">
 			{{#each speciality}}
-
 				<div class="panel panel-default">
 					<div class="panel-heading panel_heading" role="tab" id="headingOne">
-
 						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none;color:black;">
 							<h4 class="panel-title">
 								<div class="row accordion_doc">
@@ -141,22 +139,24 @@
 					</div>
 					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 						<div class="panel-body">
-
-							{{#each procedures}}
-								<div>
-									<input type="radio" multiple="none">
-									<span style="font-family:SourceSansPro-Regular">{{name}}</span>
-								</div>
-							{{/each}}
+							<form method="post" enctype="multipart/form-data">
+								<input type="hidden" name="action" value="radioSearch">
+								{{#each procedures}}
+									<div>
+										<input type="radio" style="background-color: #e7e7e7;border-color: #ddd;" name="procedure" value= {{key}} onclick="this.form.submit()">
+										<span style="font-family:SourceSansPro-Regular">{{name}}</span>
+									</div>
+								{{/each}}
+							</form>
 						</div>
 					</div>
 				</div>
-
 			{{/each}}
 		</div>
 	</div>
 
-
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="/js/pro.js"></script>
 
 </div>
 

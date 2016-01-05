@@ -1,21 +1,22 @@
-
-$( "#Edit" ).click( function() {
-    $( "#blank" ).replaceWith( function() {
-        return "<input type=\"text\" value=\"" + $( this ).html() + "\" />";
-    });
+$("#Edit").click(function() {
+	$("#blank").replaceWith(function() {
+		return "<input type=\"text\" value=\"" + $(this).html() + "\" />";
+	});
 });
 
-$( "#Edits" ).click( function() {
-    $( "#blanks" ).replaceWith( function() {
-        return "<input type=\"text\" value=\"" + $( this ).html() + "\" />";
-    });
+$("#Edits").click(function() {
+	$("#blanks").replaceWith(function() {
+		return "<input type=\"text\" value=\"" + $(this).html() + "\" />";
+	});
 });
-$( "#Editss" ).click( function() {
-    $( "#blankss" ).replaceWith( function() {
-        return "<input type=\"text\" value=\"" + $( this ).html() + "\" />";
-    });
+$("#Editss").click(function() {
+	$("#blankss").replaceWith(function() {
+		return "<input type=\"text\" value=\"" + $(this).html() + "\" />";
+	});
 });
-
+$('input[type=radio]').click(function() {
+	$("form id or class").submit();
+});
 // $( "#View" ).click( function() {
 //     $( "input[type=text]" ).replaceWith( function() {
 //         return "<label>" + $( this ).val() + "</label>";

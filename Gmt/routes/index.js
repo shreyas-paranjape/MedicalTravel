@@ -91,6 +91,7 @@ exports = module.exports = function(app) {
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/providers/:key', routes.views.providers);
 	app.get('/procedure/:key', routes.views.procedure);
+	app.get('/services/', routes.views.services);
 	app.all('/doctor/:key', routes.views.doctor);
 	app.all('/doctors', routes.views.doctors);
 	app.all('/provider/:key', routes.views.provider);

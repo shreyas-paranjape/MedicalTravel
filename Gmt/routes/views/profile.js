@@ -34,12 +34,12 @@ exports = module.exports = function(req, res) {
 					publicKey: fs.readFileSync('public_key.pem'),
 					privateKey: fs.readFileSync('private_key.pem'),
 					algorithm: 'RS256',
-					issuer: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 					subject: resUser.boxId,
 					subjectType: 'user',
-					clientId: "4eke4puqkw4chyh17err4skmk3rjuq4w",
-					clientSecret: "xYSZp93vWNo0eqqwgBL83ZpD15YtHvsA",
-					publicKeyId: "42oxjqmg",
+					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
+					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
+					publicKeyId: "v8vvf8zn",
 					callRetryMax: 5,
 					minutesUntilTokenRefresh: 10,
 					options: {
@@ -56,11 +56,13 @@ exports = module.exports = function(req, res) {
 									id: folderRes.id,
 								}).then(function(inFolderRes) {
 									fnjs.each(function(inFolder) {
-										// console.log("Names in folder : " + JSON.stringify(inFolder.name));
+										res.locals.files(inFolder.name);
+										console.log("Names in folder : " + JSON.stringify(inFolder.name));
 									}, inFolderRes.entries)
 								});
 							}
-							// console.log("Names in Root : " + JSON.stringify(folderRes.name));
+							res.locals.files(inFolder.name);
+							console.log("Names in Root : " + JSON.stringify(folderRes.name));
 						}, listRes.entries)
 					});
 				});
@@ -71,7 +73,7 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'upload'
 	}, function(next) {
-		 console.log("File" + JSON.stringify(req.files));
+		console.log("File" + JSON.stringify(req.files));
 		// console.log("length" + (req.files.image_upload).length);
 		keystone.list('User').model.findOne({
 			"_id": req.user.id
@@ -80,12 +82,12 @@ exports = module.exports = function(req, res) {
 					publicKey: fs.readFileSync('public_key.pem'),
 					privateKey: fs.readFileSync('private_key.pem'),
 					algorithm: 'RS256',
-					issuer: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 					subject: resUser.boxId,
 					subjectType: 'user',
-					clientId: "4eke4puqkw4chyh17err4skmk3rjuq4w",
-					clientSecret: "xYSZp93vWNo0eqqwgBL83ZpD15YtHvsA",
-					publicKeyId: "42oxjqmg",
+					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
+					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
+					publicKeyId: "v8vvf8zn",
 					callRetryMax: 5,
 					minutesUntilTokenRefresh: 10,
 					options: {
@@ -97,7 +99,7 @@ exports = module.exports = function(req, res) {
 					console.log("req.files" + JSON.stringify(req.files));
 					async.each(req.files.upload, function(file, cb1) {
 						api.file.upload({
-							name: resUser.key + 00 + count + 00 + file.originalname,
+							name: count + 00 + file.originalname,
 							file: file.path,
 							parentId: "0",
 							fields: [
@@ -125,12 +127,12 @@ exports = module.exports = function(req, res) {
 					publicKey: fs.readFileSync('public_key.pem'),
 					privateKey: fs.readFileSync('private_key.pem'),
 					algorithm: 'RS256',
-					issuer: "4eke4puqkw4chyh17err4skmk3rjuq4w",
+					issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 					subject: resUser.boxId,
 					subjectType: 'user',
-					clientId: "4eke4puqkw4chyh17err4skmk3rjuq4w",
-					clientSecret: "xYSZp93vWNo0eqqwgBL83ZpD15YtHvsA",
-					publicKeyId: "42oxjqmg",
+					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
+					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
+					publicKeyId: "v8vvf8zn",
 					callRetryMax: 5,
 					minutesUntilTokenRefresh: 10,
 					options: {
@@ -142,6 +144,41 @@ exports = module.exports = function(req, res) {
 						parentId: 0,
 						name: req.body.procedure
 					}).then(function(rest) {});
+				});
+		});
+		next();
+	});
+
+
+	view.on('post', {
+		action: 'download'
+	}, function(next) {
+		keystone.list('User').model.findOne({
+			"_id": req.user.id
+		}).exec(function(err, resUser) {
+			appAuth({
+					publicKey: fs.readFileSync('public_key.pem'),
+					privateKey: fs.readFileSync('private_key.pem'),
+					algorithm: 'RS256',
+					issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
+					subject: resUser.boxId,
+					subjectType: 'user',
+					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
+					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
+					publicKeyId: "v8vvf8zn",
+					callRetryMax: 5,
+					minutesUntilTokenRefresh: 10,
+					options: {
+						debug: true
+					}
+				})
+				.then(function(api) {
+					api.folder.list({
+						id: resUser.boxId,
+					}).then(function(rest) {
+
+						console.log("REST" + rest);
+					});
 				});
 		});
 		next();

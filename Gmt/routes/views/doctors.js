@@ -31,7 +31,7 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
-	var specialityQuery = keystone.list('Speciality').model.find();
+	var specialityQuery = keystone.list('Speciality').model.find().sort('_id');
 	view.on('init', function(next) {
 		specialityQuery.exec(function(err, specialities) {
 			async.each(specialities, function(spec, cb1) {
@@ -54,23 +54,43 @@ exports = module.exports = function(req, res) {
 	});
 
 	view.on('post', {
-		action: 'search'
+		action: 'testSearch'
 	}, function(next) {
-		console.log("req" + req.body.procedure);
+		console.log("TEXT" + JSON.stringify(req.body.procedureId));
 		keystone.list('Procedure').model.find({
 			name: req.body.procedure
 		}).populate('doctors').exec(function(err, procedureRes) {
-			async.each(procedureRes, function(procedure, next) {
-				async.each(procedure.doctors, function(doctor, next) {
+			async.each(procedureRes, function(procedure, cb1) {
+				async.each(procedure.doctors, function(doctor, cb2) {
 					res.locals.doctors.push(doctor);
+					cb2(err);
 				}, function(err) {
-					next(err);
+					cb1(err);
 				});
 			}, function(err) {
 				next(err);
 			});
 		});
-		next();
+	});
+
+	view.on('post', {
+		action: 'radioSearch'
+	}, function(next) {
+		console.log("req" + JSON.stringify(req.body.procedure));
+		keystone.list('Procedure').model.find({
+			key: req.body.procedure
+		}).populate('doctors').exec(function(err, procedureRes) {
+			async.each(procedureRes, function(procedure, cb1) {
+				async.each(procedure.doctors, function(doctor, cb2) {
+					res.locals.doctors.push(doctor);
+					cb2(err);
+				}, function(err) {
+					cb1(err);
+				});
+			}, function(err) {
+				next(err);
+			});
+		});
 	});
 
 	view.render('doctors');
