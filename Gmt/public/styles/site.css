@@ -5546,6 +5546,44 @@ a:focus {
       background-color: #c6c6c6;
       padding: 5px 15px; }
 
+.tryIndex {
+  position: relative;
+  top: 113px; }
+
+.hero1 {
+  background: url("../images/GMTHomeHD1.jpg") no-repeat center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  height: 447px; }
+  .hero1 .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    top: 220px; }
+    .hero1 .container .pp {
+      padding-bottom: 11px;
+      margin-bottom: 40px; }
+      .hero1 .container .pp .border_doc {
+        border-bottom: 5px solid #ff6c6f;
+        width: 10%;
+        margin-top: -15px;
+        margin-bottom: 10px; }
+    .hero1 .container h2 {
+      font-family: SourceSansPro-Semibold;
+      font-size: 30px;
+      margin-bottom: 0;
+      color: #646464; }
+    .hero1 .container p {
+      font-size: 20px;
+      margin-bottom: 0;
+      font-family: SourceSansPro-Regular; }
+
 @media only screen and (max-width: 750px) {
   .hero {
     background: grey; }

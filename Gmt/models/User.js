@@ -32,6 +32,10 @@ User.add({
 		type: String,
 		required: false
 	},
+	verify: {
+		type: String,
+		required: false
+	},
 
 }, 'Permissions', {
 	isAdmin: {
@@ -98,7 +102,7 @@ User.schema.methods.sendNotificationEmail = function(callback) {
 		to: this.email,
 		fromName: 'Goa medical travel',
 		fromEmail: 'contact@goa-medical-travel.com',
-		subject: 'New Enquiry for Goa medical travel',
+		subject: 'User Confirmation',
 		mailBody: mailBody
 	}, callback);
 };

@@ -98,7 +98,6 @@ exports = module.exports = function(req, res) {
 							}
 						})
 						.then(function(api) {
-
 							if (req.files.fileupload.length > 0) {
 								var count = 1;
 								async.each(req.files.fileupload, function(file, cb1) {
@@ -110,16 +109,13 @@ exports = module.exports = function(req, res) {
 											'total_count'
 										]
 									}).then(function(uploadRes) {
-										console.log("uploadRes" + JSON.stringify(uploadRes));
 									});
 									count++;
 								}, function(err) {
 									cb1(err);
 								});
 								console.log("Don File");
-
 							} else {
-
 								api.file.upload({
 									name: req.body.email + 00 + count + 00 + req.files.fileupload.originalname,
 									file: req.files.fileupload.path,
@@ -128,14 +124,10 @@ exports = module.exports = function(req, res) {
 										'total_count'
 									]
 								}).then(function(uploadRes) {
-									console.log("uploadRes" + JSON.stringify(uploadRes));
 								});
 								console.log("Ek File");
 							}
-
-
 						});
-
 				}
 			});
 
