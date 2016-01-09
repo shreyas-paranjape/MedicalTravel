@@ -55,9 +55,12 @@
 							<input type="hidden" name="action" value="download">
 							<input name="submit" type="submit" value="Download">
 						</form>
-						<div>
-							{{files}}
-						</div>
+
+					</div>
+					<div class="row">
+						{{#each files}}
+							<p> {{{type}}}</p>
+						{{/each}}
 					</div>
 					<!-- <input type="button" value="Edit" id="Edit" style="width: 70px;"/> -->
 					<!-- <input type="button" value="View" id="View" style="width: 70px;" /> -->

@@ -17,6 +17,21 @@ $("#Editss").click(function() {
 $('input[type=radio]').click(function() {
 	$("form id or class").submit();
 });
+
+
+// $(document).ready(function() {
+//
+// 	var owl = $("#owl-demo");
+//
+// 	owl.owlCarousel({
+// 		navigation: true,
+// 		singleItem: true,
+// 		transitionStyle: "fade"
+// 	});
+//
+// });
+
+
 // $( "#View" ).click( function() {
 //     $( "input[type=text]" ).replaceWith( function() {
 //         return "<label>" + $( this ).val() + "</label>";

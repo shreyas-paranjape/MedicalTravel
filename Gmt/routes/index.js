@@ -89,7 +89,6 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/verify', routes.views.verify);
 	app.get('/providers/:key', routes.views.providers);
 	app.get('/procedure/:key', routes.views.procedure);
 	app.get('/services', routes.views.services);
@@ -99,6 +98,9 @@ exports = module.exports = function(app) {
 	app.all('/profile',
 		require('connect-ensure-login').ensureLoggedIn(),
 		routes.views.profile);
+	app.all('/verify',
+		require('connect-ensure-login').ensureLoggedIn(),
+		routes.views.verify);
 	app.get('/login', routes.views.login);
 	app.post('/login',
 		passport.authenticate('local', {
