@@ -5293,6 +5293,16 @@ a:focus {
   box-shadow: 0 4px 0 0 #df5f69;
   border-color: #ff6c6f; }
 
+.provider_procedures .btn-primary.procedure_btn {
+  background-color: #ff6c6f;
+  color: white;
+  font-size: 16px;
+  font-family: SourceSansPro-Regular;
+  height: auto;
+  padding: 1px 12px;
+  border-color: #ff6c6f;
+  box-shadow: 0 3px 0 0 #b24b4d; }
+
 .btn-primary.enquire {
   box-shadow: 0 4px 0 0 #df5f69;
   border-color: #ff6c6f;
@@ -5326,15 +5336,6 @@ a:focus {
   .panel-default .panel-title .accordion .price {
     padding-top: 5px;
     text-align: right; }
-  .panel-default .panel-title .accordion .btn-primary.procedure_btn {
-    background-color: #ff6c6f;
-    color: white;
-    font-size: 16px;
-    font-family: SourceSansPro-Regular;
-    height: auto;
-    padding: 1px 12px;
-    border-color: #ff6c6f;
-    box-shadow: 0 3px 0 0 #b24b4d; }
   .panel-default .panel-title .accordion .btn-primary.doc_btn {
     background-color: #53c8ab;
     color: white;
@@ -5430,7 +5431,7 @@ a:focus {
       margin-top: 10px; }
 
 .index_choose .title {
-  font-size: 31px;
+  font-size: 32px;
   padding-top: 30px;
   padding-bottom: 5px;
   color: #959595;
@@ -5489,9 +5490,6 @@ a:focus {
     font-size: 15px; }
 
 .connect {
-  background-color: #ff6c6f;
-  border-color: #ff6c6f;
-  box-shadow: 0 2px 0 0 #B24B4D;
   font-family: SourceSansPro-Regular;
   font-size: 16px;
   padding: 1px 12px;
@@ -5584,7 +5582,7 @@ a:focus {
 
 .tryIndex {
   position: relative;
-  top: 113px;
+  top: -112px;
   overflow: hidden; }
 
 .text-data {

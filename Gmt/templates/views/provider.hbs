@@ -1,4 +1,5 @@
 <!-- <div class="container"> -->
+	{{>header}}
 <div class="row procedure">
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 
@@ -134,7 +135,7 @@
 								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 									<div class="panel-body">
 										{{#each procedures}}
-											<div class="row provider_procedures">
+											<div class="row provider_procedures" style="padding-bottom: 10px;">
 												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
 													<span>{{name}}</span>
 												</div>
@@ -142,7 +143,7 @@
 													<span>₹ {{price}}</span>
 												</div>
 												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry">
+													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" >
 												</div>
 											</div>
 										{{/each}}
@@ -226,3 +227,4 @@
 
 </div>
 <!-- </div> -->
+{{>footer}}

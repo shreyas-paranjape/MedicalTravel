@@ -5,10 +5,17 @@ exports = module.exports = function(req, res) {
 	locals.section = 'verify';
 
 	var profileQuery = keystone.list('User').model.findOne({
-		"_id": req.user.id
+		"uuid": req.params.key,
 	});
 	view.on('init', function(next) {
 		profileQuery.exec(function(err, resUser) {
+			keystone.list('User').model.update({
+				uuid: req.params.key,
+			}, {
+				$set: {
+					verify: "Yes",
+				}
+			}).exec(function(err, result1) {});
 			console.log("Verfied");
 		});
 		next();

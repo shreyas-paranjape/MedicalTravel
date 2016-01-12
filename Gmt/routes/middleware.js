@@ -2,6 +2,11 @@ var _ = require('underscore');
 exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	locals.navLinks = [{
+
+			label: 'Packages',
+			key: 'packages',
+			href: '/packages'
+		}, {
 		label: 'Providers',
 		key: 'provider',
 		href: '/providers/hospitals'
@@ -17,7 +22,11 @@ exports.initLocals = function(req, res, next) {
 		label: 'Services',
 		key: 'services',
 		href: '/services'
-	}, ];
+	}, {
+		label: 'Connect',
+		key: 'connect',
+		href: '/connect'
+	},  ];
 
 	locals.navs = [{
 		label: 'Login/Sign Up',

@@ -36,6 +36,10 @@ User.add({
 		type: String,
 		required: false
 	},
+	uuid: {
+		type: String,
+		required: false
+	}
 
 }, 'Permissions', {
 	isAdmin: {
@@ -97,6 +101,7 @@ User.schema.methods.sendNotificationEmail = function(callback) {
 	var mailBody = {};
 	mailBody.name = this.name;
 	mailBody.email = this.email;
+	mailBody.uuid = this.uuid;
 
 	new keystone.Email('signup').send({
 		to: this.email,

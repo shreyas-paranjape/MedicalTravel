@@ -2,6 +2,7 @@ var keystone = require('keystone');
 var User = keystone.list('User');
 var appAuth = require('box-appauth');
 var fs = require('fs');
+var uuid = require('uuid');
 
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
@@ -18,10 +19,12 @@ exports = module.exports = function(req, res) {
 		var newUser = new User.model(),
 			updater = newUser.getUpdateHandler(req);
 		req.body.lastLogin = Date.now;
+		req.body.uuid = uuid.v1();
+		console.log("IIU" + req.body.uuid);
 		updater.process(req.body, {
 
 			flashErrors: false,
-			fields: 'name, email, password, lastLogin',
+			fields: 'name, email, password, lastLogin, uuid',
 			errorMessage: 'Cannot Login:'
 		}, function(err) {
 			if (err) {

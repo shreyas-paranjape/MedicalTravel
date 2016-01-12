@@ -1,0 +1,63 @@
+<div id="header" style="margin-top:0px;">
+	<!-- <div class="container"> -->
+	<div role="navigation" class="navbar navbar-inverse navbar-static-top" style="border-width: 0px;border-radius:0px;background-color:rgba(0,0,0,0.3);border-bottom:0px;">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-lg-2">
+							</div>
+							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<div class="col-lg-10">
+								<a href="/" class="navbar-brand" style="width:100%;height:auto;">
+									<img alt="Goa Medical Travel" src="/images/gmtwhite.png" style="width:60%;height:auto;margin-bottom: 5px; margin-top: 5px;  margin-left: -5px;" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-11">
+							<div class="row">
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav navbar-right">
+										{{# each navs}}
+										<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;">
+											<a href="{{ href }}" style="color:rgb(235,235,235);;background-color:rgba(0,0,0,0);">{{ label }}</a>
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+							<div class="row" style="padding-top: 10px;">
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav navbar-right">
+										{{# each navLinks}}
+										<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;padding-left:20px;">
+											<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgba(0,0,0,0);">{{ label }}</a>
+										</li>
+										{{/each}}
+										<!-- <li style="padding-left:35px;">
+											<button type="submit" class="btn btn-primary btn-md connect" style="margin-top:10px;	">connect</button>
+										</li> -->
+										<!-- background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none; -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-1">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- </div> -->
+</div>

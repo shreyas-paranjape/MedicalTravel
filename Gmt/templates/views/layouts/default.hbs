@@ -13,92 +13,12 @@
 
 	{{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //- Safely remove
 	this block if you are not targeting IE8 --}}
-	<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
-		<![endif]-->
+
 </head>
 
 <body>
-	<!-- <div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script> -->
 
-
-
-	<div id="header" style="margin-top:0px;">
-		<!-- <div class="container"> -->
-		<div role="navigation" class="navbar navbar-inverse navbar-fixed-top" style="border-radius:0px;">
-			<div class="container-fluid">
-
-				<div class="row">
-					<div class="col-lg-4">
-						<div class="navbar-header">
-							<div class="row">
-								<div class="col-lg-2">
-								</div>
-								<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<div class="col-lg-10">
-									<a href="/" class="navbar-brand" style="width:100%;height:auto;">
-										<img alt="Goa Medical Travel" src="/images/gmtwhite.png" style="width:60%;height:auto;margin-bottom: 5px; margin-top: 5px;  margin-left: -5px;" />
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-8">
-						<div class="row">
-							<div class="col-lg-11">
-								<div class="row">
-									<div class="collapse navbar-collapse">
-										<ul class="nav navbar-nav navbar-right">
-											{{# each navs}}
-											<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;">
-												<a href="{{ href }}" style="color:#959595;background-color:rgb(43,43,43);">{{ label }}</a>
-											</li>
-											{{/each}}
-										</ul>
-									</div>
-								</div>
-								<div class="row" style="padding-top: 10px;">
-									<div class="collapse navbar-collapse">
-										<ul class="nav navbar-nav navbar-right" style="margin-right:0px;">
-											{{# each navLinks}}
-											<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;padding-left:20px;">
-												<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgb(43,43,43);">{{ label }}</a>
-											</li>
-											{{/each}}
-											<li style="padding-left:35px;">
-												<button type="submit" class="btn btn-primary btn-md connect" style="background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none;margin-top:10px;	">connect</button>
-												<li>
-													<!-- <li style="padding-left:35px"> <a class="connect" style="padding: 3px 8px;color: #D55F61; font-family: SourceSansPro-Regular;font-size:17px" href="#" data-toggle="modal" data-target="#myModal">Connect</a></li> -->
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-1">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- </div> -->
-	</div>
-	<div class="tryIndex" id="body">
+	<div class="" id="body">
 		<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
 				validation errors, success messages, etc
@@ -124,86 +44,9 @@
 			{{/if}}
 		</div>
 		{{/if}}
-		<!-- The content block should contain the bod
-    <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-    <button type="submit" class="btn btn-default">Sign in</button>
-    <a href="/signup/">Signup</a>
-      </div>
-    </div>
-  </form>
-    </div>
-  </div>
-
-
-
-</div>y of your template's content-->
 
 		{{{body}}}
-		<nav class="footer">
-			<div class="fluid-container">
-				<div class="foot row" style="">
-					<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">
-						<div class="row">
-							<div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
-							</div>
-							<div class="col-md-11 col-lg-11 col-xs-11 col-sm-11 f_img" style="margin-left: -5px;">
-								<img src="../images/gmtwhite.png" style="">
-								<p style=" margin-bottom: 0px; padding-top: 15px; ">+91 832 240 5900</p>
-								<p style=" ">info@goamedicaltravel.com</p>
-								<p style=" margin-bottom: 0px;padding-bottom: 18px;"><i class="fa fa-copyright"></i> Copyright 2015 Friendly Hospitality Solutions Pvt. Ltd.</p>
 
-							</div>
-						</div>
-					</div>
-					<div class="col-md-8 col-lg-8 col-xs-8 col-sm-8">
-						<div class="row foot_data" style="">
-
-							<div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
-								<h4 style="color:white; font-size:15px;font-family:SourceSansPro-Regular;">Explore</h4>
-								<ul style="list-style-type:none; padding-left: 0px;">
-									<li><a href="/" style="	color: white;">About Us</a></li>
-									<li><a href="/" style="color:white; ">How it Works</a></li>
-									<li><a href="/" style="color:white; ">HIPAA</a></li>
-									<li><a href="/" style="color:white; ">Privacy Policy</a></li>
-									<li><a href="/" style="color:white;">Contact Us</a></li>
-									<li><a href="/" style="color:white; ">Blog</a></li>
-								</ul>
-							</div>
-
-							<div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
-								<h4>&nbsp;</h4>
-								<ul style="list-style-type:none; padding-left: 0px;">
-									<li><a href="/" style="color:white; ">Our Mission</a></li>
-									<li><a href="/" style="color:white; ">FAQs</a></li>
-									<li><a href="/" style="color:white; ">Terms of Use</a></li>
-									<li><a href="/" style="color:white; ">Management</a></li>
-									<li><a href="/" style="color:white;">News & Events</a></li>
-									<ul>
-							</div>
-							<div class="col-md-1 col-lg-1 col-xs-1 col-sm-1">
-							</div>
-							<div class="col-md-5 col-lg-5 col-xs-5 col-sm-5" style="padding-left: 50px;">
-								<h4 style="color:white; font-size:15px;font-family:SourceSansPro-Regular;">Connect On</h4>
-								<a href=""><i class="fa fa-facebook-square fa-2x" style="color:rgb(58,87,149)"></i></a>
-								<a href=""><i class="fa fa-twitter-square fa-2x" style="color:rgb(40,169,224)" ></i></a>
-								<a href=""><i class="fa fa-google-plus-square fa-2x" style="color:rgb(230,75,68)"></i></a>
-								<a href=""><i class="fa fa-linkedin-square fa-2x" style="color:rgb(1,119,181)"></i></a>
-
-								<!-- <h4>&nbsp;</h4> -->
-								<!-- <div class="fb-like" data-href="LINK" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="padding-top: 2px;"></div> -->
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-				<script src="/js/pro.js"></script>
-
-
-			</div>
-	</div>
-	</nav>
 	</div>
 	<!-- <div class="container"> -->
 

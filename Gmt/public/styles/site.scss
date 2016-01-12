@@ -32,17 +32,7 @@ $icon-font-path: "../fonts/";
 				padding: 0;
 }
 
-//.panel-group{
-//     margin:0;
-// }
-//
-// .panel{
-//     border:none;
-//     box-shadow:none;
-// }
-// .panel-heading{
-//     padding:0;
-// }
+
 .exp {
 				border: 1px solid rgb(202,198,198);
 				margin-left: 15px;
@@ -95,6 +85,7 @@ $icon-font-path: "../fonts/";
 								}
 				}
 }
+
 .provider-box {
 				border-bottom: 1px solid #e5e5e5;
 				width: 100%;
@@ -500,11 +491,19 @@ a:focus {
 				border-color: rgb(255,108,111);
 }
 
-// .btn-primary.provider_btn {
-// 				box-shadow: 0 4px 0 0 rgb(223,95,105);
-// 				border-color: rgb(255,108,111);
-// 				background-color: #ff6c6f;
-// }
+.provider_procedures{
+	.btn-primary.procedure_btn {
+					background-color: #ff6c6f;
+					color: white;
+					font-size: 16px;
+					font-family: SourceSansPro-Regular;
+					height: auto;
+					padding: 1px 12px;
+					border-color: #ff6c6f;
+					box-shadow: 0 3px 0 0 #b24b4d;
+	}
+
+}
 .btn-primary.enquire {
 				box-shadow: 0 4px 0 0 rgb(223,95,105);
 				border-color: rgb(255,108,111);
@@ -549,16 +548,7 @@ a:focus {
 																padding-top: 5px;
 																text-align: right;
 												}
-												.btn-primary.procedure_btn {
-																background-color: #ff6c6f;
-																color: white;
-																font-size: 16px;
-																font-family: SourceSansPro-Regular;
-																height: auto;
-																padding: 1px 12px;
-																border-color: #ff6c6f;
-																box-shadow: 0 3px 0 0 #b24b4d;
-												}
+
 												.btn-primary.doc_btn {
 																background-color: #53c8ab;
 																color: white;
@@ -695,7 +685,7 @@ a:focus {
 }
 .index_choose {
 				.title {
-								font-size: 31px;
+								font-size: 32px;
 								padding-top: 30px;
 								padding-bottom: 5px;
 								color: rgb(149,149,149);
@@ -723,6 +713,7 @@ a:focus {
 								width: 50%;
 								height: auto;
 				}
+
 }
 
 .thumbnail>p {
@@ -736,7 +727,6 @@ a:focus {
 				text-align: center;
 				font-size: 14px;
 }
-
 .btn-primary.raise {
 				border: 1px solid rgb(83, 200, 171);
 				color: white;
@@ -763,9 +753,10 @@ a:focus {
 				}
 }
 .connect {
-				background-color: #ff6c6f;
-				border-color: #ff6c6f;
-				box-shadow: 0 2px 0 0 #B24B4D;
+
+				// background-color: #ff6c6f;
+				// border-color: #ff6c6f;
+				// box-shadow: 0 2px 0 0 #B24B4D;
 				font-family: SourceSansPro-Regular;
 				font-size: 16px;
 				padding: 1px 12px;
@@ -814,6 +805,7 @@ a:focus {
 				-o-background-size: cover;
 				background-size: cover;
 }
+
 // hr.style17 {
 // 	border-top: 1px solid #8c8b8b;
 // 	text-align: center;
@@ -888,7 +880,7 @@ a:focus {
 }
 .tryIndex {
 				position: relative;
-				top: 113px;
+				top: -112px;
 				overflow: hidden;
 }
 .text-data {

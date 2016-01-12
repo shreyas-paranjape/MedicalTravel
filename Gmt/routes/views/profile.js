@@ -15,11 +15,9 @@ exports = module.exports = function(req, res) {
 	keystone.list('User').model.findOne({
 		_id: req.user.id,
 	}).exec(function(err, resUser) {
-		if (resUser.isUser == true && resUser.verify == "Yes" ) {
-		   	view.render('profile');
+		if (resUser.verify == "Yes") {
+			view.render('profile');
 		}
-		else { 	view.render('verify');
-					}
 		//  else if (resUser.isDoctor == true) {
 		// 	view.render('profileDoctor');
 		// } else if (resUser.isProvider == true) {
