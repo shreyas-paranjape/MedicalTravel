@@ -18,6 +18,10 @@ exports = module.exports = function(req, res) {
 		if (resUser.verify == "Yes") {
 			view.render('profile');
 		}
+		else{
+			view.render('login');
+
+		}
 		//  else if (resUser.isDoctor == true) {
 		// 	view.render('profileDoctor');
 		// } else if (resUser.isProvider == true) {
@@ -69,8 +73,8 @@ exports = module.exports = function(req, res) {
 								// 	});
 								//
 								// }
-								res.locals.files.push(folderRes);
-								console.log("Names in Root : " + JSON.stringify(folderRes.name));
+							//	res.locals.files.push(folderRes);
+							//	console.log("Names in Root : " + JSON.stringify(folderRes.name));
 							}, listRes.entries)
 						}
 
@@ -130,7 +134,6 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'fileupload'
 	}, function(next) {
-		console.log("File" + JSON.stringify(req.files));
 		// console.log("length" + (req.files.image_upload).length);
 		keystone.list('User').model.findOne({
 			"_id": req.user.id
@@ -157,28 +160,29 @@ exports = module.exports = function(req, res) {
 						var count = 1;
 						async.each(req.files.fileupload, function(file, cb1) {
 							api.file.upload({
-								name: count + 00 + file.originalname,
+								name: count + "00" + file.originalname,
 								file: file.path,
 								parentId: "0",
 								fields: [
 									'total_count'
 								]
 							}).then(function(uploadRes) {});
+							console.log(req.files);
+
 							count++;
 						}, function(err) {
 							cb1(err);
 						});
-						console.log("Many");
 					} else {
+
 						api.file.upload({
-							name: count + 00 + req.files.fileupload.originalname,
+							name: count + "00" + req.files.fileupload.originalname,
 							file: req.files.fileupload.path,
 							parentId: "0",
 							fields: [
 								'total_count'
 							]
 						}).then(function(uploadRes) {});
-						console.log("One");
 					}
 				});
 		});

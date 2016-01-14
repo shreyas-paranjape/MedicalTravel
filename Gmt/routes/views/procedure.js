@@ -10,7 +10,8 @@ exports = module.exports = function(req, res) {
 	res.locals.doctors = [];
 	res.locals.providers = [];
 	res.locals.procedures = [];
-	res.locals.speciality = [];
+	res.locals.specialityd = [];
+	res.locals.specialityn = [];
 	res.locals.specialities = [];
 
 	var contains = function(aValue, aArray) {
@@ -32,7 +33,9 @@ exports = module.exports = function(req, res) {
 				res.locals.specialities.push(speciality);
 				if (speciality.key == req.params.key) {
 					speciality.active = true;
-					res.locals.speciality.push(speciality.discription);
+					res.locals.specialityd.push(speciality.discription);
+					res.locals.specialityn.push(speciality.name);
+
 				}
 				return speciality;
 			}, function(err) {

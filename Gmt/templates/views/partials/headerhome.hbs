@@ -37,16 +37,16 @@
 								</div>
 							</div>
 							<div class="row" style="padding-top: 10px;">
-								<div class="collapse navbar-collapse">
+								<div class="collapse navbar-collapse" style="padding-right: 15px;">
 									<ul class="nav navbar-nav navbar-right">
 										{{# each navLinks}}
 										<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;padding-left:20px;">
 											<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgba(0,0,0,0);">{{ label }}</a>
 										</li>
 										{{/each}}
-										<!-- <li style="padding-left:35px;">
-											<button type="submit" class="btn btn-primary btn-md connect" style="margin-top:10px;	">connect</button>
-										</li> -->
+										<li style="padding-left:35px;">
+											<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);border:2px solid white;color:white;font-family:SourceSansPro-Regular;font-size:16.5px;">connect</button>
+										</li>
 										<!-- background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none; -->
 									</ul>
 								</div>

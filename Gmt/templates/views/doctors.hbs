@@ -1,19 +1,19 @@
 <!-- <div class="container"> -->
-	{{>header}}
-<section class="hero ">
+{{>header}}
+<section class="hero marginAlign ">
 	<section class="container">
 
 		<div class="row">
 
 			<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
 
-				<div class="row pp" >
+				<div class="row pp">
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
 					<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
-						<h2 style="margin-left: -2px;">Meet The Doctors</h2>
-						<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
-						<div class="border_doc">&nbsp;</div>
+						<h2 style="margin-left: -2px;">Meet the Doctors</h2>
+						<!-- <span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span> -->
+						<!-- <div class="border_doc">&nbsp;</div> -->
 						<p>Choose the right doctor for your treatment</p>
 						<p>Consult a specialist for a second opinion</p>
 					</div>
@@ -98,7 +98,7 @@
 		<div class="row ">
 			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
 			{{#each doctors}}
-				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor ">
+				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " style="padding-right:20px;padding-left:20px">
 					<!-- style="padding-right: 25px;"" -->
 					<div class="thumbnail" style="">
 						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
@@ -116,17 +116,18 @@
 			{{/each}}
 		</div>
 	</div>
-	<div class="col-lg-4 col-sm-4 col-xs-0 col-md-4 qwe ">
-		<h4 class="specialities" style="">Filter Doctors by Procedure</h4>
-		<div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="">
+	<div class="col-lg-4 col-sm-4 col-xs-0 col-md-4 qwe">
+		<h4 class="specialities" style="background-color:rgb(198,198,198);color:white;">Filter Doctors by Procedure</h4>
+		<!-- <div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="border-left: solid 2px rgb(198,198,198);border-right: solid 2px rgb(198,198,198);border-bottom: solid 2px rgb(198,198,198); border-top:solid 8px rgb(198,198,198);"> -->
+		<div id="accordion" class="panel-group panel_doc" style=" " aria-multiselectable="true" role="tablist">
 			{{#each speciality}}
 				<div class="panel panel-default">
-					<div class="panel-heading panel_heading" role="tab" id="headingOne">
+					<div id="headingOne" class="panel-heading panel_heading" style="border-width: 0px 0px 2px; border-bottom: 2px solid rgb(198, 198, 198);" role="tab">
 						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none;color:black;">
-							<h4 class="panel-title">
+							<h4 class="panel-title" style="padding-left:5px;">
 								<div class="row accordion_doc">
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 " style="">
-										<img src="/images/{{key}}.png" width="60%" height="auto">
+										<img src="/images/bariatrics.png" width="60%" height="auto">
 									</div>
 									<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 pro" style="padding-top:4px;">
 										{{name}}
@@ -140,7 +141,7 @@
 
 					</div>
 					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-						<div class="panel-body">
+						<div class="panel-body" style="background-color:rgb(246,246,246)" >
 							<form method="post" enctype="multipart/form-data">
 								<input type="hidden" name="action" value="radioSearch">
 								{{#each procedures}}

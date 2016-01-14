@@ -20,11 +20,12 @@ exports = module.exports = function(req, res) {
 			updater = newUser.getUpdateHandler(req);
 		req.body.lastLogin = Date.now;
 		req.body.uuid = uuid.v1();
+		req.body.verify = "No"
 		console.log("IIU" + req.body.uuid);
 		updater.process(req.body, {
 
 			flashErrors: false,
-			fields: 'name, email, password, lastLogin, uuid',
+			fields: 'name, email, password, lastLogin, uuid, verify',
 			errorMessage: 'Cannot Login:'
 		}, function(err) {
 			if (err) {

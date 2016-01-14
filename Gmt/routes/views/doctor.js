@@ -60,9 +60,6 @@ exports = module.exports = function(req, res) {
 	view.on('post', {
 		action: 'second'
 	}, function(next) {
-		console.log("req: " + JSON.stringify(req.body.gender));
-		console.log("req dfghjl : " + JSON.stringify(req.body));
-
 		var newQuery = new Enquiry.model(),
 			updater = newQuery.getUpdateHandler(req);
 		keystone.list('Doctor').model.findOne({
@@ -86,7 +83,7 @@ exports = module.exports = function(req, res) {
 							privateKey: fs.readFileSync('private_key.pem'),
 							algorithm: 'RS256',
 							issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
-							subject: "261923813",
+							subject: "262909238",
 							subjectType: 'user',
 							clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 							clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
@@ -102,7 +99,7 @@ exports = module.exports = function(req, res) {
 								var count = 1;
 								async.each(req.files.fileupload, function(file, cb1) {
 									api.file.upload({
-										name: req.body.email + 00 + count + 00 + file.originalname,
+										name: req.body.email + "00" + count + "00" + file.originalname,
 										file: file.path,
 										parentId: "0",
 										fields: [
@@ -117,7 +114,7 @@ exports = module.exports = function(req, res) {
 								console.log("Don File");
 							} else {
 								api.file.upload({
-									name: req.body.email + 00 + count + 00 + req.files.fileupload.originalname,
+									name: req.body.email + "00" + count + "00" + req.files.fileupload.originalname,
 									file: req.files.fileupload.path,
 									parentId: "0",
 									fields: [

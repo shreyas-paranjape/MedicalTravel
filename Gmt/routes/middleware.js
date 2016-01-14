@@ -22,10 +22,6 @@ exports.initLocals = function(req, res, next) {
 		label: 'Services',
 		key: 'services',
 		href: '/services'
-	}, {
-		label: 'Connect',
-		key: 'connect',
-		href: '/connect'
 	},  ];
 
 	locals.navs = [{

@@ -31,7 +31,7 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
-	var specialityQuery = keystone.list('Speciality').model.find().sort('_id');
+	var specialityQuery = keystone.list('Speciality').model.find().sort('imageOuter');
 	view.on('init', function(next) {
 		specialityQuery.exec(function(err, specialities) {
 			async.each(specialities, function(spec, cb1) {
