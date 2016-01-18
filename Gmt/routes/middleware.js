@@ -5,7 +5,7 @@ exports.initLocals = function(req, res, next) {
 
 			label: 'Packages',
 			key: 'packages',
-			href: '/packages'
+			href: '/packages/allopathy'
 		}, {
 		label: 'Providers',
 		key: 'provider',

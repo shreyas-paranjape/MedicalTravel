@@ -89,7 +89,7 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/packages', routes.views.packages);
+	app.get('/packages/:key', routes.views.packages);
 	// app.get('/connect', routes.views.connect);
 
 	app.get('/providers/:key', routes.views.providers);
