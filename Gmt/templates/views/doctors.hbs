@@ -11,11 +11,11 @@
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
 					<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
-						<h2 style="margin-left: -2px;">Meet the Doctors</h2>
+						<!-- <h2 style="margin-left: -2px;">Meet the Doctors</h2> -->
 						<!-- <span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span> -->
 						<!-- <div class="border_doc">&nbsp;</div> -->
-						<p>Choose the right doctor for your treatment</p>
-						<p>Consult a specialist for a second opinion</p>
+						<!-- <p>Choose the right doctor for your treatment</p>
+						<p>Consult a specialist for a second opinion</p> -->
 					</div>
 				</div>
 				<div class="row">
@@ -100,7 +100,7 @@
 			{{#each doctors}}
 				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " style="padding-right:20px;padding-left:20px">
 					<!-- style="padding-right: 25px;"" -->
-					<div class="thumbnail" style="">
+					<div class="thumbnail" style="border:1px solid #ededed;">
 						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
@@ -127,7 +127,7 @@
 							<h4 class="panel-title" style="padding-left:5px;">
 								<div class="row accordion_doc">
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 " style="">
-										<img src="/images/bariatrics.png" width="60%" height="auto">
+										<img src="/images/{{key}}.png" width="60%" height="auto">
 									</div>
 									<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 pro" style="padding-top:4px;">
 										{{name}}
@@ -141,7 +141,7 @@
 
 					</div>
 					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-						<div class="panel-body" style="background-color:rgb(246,246,246)" >
+						<div class="panel-body" style="background-color:rgb(246,246,246)">
 							<form method="post" enctype="multipart/form-data">
 								<input type="hidden" name="action" value="radioSearch">
 								{{#each procedures}}

@@ -29,6 +29,17 @@ $icon-font-path: "../fonts/";
 .no-padding {
 				padding: 0;
 }
+// .sticky {
+//     position: fixed;
+//     width: 100%;
+//     left: 0;
+//     top: 0;
+//     z-index: 100;
+//     border-top: 0;
+// }
+
+
+
 .exp {
 				border: 1px solid rgb(202,198,198);
 				margin-left: 15px;
@@ -81,15 +92,18 @@ $icon-font-path: "../fonts/";
 								}
 				}
 }
+//providers open
 .provider-box {
 				border-bottom: 1px solid #e5e5e5;
 				width: 100%;
-				margin-left: 2px;
+				// margin-left: 2px;
 				// margin-bottom: 20px;
 }
 .provider-img {
-				padding: 20px;
+				padding: 20px 0px;
 				border-radius: 8px;
+				margin-top: 10px;
+				margin-bottom: 10px;
 				// width: 350px;
 				// height: 300px;
 }
@@ -102,7 +116,7 @@ $icon-font-path: "../fonts/";
 				p {
 								text-align: justify;
 								font-size: 14px;
-								margin-top: 35px;
+								// margin-top: 35px;
 								margin-left: 0;
 								margin-right: 20px;
 								font-family: SourceSansPro-Regular;
@@ -111,7 +125,7 @@ $icon-font-path: "../fonts/";
 								margin-bottom: 0;
 				}
 				.btn-primary.providers_btn {
-								margin-top: 41px;
+								margin-top: 30px;
 								background-color: #ff6c6f;
 								border-color: #ff6c6f;
 								box-shadow: 0 4px 0 0 #b24b4d;
@@ -119,8 +133,10 @@ $icon-font-path: "../fonts/";
 								outline: none;
 								font-family: SourceSansPro-Semibold;
 								font-size: 16px;
+								padding: 4px 12px;
 				}
 }
+//providers close
 .q {
 				height: auto;
 }
@@ -147,6 +163,7 @@ $icon-font-path: "../fonts/";
 .navbar-inverse .navbar-nav > li > a {
 				color: white;
 }
+//procedure doctor open
 .tabs {
 				li {
 								font-family: SourceSansPro-Regular;
@@ -170,10 +187,7 @@ $icon-font-path: "../fonts/";
 				margin-left: 0;
 				margin-right: 0;
 				margin-top: 112px;
-				.border {
-								border-right: 1px solid #ededed;
 				}
-}
 .procedure {
 				overflow: hidden;
 				margin: 0;
@@ -206,13 +220,13 @@ $icon-font-path: "../fonts/";
 								font-size: 16.5px;
 				}
 }
-#bio {
-				font-size: 16px;
-				margin-top: 45px;
-				// border-bottom: 2px solid #e5e5e5;
-				padding-bottom: 40px;
-				margin-left: -40px;
-}
+// #bio {
+// 				font-size: 16px;
+// 				margin-top: 45px;
+// 				// border-bottom: 2px solid #e5e5e5;
+// 				padding-bottom: 40px;
+// 				margin-left: -40px;
+// }
 .procedure-box {
 				margin-top: 40px;
 				padding-bottom: 20px;
@@ -272,6 +286,72 @@ $icon-font-path: "../fonts/";
 								font-family: SourceSansPro-Regular;
 				}
 }
+.doc_proc {
+				padding-bottom: 20px;
+				.doc_border {
+								border: 1px solid #e5e5e5;
+								border-radius: 4px;
+								margin-top: 20px;
+				}
+}
+.panel-default {
+				border-width: 0;
+				.panel-heading {
+								margin-top: 20px;
+								background-color: #EDEDED;
+								padding: 12px 15px;
+				}
+				.panel-title {
+								a {
+												outline: none;
+								}
+								.accordion {
+												.title {
+																padding-top: 5px;
+																font-family: SourceSansPro-Regular;
+																font-size: 16px;
+																span {
+																				padding-left: 5px;
+																				font-size: 18px;
+																				font-family: SourceSansPro-Semibold;
+																}
+												}
+												.price {
+																padding-top: 5px;
+																text-align: right;
+																span {
+																				font-size: 16px;
+																}
+												}
+												.btn-primary.procedure_btn {
+																background-color: #ff6c6f;
+																color: white;
+																font-size: 16px;
+																font-family: SourceSansPro-Regular;
+																height: auto;
+																padding: 1px 12px;
+																border-color: #ff6c6f;
+																box-shadow: 0 3px 0 0 #b24b4d;
+												}
+												.btn-primary.doc_btn {
+																background-color: #53c8ab;
+																color: white;
+																font-size: 16px;
+																font-family: SourceSansPro-Regular;
+																height: auto;
+																border-color: #53c8ab;
+																box-shadow: 0 3px 0 0 #317866;
+																padding: 1px 12px;
+												}
+								}
+				}
+				.panel-body {
+								text-align: left;
+								font-size: 16px;
+								font-family: SourceSansPro-Regular;
+				}
+}
+//procedure doctor closed
 #link {
 				border: 1px solid #53c8ab;
 				color: #53c8ab;
@@ -283,6 +363,7 @@ $icon-font-path: "../fonts/";
 				font-family: SourceSansPro-Regular;
 				font-size: 18px;
 }
+//doctor open
 .consult_block {
 				background-color: #53c8ab;
 				width: auto;
@@ -308,7 +389,7 @@ $icon-font-path: "../fonts/";
 				height: 447px;
 				padding-bottom: 40px;
 }
-.doc_pro {
+.doc_profile {
 				img {
 								width: 200px;
 								height: 200px;
@@ -324,10 +405,6 @@ $icon-font-path: "../fonts/";
 								font-family: SourceSansPro-Regular;
 								font-size: 20px;
 				}
-				#text {
-								margin-top: 40px;
-								margin-left: 0;
-				}
 }
 .name {
 				h3 {
@@ -338,6 +415,60 @@ $icon-font-path: "../fonts/";
 								padding: 25px 0 25px 33px;
 								margin-top: 0;
 								font-family: SourceSansPro-Bold;
+				}
+}
+.frm_doctor {
+
+				border: solid 2px rgb(198,198,198);
+				h5 {
+								margin-top: 0;
+								background-color: rgb(198,198,198);
+								padding: 20px 0;
+								font-family: SourceSansPro-Semibold;
+								font-size: 20px;
+								color: white;
+								text-align: center;
+				}
+				.form_fields {
+								#age {
+												padding-top: 10px;
+												padding-bottom: 10px;
+												margin-top: 0;
+								}
+								.gender {
+												font-family: SourceSansPro-Regular;
+												font-weight: normal;
+												font-size: 16px;
+												color: rgb(95,95,95);
+								}
+								.value {
+												font-family: SourceSansPro-Regular;
+												font-weight: normal;
+												font-size: 16px;
+								}
+				}
+				.doctor_btn {
+								font-size: 18px;
+								font-family: SourceSansPro-Regular;
+								margin-left: -6px;
+								background-color: rgb(83,200,171);
+								color: white;
+								border-color: rgb(83,200,171);
+								box-shadow: 0 3px 0 0 rgb(49,120,102);
+				}
+}
+//doctor closed
+//provider open
+.provider_procedures {
+				.btn-primary.procedure_btn {
+								background-color: #ff6c6f;
+								color: white;
+								font-size: 16px;
+								font-family: SourceSansPro-Regular;
+								height: auto;
+								padding: 1px 12px;
+								border-color: #ff6c6f;
+								box-shadow: 0 3px 0 0 #b24b4d;
 				}
 }
 .form {
@@ -366,11 +497,6 @@ $icon-font-path: "../fonts/";
 												padding: 8px 0 0 8px;
 												border: 1px solid #ccc;
 								}
-								// .dropdown {
-								// 				margin-left: 20px;
-								// 				width: 100px;
-								// 				margin-left: 30px;
-								// }
 				}
 				.btn-primary.provider_btn {
 								padding: 5px 6px;
@@ -388,6 +514,7 @@ $icon-font-path: "../fonts/";
 								// box-shadow: 0 2px 0 0 rgb(223,95,105);
 				}
 }
+//provider close
 .connect {
 				border: 2px solid #d55f61;
 				border-radius: 5px;
@@ -466,35 +593,9 @@ a:focus {
 								margin-left: 20px;
 				}
 }
-#education,
-#awards {
-				// margin-left: -32px;
-				// border-top:2px solid #e5e5e5;
-				// width:770px;
-				margin-left: -60px;
-				padding-top: 20px;
-				margin-top: 15px;
-				border-top: 2px solid #e5e5e5;
-				width: 863px;
-				span {
-								margin-left: 100px;
-				}
-}
 .btn-primary.raiseds {
 				box-shadow: 0 4px 0 0 rgb(223,95,105);
 				border-color: rgb(255,108,111);
-}
-.provider_procedures {
-				.btn-primary.procedure_btn {
-								background-color: #ff6c6f;
-								color: white;
-								font-size: 16px;
-								font-family: SourceSansPro-Regular;
-								height: auto;
-								padding: 1px 12px;
-								border-color: #ff6c6f;
-								box-shadow: 0 3px 0 0 #b24b4d;
-				}
 }
 .btn-primary.enquire {
 				box-shadow: 0 4px 0 0 rgb(223,95,105);
@@ -504,68 +605,6 @@ a:focus {
 				height: auto;
 }
 .spec {}
-.doc_proc {
-				padding-bottom: 20px;
-				.doc_border {
-								border: 1px solid #e5e5e5;
-								border-radius: 4px;
-								margin-top: 20px;
-				}
-}
-.panel-default {
-				border-width: 0;
-				.panel-heading {
-								margin-top: 20px;
-								background-color: #EDEDED;
-								padding: 12px 15px;
-				}
-				.panel-title {
-								a {
-												outline: none;
-								}
-								.accordion {
-												.title {
-																padding-top: 5px;
-																font-family: SourceSansPro-Regular;
-																font-size: 16px;
-																span {
-																				padding-left: 5px;
-																				font-size: 18px;
-																				font-family: SourceSansPro-Semibold;
-																}
-												}
-												.price {
-																padding-top: 5px;
-																text-align: right;
-												}
-												.btn-primary.procedure_btn {
-																background-color: #ff6c6f;
-																color: white;
-																font-size: 16px;
-																font-family: SourceSansPro-Regular;
-																height: auto;
-																padding: 1px 12px;
-																border-color: #ff6c6f;
-																box-shadow: 0 3px 0 0 #b24b4d;
-												}
-												.btn-primary.doc_btn {
-																background-color: #53c8ab;
-																color: white;
-																font-size: 16px;
-																font-family: SourceSansPro-Regular;
-																height: auto;
-																border-color: #53c8ab;
-																box-shadow: 0 3px 0 0 #317866;
-																padding: 1px 12px;
-												}
-								}
-				}
-				.panel-body {
-								text-align: left;
-								font-size: 16px;
-								font-family: SourceSansPro-Regular;
-				}
-}
 .autocomplete-suggestions {
 				border: 1px solid #999;
 				background: #fff;
@@ -794,14 +833,14 @@ a:focus {
 				width: 100%;
 				height: 447px;
 }
-.jumbotron {
-				background: url("../images/GOAhome(1).jpg")no-repeat center center;
-				background-repeat: no-repeat;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-}
+// .jumbotron {
+// 				background: url("../images/GOAhome.jpg")no-repeat center center;
+// 				background-repeat: no-repeat;
+// 				-webkit-background-size: cover;
+// 				-moz-background-size: cover;
+// 				-o-background-size: cover;
+// 				background-size: cover;
+// }
 // hr.style17 {
 // 	border-top: 1px solid #8c8b8b;
 // 	text-align: center;
@@ -812,6 +851,18 @@ a:focus {
 //
 //
 // }
+.packagePic {
+				background: url("../images/Packages265(1).jpg")no-repeat center center;
+				background-repeat: no-repeat;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				display: table;
+				width: 100%;
+				position: relative;
+				height: 265px;
+}
 .picture {
 				background: url("../images/Specialities265(1).png")no-repeat center center;
 				background-repeat: no-repeat;
@@ -824,8 +875,12 @@ a:focus {
 				position: relative;
 				height: 265px;
 }
+.affix {
+      top: 0;
+      width: 100%;
+  }
 .hero {
-				background: url("../images/MeetTheDoctors26501.jpg")no-repeat center center;
+				background: url("../images/MeetTheDoctorsC50.jpg")no-repeat center center;
 				background-repeat: no-repeat;
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
@@ -858,8 +913,9 @@ a:focus {
 												padding-bottom: 10px;
 								}
 								p {
-												font-size: 18px;
+												font-size: 19px;
 												margin-bottom: 0;
+												color: white;
 												font-family: SourceSansPro-Semibold;
 								}
 								.form-group {
@@ -881,7 +937,7 @@ a:focus {
 								display: table-cell;
 								text-align: left;
 								.block {
-												background-color: rgba(0, 0, 0, 0.3);
+												background-color: rgba(0, 0, 0, 0.2);
 												padding: 5px 15px;
 								}
 				}

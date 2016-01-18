@@ -4978,12 +4978,13 @@ button.close {
 
 .provider-box {
   border-bottom: 1px solid #e5e5e5;
-  width: 100%;
-  margin-left: 2px; }
+  width: 100%; }
 
 .provider-img {
-  padding: 20px;
-  border-radius: 8px; }
+  padding: 20px 0px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .provider-info h3 {
   margin-top: 26px;
@@ -4992,7 +4993,6 @@ button.close {
 .provider-info p {
   text-align: justify;
   font-size: 14px;
-  margin-top: 35px;
   margin-left: 0;
   margin-right: 20px;
   font-family: SourceSansPro-Regular;
@@ -5000,14 +5000,15 @@ button.close {
   padding-bottom: 0;
   margin-bottom: 0; }
 .provider-info .btn-primary.providers_btn {
-  margin-top: 41px;
+  margin-top: 30px;
   background-color: #ff6c6f;
   border-color: #ff6c6f;
   box-shadow: 0 4px 0 0 #b24b4d;
   margin-bottom: 10px;
   outline: none;
   font-family: SourceSansPro-Semibold;
-  font-size: 16px; }
+  font-size: 16px;
+  padding: 4px 12px; }
 
 .q {
   height: auto; }
@@ -5049,8 +5050,6 @@ button.close {
   margin-left: 0;
   margin-right: 0;
   margin-top: 112px; }
-  .marginAlign .border {
-    border-right: 1px solid #ededed; }
 
 .procedure {
   overflow: hidden;
@@ -5077,12 +5076,6 @@ button.close {
     top: 10px;
     font-family: SourceSansPro-Semibold;
     font-size: 16.5px; }
-
-#bio {
-  font-size: 16px;
-  margin-top: 45px;
-  padding-bottom: 40px;
-  margin-left: -40px; }
 
 .procedure-box {
   margin-top: 40px;
@@ -5136,6 +5129,57 @@ button.close {
 .procedure-doc p {
   font-family: SourceSansPro-Regular; }
 
+.doc_proc {
+  padding-bottom: 20px; }
+  .doc_proc .doc_border {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-top: 20px; }
+
+.panel-default {
+  border-width: 0; }
+  .panel-default .panel-heading {
+    margin-top: 20px;
+    background-color: #EDEDED;
+    padding: 12px 15px; }
+  .panel-default .panel-title a {
+    outline: none; }
+  .panel-default .panel-title .accordion .title {
+    padding-top: 5px;
+    font-family: SourceSansPro-Regular;
+    font-size: 16px; }
+    .panel-default .panel-title .accordion .title span {
+      padding-left: 5px;
+      font-size: 18px;
+      font-family: SourceSansPro-Semibold; }
+  .panel-default .panel-title .accordion .price {
+    padding-top: 5px;
+    text-align: right; }
+    .panel-default .panel-title .accordion .price span {
+      font-size: 16px; }
+  .panel-default .panel-title .accordion .btn-primary.procedure_btn {
+    background-color: #ff6c6f;
+    color: white;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular;
+    height: auto;
+    padding: 1px 12px;
+    border-color: #ff6c6f;
+    box-shadow: 0 3px 0 0 #b24b4d; }
+  .panel-default .panel-title .accordion .btn-primary.doc_btn {
+    background-color: #53c8ab;
+    color: white;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular;
+    height: auto;
+    border-color: #53c8ab;
+    box-shadow: 0 3px 0 0 #317866;
+    padding: 1px 12px; }
+  .panel-default .panel-body {
+    text-align: left;
+    font-size: 16px;
+    font-family: SourceSansPro-Regular; }
+
 #link {
   border: 1px solid #53c8ab;
   color: #53c8ab;
@@ -5168,21 +5212,18 @@ button.close {
   height: 447px;
   padding-bottom: 40px; }
 
-.doc_pro img {
+.doc_profile img {
   width: 200px;
   height: 200px;
   border-radius: 50%; }
-.doc_pro h3 {
+.doc_profile h3 {
   font-family: SourceSansPro-Semibold;
   font-size: 32px;
   color: #959595;
   margin-top: -5px; }
-.doc_pro p {
+.doc_profile p {
   font-family: SourceSansPro-Regular;
   font-size: 20px; }
-.doc_pro #text {
-  margin-top: 40px;
-  margin-left: 0; }
 
 .name h3 {
   background-color: #ededed;
@@ -5192,6 +5233,48 @@ button.close {
   padding: 25px 0 25px 33px;
   margin-top: 0;
   font-family: SourceSansPro-Bold; }
+
+.frm_doctor {
+  border: solid 2px #c6c6c6; }
+  .frm_doctor h5 {
+    margin-top: 0;
+    background-color: #c6c6c6;
+    padding: 20px 0;
+    font-family: SourceSansPro-Semibold;
+    font-size: 20px;
+    color: white;
+    text-align: center; }
+  .frm_doctor .form_fields #age {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0; }
+  .frm_doctor .form_fields .gender {
+    font-family: SourceSansPro-Regular;
+    font-weight: normal;
+    font-size: 16px;
+    color: #5f5f5f; }
+  .frm_doctor .form_fields .value {
+    font-family: SourceSansPro-Regular;
+    font-weight: normal;
+    font-size: 16px; }
+  .frm_doctor .doctor_btn {
+    font-size: 18px;
+    font-family: SourceSansPro-Regular;
+    margin-left: -6px;
+    background-color: #53c8ab;
+    color: white;
+    border-color: #53c8ab;
+    box-shadow: 0 3px 0 0 #317866; }
+
+.provider_procedures .btn-primary.procedure_btn {
+  background-color: #ff6c6f;
+  color: white;
+  font-size: 16px;
+  font-family: SourceSansPro-Regular;
+  height: auto;
+  padding: 1px 12px;
+  border-color: #ff6c6f;
+  box-shadow: 0 3px 0 0 #b24b4d; }
 
 .form {
   background-color: #ededed;
@@ -5296,28 +5379,9 @@ a:focus {
     color: white;
     margin-left: 20px; }
 
-#education, #awards {
-  margin-left: -60px;
-  padding-top: 20px;
-  margin-top: 15px;
-  border-top: 2px solid #e5e5e5;
-  width: 863px; }
-  #education span, #awards span {
-    margin-left: 100px; }
-
 .btn-primary.raiseds {
   box-shadow: 0 4px 0 0 #df5f69;
   border-color: #ff6c6f; }
-
-.provider_procedures .btn-primary.procedure_btn {
-  background-color: #ff6c6f;
-  color: white;
-  font-size: 16px;
-  font-family: SourceSansPro-Regular;
-  height: auto;
-  padding: 1px 12px;
-  border-color: #ff6c6f;
-  box-shadow: 0 3px 0 0 #b24b4d; }
 
 .btn-primary.enquire {
   box-shadow: 0 4px 0 0 #df5f69;
@@ -5325,55 +5389,6 @@ a:focus {
   background-color: #ff6c6f;
   width: 50%;
   height: auto; }
-
-.doc_proc {
-  padding-bottom: 20px; }
-  .doc_proc .doc_border {
-    border: 1px solid #e5e5e5;
-    border-radius: 4px;
-    margin-top: 20px; }
-
-.panel-default {
-  border-width: 0; }
-  .panel-default .panel-heading {
-    margin-top: 20px;
-    background-color: #EDEDED;
-    padding: 12px 15px; }
-  .panel-default .panel-title a {
-    outline: none; }
-  .panel-default .panel-title .accordion .title {
-    padding-top: 5px;
-    font-family: SourceSansPro-Regular;
-    font-size: 16px; }
-    .panel-default .panel-title .accordion .title span {
-      padding-left: 5px;
-      font-size: 18px;
-      font-family: SourceSansPro-Semibold; }
-  .panel-default .panel-title .accordion .price {
-    padding-top: 5px;
-    text-align: right; }
-  .panel-default .panel-title .accordion .btn-primary.procedure_btn {
-    background-color: #ff6c6f;
-    color: white;
-    font-size: 16px;
-    font-family: SourceSansPro-Regular;
-    height: auto;
-    padding: 1px 12px;
-    border-color: #ff6c6f;
-    box-shadow: 0 3px 0 0 #b24b4d; }
-  .panel-default .panel-title .accordion .btn-primary.doc_btn {
-    background-color: #53c8ab;
-    color: white;
-    font-size: 16px;
-    font-family: SourceSansPro-Regular;
-    height: auto;
-    border-color: #53c8ab;
-    box-shadow: 0 3px 0 0 #317866;
-    padding: 1px 12px; }
-  .panel-default .panel-body {
-    text-align: left;
-    font-size: 16px;
-    font-family: SourceSansPro-Regular; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;
@@ -5545,13 +5560,17 @@ a:focus {
   width: 100%;
   height: 447px; }
 
-.jumbotron {
-  background: url("../images/GOAhome(1).jpg") no-repeat center center;
+.packagePic {
+  background: url("../images/Packages265(1).jpg") no-repeat center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  display: table;
+  width: 100%;
+  position: relative;
+  height: 265px; }
 
 .picture {
   background: url("../images/Specialities265(1).png") no-repeat center center;
@@ -5565,8 +5584,12 @@ a:focus {
   position: relative;
   height: 265px; }
 
+.affix {
+  top: 0;
+  width: 100%; }
+
 .hero {
-  background: url("../images/MeetTheDoctors26501.jpg") no-repeat center center;
+  background: url("../images/MeetTheDoctorsC50.jpg") no-repeat center center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -5592,8 +5615,9 @@ a:focus {
       color: white;
       padding-bottom: 10px; }
     .hero .container p {
-      font-size: 18px;
+      font-size: 19px;
       margin-bottom: 0;
+      color: white;
       font-family: SourceSansPro-Semibold; }
     .hero .container .form-group {
       padding: 0 0 0 15px; }
@@ -5609,7 +5633,7 @@ a:focus {
         font-weight: 300;
         padding-top: 4px; }
     .hero .container .block {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.2);
       padding: 5px 15px; }
 
 .tryIndex {

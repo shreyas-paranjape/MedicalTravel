@@ -18,6 +18,40 @@ $('input[type=radio]').click(function() {
 	$("form id or class").submit();
 });
 
+// $(document).ready(function() {
+// var stickyNavTop = $('#nav').offset().top;
+//
+// var stickyNav = function(){
+// var scrollTop = $(window).scrollTop();
+//
+// if (scrollTop > stickyNavTop) {
+//     $('#nav').addClass('sticky');
+// } else {
+//     $('#nav').removeClass('sticky');
+// }
+// };
+//
+// stickyNav();
+//
+// $(window).scroll(function() {
+//     stickyNav();
+// });
+// });
+// $(document).ready(function() {
+//
+//   $(window).scroll(function () {
+//       //if you hard code, then use console
+//       //.log to determine when you want the
+//       //nav bar to stick.
+//       console.log($(window).scrollTop())
+//     if ($(window).scrollTop() > 285) {
+//       $('#nav_bar').addClass('navbar-fixed');
+//     }
+//     if ($(window).scrollTop() < 284) {
+//       $('#nav_bar').removeClass('navbar-fixed');
+//     }
+//   });
+// });
 
 // $(document).ready(function() {
 //

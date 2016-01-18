@@ -1,27 +1,25 @@
 <!-- <div class="container"> -->
-	{{>header}}
-	<div class="row marginAlign picture">
-		<div class="row" style="padding-top:205px;">
-			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-				<div class="row">
-			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+{{>header}}
+<div class="row marginAlign picture">
+	<div class="row" style="padding-top:205px;">
+		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+			<div class="row">
+				<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
+				</div>
+				<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12" style="padding-left:12px;">
+					<span style="font-size:30px;font-family:SourceSansPro-Semibold;color:white">{{{specialityn}}}</span>
+				</div>
 			</div>
-      <div class="col-md-10 col-lg-10 col-sm-10 col-xs-12" style="padding-left:12px;">
-			<span style="font-size:30px;font-family:SourceSansPro-Semibold;color:white">	{{{specialityn}}}</span>
-			</div>
-
-
-		</div>
 		</div>
 	</div>
-			<!-- <img src="../images/Specialities250.png" style="height:auto;width:100%;"> -->
-	</div>
+</div>
+
 <div class="row procedure ">
-
 	<!-- row starts-->
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 		<!-- <img src="../images/cancercare1.jpg" style="height:auto;width:100%;"> -->
 		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
+
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav row" style="padding-top: 8px;">
 					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
@@ -31,6 +29,9 @@
 					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#procedures" style="margin-left: -11px;padding-top:12px;">Procedures</a></li>
 				</ul>
 			</nav>
+
+			<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script src="/js/pro.js"></script>
 			<h4 id="overview"></h4>
 			<div class="row">
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
@@ -41,6 +42,7 @@
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 			</div>
+
 			<h4 id="providers">
 				<div class="row">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
@@ -121,7 +123,6 @@
 				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						{{#each procedures}}
-
 							<div class="panel panel-default">
 								<div class="panel-heading" role="tab" id="headingOne">
 									<h4 class="panel-title">
@@ -132,14 +133,10 @@
 													<span style="">+</span>
 													<!-- <span class="fa fa-plus-square-o"></span> -->
 												</div>
-												<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 ">
-														<span class="glyphicon glyphicon-plus"></span>
-													</div> -->
-												<!-- <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 ">
-													</div> -->
+
 												<div class="col-lg-4 col-sm-3 col-xs-4 col-md-4 price">
-													<span style="font-size:16px;font-family: SourceSansPro-Regular;">starting from</span>
-													<span style="font-size:16px;font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
+													<span style="font-family: SourceSansPro-Regular;">starting from</span>
+													<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
 												</div>
 												<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
 													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" style="">
@@ -192,13 +189,11 @@
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 								</div>
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-									<img src="/images/{{key}}.png" width="60%" height="auto">
+									<img src="/images/{{key}}.png">
 								</div>
 								<div class="col-lg-9">
 									<span>{{name}}</span>
 								</div>
-
-
 							</div>
 						</a>
 					</li>

@@ -1,6 +1,6 @@
 <div id="header" style="margin-top:0px;">
 	<!-- <div class="container"> -->
-	<div role="navigation" class="navbar navbar-inverse navbar-fixed-top " style="border-width: 0px;border-radius:0px;background-color:rgb(43,43,43);border-bottom:0px;">
+	<div role="navigation" class="navbar navbar-inverse navbar-fixed-top " style="border-width: 0px;border-radius:0px;background-color:rgb(53,53,53);border-bottom:0px;">
 
 		<div class="container-fluid">
 
@@ -17,7 +17,7 @@
 								<span class="icon-bar"></span>
 							</button>
 							<div class="col-lg-10">
-								<a href="/" class="navbar-brand" style="width:100%;height:auto;">
+								<a href="/" class="navbar-brand" style="width:100%;height:auto;outline:none">
 									<img alt="Goa Medical Travel" src="/images/gmtwhite.png" style="width:60%;height:auto;margin-bottom: 5px; margin-top: 5px;  margin-left: -5px;" />
 								</a>
 							</div>
@@ -32,7 +32,7 @@
 									<ul class="nav navbar-nav navbar-right">
 										{{# each navs}}
 											<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;">
-												<a href="{{ href }}" style="color:rgb(235,235,235);;background-color:rgb(43,43,43);">{{ label }}</a>
+												<a href="{{ href }}" style="color:rgb(235,235,235);;background-color:rgb(53,53,53);">{{ label }}</a>
 											</li>
 											{{/each}}
 									</ul>
@@ -43,11 +43,11 @@
 									<ul class="nav navbar-nav navbar-right">
 										{{# each navLinks}}
 											<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;padding-left:20px;">
-												<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgb(43,43,43);">{{ label }}</a>
+												<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgb(53,53,53);">{{ label }}</a>
 											</li>
 											{{/each}}
 											<li style="padding-left:35px;">
-												<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);font-family:SourceSansPro-Regular;font-size:16.5px;">connect</button>
+												<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);font-family:SourceSansPro-Regular;font-size:16.5px;">Connect</button>
 											</li>
 											<!-- background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none; -->
 									</ul>
