@@ -26,7 +26,6 @@ PackageCategory.add({
 	}
 });
 
-
 PackageCategory.relationship({
 	ref: 'Packages',
 	path: 'packagecategory'

@@ -22,12 +22,14 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
+//Get the doctor as per the key
 	var doctorQuery = keystone.list('Doctor').model.findOne({
 		key: req.params.key
 	});
 	view.on('init', function(next) {
 		doctorQuery.exec(function(err, doctorRes) {
 			res.locals.doctor = doctorRes;
+			//get all procedures of that doctor
 			doctorRes.getProcedures(function(er, procedureRes) {
 				async.each(procedureRes, function(procedure, cb1) {
 					if (!contains(procedure, res.locals.procedures)) {
@@ -65,8 +67,8 @@ exports = module.exports = function(req, res) {
 		keystone.list('Doctor').model.findOne({
 			key: req.params.key
 		}).exec(function(err, result) {
-			req.body.doctor = result.name;
-			req.body.flag = "SecondOpenion";
+			req.body.doctor = result.name;  //Doctor name
+			req.body.flag = "SecondOpenion"; //Type of Form
 			updater.process(req.body, {
 				flashErrors: false,
 				fields: 'name, email, phone, caseinfo, allergies, symptoms, doctor, flag, age, gender',
@@ -77,7 +79,7 @@ exports = module.exports = function(req, res) {
 					console.log(err.errors);
 				} else {
 					locals.consultationSent = true;
-
+          //Upload files to Box
 					appAuth({
 							publicKey: fs.readFileSync('public_key.pem'),
 							privateKey: fs.readFileSync('private_key.pem'),
