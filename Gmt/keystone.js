@@ -26,6 +26,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User'
 });
+
 keystone.import('models');
 keystone.set('locals', {
 	_: require('underscore'),

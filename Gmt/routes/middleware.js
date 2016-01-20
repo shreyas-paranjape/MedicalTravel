@@ -3,10 +3,10 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	locals.navLinks = [{
 
-			label: 'Packages',
-			key: 'packages',
-			href: '/packages/allopathy'
-		}, {
+		label: 'Packages',
+		key: 'packages',
+		href: '/packages/allopathy'
+	}, {
 		label: 'Providers',
 		key: 'provider',
 		href: '/providers/hospitals'
@@ -22,12 +22,16 @@ exports.initLocals = function(req, res, next) {
 		label: 'Services',
 		key: 'services',
 		href: '/services'
-	},  ];
+	}, ];
 
 	locals.navs = [{
 		label: 'Login/Sign Up',
 		key: 'login',
 		href: '/login'
+	}, {
+		label: 'Logout',
+		key: 'logout',
+		href: '/logout'
 	}];
 	locals.user = req.user;
 	next();
