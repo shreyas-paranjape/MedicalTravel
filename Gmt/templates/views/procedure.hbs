@@ -14,148 +14,168 @@
 	</div>
 </div>
 
-<div class="row procedure ">
-	<!-- row starts-->
+ <div class="row procedure">
+	<!-- row starts -->
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 		<!-- <img src="../images/cancercare1.jpg" style="height:auto;width:100%;"> -->
-		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
+		<div class="" >
 
 			<nav class="navbar navbar-default">
-				<ul class="nav navbar-nav row" style="padding-top: 8px;">
+				<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
 					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#overview" style="padding-top:12px; padding-left: 10px">Overview</a></li>
-					<li class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;"><a href="#providers" style="padding-top:12px;">Featured Providers</a></li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#doctors" style="margin-left:-16px;padding-top:12px;">Doctors</a></li>
-					<li class="col-lg-2 col-sm-2 col-xs-2 col-md-2"><a href="#procedures" style="margin-left: -11px;padding-top:12px;">Procedures</a></li>
+					<li data-menuanchor="overview" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 active">
+						<a href="#overview" style="padding-top:12px; padding-left: 10px">Overview</a>
+					</li>
+					<li data-menuanchor="providers" class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;">
+						<a href="#providers" style="padding-top:12px;">Featured Providers</a>
+					</li>
+					<li data-menuanchor="doctors" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+						<a href="#doctors" style="margin-left:-16px;padding-top:12px;">Doctors</a>
+					</li>
+					<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+						<a href="#procedures" style="margin-left: -11px;padding-top:12px;">Procedures</a>
+					</li>
 				</ul>
 			</nav>
 
-			<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-			<script src="/js/pro.js"></script>
-			<h4 id="overview"></h4>
-			<div class="row">
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-				</div>
-				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
-					{{{specialityd}}}
-				</div>
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-				</div>
-			</div>
 
-			<h4 id="providers">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
-						<span>Featured Providers</span>
-					</div>
-					<div class="col-lg-8 col-sm-7 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
-			{{#each providers}}
-				<div class="row procedure-box ">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
-						<img src="../images/nusi wockhardt goa - Copy.jpg">
-					</div>
-					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
-						<h3>{{name}}</h3>
-						<button type="button" class="btn btn-primary btn-md raised" onclick="location.href='/provider/{{key}}'">Know More</button>
-					</div>
-					<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2">
+			<div id="fullpage" class="">
+				<div class="section fp-auto-height">
+					<h4 id="over"></h4>
+
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
+							{{{specialityd}}}
+						</div>
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
 					</div>
 				</div>
-			{{/each}}
-			<h4 id="doctors">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<span>Doctors</span>
-					</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
-			<div class="q">
-				<div class="p">
-					{{#each doctors}}
-						<div class="row proc">
+				<div class="section fp-auto-height">
+					<h4 id="prov">
+						<div class="row">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
-							<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-								<img src="{{cloudinaryUrl imageOuter}}">
+							<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
+								<span>Featured Providers</span>
 							</div>
-							<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
-								<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
-								{{{summary}}}
+							<div class="col-lg-8 col-sm-7 col-xs-8 col-md-8">
 							</div>
-							<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-								<!-- <input type="text" class="form-control" id="text" value="View Profile"> -->
-								<!-- <a href="" id="link" style="">View Profile</a> -->
-								<span>
-									<input class="btn btn-primary btn-md rai" type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
-								</span>
-							</div>
+						</div>
+					</h4>
+
+					{{#each providers}}
+						<div class="row procedure-box ">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</div>
+							<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
+								<img src="../images/nusi wockhardt goa - Copy.jpg">
+							</div>
+							<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+								<h3>{{name}}</h3>
+								<button type="button" class="btn btn-primary btn-md raised" onclick="location.href='/provider/{{key}}'">Know More</button>
+							</div>
+							<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2">
 							</div>
 						</div>
 					{{/each}}
 				</div>
-			</div>
-			<h4 id="procedures">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<span>Procedures</span>
-					</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
-			<div class="row doc_proc">
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-				</div>
-				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						{{#each procedures}}
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingOne">
-									<h4 class="panel-title">
-										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
-											<div class="row accordion">
-												<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
-													{{name}}
-													<span style="">+</span>
-													<!-- <span class="fa fa-plus-square-o"></span> -->
-												</div>
+				<div class="section fp-auto-height">
+					<h4 id="doct">
+						<div class="row">
+							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</div>
+							<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+								<span>Doctors</span>
+							</div>
+							<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+							</div>
+						</div>
+					</h4>
 
-												<div class="col-lg-4 col-sm-3 col-xs-4 col-md-4 price">
-													<span style="font-family: SourceSansPro-Regular;">starting from</span>
-													<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
-												</div>
-												<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-													<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" style="">
-												</div>
-											</div>
-										</a>
-									</h4>
-								</div>
-								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-									<div class="panel-body">
-										{{{description}}}
+					<div class="q">
+						<div class="p">
+							{{#each doctors}}
+								<div class="row proc">
+									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+										<img src="{{cloudinaryUrl imageOuter}}">
+									</div>
+									<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
+										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
+										{{{summary}}}
+									</div>
+									<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
+										<!-- <input type="text" class="form-control" id="text" value="View Profile"> -->
+										<!-- <a href="" id="link" style="">View Profile</a> -->
+										<span>
+											<input class="btn btn-primary btn-md rai" type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+										</span>
+									</div>
+									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 									</div>
 								</div>
-							</div>
-
-						{{/each}}
+							{{/each}}
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				<div class="section fp-auto-height ">
+					<h4 id="proc">
+						<div class="row">
+							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</div>
+							<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+								<span>Procedures</span>
+							</div>
+							<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+							</div>
+						</div>
+					</h4>
+
+					<div class="row doc_proc">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+								{{#each procedures}}
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+													<div class="row accordion">
+														<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
+															{{name}}
+															<span style="">+</span>
+															<!-- <span class="fa fa-plus-square-o"></span> -->
+														</div>
+
+														<div class="col-lg-4 col-sm-3 col-xs-4 col-md-4 price">
+															<span style="font-family: SourceSansPro-Regular;">starting from</span>
+															<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
+														</div>
+														<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
+															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" style="">
+														</div>
+													</div>
+												</a>
+											</h4>
+										</div>
+										<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												{{{description}}}
+											</div>
+										</div>
+									</div>
+
+								{{/each}}
+							</div>
+						</div>
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -205,3 +225,28 @@
 </div>
 <!--row ends-->
 {{>footer}}
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="/js/pro.js"></script>
+<script src="/js/jquery.easings.min.js"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script src="/js/jquery.fullPage.js"></script>
+<script src="/js/mainScript.js"></script>
+<!-- <script>
+$(document).ready(function(){
+    $('#fullpage').fullpage({
+        sectionsColor: ['white', 'white', 'white', 'white'],
+        anchors: ['overview', 'providers', 'doctors', 'procedures'],
+        menu: '#menu',
+				scrollingSpeed: 1000,
+        autoScrolling: false,
+        fitToSection: true,
+        scrollBar: true,
+        responsive: 2000
+        afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            $('#menu li').removeClass('active-section');
+            $('#menu li:nth-child('-index-')').addClass('active-section');
+        },
+    });
+});
+</script> -->
