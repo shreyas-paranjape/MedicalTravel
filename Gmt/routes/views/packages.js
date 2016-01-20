@@ -10,6 +10,7 @@ exports = module.exports = function(req, res) {
 	res.locals.packageCategory2 = [];
 	res.locals.packages = [];
 
+	//List all PackageCategories
 	var packageCatQuery = keystone.list('PackageCategory').model.find().populate('packagetype');
 
 	view.on('init', function(next) {
@@ -29,6 +30,8 @@ exports = module.exports = function(req, res) {
 			var PackageOne = fnjs.filter(function(packages) {
 				return packages.key == req.params.key;
 			}, packageCatRes);
+
+			//Find packages of particular packageCategory
 			PackageOne[0].getPackages(function(e, result) {
 				async.each(result, function(pack, cb1) {
 					res.locals.packages.push(pack);

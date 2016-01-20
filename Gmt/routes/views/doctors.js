@@ -31,6 +31,7 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
+	//All Specialities list
 	var specialityQuery = keystone.list('Speciality').model.find().sort('imageOuter');
 	view.on('init', function(next) {
 		specialityQuery.exec(function(err, specialities) {
@@ -53,6 +54,7 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
+	//Text box Search
 	view.on('post', {
 		action: 'testSearch'
 	}, function(next) {
@@ -73,6 +75,7 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
+	//Radio Button Search
 	view.on('post', {
 		action: 'radioSearch'
 	}, function(next) {
