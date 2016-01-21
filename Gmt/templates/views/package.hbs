@@ -13,19 +13,45 @@
 	<div class="col-lg-8 border no-padding ">
 		<div class="row">
 			<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div>
-			<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 ">
+			<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 package_para">
 				<div class="row">
 				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 ">
-				<h3 style="font-family:SourceSansPro-Semibold">Rejuvination Package</h3>
+				<h3 style="font-family:SourceSansPro-Semibold">	{{package.name}}</h3>
 			</div>
 			<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 ">
-				<button type="submit" class="" style="margin-top:10px;color:#456C39;border: 2px solid #456C39;border-radius:4px;padding: 5px 20px;font-family:SourceSansPro-Regular;font-size:16.5px;" data-toggle="modal" data-target="#myModal">Enquire</button>
+				<button type="submit" class="" style="margin-top:12px;color:#456C39;border: 2px solid #456C39;border-radius:4px;padding: 5px 20px;font-family:SourceSansPro-Regular;font-size:16.5px;" data-toggle="modal" data-target="#myModal">Enquire</button>
        </div>
 		 </div>
-				<!-- <button type="submit" class="" style="position:relative;top:-45px;float:right;color:#456C39;border: 2px solid #456C39;border-radius:4px;padding: 5px 20px;font-family:SourceSansPro-Regular;font-size:16.5px;" data-toggle="modal" data-target="#myModal">Enquire</button> -->
-				<p style="padding-top: 15px; padding-bottom: 15px;">Alternative medical practices are generally not recognized by the medical community as standard or conventional medical approaches. Alternative medicine includes dietary supplements, megadose vitamins, herbal preparations</p>
+			{{{package.discription}}}
+			 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				 	{{#each packageSection}}
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingOne" style="border-radius:4px;">
 
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne" style="outline:none">
+							<h4 class="panel-title">
+								<div class="row">
+									<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
+										<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">	{{name}}</span>
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
+										<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
+									</div>
+								</div>
+							</h4>
+						</a>
+
+					</div>
+					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+						<div class="panel-body">
+								{{{discription}}}
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+
+				<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default">
 						<div class="panel-heading" role="tab" id="headingOne" style="border-radius:4px;">
 
@@ -33,7 +59,7 @@
 								<h4 class="panel-title">
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
-											<span style="color:black">Who should follow this?</span>
+											<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">Who should follow this?</span>
 										</div>
 										<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
 											<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
@@ -57,7 +83,7 @@
 								<h4 class="panel-title">
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
-											<span style="color:black">	Inclusions</span>
+										<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">Inclusions</span>
 										</div>
 										<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
 											<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
@@ -92,7 +118,7 @@
 								<h4 class="panel-title">
 									<div class="row">
 										<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
-												<span style="color:black">Tariffs</span>
+											<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">Tariffs</span>
 										</div>
 										<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
 											<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
@@ -104,11 +130,11 @@
 						</div>
 						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 							<div class="panel-body">
-								<table border="1" style="width:100%">
-									<tr>
-										<td>Days</td>
-										<td>Single</td>
-										<td>Couple</td>
+								<table  style="width:100%;">
+									<tr >
+										<th>Days</th>
+										<th>Single</th>
+										<th>Couple</th>
 									</tr>
 
 									<tr>
@@ -131,7 +157,7 @@
 									<h4 class="panel-title">
 										<div class="row">
 											<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
-													<span style="color:black">Other Services</span>
+												<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">Other Services</span>
 											</div>
 											<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
 												<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
@@ -161,7 +187,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div>
 		</div>
