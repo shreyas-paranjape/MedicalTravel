@@ -8,11 +8,18 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 	res.locals.packageCategory1 = [];
 	res.locals.packageCategory2 = [];
-	res.locals.packages = [];
+	res.locals.packageTariff = [];
+	res.locals.packageSection = [];
 
-	//List all PackageCategories
-	var packageCatQuery = keystone.list('PackageCategory').model.find().populate('packagetype');
+	//Package
+	view.query("package", keystone.list('Packages').model.findOne({
+		key: req.params.key
+	}).populate('packagecategory'));
 
+
+	var packageQuery = keystone.list('Packages').model.find({
+		key: req.params.key
+	}).populate('packagecategory');
 	view.on('init', function(next) {
 		packageQuery.exec(function(err_s, packageResult) {
 			async.each(packageResult, function(packageRes, cb1) {
