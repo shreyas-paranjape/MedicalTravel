@@ -86,26 +86,19 @@ var routes = {
 	views: importRoutes('./views')
 };
 exports = module.exports = function(app) {
-	app.get('/',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.index);
+	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/packages/:key',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.packages);
+	app.get('/packages/:key', routes.views.packages);
+	app.get('/package/:key', routes.views.package);
 	// app.get('/connect', routes.views.connect);
 
-	app.get('/providers/:key',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.providers);
-	app.get('/procedure/:key',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.procedure);
-	app.get('/services',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.services);
-	app.all('/doctor/:key',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.doctor);
-	app.all('/doctors',
-		require('connect-ensure-login').ensureLoggedIn(), routes.views.doctors);
-	app.all('/provider/:key',
-		require('connect-ensure-login').ensureLoggedIn(),routes.views.provider);
+	app.get('/providers/:key', routes.views.providers);
+	app.get('/procedure/:key', routes.views.procedure);
+	app.get('/services', routes.views.services);
+	app.all('/doctor/:key', routes.views.doctor);
+	app.all('/doctors', routes.views.doctors);
+	app.all('/provider/:key', routes.views.provider);
 	app.all('/profile',
 		require('connect-ensure-login').ensureLoggedIn(),
 		routes.views.profile);
@@ -116,7 +109,7 @@ exports = module.exports = function(app) {
 			failureRedirect: '/login'
 		}),
 		function(req, res) {
-			res.redirect('/');
+			res.redirect('/profile');
 		});
 	app.get('/logout',
 		function(req, res) {

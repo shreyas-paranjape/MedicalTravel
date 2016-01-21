@@ -54,11 +54,13 @@ exports = module.exports = function(req, res) {
 						var userQuery = keystone.list('User').model.findOne({
 							email: req.body.email
 						}).exec(function(err, result) {
+
 							api.user.create({
 								name: result.key
 							}).then(function(resUser) {
 								console.log("resUser" + JSON.stringify(resUser));
 								idx = resUser.id;
+
 								keystone.list('User').model.update({
 									key: result.key
 								}, {
