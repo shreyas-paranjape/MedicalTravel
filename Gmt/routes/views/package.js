@@ -8,19 +8,11 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 	res.locals.packageCategory1 = [];
 	res.locals.packageCategory2 = [];
-	res.locals.packageTariff = [];
-	res.locals.packageSection = [];
+	res.locals.packages = [];
 
+	//List all PackageCategories
+	var packageCatQuery = keystone.list('PackageCategory').model.find().populate('packagetype');
 
-	//Package
-	view.query("package", keystone.list('Packages').model.findOne({
-		key: req.params.key
-	}).populate('packagecategory'));
-
-
-	var packageQuery = keystone.list('Packages').model.find({
-		key: req.params.key
-	}).populate('packagecategory');
 	view.on('init', function(next) {
 		packageQuery.exec(function(err_s, packageResult) {
 			async.each(packageResult, function(packageRes, cb1) {
@@ -49,6 +41,7 @@ exports = module.exports = function(req, res) {
 								res.locals.packageSection.push(section)
 							},
 							function(err) {
+
 							});
 					});
 				},
@@ -60,30 +53,3 @@ exports = module.exports = function(req, res) {
 
 	view.render('package');
 };
-
-
-// async.map(packageCatRes, function(packageCat, cb1) {
-// 	if (packageCat.packagetype.name == "Package") {
-// 		res.locals.packageCategory1.push(packageCat);
-// 	} else if (packageCat.packagetype.name == "Checkups") {
-// 		res.locals.packageCategory2.push(packageCat);
-// 	}
-// 	if (packageCat.key == req.params.key) {
-// 		packageCat.active = true;
-// 	}
-// }, function(err) {
-// 	next(err);
-// });
-// var PackageOne = fnjs.filter(function(packages) {
-// 	return packages.key == req.params.key;
-// }, packageCatRes);
-//
-// //Find packages of particular packageCategory
-// PackageOne[0].getPackages(function(e, result) {
-// 	async.each(result, function(pack, cb1) {
-// 		res.locals.packages.push(pack);
-// 		cb1();
-// 	}, function(err) {
-// 		next(err);
-// 	});
-// });
