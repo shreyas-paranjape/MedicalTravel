@@ -90,6 +90,7 @@ exports = module.exports = function(app) {
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/packages/:key', routes.views.packages);
+	app.get('/package/:key', routes.views.package);
 	// app.get('/connect', routes.views.connect);
 
 	app.get('/providers/:key', routes.views.providers);

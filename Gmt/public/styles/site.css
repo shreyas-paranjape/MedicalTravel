@@ -5068,10 +5068,10 @@ button.close {
   text-align: justify;
   padding: 20px 0; }
 
-#prov, #doct, #proc, #speciality, #reviews {
+#prov, #doct, #proce, #speciality, #reviews {
   border-top: 1px solid #ededed;
   padding-top: 10px; }
-  #prov span, #doct span, #proc span, #speciality span, #reviews span {
+  #prov span, #doct span, #proce span, #speciality span, #reviews span {
     position: relative;
     top: 10px;
     font-family: SourceSansPro-Semibold;
