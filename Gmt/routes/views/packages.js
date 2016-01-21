@@ -8,6 +8,7 @@ exports = module.exports = function(req, res) {
 	locals.section = 'home';
 	res.locals.packageCategory1 = [];
 	res.locals.packageCategory2 = [];
+	res.locals.packageCate = [];
 	res.locals.packages = [];
 
 	//List all PackageCategories
@@ -23,6 +24,7 @@ exports = module.exports = function(req, res) {
 				}
 				if (packageCat.key == req.params.key) {
 					packageCat.active = true;
+					res.locals.packageCate.push(packageCat.name);
 				}
 			}, function(err) {
 				next(err);
