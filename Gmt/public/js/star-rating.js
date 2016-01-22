@@ -513,10 +513,12 @@
             4.5: 'label label-success',
             5: 'label label-success'
         },
-        clearButton: '<i class="glyphicon glyphicon-minus-sign"></i>',
+        // <i class="glyphicon glyphicon-minus-sign"></i>
+        // label label-default
+        clearButton: '',
         clearButtonBaseClass: 'clear-rating',
         clearButtonActiveClass: 'clear-rating-active',
-        clearCaptionClass: 'label label-default',
+        clearCaptionClass: '',
         clearValue: null,
         captionElement: null,
         clearElement: null,
@@ -526,9 +528,9 @@
         hoverChangeStars: true,
         hoverOnClear: true
     };
-
+// {rating} Stars
     $.fn.ratingLocales.en = {
-        defaultCaption: '{rating} Stars',
+        defaultCaption: '',
         starCaptions: {
             0.5: 'Half Star',
             1: 'One Star',
