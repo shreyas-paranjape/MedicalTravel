@@ -29,5 +29,26 @@ Packages.add({
 	}
 });
 
+Packages.relationship({
+	ref: 'PackageSection',
+	path: 'package'
+});
+Packages.relationship({
+	ref: 'PackageTariff',
+	path: 'package'
+});
 
+Packages.schema.methods.getPackageSection = function(done) {
+	return keystone.list('PackageSection').model.find({
+			"package": this._id
+		})
+		.exec(done);
+};
+
+Packages.schema.methods.getPackageTariff = function(done) {
+	return keystone.list('PackageTariff').model.find({
+			"package": this._id
+		})
+		.exec(done);
+};
 Packages.register();
