@@ -43,7 +43,7 @@ exports = module.exports = function(req, res) {
 						subjectType: 'enterprise',
 						clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 						clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-						publicKeyId: "hhqzcvgu",
+						publicKeyId: "kgfyhdqk",
 						callRetryMax: 5,
 						minutesUntilTokenRefresh: 10,
 						options: {
