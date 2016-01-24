@@ -28,15 +28,42 @@ $icon-font-path: "../fonts/";
 @import "site/layout";
 .no-padding {
 				padding: 0;
+
 }
-// .sticky {
-//     position: fixed;
-//     width: 100%;
-//     left: 0;
-//     top: 0;
-//     z-index: 100;
-//     border-top: 0;
-// }
+
+#navprocedure,#navdoctor,#navprovider {
+				width: 100%;
+				a.active {
+				     color: #1abc9c;
+				}
+		}
+
+#navstick {
+				// background-color: green;
+				// height: 2000px;
+}
+/* Sticky scrollbar on scroll down */
+#navprocedure.sticky {
+				position: fixed;
+				top: 112px;
+				z-index: 999;
+				width: 66.8%;
+}
+#navdoctor.sticky {
+				position: fixed;
+				top: 112px;
+				z-index: 999;
+				width: 66.8%;
+}
+#navprovider.sticky {
+				position: fixed;
+				top: 112px;
+				z-index: 999;
+				width: 66.8%;
+}
+#navstick.offset {
+				padding-top: 40px;
+}
 table {
 				border-collapse: separate;
 				border-spacing: 0;
@@ -186,7 +213,6 @@ table tr:last-child td:last-child {
 }
 .navbar-default {
 				background-color: #ededed;
-				// background-color: rgb(232,232,232);
 				border-radius: 0;
 				li {
 								font-family: SourceSansPro-Regular;
@@ -199,9 +225,11 @@ table tr:last-child td:last-child {
 .navbar-default .navbar-nav > li > a {
 				color: black;
 }
+
 .navbar-inverse .navbar-nav > li > a {
 				color: white;
 }
+
 //procedure doctor open
 .tabs {
 				li {
@@ -218,7 +246,7 @@ table tr:last-child td:last-child {
 				}
 				.active {
 								background-color: white;
-								// margin-left: -2px;
+
 				}
 }
 .marginAlign {
@@ -226,6 +254,9 @@ table tr:last-child td:last-child {
 				margin-left: 0;
 				margin-right: 0;
 				margin-top: 112px;
+				.border {
+								border-right: 1px solid #ededed;
+				}
 }
 .procedure {
 				overflow: hidden;
@@ -244,12 +275,9 @@ table tr:last-child td:last-child {
 				font-size: 16px;
 				text-align: justify;
 				padding: 20px 0;
+				margin-bottom: 0;
 }
-#prov,
-#doct,
-#proce,
-#speciality,
-#reviews {
+#over {
 				border-top: 1px solid #ededed;
 				padding-top: 10px;
 				span {
@@ -259,13 +287,7 @@ table tr:last-child td:last-child {
 								font-size: 16.5px;
 				}
 }
-// #bio {
-// 				font-size: 16px;
-// 				margin-top: 45px;
-// 				// border-bottom: 2px solid #e5e5e5;
-// 				padding-bottom: 40px;
-// 				margin-left: -40px;
-// }
+
 .procedure-box {
 				margin-top: 40px;
 				padding-bottom: 20px;
@@ -331,6 +353,7 @@ table tr:last-child td:last-child {
 								border: 1px solid #e5e5e5;
 								border-radius: 4px;
 								margin-top: 20px;
+								margin-bottom: 20px;
 				}
 }
 .panel-default {
@@ -575,6 +598,7 @@ a {
 a:hover {
 				color: black;
 				background-color: inherit;
+				text-decoration: none;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -584,6 +608,8 @@ a:hover {
 a:focus {
 				background-color: none;
 }
+
+
 .box {
 				width: 700px;
 				height: 300px;
