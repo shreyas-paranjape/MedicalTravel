@@ -4,10 +4,10 @@ var Enquiry = keystone.list('Enquiry');
 var appAuth = require('box-appauth');
 var fs = require('fs');
 
-
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+
 	res.locals.procedures = [];
 	res.locals.providers = [];
 	res.locals.speciality = [];

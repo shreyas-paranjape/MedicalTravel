@@ -1,15 +1,13 @@
 var keystone = require('keystone');
-var fnjs = require('fn.js');
+var async = require('async');
 var appAuth = require('box-appauth');
 var fs = require('fs');
-var async = require('async');
 
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	locals.section = 'profile';
-	res.locals.files = [];
 
+	res.locals.files = [];
 
 	// initial nevigation
 	keystone.list('User').model.findOne({
@@ -17,8 +15,7 @@ exports = module.exports = function(req, res) {
 	}).exec(function(err, resUser) {
 		if (resUser.verify == "Yes") {
 			view.render('profile');
-		}
-		else{
+		} else {
 			view.render('login');
 
 		}
@@ -61,21 +58,19 @@ exports = module.exports = function(req, res) {
 						if (!listRes.total_count) {
 							console.log("No Files Present");
 						} else {
-							fnjs.each(function(folderRes) {
-								// if (folderRes.type == "folder") {
-								// 	api.folder.list({
-								// 		id: folderRes.id,
-								// 	}).then(function(inFolderRes) {
-								// 		fnjs.each(function(inFolder) {
-								// 			res.locals.files(inFolder.name);
-								// 			console.log("Names in folder : " + JSON.stringify(inFolder.name));
-								// 		}, inFolderRes.entries)
-								// 	});
-								//
-								// }
-							//	res.locals.files.push(folderRes);
-							//	console.log("Names in Root : " + JSON.stringify(folderRes.name));
-							}, listRes.entries)
+							async.each(listRes.entries, function(folderRes, next) {
+								if (folderRes.type == "folder") {
+									api.folder.list({
+										id: folderRes.id,
+									}).then(function(inFolderRes) {
+										async.each(inFolderRes.entries, function(inFolder, next) {
+											console.log("Names in folder : " + JSON.stringify(inFolder.name));
+										}, function(err) {});
+									});
+								}
+								res.locals.files.push(folderRes);
+								console.log("Names in Root : " + JSON.stringify(folderRes.name));
+							}, function(err) {});
 						}
 
 					});

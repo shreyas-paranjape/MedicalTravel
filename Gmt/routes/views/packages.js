@@ -1,11 +1,10 @@
 var keystone = require('keystone');
 var async = require('async');
-var fnjs = require('fn.js');
 
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	locals.section = 'home';
+
 	res.locals.packageCategory1 = [];
 	res.locals.packageCategory2 = [];
 	res.locals.packageCate = [];
@@ -16,6 +15,8 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		packageCatQuery.exec(function(err_s, packageCatRes) {
+
+			//maping with key for side menu
 			async.map(packageCatRes, function(packageCat, cb1) {
 				if (packageCat.packagetype.name == "Package") {
 					res.locals.packageCategory1.push(packageCat);
@@ -29,21 +30,27 @@ exports = module.exports = function(req, res) {
 			}, function(err) {
 				next(err);
 			});
-			var PackageOne = fnjs.filter(function(packages) {
-				return packages.key == req.params.key;
-			}, packageCatRes);
 
-			//Find packages of particular packageCategory
-			PackageOne[0].getPackages(function(e, result) {
-				async.each(result, function(pack, cb1) {
-					res.locals.packages.push(pack);
-					cb1();
-				}, function(err) {
-					next(err);
+			//Filte packages w.r.t key
+			async.filter(packageCatRes, function(packages, callback) {
+				if (packages.key == req.params.key) {
+					callback(true);
+				} else {
+					callback(false);
+				}
+			}, function(packages) {
+
+				//Find packages of particular packageCategory
+				packages[0].getPackages(function(e, result) {
+					async.each(result, function(pack, cb1) {
+						res.locals.packages.push(pack);
+						cb1();
+					}, function(err) {
+						next(err);
+					});
 				});
 			});
 		});
 	});
-
 	view.render('packages');
 };

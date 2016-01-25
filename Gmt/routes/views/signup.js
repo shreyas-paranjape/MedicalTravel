@@ -8,7 +8,6 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	var key, idx;
-	locals.section = 'signup';
 	locals.validationErrors = {};
 	locals.signedUpSuccessfully = false;
 

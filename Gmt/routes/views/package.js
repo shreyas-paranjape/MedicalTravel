@@ -1,11 +1,10 @@
 var keystone = require('keystone');
 var async = require('async');
-var fnjs = require('fn.js');
 
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	locals.section = 'home';
+	
 	res.locals.packageCategory1 = [];
 	res.locals.packageCategory2 = [];
 	res.locals.packageTariff = [];

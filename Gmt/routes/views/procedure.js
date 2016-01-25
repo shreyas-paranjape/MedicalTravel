@@ -1,11 +1,9 @@
 var keystone = require('keystone');
 var async = require('async');
-var fnjs = require('fn.js');
+
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	var Speciality;
-	var SpecialityQuery = keystone.list('Speciality').model.find();
 
 	res.locals.doctors = [];
 	res.locals.providers = [];
@@ -14,69 +12,54 @@ exports = module.exports = function(req, res) {
 	res.locals.specialityn = [];
 	res.locals.specialities = [];
 
-	var contains = function(aValue, aArray) {
-		var idx;
-		for (idx = 0; idx < aArray.length; idx++) {
-			if (aValue._id.equals(aArray[idx]._id)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
+	//Manin query
+	var SpecialityQuery = keystone.list('Speciality').model.find();
 	view.on('init', function(next) {
 		SpecialityQuery.exec(function(err_s, specialityRes) {
 			if (err_s || !specialityRes.length) {
 				return next(err_s);
 			}
+
+			//mapping with key for side menu
 			async.map(specialityRes, function(speciality) {
 				res.locals.specialities.push(speciality);
 				if (speciality.key == req.params.key) {
 					speciality.active = true;
 					res.locals.specialityd.push(speciality.discription);
 					res.locals.specialityn.push(speciality.name);
-
 				}
 				return speciality;
 			}, function(err) {
 				next(err);
 			});
 
-			var Speciality = fnjs.filter(function(speciality) {
-				return speciality.key == req.params.key;
-			}, specialityRes);
-			//
-			// async.filter(specialityRes, function(speciality, callback) {
-			// 	if (speciality.key == req.params.key) {
-			// 		callback(true);
-			// 	}
-			// }, function(results) {
-			// 	Speciality = results;
-			// 	console.log("Speciality:" + results);
-			// });
+			//filtering the specialities from the key
+			async.filter(specialityRes, function(speciality, callback) {
+				if (speciality.key == req.params.key) {
+					callback(true);
+				} else {
+					callback(false);
+				}
+			}, function(speciality) {
 
-			Speciality[0].getDoctorsAndProviders(function(doctors, providers, procedures) {
-				async.each(doctors, function(doctor, next) {
-					res.locals.doctors.push(doctor);
-				}, function(err) {
-					next(err);
-				});
-				async.each(providers, function(provider, next) {
-					res.locals.providers.push(provider);
-				}, function(err) {
-					next(err);
-				});
-				async.each(procedures, function(procedure, next) {
-					keystone.list('Price').model.find({
-						procedure: procedure.id,
-					}).sort('price').limit(1).exec(function(er, priceRes) {
-						fnjs.each(function(price) {
-							procedure.price = price.price;
-						}, priceRes);
-					});
-					res.locals.procedures.push(procedure);
-				}, function(err) {
-					next(err);
+				// getiing all Doctors, Providers and procedure for the speciality
+				speciality[0].getDoctorsAndProviders(function(doctors, providers, procedures) {
+					async.each(doctors, function(doctor, next) {
+						res.locals.doctors.push(doctor);
+					}, function(err) {});
+					async.each(providers, function(provider, next) {
+						res.locals.providers.push(provider);
+					}, function(err) {});
+					async.each(procedures, function(procedure, next) {
+						keystone.list('Price').model.find({
+							procedure: procedure.id,
+						}).sort('price').limit(1).exec(function(er, priceRes) {
+							async.each(priceRes, function(price, next) {
+								procedure.price = price.price;
+							}, function(err) {});
+						});
+						res.locals.procedures.push(procedure);
+					}, function(err) {});
 				});
 			});
 			next();

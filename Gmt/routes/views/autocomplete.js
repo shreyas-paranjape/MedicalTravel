@@ -11,11 +11,11 @@ var singleSearch = function(model, req, res) {
 		],
 		function(err, results) {
 			var suggestions = [];
-			fnjs.each(function(result) {
-				fnjs.each(function(suggestion) {
+			async.each(results, function(result, next) {
+				async.each(result, function(suggestion, next) {
 					suggestions.push(suggestion);
-				}, result);
-			}, results);
+				}, function(err) {});
+			}, function(err) {});
 			res.json({
 				"suggestions": suggestions
 			});
@@ -46,11 +46,11 @@ var globalSearch = function(model, req, res) {
 		],
 		function(err, results) {
 			var suggestions = [];
-			fnjs.each(function(result) {
-				fnjs.each(function(suggestion) {
+			async.each(results, function(result, next) {
+				async.each(result, function(suggestion, next) {
 					suggestions.push(suggestion);
-				}, result);
-			}, results);
+				}, function(err) {});
+			}, function(err) {});
 			res.json({
 				"suggestions": suggestions
 			});

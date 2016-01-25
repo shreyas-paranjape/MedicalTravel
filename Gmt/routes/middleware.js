@@ -2,7 +2,6 @@ var _ = require('underscore');
 exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	locals.navLinks = [{
-
 		label: 'Packages',
 		key: 'packages',
 		href: '/packages/allopathy'
@@ -33,9 +32,11 @@ exports.initLocals = function(req, res, next) {
 		key: 'logout',
 		href: '/logout'
 	}];
+
 	locals.user = req.user;
 	next();
 };
+
 exports.flashMessages = function(req, res, next) {
 	var flashMessages = {
 		info: req.flash('info'),

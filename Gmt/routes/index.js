@@ -89,11 +89,11 @@ exports = module.exports = function(app) {
 	app.get('/packages/:key', routes.views.packages);
 	app.get('/package/:key', routes.views.package);
 	app.get('/providers/:key', routes.views.providers);
-	app.get('/procedure/:key', routes.views.procedure);
-	app.get('/services', routes.views.services);
-	app.all('/doctor/:key', routes.views.doctor);
-	app.all('/doctors', routes.views.doctors);
 	app.all('/provider/:key', routes.views.provider);
+	app.get('/procedure/:key', routes.views.procedure);
+	app.all('/doctors', routes.views.doctors);
+	app.all('/doctor/:key', routes.views.doctor);
+	app.get('/services', routes.views.services);
 	app.all('/profile', require('connect-ensure-login').ensureLoggedIn(), routes.views.profile);
 	app.all('/verify/:key', routes.views.verify);
 	app.get('/login', routes.views.login);
