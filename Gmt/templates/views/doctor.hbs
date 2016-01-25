@@ -50,124 +50,133 @@
 				</div>
 			</div> -->
 
-		<div class="scrolls" data-spy="scroll" data-target="#navbar-example">
-			<nav class="navbar navbar-default">
-				<ul class="nav navbar-nav row" style="padding-top: 8px;">
-					<li class="col-lg-1">&nbsp;</li>
-					<li class="col-lg-2"><a href="#bio">Bio</a></li>
-					<li class="col-lg-3"><a href="#procedures">Procedure</a></li>
-					<li class="col-lg-3"><a href="#providers" style="margin-left:7px;">Providers</a></li>
-					<li class="col-lg-2"><a href="#reviews">Reviews</a></li>
-				</ul>
-			</nav>
-
-			<h4 id="bio"></h4>
-			<!-- <div class="row">
-				<div class="col-lg-1">
-				</div>
-				<div class="col-lg-10">
-
-					{{#each provider}}
-						<p>
-							{{{description}}}
-						</p>
-					{{/each}}
-				</div>
-				<div class="col-lg-1">
-				</div>
-			</div> -->
-
-			<h4 id="procedures">
+		<!-- <div class="scrolls" data-spy="scroll" data-target="#navbar-example"> -->
+		<nav class="navbar navbar-default" id="navdoctor">
+			<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
+				<li class="col-lg-1">&nbsp;</li>
+				<li data-menuanchor="bio" class="col-lg-2">
+					<a class="demo" href="#section1">Bio</a>
+				</li>
+				<li data-menuanchor="procedures" class="col-lg-3">
+					<a class="demo" href="#section2">Procedure</a>
+				</li>
+				<li data-menuanchor="providers" class="col-lg-3">
+					<a class="demo" href="#section3" style="margin-left:7px;">Providers</a>
+				</li>
+				<li data-menuanchor="reviews" class="col-lg-2">
+					<a class="demo" href="#section4">Reviews</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="navstick" class="">
+			<section id="section1">
+				<h4 id="bio"></h4>
 				<div class="row">
+					<div class="col-lg-1">
+					</div>
+					<div class="col-lg-10 para">
+						{{{doctor.description}}}
+					</div>
+					<div class="col-lg-1">
+					</div>
+				</div>
+			</section>
+			<section id="section2">
+				<h4 id="over">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+							<span>Procedures</span>
+						</div>
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						</div>
+					</div>
+				</h4>
+
+				<div class="row doc_proc" style="">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<span>Procedures</span>
-					</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
-
-			<div class="row doc_proc" style="">
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-				</div>
-				<div class="col-lg-10 doc_border" style="">
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						{{#each procedures}}
-							<div class="panel panel-default">
-								<div class="panel-heading" role="tab" id="headingOne">
-									<h4 class="panel-title">
-										<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
-											<div class="row accordion">
-												<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
-													{{name}}
-													<!-- <span class="fa fa-plus-square-o"></span> -->
+					<div class="col-lg-10 doc_border" style="">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							{{#each procedures}}
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+												<div class="row accordion">
+													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
+														{{name}}
+														<!-- <span class="fa fa-plus-square-o"></span> -->
+													</div>
+													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 price">
+														{{price}}
+													</div>
+													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+														<input class="btn btn-primary btn-md doc_btn" type="submit" value="Get Free Quote" style="outline:none">
+													</div>
 												</div>
-												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 price">
-													{{price}}
-												</div>
-												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-													<input class="btn btn-primary btn-md doc_btn" type="submit" value="Get Free Quote" style="outline:none">
-												</div>
-											</div>
-										</a>
-									</h4>
-								</div>
-								<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-									<div class="panel-body">
-										{{{description}}}
+											</a>
+										</h4>
+									</div>
+									<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+											{{{description}}}
+										</div>
 									</div>
 								</div>
-							</div>
-						{{/each}}
+							{{/each}}
+						</div>
+					</div>
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
 				</div>
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-				</div>
-			</div>
-
+			</section>
 			<!-- <h3 style="margin-left: 60px;font-size:18px;">{{{doctor.description}}}</h3> -->
-			<h4 id="providers" style="">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+			<section id="section3">
+				<h4 id="over" style="">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+							<span>Affiliated Providers</span>
+						</div>
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						</div>
 					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<span>Affiliated Providers</span>
-					</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
+				</h4>
 
-			{{#each providers}}
-				<div class="row procedure-box ">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				{{#each providers}}
+					<div class="row procedure-box ">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+							<img src="">
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+							<h3>{{name}}</h3>
+							<button type="button" class="btn btn-primary btn-md raised" style="outline:none">Know More</button>
+						</div>
+						<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+						</div>
 					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<img src="">
+				{{/each}}
+			</section>
+			<section id="section4">
+				<h4 id="over" style="">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+							<span>Reviews</span>
+						</div>
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						</div>
 					</div>
-					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
-						<h3>{{name}}</h3>
-						<button type="button" class="btn btn-primary btn-md raised" style="outline:none">Know More</button>
-					</div>
-					<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-					</div>
-				</div>
-			{{/each}}
-
-			<h4 id="reviews" style="">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-						<span>Reviews</span>
-					</div>
-					<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-					</div>
-				</div>
-			</h4>
+				</h4>
+			</section>
 		</div>
+		<!-- </div> -->
 	</div>
 
 	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
@@ -304,3 +313,7 @@
 	</div>
 </div>
 {{>footer}}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/smooth-scroller.js"></script>
+<script src="/js/mainScript.js"></script>
+<script src="/js/navbar.js"></script>

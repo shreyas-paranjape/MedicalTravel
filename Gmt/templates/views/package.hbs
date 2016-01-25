@@ -15,41 +15,41 @@
 			<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div>
 			<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 package_para">
 				<div class="row">
-				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 ">
-				<h3 style="font-family:SourceSansPro-Semibold">	{{package.name}}</h3>
-			</div>
-			<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 ">
-				<button type="submit" class="" style="margin-top:12px;color:#456C39;border: 2px solid #456C39;border-radius:4px;padding: 5px 20px;font-family:SourceSansPro-Regular;font-size:16.5px;" data-toggle="modal" data-target="#myModal">Enquire</button>
-       </div>
-		 </div>
-			{{{package.discription}}}
-			 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				 	{{#each packageSection}}
-				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingOne" style="border-radius:4px;">
-
-						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne" style="outline:none">
-							<h4 class="panel-title">
-								<div class="row">
-									<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
-										<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;">	{{name}}</span>
-									</div>
-									<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
-										<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
-									</div>
-								</div>
-							</h4>
-						</a>
-
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 ">
+						<h3 style="font-family:SourceSansPro-Semibold"> {{package.name}}</h3>
 					</div>
-					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-						<div class="panel-body">
-								{{{discription}}}
-						</div>
+					<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 ">
+						<button type="submit" class="" style="margin-top:12px;color:#456C39;border: 2px solid #456C39;border-radius:4px;padding: 5px 20px;font-family:SourceSansPro-Regular;font-size:16.5px;background-color:white;" data-toggle="modal" data-target="#myModal">Enquire</button>
 					</div>
 				</div>
-				{{/each}}
-			</div>
+				{{{package.discription}}}
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					{{#each packageSection}}
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne" style="border-radius:4px;">
+
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="true" aria-controls="collapseOne" style="outline:none">
+									<h4 class="panel-title">
+										<div class="row">
+											<div class="col-lg-11 col-md-11 col-sm-11 c0l-xs-11">
+												<span style="color:black;font-size:16px;font-family:SourceSansPro-Regular;"> {{name}}</span>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-1 c0l-xs-1">
+												<span class="glyphicon glyphicon-chevron-down" style="color: #d6d2d2;"></span>
+											</div>
+										</div>
+									</h4>
+								</a>
+
+							</div>
+							<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+								<div class="panel-body">
+									{{{discription}}}
+								</div>
+							</div>
+						</div>
+					{{/each}}
+				</div>
 
 				<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default">

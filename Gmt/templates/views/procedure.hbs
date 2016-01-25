@@ -1,5 +1,6 @@
 <!-- <div class="container"> -->
 {{>header}}
+
 <div class="row marginAlign picture">
 	<div class="row" style="padding-top:205px;">
 		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
@@ -14,34 +15,34 @@
 	</div>
 </div>
 
- <div class="row procedure">
+<div class="row procedure">
 	<!-- row starts -->
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
 		<!-- <img src="../images/cancercare1.jpg" style="height:auto;width:100%;"> -->
-		<div class="" >
+		<div class="">
 
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default" id="navprocedure">
 				<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
 					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
-					<li data-menuanchor="overview" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 active">
-						<a href="#overview" style="padding-top:12px; padding-left: 10px">Overview</a>
+					<li data-menuanchor="overview" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+						<a class="demo" href="#section1" style="padding-top:12px; padding-left: 10px">Overview</a>
 					</li>
 					<li data-menuanchor="providers" class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;">
-						<a href="#providers" style="padding-top:12px;">Featured Providers</a>
+						<a class="demo" href="#section2" style="padding-top:12px;">Featured Providers</a>
 					</li>
 					<li data-menuanchor="doctors" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-						<a href="#doctors" style="margin-left:-16px;padding-top:12px;">Doctors</a>
+						<a class="demo" href="#section3" style="margin-left:-16px;padding-top:12px;">Doctors</a>
 					</li>
 					<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-						<a href="#procedures" style="margin-left: -11px;padding-top:12px;">Procedures</a>
+						<a class="demo" href="#section4" style="margin-left: -11px;padding-top:12px;">Procedures</a>
 					</li>
 				</ul>
 			</nav>
 
 
-			<div id="fullpage" class="">
-				<div class="section fp-auto-height">
-					<h4 id="over"></h4>
+			<div id="navstick">
+				<section id="section1">
+					<h4 id=""></h4>
 
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
@@ -52,9 +53,9 @@
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
 					</div>
-				</div>
-				<div class="section fp-auto-height">
-					<h4 id="prov">
+				</section>
+				<section id="section2">
+					<h4 id="over">
 						<div class="row">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
@@ -81,9 +82,9 @@
 							</div>
 						</div>
 					{{/each}}
-				</div>
-				<div class="section fp-auto-height">
-					<h4 id="doct">
+				</section>
+				<section id="section3">
+					<h4 id="over">
 						<div class="row">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
@@ -102,7 +103,8 @@
 									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 									</div>
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-										<img src="{{cloudinaryUrl imageOuter}}">
+										<img src="">
+										<!-- {{cloudinaryUrl imageOuter}} -->
 									</div>
 									<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
 										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
@@ -121,9 +123,9 @@
 							{{/each}}
 						</div>
 					</div>
-				</div>
-				<div class="section fp-auto-height ">
-					<h4 id="proce">
+				</section>
+				<section id="section4">
+					<h4 id="over">
 						<div class="row">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
@@ -176,7 +178,7 @@
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
 	</div>
@@ -227,26 +229,7 @@
 {{>footer}}
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script src="/js/pro.js"></script>
-<script src="/js/jquery.easings.min.js"></script>
-<script src="/js/jquery.slimscroll.min.js"></script>
-<script src="/js/jquery.fullPage.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/smooth-scroller.js"></script>
 <script src="/js/mainScript.js"></script>
-<!-- <script>
-$(document).ready(function(){
-    $('#fullpage').fullpage({
-        sectionsColor: ['white', 'white', 'white', 'white'],
-        anchors: ['overview', 'providers', 'doctors', 'procedures'],
-        menu: '#menu',
-				scrollingSpeed: 1000,
-        autoScrolling: false,
-        fitToSection: true,
-        scrollBar: true,
-        responsive: 2000
-        afterLoad: function(anchorLink, index, slideAnchor, slideIndex){
-            $('#menu li').removeClass('active-section');
-            $('#menu li:nth-child('-index-')').addClass('active-section');
-        },
-    });
-});
-</script> -->
+<script src="/js/navbar.js"></script>
