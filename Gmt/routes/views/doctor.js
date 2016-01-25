@@ -22,7 +22,7 @@ exports = module.exports = function(req, res) {
 		return false;
 	}
 
-//Get the doctor as per the key
+	//Get the doctor as per the key
 	var doctorQuery = keystone.list('Doctor').model.findOne({
 		key: req.params.key
 	});
@@ -67,7 +67,7 @@ exports = module.exports = function(req, res) {
 		keystone.list('Doctor').model.findOne({
 			key: req.params.key
 		}).exec(function(err, result) {
-			req.body.doctor = result.name;  //Doctor name
+			req.body.doctor = result.name; //Doctor name
 			req.body.flag = "SecondOpenion"; //Type of Form
 			updater.process(req.body, {
 				flashErrors: false,
@@ -79,19 +79,19 @@ exports = module.exports = function(req, res) {
 					console.log(err.errors);
 				} else {
 					locals.consultationSent = true;
-          //Upload files to Box
+					//Upload files to Box
 					appAuth({
 							publicKey: fs.readFileSync('public_key.pem'),
 							privateKey: fs.readFileSync('private_key.pem'),
 							algorithm: 'RS256',
 							issuer: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
-							subject: "262909238",
+							subject: "263917765",
 							subjectType: 'user',
 							clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 							clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-							publicKeyId: "v8vvf8zn",
+							publicKeyId: "hhqzcvgu",
 							callRetryMax: 5,
-							minutesUntilTokenRefresh: 3,
+							minutesUntilTokenRefresh: 10,
 							options: {
 								debug: true
 							}
@@ -107,8 +107,7 @@ exports = module.exports = function(req, res) {
 										fields: [
 											'total_count'
 										]
-									}).then(function(uploadRes) {
-									});
+									}).then(function(uploadRes) {});
 									count++;
 								}, function(err) {
 									cb1(err);
@@ -122,8 +121,7 @@ exports = module.exports = function(req, res) {
 									fields: [
 										'total_count'
 									]
-								}).then(function(uploadRes) {
-								});
+								}).then(function(uploadRes) {});
 								console.log("Ek File");
 							}
 						});

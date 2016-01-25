@@ -47,7 +47,7 @@ exports = module.exports = function(req, res) {
 					subjectType: 'user',
 					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-					publicKeyId: "v8vvf8zn",
+					publicKeyId: "hhqzcvgu",
 					callRetryMax: 5,
 					minutesUntilTokenRefresh: 10,
 					options: {
@@ -101,7 +101,7 @@ exports = module.exports = function(req, res) {
 	// 				subjectType: 'user',
 	// 				clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 	// 				clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-	// 				publicKeyId: "v8vvf8zn",
+	// 				publicKeyId: "hhqzcvgu",
 	// 				callRetryMax: 5,
 	// 				minutesUntilTokenRefresh: 10,
 	// 				options: {
@@ -147,7 +147,7 @@ exports = module.exports = function(req, res) {
 					subjectType: 'user',
 					clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 					clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-					publicKeyId: "v8vvf8zn",
+					publicKeyId: "hhqzcvgu",
 					callRetryMax: 5,
 					minutesUntilTokenRefresh: 10,
 					options: {
@@ -205,7 +205,7 @@ exports = module.exports = function(req, res) {
 	// 				subjectType: 'user',
 	// 				clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 	// 				clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-	// 				publicKeyId: "v8vvf8zn",
+	// 				publicKeyId: "hhqzcvgu",
 	// 				callRetryMax: 5,
 	// 				minutesUntilTokenRefresh: 10,
 	// 				options: {

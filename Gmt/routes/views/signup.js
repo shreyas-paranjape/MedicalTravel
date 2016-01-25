@@ -43,7 +43,7 @@ exports = module.exports = function(req, res) {
 						subjectType: 'enterprise',
 						clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 						clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-						publicKeyId: "gjq5tqzo",
+						publicKeyId: "hhqzcvgu",
 						callRetryMax: 5,
 						minutesUntilTokenRefresh: 10,
 						options: {
@@ -58,6 +58,7 @@ exports = module.exports = function(req, res) {
 							api.user.create({
 								name: result.key
 							}).then(function(resUser) {
+								console.log("resUser" + JSON.stringify(resUser));
 								idx = resUser.id;
 
 								keystone.list('User').model.update({

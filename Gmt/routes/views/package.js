@@ -11,7 +11,6 @@ exports = module.exports = function(req, res) {
 	res.locals.packageTariff = [];
 	res.locals.packageSection = [];
 
-
 	//Package
 	view.query("package", keystone.list('Packages').model.findOne({
 		key: req.params.key
