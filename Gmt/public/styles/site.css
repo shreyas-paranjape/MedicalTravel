@@ -4935,7 +4935,7 @@ button.close {
 #navprocedure, #navdoctor, #navprovider {
   width: 100%; }
   #navprocedure a.active, #navdoctor a.active, #navprovider a.active {
-    color: red; }
+    color: #FF6C6F; }
 
 /* Sticky scrollbar on scroll down */
 #navprocedure.sticky {
