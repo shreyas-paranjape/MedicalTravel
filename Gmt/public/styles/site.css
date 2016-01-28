@@ -4915,6 +4915,10 @@ button.close {
   font-family: SourceSansPro-Semibold;
   src: url(../fonts/SourceSansPro-Semibold.otf); }
 
+@font-face {
+  font-family: SourceSansPro-ExtraLight;
+  src: url(../fonts/SourceSansPro-ExtraLight.otf); }
+
 #header {
   margin-top: 30px; }
 
@@ -4931,6 +4935,24 @@ button.close {
 
 .no-padding {
   padding: 0; }
+
+.package-type > p {
+  position: absolute;
+  top: 0;
+  padding-top: 8px;
+  padding-right: 16px;
+  width: 100%;
+  font-family: SourceSansPro-Semibold;
+  font-size: 18px;
+  text-align: right; }
+
+.package-caption > p {
+  font-family: SourceSansPro-Regular;
+  color: #2b2b2b;
+  text-align: justify;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px; }
 
 #navprocedure, #navdoctor, #navprovider {
   width: 100%; }
@@ -5119,6 +5141,10 @@ table tr:last-child td:last-child {
   margin-top: 112px; }
   .marginAlign .border {
     border-right: 1px solid #ededed; }
+  .marginAlign span {
+    font-size: 30px;
+    font-family: SourceSansPro-Semibold;
+    color: white; }
 
 .procedure {
   overflow: hidden;
@@ -5490,19 +5516,22 @@ a:focus {
   border-bottom: 1px solid #000; }
 
 .form ::-webkit-input-placeholder {
-  font-family: SourceSansPro-Regular;
+  font-family: SourceSansPro-ExtraLight;
   font-size: 16px; }
 .form :-moz-placeholder {
   /* Firefox 18- */
-  font-family: SourceSansPro-Regular;
-  font-size: 16px; }
+  font-family: SourceSansPro-ExtraLight;
+  font-size: 16px;
+  color: #2b2b2b; }
 .form ::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: SourceSansPro-Regular;
-  font-size: 16px; }
+  font-family: SourceSansPro-ExtraLight;
+  font-size: 16px;
+  color: #2b2b2b; }
 .form :-ms-input-placeholder {
-  font-family: SourceSansPro-Regular;
-  font-size: 16px; }
+  font-family: SourceSansPro-ExtraLight;
+  font-size: 16px;
+  color: #2b2b2b; }
 
 .carousel-fade .carousel-inner .item {
   transition-property: opacity; }
@@ -5551,14 +5580,32 @@ a:focus {
   font-family: SourceSansPro-Semibold; }
 .index_choose .thumbnail {
   border-radius: 0; }
-  .index_choose .thumbnail .image {
+  .index_choose .thumbnail .index-border {
+    border: #53c8ab 1px solid;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .index_choose .thumbnail .index-info {
     margin-bottom: 0;
-    width: 30%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding: 25px 0 15px 5px; }
+    border-color: #53c8ab;
+    background-color: #53c8ab;
+    color: white;
+    font-family: SourceSansPro-Regular;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .index_choose .thumbnail .index-info h4 {
+      font-family: SourceSansPro-Semibold;
+      text-align: center;
+      font-size: 24px; }
+    .index_choose .thumbnail .index-info p {
+      padding-top: 0;
+      font-family: SourceSansPro-Regular;
+      margin-top: -5px; }
+    .index_choose .thumbnail .index-info span {
+      text-decoration: none;
+      font-family: SourceSansPro-Regular;
+      color: white;
+      font-size: 16px; }
 
 .index_help .null {
   border: none; }

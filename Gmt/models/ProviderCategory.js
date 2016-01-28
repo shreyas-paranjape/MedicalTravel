@@ -14,7 +14,7 @@ ProviderCategory.add({
 		required: true,
 		index: true
 	},
-	discription: {
+	description: {
 		type: Types.Html,
 		wysiwyg: true,
 		height: 400

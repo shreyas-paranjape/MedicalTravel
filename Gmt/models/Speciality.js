@@ -18,7 +18,7 @@ Speciality.add({
 	imageOuter: {
 		type: Types.CloudinaryImage
 	},
-	discription: {
+	description: {
 		type: Types.Html,
 		wysiwyg: true,
 		height: 400

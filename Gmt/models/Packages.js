@@ -15,6 +15,11 @@ Packages.add({
 		required: true,
 		index: true
 	},
+	type: {
+		type: Types.Html,
+		wysiwyg: true,
+		height: 50,
+	},
 	imageOuter: {
 		type: Types.CloudinaryImage
 	},
@@ -22,7 +27,7 @@ Packages.add({
 		type: Types.Relationship,
 		ref: 'PackageCategory'
 	},
-	discription: {
+	description: {
 		type: Types.Html,
 		wysiwyg: true,
 		height: 400
@@ -33,10 +38,7 @@ Packages.relationship({
 	ref: 'PackageSection',
 	path: 'package'
 });
-Packages.relationship({
-	ref: 'PackageTariff',
-	path: 'package'
-});
+
 
 Packages.schema.methods.getPackageSection = function(done) {
 	return keystone.list('PackageSection').model.find({

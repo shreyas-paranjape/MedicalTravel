@@ -15,6 +15,10 @@ $icon-font-path: "../fonts/";
 				font-family: SourceSansPro-Semibold;
 				src: url(../fonts/SourceSansPro-Semibold.otf);
 }
+@font-face {
+				font-family: SourceSansPro-ExtraLight;
+				src: url(../fonts/SourceSansPro-ExtraLight.otf);
+}
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
 // versions is to override the ones you want in another file.
@@ -28,16 +32,33 @@ $icon-font-path: "../fonts/";
 @import "site/layout";
 .no-padding {
 				padding: 0;
-
 }
-
-#navprocedure,#navdoctor,#navprovider {
+.package-type >p {
+				position: absolute;
+				top: 0;
+				padding-top: 8px;
+				padding-right: 16px;
+				width: 100%;
+				font-family: SourceSansPro-Semibold;
+				font-size: 18px;
+				text-align: right;
+}
+.package-caption>p {
+				font-family: SourceSansPro-Regular;
+				color: rgb(43,43,43);
+				text-align: justify;
+				padding-left: 7px;
+				padding-right: 7px;
+				padding-top: 5px;
+}
+#navprocedure,
+#navdoctor,
+#navprovider {
 				width: 100%;
 				a.active {
-				     color: #FF6C6F;
+								color: #FF6C6F;
 				}
-		}
-
+}
 #navstick {
 				// background-color: green;
 				// height: 2000px;
@@ -225,11 +246,9 @@ table tr:last-child td:last-child {
 .navbar-default .navbar-nav > li > a {
 				color: black;
 }
-
 .navbar-inverse .navbar-nav > li > a {
 				color: white;
 }
-
 //procedure doctor open
 .tabs {
 				li {
@@ -246,7 +265,6 @@ table tr:last-child td:last-child {
 				}
 				.active {
 								background-color: white;
-
 				}
 }
 .marginAlign {
@@ -256,6 +274,11 @@ table tr:last-child td:last-child {
 				margin-top: 112px;
 				.border {
 								border-right: 1px solid #ededed;
+				}
+				span {
+								font-size: 30px;
+								font-family: SourceSansPro-Semibold;
+								color: white;
 				}
 }
 .procedure {
@@ -287,7 +310,6 @@ table tr:last-child td:last-child {
 								font-size: 16.5px;
 				}
 }
-
 .procedure-box {
 				margin-top: 40px;
 				padding-bottom: 20px;
@@ -608,8 +630,6 @@ a:hover {
 a:focus {
 				background-color: none;
 }
-
-
 .box {
 				width: 700px;
 				height: 300px;
@@ -699,24 +719,27 @@ a:focus {
 }
 .form {
 				 ::-webkit-input-placeholder {
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
 				}
 				 :-moz-placeholder {
 								/* Firefox 18- */
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+								color:rgb(43,43,43);
 				}
 				 ::-moz-placeholder {
 								/* Firefox 19+ */
 								// color: red;
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+									color:rgb(43,43,43);
 				}
 				 :-ms-input-placeholder {
 								// color: red;
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+									color:rgb(43,43,43);
 				}
 }
 // .jumbotron {
@@ -792,14 +815,36 @@ a:focus {
 				}
 				.thumbnail {
 								border-radius: 0;
-								.image {
+								.index-border {
+												border: rgb(83,200,171) 1px solid;
+												border-bottom: none;
+												border-top-left-radius: 10px;
+												border-top-right-radius: 10px;
+								}
+								.index-info {
 												margin-bottom: 0;
-												width: 30%;
-												height: auto;
-												margin-left: auto;
-												margin-right: auto;
-												display: block;
-												padding: 25px 0 15px 5px;
+												border-color: rgb(83,200,171);
+												background-color: rgb(83,200,171);
+												color: white;
+												font-family: SourceSansPro-Regular;
+												border-bottom-left-radius: 10px;
+												border-bottom-right-radius: 10px;
+												h4 {
+																font-family: SourceSansPro-Semibold;
+																text-align: center;
+																font-size: 24px;
+												}
+												p {
+																padding-top: 0;
+																font-family: SourceSansPro-Regular;
+																margin-top: -5px;
+												}
+												span {
+																text-decoration: none;
+																font-family: SourceSansPro-Regular;
+																color: white;
+																font-size: 16px;
+												}
 								}
 				}
 }
