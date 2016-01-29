@@ -1,6 +1,6 @@
 <div id="header" style="margin-top:0px;">
 	<!-- <div class="container"> -->
-	<div role="navigation" class="navbar navbar-inverse navbar-fixed-top " style="border-width: 0px;border-radius:0px;background-color:rgb(53,53,53);border-bottom:0px;">
+	<div role="navigation" class="navbar navbar-fixed-top " style="border-width: 0px;border-radius:0px;background-color:rgb(47,47,47);border-bottom:0px;">
 
 		<div class="container-fluid">
 
@@ -32,7 +32,7 @@
 									<ul class="nav navbar-nav navbar-right">
 										{{# each navs}}
 											<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;">
-												<a href="{{ href }}" style="color:rgb(235,235,235);;background-color:rgb(53,53,53);">{{ label }}</a>
+												<a href="{{ href }}" style="color:rgb(255,255,255);;background-color:rgb(47,47,47);">{{ label }}</a>
 											</li>
 											{{/each}}
 									</ul>
@@ -43,17 +43,17 @@
 									<ul class="nav navbar-nav navbar-right">
 										{{# each navLinks}}
 											<li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}} style="font-family: SourceSansPro-Regular;font-size:16.5px;padding-left:20px;">
-												<a href="{{ href }}" style="outline:none;color:rgb(235,235,235);background-color:rgb(53,53,53);">{{ label }}</a>
+												<a href="{{ href }}" style="outline:none;color:rgb(255,255,255);background-color:rgb(47,47,47);">{{ label }}</a>
 											</li>
 											{{/each}}
-											<li style="padding-left:35px;color:#dd7e80;padding-top: 10px;color">
+											<!-- <li style="padding-left:35px;color:#dd7e80;padding-top: 10px;color">
 													<i class="fa fa-envelope-o fa-2x"></i>
 												<i class="fa fa-skype fa-2x" style="padding-left: 10px; padding-right: 10px; "></i>
 												<i class="fa fa-whatsapp fa-2x" ></i>
-	</li>
-												<!-- <i class="fa fa-envelope fa-2x" style=""></i> -->
-												<!-- <button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);font-family:SourceSansPro-Regular;font-size:16.5px;">Connect</button> -->
-
+	</li> -->
+											<li style="padding-left:35px;">
+												<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);font-family:SourceSansPro-Regular;font-size:16.5px;"data-toggle="modal" data-target="#myModal">Connect</button>
+											</li>
 											<!-- background-color: #ff6c6f;	border-color:#ff6c6f;	box-shadow: 0 3px 0 0 #B24B4D;outline:none; -->
 									</ul>
 								</div>
@@ -67,4 +67,24 @@
 		</div>
 	</div>
 	<!-- </div> -->
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

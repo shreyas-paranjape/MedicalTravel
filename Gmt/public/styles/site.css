@@ -5141,10 +5141,6 @@ table tr:last-child td:last-child {
   margin-top: 112px; }
   .marginAlign .border {
     border-right: 1px solid #ededed; }
-  .marginAlign span {
-    font-size: 30px;
-    font-family: SourceSansPro-Semibold;
-    color: white; }
 
 .procedure {
   overflow: hidden;
