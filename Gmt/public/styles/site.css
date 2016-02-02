@@ -5026,7 +5026,7 @@ table tr:last-child td:last-child {
   margin-left: 15px;
   background-color: #c6c6c6;
   color: white;
-  margin-top: -20px; }
+  margin-top: -50px; }
   .exp h4 {
     padding: 10px 0;
     font-family: SourceSansPro-Semibold;
@@ -5037,6 +5037,15 @@ table tr:last-child td:last-child {
   font-family: SourceSansPro-Regular;
   font-size: 16px;
   margin-top: -10px; }
+
+.philo {
+  margin-top: 40px; }
+
+.philo > p {
+  font-family: SourceSansPro-Regular;
+  font-size: 18px;
+  text-align: center;
+  color: #959595; }
 
 .navbar {
   margin-bottom: 0;
@@ -5284,18 +5293,18 @@ table tr:last-child td:last-child {
   font-size: 18px; }
 
 .consult_block {
-  background-color: #53c8ab;
+  border: solid 2px #53c8ab;
   width: auto; }
   .consult_block .info {
     text-align: center;
     font-family: SourceSansPro-Regular;
     font-size: 16px;
-    color: white; }
+    color: #53c8ab; }
 
 .consult_content {
-  border: solid 2px #53c8ab; }
+  background-color: #53c8ab; }
   .consult_content .consult_data {
-    color: #53c8ab;
+    color: white;
     text-align: center;
     font-family: SourceSansPro-Regular;
     font-size: 18px; }
@@ -5800,6 +5809,38 @@ a:focus {
   display: table;
   width: 100%;
   height: 447px; }
+
+@media (max-width: 1000px) {
+  .navbar-collapse.collapse {
+    display: none !important; }
+  .navbar-toggle {
+    display: block !important; }
+  .navbar-collapse {
+    overflow-x: visible !important; }
+  .navbar-collapse.in {
+    overflow-y: auto !important; }
+  .collapse.in {
+    display: block !important; }
+  .marginAlign {
+    margin-top: 80px; }
+  #navdoctor.sticky {
+    top: 87px;
+    width: 58.2%; }
+  .doc .doc_profile img {
+    width: 130px;
+    height: 130px; }
+  .doc .doc_profile h3 {
+    font-size: 20px; }
+  .doc .doc_profile p {
+    font-size: 16px; }
+  .doc .exp {
+    margin-top: 30px; }
+    .doc .exp h4 {
+      font-size: 18px; }
+    .doc .exp p {
+      font-size: 15px; }
+  .doc .philo > p {
+    font-size: 16px; } }
 
 @media only screen and (max-width: 750px) {
   .hero {

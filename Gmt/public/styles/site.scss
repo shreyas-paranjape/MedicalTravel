@@ -132,7 +132,7 @@ table tr:last-child td:last-child {
 				margin-left: 15px;
 				background-color: rgb(198,198,198);
 				color: white;
-				margin-top: -20px;
+				margin-top: -50px;
 				h4 {
 								padding: 10px 0;
 								font-family: SourceSansPro-Semibold;
@@ -144,6 +144,15 @@ table tr:last-child td:last-child {
 				font-family: SourceSansPro-Regular;
 				font-size: 16px;
 				margin-top: -10px;
+}
+.philo {
+				margin-top: 40px;
+}
+.philo>p {
+				font-family: SourceSansPro-Regular;
+				font-size: 18px;
+				text-align: center;
+				color: #959595;
 }
 .navbar {
 				margin-bottom: 0;
@@ -449,20 +458,23 @@ table tr:last-child td:last-child {
 }
 //doctor open
 .consult_block {
-				background-color: #53c8ab;
+				border: solid 2px #53c8ab;
+				// background-color: #53c8ab;
 				width: auto;
 				.info {
 								text-align: center;
 								font-family: SourceSansPro-Regular;
 								font-size: 16px;
-								color: white;
-								// padding: 10px;
+								color: #53c8ab;
+								// padding-top: 2px;
+								// padding-bottom: 2px;
 				}
 }
 .consult_content {
-				border: solid 2px #53c8ab;
+				// border: solid 2px #53c8ab;
+				background-color: #53c8ab;
 				.consult_data {
-								color: #53c8ab;
+								color: white;
 								text-align: center;
 								font-family: SourceSansPro-Regular;
 								font-size: 18px;
@@ -809,8 +821,8 @@ a:focus {
 								font-size: 32px;
 								padding-top: 30px;
 								padding-bottom: 5px;
-								color:rgb(149,149,149);
-								 text-align: center;
+								color: rgb(149,149,149);
+								text-align: center;
 								font-family: SourceSansPro-Semibold;
 				}
 				.thumbnail {
@@ -942,7 +954,6 @@ a:focus {
 				width: 100%;
 				height: 447px;
 }
-
 .packagePic {
 				background: url("../images/Packages265(1).jpg")no-repeat center center;
 				background-repeat: no-repeat;
@@ -1078,7 +1089,6 @@ a:focus {
 								margin-bottom: 0;
 								color: rgb(43,43,43);
 				}
-				// color: #FFF;
 }
 .hero1 {
 				background: url("../images/GMTHomeHD1.jpg")no-repeat center center;
@@ -1092,6 +1102,58 @@ a:focus {
 				// position: absolute;
 				// top: 114px;
 				height: 447px;
+}
+@media(max-width:1000px) {
+
+				.navbar-collapse.collapse {
+								display: none !important;
+				}
+				.navbar-toggle {
+								display: block !important;
+				}
+				.navbar-collapse {
+								overflow-x: visible !important;
+				}
+				.navbar-collapse.in {
+								overflow-y: auto !important;
+				}
+				.collapse.in {
+								display: block !important;
+				}
+				.marginAlign {
+								margin-top: 80px;
+				}
+				#navdoctor.sticky {
+								top: 87px;
+								width: 58.2%;
+				}
+
+				.doc {
+								.doc_profile {
+												img {
+																width: 130px;
+																height: 130px;
+												}
+												h3 {
+																font-size: 20px;
+												}
+												p {
+																font-size: 16px;
+												}
+								}
+								.exp {
+												margin-top: 30px;
+												h4 {
+																font-size: 18px;
+												}
+												p {
+																font-size: 15px;
+												}
+								}
+								.philo>p {
+											font-size: 16px;
+								}
+				}
 }
 @media only screen and (max-width: 750px) {
 				.hero {
