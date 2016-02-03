@@ -14,33 +14,32 @@
 </div>
 
 <div class="row procedure">
-	<div class="col-lg-8 border no-padding ">
-		<div class="row" >
-			<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div>
-				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 ">
+	<div class="col-lg-8 border ">
 		<div class="row">
-
-			{{#each packages}}
-				<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
-				<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 ">
-					<div class="thumbnail" style="margin-top:30px;margin-bottom:0px;">
-						<div class="image " style="position: relative; width:100%">
-							<img src="/images/Panchakarma 1.jpg" style="display:block;margin-left:auto;margin-right:auto;width:100%;">
-							<h2 style="position: absolute;top:125px;width: 100%;left:15px;color:white;font-family:SourceSansPro-Semibold;font-size:26px;">{{name}}</h2>
+			<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
+			<!-- <div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 "> -->
+				<!-- <div class="row package"> -->
+					{{#each packages}}
+						<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
+						<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="padding-right:20px;padding-left:20px;">
+							<div class="thumbnail" style="margin-top:30px;margin-bottom:0px;">
+								<div class="image" style="position:relative; width:100%">
+									<img src="{{cloudinaryUrl imageOuter}}" style="display:block;margin-left:auto;margin-right:auto;width:25%;padding-top: 80px;" align="middle">
+										<h2 class=" package-type" style="">{{{type}}}</h2>
+								</div>
+								<div class="caption package-caption">
+									<h3 style="padding-left:8px;font-family:SourceSansPro-Semibold;color:rgb(149,149,149);margin-top:0px;">{{name}}</h3>
+									{{{description}}}
+									<p><a class="btn btn-default" role="button" style="box-shadow: 0 3px 0 0 rgb(204,86,88);background-color: #ff6c6f;border-color: rgb(255,108,111);color:white;font-family:SourceSansPro-Regular;margin-top:10px;" onclick="location.href='/package/{{key}}'">Know more</a></p>
+								</div>
+							</div>
 						</div>
-						<div class="caption">
-							<p style="font-family:SourceSansPro-Regular;color:rgb(53,53,53);text-align:justify;padding-left:7px;padding-right:7px;padding-top:5px;">Alternative medical practices are generally not recognized by the medical community as standard or conventional medical approaches. Alternative medicine includes dietary supplements, megadose vitamins, herbal preparations</p>
-							<p><a class="btn btn-default" role="button" style="box-shadow: 0 3px 0 0 #b24b4d;background-color: #ff6c6f;border-color: rgb(255,108,111);margin-left:8px;color:white;font-family:SourceSansPro-Regular;margin-top:10px;"onclick="location.href='/package/{{key}}'">Know more</a></p>
-						</div>
-
-					</div>
-				</div>
-				<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
-			{{/each}}
+						<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
+					{{/each}}
+				<!-- </div> -->
+			<!-- </div> -->
+			<!-- <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div> -->
 		</div>
-		</div>
-		<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 "></div>
-	</div>
 	</div>
 
 	<div class="col-lg-4 no-padding">

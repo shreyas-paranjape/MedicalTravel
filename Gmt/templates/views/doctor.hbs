@@ -1,69 +1,69 @@
 <!-- <div class="container"> -->
+
 {{>header}}
 <div class="row marginAlign ">
-	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
+	<div class="col-lg-8 col-sm-7 col-xs-8 col-md-8 border no-padding">
 		<div class=" row doc">
 			<div class="row doc_profile">
-				<div class="col-lg-1">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
 					<img src="{{cloudinaryUrl doctor.imageOuter}}">
 				</div>
 
-				<div class="col-lg-5">
+				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
 					<h3> {{doctor.name}}</h3>
 					{{{doctor.summary}}}
 				</div>
 
-				<div class="col-lg-2" style="padding:0px;">
+				<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2" style="padding:0px;">
 					<div class="consult_block">
-						<div class="info" style="margin-bottom:0px;">Consultation</div>
-						<div class="info">Fees</div>
+						<div class="info" style="margin-bottom:0px;">GMT</div>
+						<!-- <div class="info">Fees</div> -->
 					</div>
 					<div class="consult_content">
 						<div class="consult_data">
-							USD 59
+							Verified
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-lg-4">
+				<div class="col-lg-4 col-sm-2 col-xs-4 col-md-4">
 				</div>
 
-				<div class="col-lg-5 exp" style="">
-					<h4 style="">Area of Expertise</h4>
+				<div class="col-lg-5 col-sm-8 col-xs-5 col-md-5 exp">
+					<h4>Area of Expertise</h4>
 					{{{doctor.expertise}}}
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+
+				<div class="col-lg-10 col-sm-9 col-xs-10 col-md-10 philo" >
+					<h4 >Practice Philosophy</h4>
+					{{{doctor.philosophy}}}
+				</div>
+			</div>
 		</div>
-		<!-- <div class=" row">
-				<div class="col-lg-1">
-				</div>
-				<div class="col-lg-3">
-				</div>
-				<div class="col-lg-5">
-					{{{doctor.expertise}}}
-				</div>
-				<div class="col-lg-2">
-				</div>
-			</div> -->
 
 		<!-- <div class="scrolls" data-spy="scroll" data-target="#navbar-example"> -->
 		<nav class="navbar navbar-default" id="navdoctor">
 			<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
-				<li class="col-lg-1">&nbsp;</li>
-				<li data-menuanchor="bio" class="col-lg-2">
+				<li class="col-lg-1 col-md-1 col-sm-0 col-xs-1">&nbsp;</li>
+				<li data-menuanchor="bio" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 					<a class="demo" href="#section1">Bio</a>
 				</li>
-				<li data-menuanchor="procedures" class="col-lg-3">
+				<li data-menuanchor="procedures" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 					<a class="demo" href="#section2">Procedure</a>
 				</li>
-				<li data-menuanchor="providers" class="col-lg-3">
+				<li data-menuanchor="providers" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 					<a class="demo" href="#section3" style="margin-left:7px;">Providers</a>
 				</li>
-				<li data-menuanchor="reviews" class="col-lg-2">
+				<li data-menuanchor="reviews" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 					<a class="demo" href="#section4">Reviews</a>
 				</li>
 			</ul>
@@ -72,12 +72,12 @@
 			<section id="section1">
 				<h4 id="bio"></h4>
 				<div class="row">
-					<div class="col-lg-1">
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 					</div>
-					<div class="col-lg-10 para">
+					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 para">
 						{{{doctor.description}}}
 					</div>
-					<div class="col-lg-1">
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 					</div>
 				</div>
 			</section>
@@ -94,10 +94,10 @@
 					</div>
 				</h4>
 
-				<div class="row doc_proc" style="">
+				<div class="row doc_proc">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="col-lg-10 doc_border" style="">
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							{{#each procedures}}
 								<div class="panel panel-default">
@@ -109,10 +109,10 @@
 														{{name}}
 														<!-- <span class="fa fa-plus-square-o"></span> -->
 													</div>
-													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 price">
+													<div class="col-lg-3 col-sm-1 col-xs-3 col-md-3 price">
 														{{price}}
 													</div>
-													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+													<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
 														<input class="btn btn-primary btn-md doc_btn" type="submit" value="Get Free Quote" style="outline:none">
 													</div>
 												</div>
@@ -134,14 +134,14 @@
 			</section>
 			<!-- <h3 style="margin-left: 60px;font-size:18px;">{{{doctor.description}}}</h3> -->
 			<section id="section3">
-				<h4 id="over" style="">
+				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<div class="col-lg-3 col-sm-5 col-xs-3 col-md-3">
 							<span>Affiliated Providers</span>
 						</div>
-						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						<div class="col-lg-8 col-sm-6 col-xs-8 col-md-8">
 						</div>
 					</div>
 				</h4>
@@ -150,20 +150,20 @@
 					<div class="row procedure-box ">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
 							<img src="">
 						</div>
-						<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+						<div class="col-lg-5 col-sm-6 col-xs-5 col-md-5">
 							<h3>{{name}}</h3>
 							<button type="button" class="btn btn-primary btn-md raised" style="outline:none">Know More</button>
 						</div>
-						<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+						<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2">
 						</div>
 					</div>
 				{{/each}}
 			</section>
 			<section id="section4">
-				<h4 id="over" style="">
+				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
@@ -179,7 +179,7 @@
 		<!-- </div> -->
 	</div>
 
-	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
+	<div class="col-lg-4 col-sm-5 col-xs-4 col-md-4 no-padding name">
 		{{#each speciality}}
 			<h3> {{name}} </h3>
 		{{/each}}
@@ -187,7 +187,7 @@
 		<br>
 
 		<div class="form frm_doctor" style="margin-top: -50px;	background-color: #f6f6f6;	">
-			<h5 style="">Request a Consultation</h5>
+			<h5>Request a Consultation</h5>
 			<div class="row">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 				</div>
@@ -195,17 +195,17 @@
 					<form method="post" enctype="multipart/form-data">
 						<input type="hidden" name="action" value="second">
 						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
-						<div class="panel-group" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default" style="border: none;box-shadow: none;">
-								<div class="panel-heading" role="tab" id="headingOne" style="margin-top: 10px;padding: 10px 15px;">
+						<div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default" style="">
+								<div class="panel-heading" role="tab" id="headingOne" style="">
 									<a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
 											<div class="row form_accordion">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;">Medical Reports</span>
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+													<span class="medical" style="">Medical Reports</span>
 												</div>
-												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 ">
-													<span style="padding-top: 6px;color: rgb(95,95,95);" class="glyphicon glyphicon-chevron-down"></span>
+												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -222,12 +222,12 @@
 								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
 									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
-											<div class="row">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;"> Allergies</span>
+											<div class="row form_accordion">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+													<span class="medical" style=""> Allergies</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="color:rgb(95,95,95);padding-top: 6px;" class="glyphicon glyphicon-chevron-down"></span>
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -244,13 +244,12 @@
 								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
 									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
-											<div class="row">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;">
-														Symptoms</span>
+											<div class="row form_accordion">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
+													<span class="medical" style="">Symptoms</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="color:rgb(95,95,95);padding-top: 6px;" class="glyphicon glyphicon-chevron-down"></span>
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -270,18 +269,18 @@
 
 						<div class="form-group row form_fields">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-								<input type="text" class="form-control" id="age" placeholder="Age" name="age" style="">
+								<input type="text" class="form-control" id="age" placeholder="Age" name="age">
 							</div>
-							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+							<div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 10px;">
-								<label for="gender" class="gender" style="">Sex:</label>
+							<div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
+								<label for="gender" class="gender">Sex:</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Male" style="">M</label>
+									<input type="radio" name="gender" class="value" value="Male">M</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Female" style="">F</label>
+									<input type="radio" name="gender" class="value" value="Female" >F</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Other" style="">O</label>
+									<input type="radio" name="gender" class="value" value="Other" >O</label>
 								<!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
 							</div>
 						</div>
@@ -298,7 +297,7 @@
 						<div class="row">
 							<div class="col-lg-3"></div>
 							<div class="col-lg-6">
-								<button type="submit" class="btn btn-default doctor_btn" style="">Get second Opinion</button>
+								<button type="submit" class="btn btn-default doctor_btn" >Get second Opinion</button>
 							</div>
 							<div class="col-lg-3"></div>
 						</div>

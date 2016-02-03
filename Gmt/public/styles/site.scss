@@ -15,6 +15,10 @@ $icon-font-path: "../fonts/";
 				font-family: SourceSansPro-Semibold;
 				src: url(../fonts/SourceSansPro-Semibold.otf);
 }
+@font-face {
+				font-family: SourceSansPro-ExtraLight;
+				src: url(../fonts/SourceSansPro-ExtraLight.otf);
+}
 // The easiest way to customise Bootstrap variables while
 // being able to easily override the source files with new
 // versions is to override the ones you want in another file.
@@ -28,16 +32,33 @@ $icon-font-path: "../fonts/";
 @import "site/layout";
 .no-padding {
 				padding: 0;
-
 }
-
-#navprocedure,#navdoctor,#navprovider {
+.package-type >p {
+				position: absolute;
+				top: 0;
+				padding-top: 8px;
+				padding-right: 16px;
+				width: 100%;
+				font-family: SourceSansPro-Semibold;
+				font-size: 18px;
+				text-align: right;
+}
+.package-caption>p {
+				font-family: SourceSansPro-Regular;
+				color: rgb(43,43,43);
+				text-align: justify;
+				padding-left: 7px;
+				padding-right: 7px;
+				padding-top: 5px;
+}
+#navprocedure,
+#navdoctor,
+#navprovider {
 				width: 100%;
 				a.active {
-				     color: #FF6C6F;
+								color: #FF6C6F;
 				}
-		}
-
+}
 #navstick {
 				// background-color: green;
 				// height: 2000px;
@@ -111,7 +132,7 @@ table tr:last-child td:last-child {
 				margin-left: 15px;
 				background-color: rgb(198,198,198);
 				color: white;
-				margin-top: -20px;
+				margin-top: -50px;
 				h4 {
 								padding: 10px 0;
 								font-family: SourceSansPro-Semibold;
@@ -123,6 +144,20 @@ table tr:last-child td:last-child {
 				font-family: SourceSansPro-Regular;
 				font-size: 16px;
 				margin-top: -10px;
+}
+.philo {
+				margin-top: 40px;
+				h4 {
+								padding-left: 35px;
+								font-family: SourceSansPro-Semibold;
+								color: rgb(43,43,43);
+				}
+}
+.philo>p {
+				font-family: SourceSansPro-Regular;
+				font-size: 18px;
+				text-align: center;
+				color: #959595;
 }
 .navbar {
 				margin-bottom: 0;
@@ -225,11 +260,9 @@ table tr:last-child td:last-child {
 .navbar-default .navbar-nav > li > a {
 				color: black;
 }
-
 .navbar-inverse .navbar-nav > li > a {
 				color: white;
 }
-
 //procedure doctor open
 .tabs {
 				li {
@@ -238,7 +271,6 @@ table tr:last-child td:last-child {
 								font-size: 20px;
 								padding-top: 10px;
 								padding-bottom: 10px;
-								// box-shadow: 0 5px 0 #cac6c6;
 								border-bottom: 2px solid #cac6c6;
 				}
 				a {
@@ -246,7 +278,6 @@ table tr:last-child td:last-child {
 				}
 				.active {
 								background-color: white;
-
 				}
 }
 .marginAlign {
@@ -256,6 +287,11 @@ table tr:last-child td:last-child {
 				margin-top: 112px;
 				.border {
 								border-right: 1px solid #ededed;
+				}
+				.category_name {
+								font-size: 30px;
+								font-family: SourceSansPro-Semibold;
+								color: white;
 				}
 }
 .procedure {
@@ -287,7 +323,6 @@ table tr:last-child td:last-child {
 								font-size: 16.5px;
 				}
 }
-
 .procedure-box {
 				margin-top: 40px;
 				padding-bottom: 20px;
@@ -427,20 +462,23 @@ table tr:last-child td:last-child {
 }
 //doctor open
 .consult_block {
-				background-color: #53c8ab;
+				border: solid 2px #53c8ab;
+				// background-color: #53c8ab;
 				width: auto;
 				.info {
 								text-align: center;
 								font-family: SourceSansPro-Regular;
 								font-size: 16px;
-								color: white;
-								// padding: 10px;
+								color: #53c8ab;
+								// padding-top: 2px;
+								// padding-bottom: 2px;
 				}
 }
 .consult_content {
-				border: solid 2px #53c8ab;
+				// border: solid 2px #53c8ab;
+				background-color: #53c8ab;
 				.consult_data {
-								color: #53c8ab;
+								color: white;
 								text-align: center;
 								font-family: SourceSansPro-Regular;
 								font-size: 18px;
@@ -489,6 +527,27 @@ table tr:last-child td:last-child {
 								font-size: 20px;
 								color: white;
 								text-align: center;
+				}
+				.doc_acc {
+								.panel-default {
+												border: none;
+												box-shadow: none;
+								}
+								.panel-heading {
+												margin-top: 10px;
+												padding: 10px 15px;
+								}
+								.form_accordion {
+												.medical {
+																color: rgb(95,95,95);
+																font-family: SourceSansPro-Regular;
+																font-size: 16px;
+												}
+												.icon {
+																padding-top: 6px;
+																color: rgb(95,95,95);
+												}
+								}
 				}
 				.form_fields {
 								#age {
@@ -608,8 +667,6 @@ a:hover {
 a:focus {
 				background-color: none;
 }
-
-
 .box {
 				width: 700px;
 				height: 300px;
@@ -699,24 +756,27 @@ a:focus {
 }
 .form {
 				 ::-webkit-input-placeholder {
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
 				}
 				 :-moz-placeholder {
 								/* Firefox 18- */
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+								color: rgb(43,43,43);
 				}
 				 ::-moz-placeholder {
 								/* Firefox 19+ */
 								// color: red;
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+								color: rgb(43,43,43);
 				}
 				 :-ms-input-placeholder {
 								// color: red;
-								font-family: SourceSansPro-Regular;
+								font-family: SourceSansPro-ExtraLight;
 								font-size: 16px;
+								color: rgb(43,43,43);
 				}
 }
 // .jumbotron {
@@ -792,14 +852,36 @@ a:focus {
 				}
 				.thumbnail {
 								border-radius: 0;
-								.image {
+								.index-border {
+												border: rgb(83,200,171) 1px solid;
+												border-bottom: none;
+												border-top-left-radius: 10px;
+												border-top-right-radius: 10px;
+								}
+								.index-info {
 												margin-bottom: 0;
-												width: 30%;
-												height: auto;
-												margin-left: auto;
-												margin-right: auto;
-												display: block;
-												padding: 25px 0 15px 5px;
+												border-color: rgb(83,200,171);
+												background-color: rgb(83,200,171);
+												color: white;
+												font-family: SourceSansPro-Regular;
+												border-bottom-left-radius: 10px;
+												border-bottom-right-radius: 10px;
+												h4 {
+																font-family: SourceSansPro-Semibold;
+																text-align: center;
+																font-size: 24px;
+												}
+												p {
+																padding-top: 0;
+																font-family: SourceSansPro-Regular;
+																margin-top: -5px;
+												}
+												span {
+																text-decoration: none;
+																font-family: SourceSansPro-Regular;
+																color: white;
+																font-size: 16px;
+												}
 								}
 				}
 }
@@ -897,24 +979,6 @@ a:focus {
 				width: 100%;
 				height: 447px;
 }
-// .jumbotron {
-// 				background: url("../images/GOAhome.jpg")no-repeat center center;
-// 				background-repeat: no-repeat;
-// 				-webkit-background-size: cover;
-// 				-moz-background-size: cover;
-// 				-o-background-size: cover;
-// 				background-size: cover;
-// }
-// hr.style17 {
-// 	border-top: 1px solid #8c8b8b;
-// 	text-align: center;
-// }
-// hr.style17:after {
-// 	content: 'V';
-// 	display: inline-block;
-//
-//
-// }
 .packagePic {
 				background: url("../images/Packages265(1).jpg")no-repeat center center;
 				background-repeat: no-repeat;
@@ -1050,7 +1114,6 @@ a:focus {
 								margin-bottom: 0;
 								color: rgb(43,43,43);
 				}
-				// color: #FFF;
 }
 .hero1 {
 				background: url("../images/GMTHomeHD1.jpg")no-repeat center center;
@@ -1064,6 +1127,59 @@ a:focus {
 				// position: absolute;
 				// top: 114px;
 				height: 447px;
+}
+@media(max-width:1000px) {
+				.navbar-collapse.collapse {
+								display: none !important;
+				}
+				.navbar-toggle {
+								display: block !important;
+				}
+				.navbar-collapse {
+								overflow-x: visible !important;
+				}
+				.navbar-collapse.in {
+								overflow-y: auto !important;
+				}
+				.collapse.in {
+								display: block !important;
+				}
+				.marginAlign {
+								margin-top: 80px;
+				}
+				#navprocedure.sticky {
+								top: 101px;
+				}
+				#navdoctor.sticky {
+								top: 87px;
+								width: 58.2%;
+				}
+				.doc {
+								.doc_profile {
+												img {
+																width: 130px;
+																height: 130px;
+												}
+												h3 {
+																font-size: 20px;
+												}
+												p {
+																font-size: 16px;
+												}
+								}
+								.exp {
+												margin-top: 30px;
+												h4 {
+																font-size: 18px;
+												}
+												p {
+																font-size: 15px;
+												}
+								}
+								.philo>p {
+												font-size: 16px;
+								}
+				}
 }
 @media only screen and (max-width: 750px) {
 				.hero {

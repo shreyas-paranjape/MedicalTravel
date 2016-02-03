@@ -8,7 +8,7 @@
 				<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
 				</div>
 				<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12" style="padding-left:12px;">
-					<span style="font-size:30px;font-family:SourceSansPro-Semibold;color:white">{{{specialityn}}}</span>
+					<span class="category_name">{{{specialityn}}}</span>
 				</div>
 			</div>
 		</div>
@@ -18,7 +18,6 @@
 <div class="row procedure">
 	<!-- row starts -->
 	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
-		<!-- <img src="../images/cancercare1.jpg" style="height:auto;width:100%;"> -->
 		<div class="">
 
 			<nav class="navbar navbar-default" id="navprocedure">
@@ -59,10 +58,10 @@
 						<div class="row">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
-							<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
+							<div class="col-lg-3 col-sm-5 col-xs-3 col-md-3">
 								<span>Featured Providers</span>
 							</div>
-							<div class="col-lg-8 col-sm-7 col-xs-8 col-md-8">
+							<div class="col-lg-8 col-sm-6 col-xs-8 col-md-8">
 							</div>
 						</div>
 					</h4>
@@ -103,21 +102,18 @@
 									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 									</div>
 									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-										<img src="">
-										<!-- {{cloudinaryUrl imageOuter}} -->
+										<img src="{{cloudinaryUrl imageOuter}}">
 									</div>
 									<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
 										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
 										{{{summary}}}
 									</div>
 									<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-										<!-- <input type="text" class="form-control" id="text" value="View Profile"> -->
-										<!-- <a href="" id="link" style="">View Profile</a> -->
 										<span>
 											<input class="btn btn-primary btn-md rai" type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
 										</span>
 									</div>
-									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+									<div class="col-lg-1 col-sm-0 col-xs-1 col-md-1">
 									</div>
 								</div>
 							{{/each}}
@@ -150,7 +146,7 @@
 													<div class="row accordion">
 														<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
 															{{name}}
-															<span style="">+</span>
+															<span>+</span>
 															<!-- <span class="fa fa-plus-square-o"></span> -->
 														</div>
 
@@ -159,7 +155,7 @@
 															<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
 														</div>
 														<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry" style="">
+															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry">
 														</div>
 													</div>
 												</a>
@@ -194,13 +190,12 @@
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 								</div>
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-									<img src="/images/{{key}}.png">
+								<img src="/images/{{key}}.png">
 									<!-- style="width:27px;height:28.1px;position:relative;top:8px" -->
 								</div>
-								<div class="col-lg-9">
+								<div class="col-lg-9 col-sm-8 col-xs-9 col-md-9">
 									<span>{{name}}</span>
 								</div>
-
 							</div>
 						</a>
 					</li>
@@ -213,7 +208,7 @@
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
 									<img src="/images/{{key}}.png">
 								</div>
-								<div class="col-lg-9">
+								<div class="col-lg-9 col-sm-8 col-xs-9 col-md-9">
 									<span>{{name}}</span>
 								</div>
 							</div>
@@ -227,6 +222,8 @@
 </div>
 <!--row ends-->
 {{>footer}}
+
+
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

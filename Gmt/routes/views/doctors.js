@@ -8,7 +8,7 @@ exports = module.exports = function(req, res) {
 	res.locals.doctors = [];
 	res.locals.speciality = [];
 
-	var procQuery = keystone.list('Doctor').model.find().sort("-imageOuter");
+	var procQuery = keystone.list('Doctor').model.find().sort("-summary");
 	view.on('get', function(next) {
 		procQuery.exec(function(err, docRes) {
 			async.each(docRes, function(doc, next) {

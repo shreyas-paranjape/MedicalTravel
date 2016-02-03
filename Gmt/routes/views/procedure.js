@@ -25,7 +25,7 @@ exports = module.exports = function(req, res) {
 				res.locals.specialities.push(speciality);
 				if (speciality.key == req.params.key) {
 					speciality.active = true;
-					res.locals.specialityd.push(speciality.discription);
+					res.locals.specialityd.push(speciality.description);
 					res.locals.specialityn.push(speciality.name);
 				}
 				return speciality;

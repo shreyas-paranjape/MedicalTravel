@@ -19,7 +19,7 @@ PackageSection.add({
 		type: Types.Relationship,
 		ref: 'Packages'
 	},
-	discription: {
+	description: {
 		type: Types.Html,
 		wysiwyg: true,
 		height: 400
