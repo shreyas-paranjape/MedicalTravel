@@ -83,19 +83,19 @@ var routes = {
 };
 
 exports = module.exports = function(app) {
-	app.get('/', routes.views.index);
+	app.get('/',require('connect-ensure-login').ensureLoggedIn(),  routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/packages/:key', routes.views.packages);
-	app.get('/package/:key', routes.views.package);
-	app.get('/providers/:key', routes.views.providers);
-	app.all('/provider/:key', routes.views.provider);
-	app.get('/procedure/:key', routes.views.procedure);
-	app.all('/doctors', routes.views.doctors);
-	app.all('/doctor/:key', routes.views.doctor);
-	app.get('/services', routes.views.services);
+	app.get('/packages/:key', require('connect-ensure-login').ensureLoggedIn(),routes.views.packages);
+	app.get('/package/:key', require('connect-ensure-login').ensureLoggedIn(),routes.views.package);
+	app.get('/providers/:key', require('connect-ensure-login').ensureLoggedIn(),routes.views.providers);
+	app.all('/provider/:key', require('connect-ensure-login').ensureLoggedIn(),routes.views.provider);
+	app.get('/procedure/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.procedure);
+	app.all('/doctors',require('connect-ensure-login').ensureLoggedIn(), routes.views.doctors);
+	app.all('/doctor/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.doctor);
+	app.get('/services',require('connect-ensure-login').ensureLoggedIn(), routes.views.services);
 	app.all('/profile', require('connect-ensure-login').ensureLoggedIn(), routes.views.profile);
-	app.all('/verify/:key', routes.views.verify);
+	app.all('/verify/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.verify);
 	app.get('/login', routes.views.login);
 	app.post('/login',
 		passport.authenticate('local', {
