@@ -42,7 +42,7 @@ exports = module.exports = function(req, res) {
 						subjectType: 'enterprise',
 						clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 						clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-						publicKeyId: "kgfyhdqk",
+						publicKeyId: "oeirzs4v",
 						callRetryMax: 5,
 						minutesUntilTokenRefresh: 10,
 						options: {
@@ -50,6 +50,7 @@ exports = module.exports = function(req, res) {
 						}
 					})
 					.then(function(api) {
+						console.log("apt:" + api);
 						var userQuery = keystone.list('User').model.findOne({
 							email: req.body.email
 						}).exec(function(err, result) {
