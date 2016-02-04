@@ -147,6 +147,11 @@ table tr:last-child td:last-child {
 }
 .philo {
 				margin-top: 40px;
+				h4 {
+								padding-left: 35px;
+								font-family: SourceSansPro-Semibold;
+								color: rgb(43,43,43);
+				}
 }
 .philo>p {
 				font-family: SourceSansPro-Regular;
@@ -266,7 +271,6 @@ table tr:last-child td:last-child {
 								font-size: 20px;
 								padding-top: 10px;
 								padding-bottom: 10px;
-								// box-shadow: 0 5px 0 #cac6c6;
 								border-bottom: 2px solid #cac6c6;
 				}
 				a {
@@ -284,11 +288,11 @@ table tr:last-child td:last-child {
 				.border {
 								border-right: 1px solid #ededed;
 				}
-				// span {
-				// 				font-size: 30px;
-				// 				font-family: SourceSansPro-Semibold;
-				// 				color: white;
-				// }
+				.category_name {
+								font-size: 30px;
+								font-family: SourceSansPro-Semibold;
+								color: white;
+				}
 }
 .procedure {
 				overflow: hidden;
@@ -523,6 +527,27 @@ table tr:last-child td:last-child {
 								font-size: 20px;
 								color: white;
 								text-align: center;
+				}
+				.doc_acc {
+								.panel-default {
+												border: none;
+												box-shadow: none;
+								}
+								.panel-heading {
+												margin-top: 10px;
+												padding: 10px 15px;
+								}
+								.form_accordion {
+												.medical {
+																color: rgb(95,95,95);
+																font-family: SourceSansPro-Regular;
+																font-size: 16px;
+												}
+												.icon {
+																padding-top: 6px;
+																color: rgb(95,95,95);
+												}
+								}
 				}
 				.form_fields {
 								#age {
@@ -1104,7 +1129,6 @@ a:focus {
 				height: 447px;
 }
 @media(max-width:1000px) {
-
 				.navbar-collapse.collapse {
 								display: none !important;
 				}
@@ -1123,11 +1147,13 @@ a:focus {
 				.marginAlign {
 								margin-top: 80px;
 				}
+				#navprocedure.sticky {
+								top: 101px;
+				}
 				#navdoctor.sticky {
 								top: 87px;
 								width: 58.2%;
 				}
-
 				.doc {
 								.doc_profile {
 												img {
@@ -1151,7 +1177,7 @@ a:focus {
 												}
 								}
 								.philo>p {
-											font-size: 16px;
+												font-size: 16px;
 								}
 				}
 }

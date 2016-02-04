@@ -33,8 +33,8 @@
 				<div class="col-lg-4 col-sm-2 col-xs-4 col-md-4">
 				</div>
 
-				<div class="col-lg-5 col-sm-8 col-xs-5 col-md-5 exp" style="">
-					<h4 style="">Area of Expertise</h4>
+				<div class="col-lg-5 col-sm-8 col-xs-5 col-md-5 exp">
+					<h4>Area of Expertise</h4>
 					{{{doctor.expertise}}}
 				</div>
 			</div>
@@ -43,23 +43,12 @@
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 
-				<div class="col-lg-10 col-sm-9 col-xs-10 col-md-10 philo" style="">
-					<h4 style="padding-left:35px; font-family:SourceSansPro-Semibold;color:rgb(43,43,43);">Practice Philosophy</h4>
+				<div class="col-lg-10 col-sm-9 col-xs-10 col-md-10 philo" >
+					<h4 >Practice Philosophy</h4>
 					{{{doctor.philosophy}}}
 				</div>
 			</div>
 		</div>
-		<!-- <div class=" row">
-				<div class="col-lg-1">
-				</div>
-				<div class="col-lg-3">
-				</div>
-				<div class="col-lg-5">
-					{{{doctor.expertise}}}
-				</div>
-				<div class="col-lg-2">
-				</div>
-			</div> -->
 
 		<!-- <div class="scrolls" data-spy="scroll" data-target="#navbar-example"> -->
 		<nav class="navbar navbar-default" id="navdoctor">
@@ -105,10 +94,10 @@
 					</div>
 				</h4>
 
-				<div class="row doc_proc" style="">
+				<div class="row doc_proc">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border" style="">
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							{{#each procedures}}
 								<div class="panel panel-default">
@@ -145,7 +134,7 @@
 			</section>
 			<!-- <h3 style="margin-left: 60px;font-size:18px;">{{{doctor.description}}}</h3> -->
 			<section id="section3">
-				<h4 id="over" style="">
+				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
@@ -174,7 +163,7 @@
 				{{/each}}
 			</section>
 			<section id="section4">
-				<h4 id="over" style="">
+				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
@@ -198,7 +187,7 @@
 		<br>
 
 		<div class="form frm_doctor" style="margin-top: -50px;	background-color: #f6f6f6;	">
-			<h5 style="">Request a Consultation</h5>
+			<h5>Request a Consultation</h5>
 			<div class="row">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 				</div>
@@ -206,17 +195,17 @@
 					<form method="post" enctype="multipart/form-data">
 						<input type="hidden" name="action" value="second">
 						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
-						<div class="panel-group" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default" style="border: none;box-shadow: none;">
-								<div class="panel-heading" role="tab" id="headingOne" style="margin-top: 10px;padding: 10px 15px;">
+						<div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default" style="">
+								<div class="panel-heading" role="tab" id="headingOne" style="">
 									<a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
 											<div class="row form_accordion">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;">Medical Reports</span>
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+													<span class="medical" style="">Medical Reports</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="padding-top: 6px;color: rgb(95,95,95);" class="glyphicon glyphicon-chevron-down"></span>
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -233,12 +222,12 @@
 								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
 									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
-											<div class="row">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;"> Allergies</span>
+											<div class="row form_accordion">
+												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+													<span class="medical" style=""> Allergies</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="color:rgb(95,95,95);padding-top: 6px;" class="glyphicon glyphicon-chevron-down"></span>
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -255,13 +244,12 @@
 								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
 									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
-											<div class="row">
+											<div class="row form_accordion">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
-													<span style="color: rgb(95,95,95);font-family: SourceSansPro-Regular;font-size: 16px;">
-														Symptoms</span>
+													<span class="medical" style="">Symptoms</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="color:rgb(95,95,95);padding-top: 6px;" class="glyphicon glyphicon-chevron-down"></span>
+													<span style="" class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -281,18 +269,18 @@
 
 						<div class="form-group row form_fields">
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-								<input type="text" class="form-control" id="age" placeholder="Age" name="age" style="">
+								<input type="text" class="form-control" id="age" placeholder="Age" name="age">
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
-								<label for="gender" class="gender" style="">Sex:</label>
+								<label for="gender" class="gender">Sex:</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Male" style="">M</label>
+									<input type="radio" name="gender" class="value" value="Male">M</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Female" style="">F</label>
+									<input type="radio" name="gender" class="value" value="Female" >F</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Other" style="">O</label>
+									<input type="radio" name="gender" class="value" value="Other" >O</label>
 								<!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
 							</div>
 						</div>
@@ -309,7 +297,7 @@
 						<div class="row">
 							<div class="col-lg-3"></div>
 							<div class="col-lg-6">
-								<button type="submit" class="btn btn-default doctor_btn" style="">Get second Opinion</button>
+								<button type="submit" class="btn btn-default doctor_btn" >Get second Opinion</button>
 							</div>
 							<div class="col-lg-3"></div>
 						</div>
