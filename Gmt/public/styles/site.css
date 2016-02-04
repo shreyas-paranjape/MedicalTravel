@@ -5216,10 +5216,10 @@ table tr:last-child td:last-child {
   box-shadow: 0 3px 0 0 #b24b4d;
   background-color: #ff6c6f;
   border-color: #ff6c6f;
-  margin-top: 53px;
+  margin-top: 60px;
   font-family: SourceSansPro-Regular;
   font-size: 16px;
-  padding: 4px 12px; }
+  padding: 1px 10px; }
 
 .btn-primary.raised.active {
   outline: none;
@@ -5674,6 +5674,9 @@ a:focus {
   .btn-primary.rais .search_doc {
     font-size: 15px; }
 
+.btn-connect {
+  padding-left: 35px; }
+
 .qwe {
   padding-left: 0;
   padding-right: 0; }
@@ -5838,17 +5841,34 @@ a:focus {
     display: block !important; }
   .navbar-collapse {
     overflow-x: visible !important; }
-  .navbar-collapse.in {
-    overflow-y: auto !important; }
   .collapse.in {
     display: block !important; }
   .marginAlign {
     margin-top: 80px; }
+  .align-right {
+    padding-right: 20px; }
+  .align-left {
+    padding-left: 65px; }
+  .btn-connect {
+    padding-left: 50px; }
   #navprocedure.sticky {
-    top: 101px; }
+    top: 88px;
+    width: 58.2%; }
   #navdoctor.sticky {
     top: 87px;
     width: 58.2%; }
+  .proc {
+    text-align: center; }
+  .procedure-box {
+    text-align: center; }
+    .procedure-box img {
+      width: 50%; }
+    .procedure-box h3 {
+      width: 60%;
+      margin-left: 90px;
+      margin-top: 20px; }
+    .procedure-box .btn-primary.raised {
+      margin-top: 20px; }
   .doc .doc_profile img {
     width: 130px;
     height: 130px; }
@@ -5864,57 +5884,3 @@ a:focus {
       font-size: 15px; }
   .doc .philo > p {
     font-size: 16px; } }
-
-@media only screen and (max-width: 750px) {
-  .hero {
-    background: grey; }
-    .hero .container .pp {
-      margin-top: 0;
-      text-align: center;
-      padding-left: 0; }
-      .hero .container .pp h2 {
-        font-size: 180%; }
-      .hero .container .pp p {
-        font-size: 15px;
-        margin-top: 3px; }
-      .hero .container .pp .border_doc {
-        border-bottom: 5px solid #ff6c6f;
-        width: 25%;
-        margin: -15px auto 0; }
-    .hero .container .form-group .form-control {
-      width: 100%;
-      margin-left: 0;
-      margin-right: auto;
-      height: 45px; }
-    .hero .container .form-group #proc {
-      font-size: 25px;
-      font-weight: 200;
-      text-align: center;
-      margin: 0 auto;
-      display: block; }
-    .hero .container .form-group .main_button .btn-primary.rais {
-      width: 50%;
-      display: block;
-      margin: 0 auto;
-      height: 45px;
-      margin-top: 10px;
-      margin-bottom: 20px; }
-      .hero .container .form-group .main_button .btn-primary.rais .search_doc {
-        font-size: 18px;
-        font-family: SourceSansPro-Semibold; } }
-
-@media only screen and (max-width: 774px) {
-  .qwe {
-    display: none; }
-  .doctor .thumbnail {
-    height: 321px;
-    width: 271px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0; }
-  .hero .container .form-group #proc {
-    text-align: center;
-    margin: 0 auto; } }
-
-.form-horizontal {
-  margin-top: 20px; }

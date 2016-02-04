@@ -17,7 +17,7 @@
 
 <div class="row procedure">
 	<!-- row starts -->
-	<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 border no-padding">
+	<div class="col-lg-8 col-sm-12 col-xs-8 col-md-8 border no-padding">
 		<div class="">
 
 			<nav class="navbar navbar-default" id="navprocedure">
@@ -35,6 +35,12 @@
 					<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
 						<a class="demo" href="#section4" style="margin-left: -11px;padding-top:12px;">Procedures</a>
 					</li>
+					<button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" style="background-color:black;">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</button>
 				</ul>
 			</nav>
 
@@ -70,10 +76,10 @@
 						<div class="row procedure-box ">
 							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 							</div>
-							<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
+							<div class="col-lg-3 col-sm-12 col-xs-3 col-md-3">
 								<img src="../images/nusi wockhardt goa - Copy.jpg">
 							</div>
-							<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+							<div class="col-lg-5 col-sm-12 col-xs-5 col-md-5">
 								<h3>{{name}}</h3>
 								<button type="button" class="btn btn-primary btn-md raised" onclick="location.href='/provider/{{key}}'">Know More</button>
 							</div>
@@ -99,21 +105,21 @@
 						<div class="p">
 							{{#each doctors}}
 								<div class="row proc">
-									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+									<div class="col-lg-1 col-sm-1 col-xs-5 col-md-1">
 									</div>
-									<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
 										<img src="{{cloudinaryUrl imageOuter}}">
 									</div>
-									<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 procedure-doc">
+									<div class="col-lg-5 col-sm-12 col-xs-5 col-md-5 procedure-doc">
 										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
 										{{{summary}}}
 									</div>
-									<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
+									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
 										<span>
 											<input class="btn btn-primary btn-md rai" type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
 										</span>
 									</div>
-									<div class="col-lg-1 col-sm-0 col-xs-1 col-md-1">
+									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 									</div>
 								</div>
 							{{/each}}
@@ -181,6 +187,7 @@
 
 	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding">
 		<!--col 4 starts-->
+		<div class="collapse navbar-collapse">
 		<ul class="nav nav-stacked tabs">
 			{{#each specialities}}
 				{{#if active}}
@@ -217,6 +224,8 @@
 				{{/if}}
 			{{/each}}
 		</ul>
+	</div>
+
 	</div>
 	<!--col 4 ends-->
 </div>

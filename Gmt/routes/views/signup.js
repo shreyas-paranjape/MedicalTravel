@@ -20,7 +20,6 @@ exports = module.exports = function(req, res) {
 		req.body.lastLogin = Date.now;
 		req.body.uuid = uuid.v1();
 		req.body.verify = "No"
-		console.log("IIU" + req.body.uuid);
 		updater.process(req.body, {
 
 			flashErrors: false,
@@ -29,7 +28,6 @@ exports = module.exports = function(req, res) {
 		}, function(err) {
 			if (err) {
 				locals.validationErrors = err.errors;
-				console.log(err.errors);
 			} else {
 				locals.signedUpSuccessfully = true;
 
