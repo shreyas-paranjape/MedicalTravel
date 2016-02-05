@@ -20,7 +20,6 @@ exports = module.exports = function(req, res) {
 		req.body.lastLogin = Date.now;
 		req.body.uuid = uuid.v1();
 		req.body.verify = "No"
-		console.log("IIU" + req.body.uuid);
 		updater.process(req.body, {
 
 			flashErrors: false,
@@ -29,7 +28,6 @@ exports = module.exports = function(req, res) {
 		}, function(err) {
 			if (err) {
 				locals.validationErrors = err.errors;
-				console.log(err.errors);
 			} else {
 				locals.signedUpSuccessfully = true;
 
@@ -42,7 +40,7 @@ exports = module.exports = function(req, res) {
 						subjectType: 'enterprise',
 						clientId: "q3bx2diw8xuzyurn0ztd31yuqeqjsedg",
 						clientSecret: "hUTWsjEIoYRZq0ilKrykoN0tTlT1jE8h",
-						publicKeyId: "kgfyhdqk",
+						publicKeyId: "oeirzs4v",
 						callRetryMax: 5,
 						minutesUntilTokenRefresh: 10,
 						options: {
