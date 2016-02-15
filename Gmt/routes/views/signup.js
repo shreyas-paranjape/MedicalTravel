@@ -48,6 +48,7 @@ exports = module.exports = function(req, res) {
 						}
 					})
 					.then(function(api) {
+						console.log("apt:" + api);
 						var userQuery = keystone.list('User').model.findOne({
 							email: req.body.email
 						}).exec(function(err, result) {
