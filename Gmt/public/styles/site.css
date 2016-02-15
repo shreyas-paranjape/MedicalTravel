@@ -5208,12 +5208,13 @@ table tr:last-child td:last-child {
   border: 1px solid #53c8ab;
   color: white;
   background-color: #53c8ab;
-  box-shadow: 0 3px 0 0 #317866;
+  box-shadow: 0 3px 0 0 #458575;
   font-family: SourceSansPro-Regular;
-  font-size: 16px; }
+  font-size: 16px;
+  padding: 3px 12px; }
 
 .btn-primary.raised {
-  box-shadow: 0 3px 0 0 #b24b4d;
+  box-shadow: 0 3px 0 0 #C16E70;
   background-color: #ff6c6f;
   border-color: #ff6c6f;
   margin-top: 60px;
@@ -5636,13 +5637,13 @@ a:focus {
 .index_help .null {
   border: none; }
 .index_help .image1 {
-  width: 50%;
+  width: 40%;
   height: auto; }
 
 .thumbnail > p {
   font-family: SourceSansPro-Semibold;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   padding-top: 15px; }
 
 .thumbnail > span {

@@ -100,15 +100,14 @@
 			{{#each doctors}}
 				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " style="padding-right:20px;padding-left:20px">
 					<!-- style="padding-right: 25px;"" -->
-					<div class="thumbnail" style="border:1px solid #ededed;">
-						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
+					<div class="thumbnail" style="border:1px solid #53C8AB;">
+						<img src="{{cloudinaryUrl imageOuter}}" class="doct"  style="filter: grayscale(1);">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
 						<!-- <a href="#"> -->
-						<!-- <p style="border: 2px solid rgb(83, 200, 171); color: white;background-color:rgb(83, 200, 171); margin-top: -30px; border-radius: 5px; width: 270px; margin-left: -5px; height: 38px; text-align: center; padding-top: 4px; padding-bottom: 4px; font-family: SourceSansPro-Semibold; font-size: 16px;">View Complete Profile</p> -->
 						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 						<span style="padding-left:40px;">
-							<input class="btn btn-primary btn-md raise " type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+							<input class="btn btn-primary btn-md raise " type="submit" value="View Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
 						</span>
 						<!-- </a> -->
 					</div>

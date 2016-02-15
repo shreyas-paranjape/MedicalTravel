@@ -16,6 +16,9 @@ Doctor.add({
 	imageOuter: {
 		type: Types.CloudinaryImage
 	},
+	panelist: {
+		type: String,
+	},
 	summary: {
 		type: Types.Html,
 		wysiwyg: true,

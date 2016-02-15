@@ -8,7 +8,7 @@
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 				<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-					<img src="{{cloudinaryUrl doctor.imageOuter}}">
+					<img src="{{cloudinaryUrl doctor.imageOuter}}"  style="filter: grayscale(1);">
 				</div>
 
 				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
@@ -23,7 +23,7 @@
 					</div>
 					<div class="consult_content">
 						<div class="consult_data">
-							Verified
+								{{doctor.panelist}}
 						</div>
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 					<a class="demo" href="#section1">Bio</a>
 				</li>
 				<li data-menuanchor="procedures" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-					<a class="demo" href="#section2">Procedure</a>
+					<a class="demo" href="#section2">Procedures</a>
 				</li>
 				<li data-menuanchor="providers" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 					<a class="demo" href="#section3" style="margin-left:7px;">Providers</a>
@@ -183,10 +183,10 @@
 		{{#each speciality}}
 			<h3> {{name}} </h3>
 		{{/each}}
-		<br>
-		<br>
+		<!-- <br>
+		<br> -->
 
-		<div class="form frm_doctor" style="margin-top: -50px;	background-color: #f6f6f6;	">
+		<div class="form frm_doctor" style="margin-top:-10px;	background-color: #f6f6f6;	">
 			<h5>Request a Consultation</h5>
 			<div class="row">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">

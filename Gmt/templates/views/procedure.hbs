@@ -35,12 +35,6 @@
 					<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
 						<a class="demo" href="#section4" style="margin-left: -11px;padding-top:12px;">Procedures</a>
 					</li>
-					<button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" style="background-color:black;">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-					</button>
 				</ul>
 			</nav>
 
@@ -108,15 +102,15 @@
 									<div class="col-lg-1 col-sm-1 col-xs-5 col-md-1">
 									</div>
 									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
-										<img src="{{cloudinaryUrl imageOuter}}">
+										<img src="{{cloudinaryUrl imageOuter}}" style="filter: grayscale(1);">
 									</div>
-									<div class="col-lg-5 col-sm-12 col-xs-5 col-md-5 procedure-doc">
+									<div class="col-lg-6 col-sm-12 col-xs-6 col-md-6 procedure-doc">
 										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
 										{{{summary}}}
 									</div>
 									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
 										<span>
-											<input class="btn btn-primary btn-md rai" type="submit" value="View Complete Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+											<input class="btn btn-primary btn-md rai" type="submit" value="View Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
 										</span>
 									</div>
 									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
@@ -161,7 +155,7 @@
 															<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
 														</div>
 														<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Enquiry">
+															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Get quotes">
 														</div>
 													</div>
 												</a>
@@ -185,9 +179,8 @@
 		</div>
 	</div>
 
-	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding">
+	<div class="col-lg-4 col-sm-5 col-xs-4 col-md-4 no-padding">
 		<!--col 4 starts-->
-		<div class="collapse navbar-collapse">
 		<ul class="nav nav-stacked tabs">
 			{{#each specialities}}
 				{{#if active}}
@@ -224,8 +217,6 @@
 				{{/if}}
 			{{/each}}
 		</ul>
-	</div>
-
 	</div>
 	<!--col 4 ends-->
 </div>

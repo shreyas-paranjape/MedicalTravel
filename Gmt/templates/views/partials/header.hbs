@@ -45,7 +45,7 @@
 										</li>
 										{{/each}}
 										<li  class="btn-connect" style="">
-											<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);border:2px solid #FF6C6F;color:#FF6C6F;font-family:SourceSansPro-Regular;font-size:16.5px;">Connect</button>
+											<button type="submit" class=" btn-md connect" style="background-color:rgba(0,0,0,0.0);border:2px solid #FF6C6F;color:#FF6C6F;font-family:SourceSansPro-Regular;font-size:16.5px;" data-toggle="modal" data-target="#myModal">Connect</button>
 										</li>
 										<!-- <li style="padding-left:35px;color:rgb(220,220,220);padding-top: 10px;color">
 												<i class="fa fa-envelope-o fa-2x"></i>
@@ -73,5 +73,24 @@
 			</div>
 		</div>
 	</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 	<!-- </div> -->
 </div>
