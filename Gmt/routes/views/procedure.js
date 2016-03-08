@@ -4,7 +4,6 @@ var async = require('async');
 exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-
 	res.locals.doctors = [];
 	res.locals.providers = [];
 	res.locals.procedures = [];

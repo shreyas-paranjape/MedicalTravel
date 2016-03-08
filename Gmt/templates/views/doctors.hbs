@@ -4,9 +4,7 @@
 	<section class="container">
 
 		<div class="row">
-
 			<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
-
 				<div class="row pp">
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
@@ -23,7 +21,6 @@
 					</div>
 
 					<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
-
 						<form role="form row" method="post">
 							<input type="hidden" name="action" value="testSearch">
 							<div class="form-group">
@@ -43,13 +40,13 @@
 							</div>
 						</form>
 					</div>
+
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-0"></div>
 				</div>
 			</div>
 
 			<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
 		</div>
-
 	</section>
 </section>
 
@@ -96,20 +93,15 @@
 <div class="row procedure">
 	<div class="col-lg-8 col-sm-8 col-xs-12 col-md-8 border">
 		<div class="row ">
-			<!-- <div class="col-lg-0 col-xs-1 col-sm-0 col-md-0"></div> -->
 			{{#each doctors}}
 				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " style="padding-right:20px;padding-left:20px">
-					<!-- style="padding-right: 25px;"" -->
 					<div class="thumbnail" style="border:1px solid #53C8AB;">
-						<img src="{{cloudinaryUrl imageOuter}}" class="doct"  style="filter: grayscale(1);">
+						<img src="{{cloudinaryUrl imageOuter}}" class="doct" style="filter: grayscale(1);">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
-						<!-- <a href="#"> -->
-						<!-- <button type="button" class="bttn" onclick=location.href="/provider_info/">Know More</button> -->
 						<span style="padding-left:40px;">
 							<input class="btn btn-primary btn-md raise " type="submit" value="View Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
 						</span>
-						<!-- </a> -->
 					</div>
 				</div>
 			{{/each}}
@@ -118,7 +110,7 @@
 	<div class="col-lg-4 col-sm-4 col-xs-0 col-md-4 qwe">
 		<h4 class="specialities" style="background-color:rgb(198,198,198);color:white;">Filter Doctors by Procedure</h4>
 		<!-- <div class="panel-group panel_doc" id="accordion" role="tablist" aria-multiselectable="true" style="border-left: solid 2px rgb(198,198,198);border-right: solid 2px rgb(198,198,198);border-bottom: solid 2px rgb(198,198,198); border-top:solid 8px rgb(198,198,198);"> -->
-		<div id="accordion" class="panel-group panel_doc"  aria-multiselectable="true" role="tablist">
+		<div id="accordion" class="panel-group panel_doc" aria-multiselectable="true" role="tablist">
 			{{#each speciality}}
 				<div class="panel panel-default">
 					<div id="headingOne" class="panel-heading panel_heading" style="border-width: 0px 0px 2px; border-bottom: 2px solid rgb(198, 198, 198);" role="tab">
@@ -159,7 +151,6 @@
 
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="/js/pro.js"></script>
-
 </div>
 
 {{>footer}}

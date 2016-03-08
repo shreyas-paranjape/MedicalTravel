@@ -843,6 +843,8 @@ a:focus {
 				}
 }
 .index_choose {
+			}
+			.index_choose {
 				.title {
 								font-size: 32px;
 								padding-top: 30px;
@@ -858,6 +860,13 @@ a:focus {
 												border-bottom: none;
 												border-top-left-radius: 10px;
 												border-top-right-radius: 10px;
+												img {
+																margin-left: auto;
+																margin-right: auto;
+																display: block;
+																padding: 25px 0 15px 5px;
+																margin-bottom: 0;
+												}
 								}
 								.index-info {
 												margin-bottom: 0;
@@ -931,8 +940,8 @@ a:focus {
 								font-size: 15px;
 				}
 }
-.btn-connect{
-	padding-left:35px;
+.btn-connect {
+				padding-left: 35px;
 }
 .qwe {
 				padding-left: 0;
@@ -1120,14 +1129,23 @@ a:focus {
 				// top: 114px;
 				height: 447px;
 }
+
+.dropdown-menu{
+	width:100%;
+	.dropdown{
+		padding-bottom:10px;
+	}
+}
+
+
+
+
 @media(max-width:1000px) {
 				.navbar-collapse.collapse {
 								display: none !important;
-
 				}
 				.navbar-toggle {
 								display: block !important;
-
 				}
 				.navbar-collapse {
 								overflow-x: visible !important;
@@ -1141,15 +1159,14 @@ a:focus {
 				.marginAlign {
 								margin-top: 80px;
 				}
-
-				.align-right{
-					padding-right: 20px;
+				.align-right {
+								padding-right: 20px;
 				}
-				.align-left{
-					padding-left: 65px;
+				.align-left {
+								padding-left: 65px;
 				}
-				.btn-connect{
-					padding-left: 50px;
+				.btn-connect {
+								padding-left: 50px;
 				}
 				#navprocedure.sticky {
 								top: 88px;
@@ -1159,23 +1176,23 @@ a:focus {
 								top: 87px;
 								width: 58.2%;
 				}
-				.proc{
-					text-align: center;
+				.proc {
+								text-align: center;
 				}
-			.procedure-box{
-				text-align: center;
-				img{
-					width:50%;
+				.procedure-box {
+								text-align: center;
+								img {
+												width: 50%;
+								}
+								h3 {
+												width: 60%;
+												margin-left: 90px;
+												margin-top: 20px;
+								}
+								.btn-primary.raised {
+												margin-top: 20px;
+								}
 				}
-				h3{
-					width:60%;
-					margin-left: 90px;
-					margin-top: 20px;
-				}
-			.btn-primary.raised{
-					margin-top: 20px;
-				}
-			}
 				.doc {
 								.doc_profile {
 												img {

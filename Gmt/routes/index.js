@@ -94,6 +94,7 @@ exports = module.exports = function(app) {
 	app.all('/doctors',require('connect-ensure-login').ensureLoggedIn(), routes.views.doctors);
 	app.all('/doctor/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.doctor);
 	app.get('/services',require('connect-ensure-login').ensureLoggedIn(), routes.views.services);
+		app.get('/data/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.data);
 	app.all('/profile', require('connect-ensure-login').ensureLoggedIn(), routes.views.profile);
 	app.all('/verify/:key',require('connect-ensure-login').ensureLoggedIn(), routes.views.verify);
 	app.get('/login', routes.views.login);

@@ -5612,6 +5612,12 @@ a:focus {
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
+    .index_choose .thumbnail .index-border img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding: 25px 0 15px 5px;
+      margin-bottom: 0; }
   .index_choose .thumbnail .index-info {
     margin-bottom: 0;
     border-color: #53c8ab;
@@ -5834,6 +5840,11 @@ a:focus {
   display: table;
   width: 100%;
   height: 447px; }
+
+.dropdown-menu {
+  width: 100%; }
+  .dropdown-menu .dropdown {
+    padding-bottom: 10px; }
 
 @media (max-width: 1000px) {
   .navbar-collapse.collapse {

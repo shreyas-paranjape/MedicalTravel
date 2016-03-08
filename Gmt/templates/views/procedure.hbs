@@ -155,7 +155,8 @@
 															<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
 														</div>
 														<div class="col-lg-2 col-sm-3 col-xs-2 col-md-2">
-															<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Get quotes">
+															<input class="btn btn-primary btn-md procedure_btn" id="{{key}}" type="submit" value="Get quotes" data-toggle="modal" data-target="#exampleModal" data-whatever="{{name}}">
+															<!-- onclick="location.href='/data/{{key}}'" -->
 														</div>
 													</div>
 												</a>
@@ -190,7 +191,7 @@
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 								</div>
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-								<img src="/images/{{key}}.png">
+									<img src="/images/{{key}}.png">
 									<!-- style="width:27px;height:28.1px;position:relative;top:8px" -->
 								</div>
 								<div class="col-lg-9 col-sm-8 col-xs-9 col-md-9">
@@ -224,9 +225,114 @@
 {{>footer}}
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 id="exampleModalLabel">New message</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="procedure" class="control-label">Procedure:</label>
+								<input type="text" class="form-control" id="procedure">
+							</div>
+						</form>
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="message-text" class="control-label">Hospitals:</label>
+								<div class="dropdown">
+									<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Hospitals
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+										{{#each providers}}
+											<div class="row dropdown">
+												<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+												</div>
+												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 no-padding">
+													<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+												</div>
+												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+													<button type="button" class="btn btn-default" onclick="location.href='/provider/{{key}}'">View Profile</button>
+												</div>
+											</div>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+						</form>
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="message-text" class="control-label">Doctors:</label>
+								<div class="dropdown">
+									<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Doctors
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+										{{#each doctors}}
+											<div class="row dropdown" >
+												<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+												</div>
+												<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 no-padding">
+													<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+												</div>
+												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+													<button type="button" class="btn btn-default" onclick="location.href='/doctor/{{key}}'">View Profile</button>
+													<!-- data-toggle="modal" data-target="#modaldoc" data-title="{{name}}" -->
+												</div>
+											</div>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Send message</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ModalDoc -->
+<!-- <div class="bs-example">
+	<div id="modaldoc" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Modal Window</h4>
+				</div>
+				<div class="modal-body">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/smooth-scroller.js"></script>
 <script src="/js/mainScript.js"></script>
 <script src="/js/navbar.js"></script>
+<script src="/js/form.js"></script>
