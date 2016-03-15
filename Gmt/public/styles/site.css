@@ -4936,11 +4936,33 @@ button.close {
 .no-padding {
   padding: 0; }
 
+*[hidden] {
+  display: none; }
+
+#mybutton {
+  position: fixed;
+  width: 20%;
+  bottom: 0;
+  right: 0;
+  padding: 10px 12px;
+  display: none;
+  background-color: #53c8ab;
+  border: 1px solid #53c8ab;
+  box-shadow: 0 3px 0 0 #317866;
+  color: white;
+  font-family: SourceSansPro-Regular;
+  font-size: 18px; }
+
+.caret {
+  position: absolute;
+  right: 25px;
+  top: 16px; }
+
 .package-type > p {
   position: absolute;
   top: 0;
   padding-top: 8px;
-  padding-right: 16px;
+  padding-right: 18px;
   width: 100%;
   font-family: SourceSansPro-Semibold;
   font-size: 18px;
@@ -5023,7 +5045,6 @@ table tr:last-child td:last-child {
 
 .exp {
   border: 1px solid #cac6c6;
-  margin-left: 15px;
   background-color: #c6c6c6;
   color: white;
   margin-top: -50px; }
@@ -5096,13 +5117,13 @@ table tr:last-child td:last-child {
   text-align: justify;
   font-size: 14px;
   margin-left: 0;
-  margin-right: 20px;
   font-family: SourceSansPro-Regular;
-  font-size: 14px;
+  font-size: 15px;
+  padding-top: 10px;
   padding-bottom: 0;
   margin-bottom: 0; }
 .provider-info .btn-primary.providers_btn {
-  margin-top: 30px;
+  margin-top: 10px;
   background-color: #ff6c6f;
   border-color: #ff6c6f;
   box-shadow: 0 4px 0 0 #b24b4d;
@@ -5110,7 +5131,7 @@ table tr:last-child td:last-child {
   outline: none;
   font-family: SourceSansPro-Semibold;
   font-size: 16px;
-  padding: 4px 12px; }
+  padding: 2px 10px; }
 
 .q {
   height: auto; }
@@ -5160,7 +5181,6 @@ table tr:last-child td:last-child {
     color: white; }
 
 .procedure {
-  overflow: hidden;
   margin: 0; }
   .procedure .border {
     border-right: 1px solid #ededed; }
@@ -5232,7 +5252,8 @@ table tr:last-child td:last-child {
   .proc img {
     width: 104px;
     height: 104px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    filter: grayscale(1); }
 
 .procedure-doc h4 {
   font-family: SourceSansPro-Regular; }
@@ -5276,7 +5297,8 @@ table tr:last-child td:last-child {
     height: auto;
     padding: 1px 12px;
     border-color: #ff6c6f;
-    box-shadow: 0 3px 0 0 #b24b4d; }
+    box-shadow: 0 3px 0 0 #b24b4d;
+    outline: none; }
   .panel-default .panel-title .accordion .btn-primary.doc_btn {
     background-color: #53c8ab;
     color: white;
@@ -5310,13 +5332,12 @@ table tr:last-child td:last-child {
     font-size: 16px;
     color: #53c8ab; }
 
-.consult_content {
+.consult_data {
+  color: white;
+  text-align: center;
+  font-family: SourceSansPro-Regular;
+  font-size: 18px;
   background-color: #53c8ab; }
-  .consult_content .consult_data {
-    color: white;
-    text-align: center;
-    font-family: SourceSansPro-Regular;
-    font-size: 18px; }
 
 .doc {
   padding-top: 45px;
@@ -5326,7 +5347,8 @@ table tr:last-child td:last-child {
 .doc_profile img {
   width: 200px;
   height: 200px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  filter: grayscale(1); }
 .doc_profile h3 {
   font-family: SourceSansPro-Semibold;
   font-size: 32px;
@@ -5587,8 +5609,10 @@ a:focus {
   text-align: center; }
 
 .doctor {
-  padding-left: 25px; }
+  padding-right: 20px;
+  padding-left: 20px; }
   .doctor .thumbnail {
+    border: 1px solid #53C8AB;
     margin-top: 30px;
     height: auto;
     width: auto; }
@@ -5596,7 +5620,8 @@ a:focus {
       border-radius: 50%;
       width: 160px;
       height: 160px;
-      margin-top: 10px; }
+      margin-top: 10px;
+      filter: grayscale(1); }
 
 .index_choose .title {
   font-size: 32px;
@@ -5630,10 +5655,13 @@ a:focus {
       font-family: SourceSansPro-Semibold;
       text-align: center;
       font-size: 24px; }
-    .index_choose .thumbnail .index-info p {
-      padding-top: 0;
-      font-family: SourceSansPro-Regular;
-      margin-top: -5px; }
+    .index_choose .thumbnail .index-info .info {
+      padding-top: 10px;
+      text-align: center; }
+      .index_choose .thumbnail .index-info .info p {
+        font-size: 18px;
+        font-family: SourceSansPro-Regular;
+        margin-top: -10px; }
     .index_choose .thumbnail .index-info span {
       text-decoration: none;
       font-family: SourceSansPro-Regular;
@@ -5697,12 +5725,21 @@ a:focus {
     margin-top: 0;
     border: 1px solid #cac6c6;
     border-top-left-radius: 0;
-    border-top-right-radius: 0; }
+    border-top-right-radius: 0;
+    border-width: 0 0 2px;
+    border-bottom: 2px solid #c6c6c6; }
     .panel_doc .panel_heading .accordion_doc .pro {
       font-family: SourceSansPro-Regular;
       font-size: 16.5px; }
     .panel_doc .panel_heading .accordion_doc .icon {
       color: #d6d2d2; }
+  .panel_doc .panel-body {
+    background-color: #f6f6f6; }
+    .panel_doc .panel-body #radio {
+      background-color: #e7e7e7;
+      border-color: #ddd; }
+    .panel_doc .panel-body span {
+      font-family: SourceSansPro-Regular; }
 
 .homepage {
   background: url("../images/GMTHomeHD1.jpg") no-repeat center center;
@@ -5761,19 +5798,6 @@ a:focus {
     width: 100%;
     display: table-cell;
     text-align: left; }
-    .hero .container .pp {
-      padding-bottom: 35px; }
-    .hero .container h2 {
-      font-family: SourceSansPro-Bold;
-      font-size: 34px;
-      margin-bottom: 0;
-      color: white;
-      padding-bottom: 10px; }
-    .hero .container p {
-      font-size: 19px;
-      margin-bottom: 0;
-      color: white;
-      font-family: SourceSansPro-Semibold; }
     .hero .container .form-group {
       padding: 0 0 0 15px; }
       .hero .container .form-group .form-control {
@@ -5844,7 +5868,12 @@ a:focus {
 .dropdown-menu {
   width: 100%; }
   .dropdown-menu .dropdown {
-    padding-bottom: 10px; }
+    padding-bottom: 20px; }
+    .dropdown-menu .dropdown li {
+      padding-top: 10px; }
+
+#procedurebtn, #doctor {
+  text-align: left; }
 
 @media (max-width: 1000px) {
   .navbar-collapse.collapse {
@@ -5896,3 +5925,71 @@ a:focus {
       font-size: 15px; }
   .doc .philo > p {
     font-size: 16px; } }
+
+/*
+    Common
+*/
+.wizard-steps-panel {
+  position: relative;
+  height: 4em; }
+
+.wizard-steps-panel .step-number {
+  display: inline-block;
+  text-align: center;
+  font-size: 26px;
+  position: relative; }
+
+.wizard-steps-panel .step-number .number {
+  width: 1.7em;
+  height: 1.7em;
+  background-color: #dedede;
+  color: #5a5a5a;
+  margin-left: calc(50% - 1.7em / 2);
+  border: 4px solid #dedede;
+  border-radius: 1.7em; }
+
+.wizard-steps-panel .step-number.doing .number, .wizard-steps-panel .step-number.doing .number:after, .wizard-steps-panel .step-number.doing .number:before {
+  background-color: #FF5454;
+  border: 4px solid #FF5454;
+  color: white; }
+
+.wizard-steps-panel .step-number.done .number, .wizard-steps-panel .step-number.done .number:after, .wizard-steps-panel .step-number.done .number:before {
+  background-color: #79C447;
+  border: 4px solid #79C447;
+  color: white; }
+
+.wizard-steps-panel .step-number .number:before {
+  content: ' ';
+  position: absolute;
+  border: 4px solid #dedede;
+  border-radius: 4px;
+  left: -4px;
+  right: calc( 50% + 1.4em/2);
+  top: calc( 1.4em / 2); }
+
+.wizard-steps-panel .step-number .number:after {
+  content: ' ';
+  position: absolute;
+  border: 4px solid #dedede;
+  border-radius: 4px;
+  left: calc( 50% + 1.4em/2);
+  right: -4px;
+  top: calc( 1.4em / 2); }
+
+.wizard-steps-panel.steps-quantity-1 .step-number {
+  width: 99%; }
+
+.wizard-steps-panel.steps-quantity-2 .step-number {
+  width: 49%; }
+
+.wizard-steps-panel.steps-quantity-3 .step-number {
+  width: 32%; }
+
+.wizard-steps-panel.steps-quantity-4 .step-number {
+  width: 24%; }
+
+.wizard-steps-panel.steps-quantity-5 .step-number {
+  width: 19%; }
+
+.wizard-steps-panel.steps-quantity-6 .step-number {
+  width: 15%; }

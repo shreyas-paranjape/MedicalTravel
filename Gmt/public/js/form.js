@@ -18,3 +18,12 @@ $(document).ready(function(){
          $(this).find('.modal-body').text(titleData + ' Form');
     });
 });
+
+$(document).ready(function(){
+	$("#modalprov").on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);  // Button that triggered the modal
+        var titleData = button.data('title'); // Extract value from data-* attributes
+        $(this).find('.modal-title').text(titleData + ' Form');
+         $(this).find('.modal-body').text(titleData + ' Form');
+    });
+});

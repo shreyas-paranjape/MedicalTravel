@@ -14,26 +14,26 @@
 	</div>
 </div>
 <div class="row procedure">
-	<div class="col-lg-8 border no-padding">
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 border no-padding">
 		{{#each providers}}
 			<div class="row provider-box">
-				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 no-padding"></div>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding" >
 					<img class="provider-img" width="auto" height="auto" style="" src="../images/Manipal goa.jpg">
 				</div>
-				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 provider-info">
+				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding provider-info">
 
 					<h3 style="">{{name}}</h3>
 					<input id="input-id" type="number" class="rating" min=1 max=10 step=2 data-size="xs" data-rtl="false" data-readonly="false" showCaption="false">
 
 					{{{summary}}}
-					<button type="button" class="btn btn-primary btn-md providers_btn" onclick="location.href='/provider/{{key}}'" style="outline:none;">Know More</button>
+					<button type="button" class="btn btn-primary btn-md providers_btn"  onclick="location.href='/provider/{{key}}'" style="outline:none;float:right">Know More</button>
 				</div>
 			</div>
 		{{/each}}
 	</div>
 
-	<div class="col-lg-4 no-padding">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 no-padding">
 		<ul class="nav nav-stacked tabs">
 			{{#each providerCategories}}
 				{{#if active}}
@@ -45,7 +45,7 @@
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
 									<img src="/images/{{key}}.png" style="width:60%;height:26px;">
 								</div>
-								<div class="col-lg-9">
+								<div class="col-lg-9 col-sm-9 col-xs-9 col-md-8">
 									<span>{{name}}</span>
 								</div>
 							</div>
@@ -61,7 +61,7 @@
 								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
 									<img src="/images/{{key}}.png" style="width:60%;height:26px;">
 								</div>
-								<div class="col-lg-9">
+								<div class="col-lg-9 col-sm-9 col-xs-9 col-md-8">
 									<span>{{name}}</span>
 								</div>
 							</div>

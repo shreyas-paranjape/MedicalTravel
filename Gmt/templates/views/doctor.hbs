@@ -1,30 +1,30 @@
 <!-- <div class="container"> -->
 
 {{>header}}
-<div class="row marginAlign ">
+<div class="marginAlign">
+</div>
+<div class="row ">
 	<div class="col-lg-8 col-sm-7 col-xs-8 col-md-8 border no-padding">
 		<div class=" row doc">
 			<div class="row doc_profile">
-				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
 				</div>
-				<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-					<img src="{{cloudinaryUrl doctor.imageOuter}}"  style="filter: grayscale(1);">
+				<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+					<img src="{{cloudinaryUrl doctor.imageOuter}}">
 				</div>
 
-				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 no-padding">
 					<h3> {{doctor.name}}</h3>
 					{{{doctor.summary}}}
 				</div>
 
-				<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2" style="padding:0px;">
+				<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
 					<div class="consult_block">
-						<div class="info" style="margin-bottom:0px;">GMT</div>
-						<!-- <div class="info">Fees</div> -->
+						<div class="info">GMT</div>
 					</div>
-					<div class="consult_content">
-						<div class="consult_data">
-								{{doctor.panelist}}
-						</div>
+
+					<div class="consult_data">
+						{{doctor.panelist}}
 					</div>
 				</div>
 			</div>
@@ -43,8 +43,8 @@
 				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 				</div>
 
-				<div class="col-lg-10 col-sm-9 col-xs-10 col-md-10 philo" >
-					<h4 >Practice Philosophy</h4>
+				<div class="col-lg-10 col-sm-9 col-xs-10 col-md-10 philo">
+					<h4>Practice Philosophy</h4>
 					{{{doctor.philosophy}}}
 				</div>
 			</div>
@@ -86,10 +86,10 @@
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
 							<span>Procedures</span>
 						</div>
-						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
 						</div>
 					</div>
 				</h4>
@@ -105,18 +105,19 @@
 										<h4 class="panel-title">
 											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
 												<div class="row accordion">
-													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 title">
+													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-5 title">
 														{{name}}
 														<!-- <span class="fa fa-plus-square-o"></span> -->
 													</div>
 													<div class="col-lg-3 col-sm-1 col-xs-3 col-md-3 price">
 														{{price}}
 													</div>
-													<div class="col-lg-3 col-sm-4 col-xs-3 col-md-3">
-														<input class="btn btn-primary btn-md doc_btn" type="submit" value="Get Free Quote" style="outline:none">
-													</div>
-												</div>
 											</a>
+											<div class="col-lg-3 col-sm-4 col-xs-3 col-md-4">
+												<input class="btn btn-primary btn-md doc_btn" type="submit" value="Get Free Quote" style="outline:none" onclick="location.href='/data/{{key}}'">
+											</div>
+											</div>
+
 										</h4>
 									</div>
 									<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
@@ -132,16 +133,16 @@
 					</div>
 				</div>
 			</section>
-			<!-- <h3 style="margin-left: 60px;font-size:18px;">{{{doctor.description}}}</h3> -->
+
 			<section id="section3">
 				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-3 col-sm-5 col-xs-3 col-md-3">
+						<div class="col-lg-8 col-sm-6 col-xs-8 col-md-8">
 							<span>Affiliated Providers</span>
 						</div>
-						<div class="col-lg-8 col-sm-6 col-xs-8 col-md-8">
+						<div class="col-lg-3 col-sm-5 col-xs-3 col-md-3">
 						</div>
 					</div>
 				</h4>
@@ -167,10 +168,10 @@
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
 							<span>Reviews</span>
 						</div>
-						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
 						</div>
 					</div>
 				</h4>
@@ -196,16 +197,16 @@
 						<input type="hidden" name="action" value="second">
 						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
 						<div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default" style="">
-								<div class="panel-heading" role="tab" id="headingOne" style="">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
 									<a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
 										<h4 class="panel-title" style="color:black">
 											<div class="row form_accordion">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
-													<span class="medical" style="">Medical Reports</span>
+													<span class="medical">Medical Reports</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
+													<span class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -224,10 +225,10 @@
 										<h4 class="panel-title" style="color:black">
 											<div class="row form_accordion">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
-													<span class="medical" style=""> Allergies</span>
+													<span class="medical"> Allergies</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
+													<span class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -246,10 +247,10 @@
 										<h4 class="panel-title" style="color:black">
 											<div class="row form_accordion">
 												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
-													<span class="medical" style="">Symptoms</span>
+													<span class="medical">Symptoms</span>
 												</div>
 												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
+													<span class="glyphicon glyphicon-chevron-down"></span>
 												</div>
 											</div>
 										</h4>
@@ -271,16 +272,16 @@
 							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 								<input type="text" class="form-control" id="age" placeholder="Age" name="age">
 							</div>
-							<div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
+							<div class="col-lg-2 col-md-0 col-sm-0 col-xs-2">
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
+							<div class="col-lg-6 col-md-8 col-sm-8 col-xs-6" style="padding-top: 10px;">
 								<label for="gender" class="gender">Sex:</label>
 								<label class="radio-inline">
 									<input type="radio" name="gender" class="value" value="Male">M</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Female" >F</label>
+									<input type="radio" name="gender" class="value" value="Female">F</label>
 								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Other" >O</label>
+									<input type="radio" name="gender" class="value" value="Other">O</label>
 								<!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
 							</div>
 						</div>
@@ -295,11 +296,11 @@
 
 						</br>
 						<div class="row">
-							<div class="col-lg-3"></div>
-							<div class="col-lg-6">
-								<button type="submit" class="btn btn-default doctor_btn" >Get second Opinion</button>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+							<div class="col-lg-6 ol-md-6 col-sm-6 col-xs-6">
+								<button type="submit" class="btn btn-default doctor_btn">Get second Opinion</button>
 							</div>
-							<div class="col-lg-3"></div>
+							<div class="col-lg-3 ol-md-3 col-sm-3 col-xs-3"></div>
 						</div>
 					</form>
 
@@ -312,6 +313,8 @@
 	</div>
 </div>
 {{>footer}}
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/smooth-scroller.js"></script>
 <script src="/js/mainScript.js"></script>

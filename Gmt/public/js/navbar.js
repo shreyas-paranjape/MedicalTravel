@@ -3,7 +3,6 @@ $(window).scroll(function() {
 	var height = $(window).scrollTop();
 
 	// Output the height for debug
-	console.log(height);
 	if ("#navprocedure") {
 		if (height > 265) {
 			// make the nav bar stick at the top

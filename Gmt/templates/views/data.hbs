@@ -1,61 +1,217 @@
+{{>header}}
+<div class="row marginAlign ">
+</div>
 <div class="row">
-  <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-  </div>
-  <div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="procedure" class="control-label">Procedure:</label>
-        <label for="procedure" class="control-label">{{procedure.name}}</label>
-        <!-- <input type="text" class="form-control" id="procedure"> -->
-      </div>
-    </form>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="message-text" class="control-label">Hospitals:</label>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Hospitals
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="width:100%">
-            {{#each procedure.providers}}
-              <div class="row">
-                <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9">
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                  <button type="button" class="btn btn-default">View Profile</button>
-                </div>
-              </div>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </form>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="message-text" class="control-label">Doctors:</label>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Doctors
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="width:100%">
-            {{#each procedure.doctors}}
-              <div class="row">
-                <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9">
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modaldoc" data-title="{{name}}">View Profile</button>
-                </div>
-              </div>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-  </div>
+	<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+	</div>
+	<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10" style="padding-top: 50px; padding-bottom: 50px;">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="procedure" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Procedure:</label>
+				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5">
+					<input type="text" class="form-control" id="procedure" value="{{procedure.name}}" readonly>
+				</div>
+			</div>
+		</form>
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Hospitals:</label>
+				<div class=" col-lg5 col-sm-5 col-xs-5 col-md-5 dropdown">
+					<button class="form-control btn btn-default dropdown-toggle" type="button" id="procedurebtn" data-toggle="dropdown">Hospitals
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu procedure" role="menu" aria-labelledby="menu1">
+						{{#each procedure.providers}}
+							<div class="row dropdown">
+								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+								</div>
+								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+									<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding no-padding">
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+								</div>
+								<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalprov" data-title="{{name}}">View Profile</button>
+								</div>
+							</div>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</form>
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Doctors:</label>
+				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 dropdown">
+					<button class="form-control btn btn-default dropdown-toggle" type="button" id="doctor" data-toggle="dropdown">Doctors
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu doctor" role="menu" aria-labelledby="menu1">
+						{{#each procedure.doctors}}
+							<div class="row dropdown">
+								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+								</div>
+								<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+									<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding">
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+								</div>
+								<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modaldoc" data-title="{{name}}">View Profile</button>
+								</div>
+							</div>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</form>
+
+
+<div id="item" hidden>
+		<div class="row hello " style="padding-top: 50px;padding-bottom:50px;" >
+		  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		  </div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="form frm_doctor" style="margin-top: -10px;	background-color: #f6f6f6;margin-left:-1px;">
+		  <div class="row">
+		    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+		    </div>
+		    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+		      <form method="post" enctype="multipart/form-data">
+		        <input type="hidden" name="action" value="second">
+		        <textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
+		        <div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
+		          <div class="panel panel-default" style="">
+		            <div class="panel-heading" role="tab" id="headingOne" style="">
+		              <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
+		                <h4 class="panel-title" style="color:black">
+		                  <div class="row form_accordion">
+		                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+		                      <span class="medical" style="">Medical Reports</span>
+		                    </div>
+		                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+		                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+		                    </div>
+		                  </div>
+		                </h4>
+		              </a>
+		            </div>
+		            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+		              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px; ">
+		                <input type="file" name="fileupload" size="80" value="Attach" multiple>
+		              </div>
+		            </div>
+		          </div>
+
+		          <div class="panel panel-default" style="border: none;box-shadow: none;">
+		            <div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
+		              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
+		                <h4 class="panel-title" style="color:black">
+		                  <div class="row form_accordion">
+		                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+		                      <span class="medical" style=""> Allergies</span>
+		                    </div>
+		                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+		                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+		                    </div>
+		                  </div>
+		                </h4>
+		              </a>
+		            </div>
+		            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+		                <input type="text" class="form-control" id="exampleInputName1" placeholder="Allergies">
+		              </div>
+		            </div>
+		          </div>
+
+		          <div class="panel panel-default" style="border: none;box-shadow: none;">
+		            <div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
+		              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
+		                <h4 class="panel-title" style="color:black">
+		                  <div class="row form_accordion">
+		                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
+		                      <span class="medical" style="">Symptoms</span>
+		                    </div>
+		                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+		                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+		                    </div>
+		                  </div>
+		                </h4>
+		              </a>
+		            </div>
+		            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+		              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+		                <input type="text" class="form-control" id="exampleInputName2" placeholder="Symptoms">
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+
+		        <div class="form-group">
+		          <input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" style="margin-top: -10px;">
+		        </div>
+
+		        <div class="form-group row form_fields">
+		          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		            <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+		          </div>
+		          <div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
+		          </div>
+		          <div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
+		            <label for="gender" class="gender">Sex:</label>
+		            <label class="radio-inline">
+		              <input type="radio" name="gender" class="value" value="Male">M</label>
+		            <label class="radio-inline">
+		              <input type="radio" name="gender" class="value" value="Female" >F</label>
+		            <label class="radio-inline">
+		              <input type="radio" name="gender" class="value" value="Other" >O</label>
+		            <!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
+		          </div>
+		        </div>
+
+		        <div class="form-group">
+		          <input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+		        </div>
+
+		        <div class="form-group">
+		          <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+		        </div>
+
+		        </br>
+		        <div class="row">
+		          <div class="col-lg-4"></div>
+		          <div class="col-lg-6">
+		            <button type="submit" class="btn btn-default doctor_btn" style="margin-left: 20px; padding: 3px 15px;" >Submit</button>
+		          </div>
+		          <div class="col-lg-2"></div>
+		        </div>
+		      </form>
+
+		    </div>
+		    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+		    </div>
+		  </div>
+
+		</div>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		</div>
+		</div>
+	</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding">
+			</div>
+			<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding">
+				<button type="button" class="btn btn-default" id="button" style="padding-left: 32px; padding-right: 35px; margin-top: 30px;outline:none;">Next</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- ModalDoc -->
@@ -79,5 +235,45 @@
 	</div>
 </div>
 
+
+
+<!-- ModalProv -->
+<div class="bs-example">
+	<div id="modalprov" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Modal Window</h4>
+				</div>
+				<div class="modal-body">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{{>footer}}
+
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/js/form.js"></script>
+<!-- <script>
+	$('.dropdown-menu.doctor a').on('click', function() {
+		$('#doctor').html($(this).html() + '<span class="caret"></span>');
+	});
+	$('.dropdown-menu.procedure a').on('click', function() {
+		$('#procedurebtn').html($(this).html() + '<span class="caret"></span>');
+	});
+</script> -->
+
+<script>
+$( "#button" ).click(function() {
+    $( "#item" ).show();
+});
+</script>

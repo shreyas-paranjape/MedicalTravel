@@ -5,26 +5,26 @@
 
 		<div class="row">
 			<div class="col-md-8 col-lg-8 col-sm-8 col-xs-12">
-				<div class="row pp">
+				<!-- <div class="row pp">
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
 					<div class="col-md-11 col-lg-11 col-sm-11 col-xs-12" style="padding-left: 0px;">
-						<!-- <h2 style="margin-left: -2px;">Meet the Doctors</h2> -->
-						<!-- <span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span> -->
-						<!-- <div class="border_doc">&nbsp;</div> -->
-						<!-- <p>Choose the right doctor for your treatment</p>
-						<p>Consult a specialist for a second opinion</p> -->
+						<h2 style="margin-left: -2px;">Meet the Doctors</h2>
+						<span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
+						<div class="border_doc">&nbsp;</div>
+						<p>Choose the right doctor for your treatment</p>
+						<p>Consult a specialist for a second opinion</p>
 					</div>
-				</div>
+				</div> -->
 				<div class="row">
 					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-12">
 					</div>
 
-					<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12 block">
+					<div class="col-md-11 col-lg-10 col-sm-10 col-xs-12 block">
 						<form role="form row" method="post">
 							<input type="hidden" name="action" value="testSearch">
 							<div class="form-group">
-								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 " style="padding-top: 2px;">
+								<div class="col-md-2 col-lg-3 col-sm-3 col-xs-12 " style="padding-top: 2px;">
 									<label id="proc" style="color:white">Area of Expertise:</label>
 								</div>
 								<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 " style="margin-bottom: 10px; margin-left:0px">
@@ -32,7 +32,7 @@
 									<input type="text" name="procedure" class="form-control" id="procedure" placeholder="Procedure" style="margin-left: -8px;">
 									<input type="hidden" id="procedureId" name="procedureId" value="">
 								</div>
-								<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10  main_button">
+								<div class="col-md-4 col-lg-3 col-sm-3 col-xs-10  main_button">
 									<button type="submit" class="btn btn-primary btn-md rais">
 										<span class="search_doc">Search Doctors</span>
 									</button>
@@ -41,7 +41,7 @@
 						</form>
 					</div>
 
-					<div class="col-md-1 col-lg-1 col-sm-1 col-xs-0"></div>
+					<div class=" col-lg-1 col-sm-1 col-xs-0"></div>
 				</div>
 			</div>
 
@@ -50,53 +50,14 @@
 	</section>
 </section>
 
-<!-- <div class="doc_main">
-	<img src="../images/Meet the Doctors.jpg" style="width:100%;height:auto;">
-	<section class="container">
-		<div class="row pp">
-			<h2>
-				Meet The Doctors</h2>
-				 <span style="border-bottom: 5px solid #ff6c6f;line-height:70px;"></span>
-				 <div class="border_doc">&nbsp;</div>
-			<p>Choose the right doctor for your treatment</p>
-			<p>Consult a specialist for a second opinion</p>
-		</div>
-		<div class="row">
-			<div class="col-md-5 col-lg-5 col-sm-5 col-xs-0"></div>
-			<div class="col-md-7 col-lg-7 col-sm-7 col-xs-12 block">
-				<form role="form row">
-					<div class="form-group">
-						<div class="col-md-3 col-lg-3 col-sm-4 col-xs-12 no-padding">
-							<label id="proc">Procedure:</label>
-						</div>
-						<div class="col-md-6 col-lg-6 col-sm-5 col-xs-12 no-padding">
-							<input type="email" class="form-control" id="email" style="">
-						</div>
-						<div class="col-md-3 col-lg-3 col-sm-3 col-xs-10 no-padding main_button">
-							<button type="submit" class="btn btn-primary btn-md rais" style="">
-								<span class="search_doc">Search Doctors</span>
-							</button>
-						</div>
-
-					</div>
-				</form>
-
-
-			</div>
-		</div>
-	</section>
-
-</div> -->
-
-
 
 <div class="row procedure">
 	<div class="col-lg-8 col-sm-8 col-xs-12 col-md-8 border">
 		<div class="row ">
 			{{#each doctors}}
-				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor " style="padding-right:20px;padding-left:20px">
-					<div class="thumbnail" style="border:1px solid #53C8AB;">
-						<img src="{{cloudinaryUrl imageOuter}}" class="doct" style="filter: grayscale(1);">
+				<div class="col-lg-4 col-sm-6 col-xs-12 col-md-4 doctor ">
+					<div class="thumbnail">
+						<img src="{{cloudinaryUrl imageOuter}}" class="doct">
 						<p>{{name}}</p>
 						<span>{{{summary}}}</span>
 						<span style="padding-left:40px;">
@@ -113,7 +74,7 @@
 		<div id="accordion" class="panel-group panel_doc" aria-multiselectable="true" role="tablist">
 			{{#each speciality}}
 				<div class="panel panel-default">
-					<div id="headingOne" class="panel-heading panel_heading" style="border-width: 0px 0px 2px; border-bottom: 2px solid rgb(198, 198, 198);" role="tab">
+					<div id="headingOne" class="panel-heading panel_heading"  role="tab">
 						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne" style="outline:none;color:black;">
 							<h4 class="panel-title" style="padding-left:5px;">
 								<div class="row accordion_doc">
@@ -132,13 +93,13 @@
 
 					</div>
 					<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-						<div class="panel-body" style="background-color:rgb(246,246,246)">
+						<div class="panel-body">
 							<form method="post" enctype="multipart/form-data">
 								<input type="hidden" name="action" value="radioSearch">
 								{{#each procedures}}
 									<div>
-										<input type="radio" style="background-color: #e7e7e7;border-color: #ddd;" name="procedure" value= {{key}} onclick="this.form.submit()">
-										<span style="font-family:SourceSansPro-Regular">{{name}}</span>
+										<input type="radio" id="radio" name="procedure" value= {{key}} onclick="this.form.submit()">
+										<span>{{name}}</span>
 									</div>
 								{{/each}}
 							</form>
@@ -147,6 +108,7 @@
 				</div>
 			{{/each}}
 		</div>
+		<button type="button" id="mybutton" class=" btn-default" onclick="location.href='#top'">Procedure</button>
 	</div>
 
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -154,3 +116,16 @@
 </div>
 
 {{>footer}}
+
+<script>
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 780) {
+        $('#mybutton').show();
+    } else {
+        $('#mybutton').hide();
+    }
+
+});
+</script>

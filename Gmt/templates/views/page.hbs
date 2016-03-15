@@ -1,0 +1,151 @@
+{{>header}}
+<div class="row marginAlign ">
+</div>
+<div class="row " style="padding-top: 50px;padding-bottom:50px;" >
+  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+  </div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+<div class="form frm_doctor" style="margin-top: -10px;	background-color: #f6f6f6;margin-left:-1px;">
+  <div class="row">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+      <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="second">
+        <textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
+        <div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default" style="">
+            <div class="panel-heading" role="tab" id="headingOne" style="">
+              <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
+                <h4 class="panel-title" style="color:black">
+                  <div class="row form_accordion">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+                      <span class="medical" style="">Medical Reports</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                  </div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px; ">
+                <input type="file" name="fileupload" size="80" value="Attach" multiple>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default" style="border: none;box-shadow: none;">
+            <div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
+                <h4 class="panel-title" style="color:black">
+                  <div class="row form_accordion">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+                      <span class="medical" style=""> Allergies</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                  </div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+                <input type="text" class="form-control" id="exampleInputName1" placeholder="Allergies">
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default" style="border: none;box-shadow: none;">
+            <div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
+                <h4 class="panel-title" style="color:black">
+                  <div class="row form_accordion">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
+                      <span class="medical" style="">Symptoms</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+                      <span style="" class="glyphicon glyphicon-chevron-down"></span>
+                    </div>
+                  </div>
+                </h4>
+              </a>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Symptoms">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" style="margin-top: -10px;">
+        </div>
+
+        <div class="form-group row form_fields">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
+            <label for="gender" class="gender">Sex:</label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" class="value" value="Male">M</label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" class="value" value="Female" >F</label>
+            <label class="radio-inline">
+              <input type="radio" name="gender" class="value" value="Other" >O</label>
+            <!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+        </div>
+
+        <div class="form-group">
+          <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+        </div>
+
+        </br>
+        <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-6">
+            <button type="submit" class="btn btn-default doctor_btn" style="margin-left: 20px; padding: 3px 15px;" >Submit</button>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </form>
+
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+</div>
+</div>
+{{>footer}}
+
+<!-- <script>
+var isVisible = false;
+$('#mybutton').click(function(){
+    $(window).scrollTop(0);
+});
+$(window).scroll(function(){
+     var shouldBeVisible = $(window).scrollTop()>780;
+     if (shouldBeVisible && !isVisible) {
+          isVisible = true;
+          $('#mybutton').show();
+     } else if (isVisible && !shouldBeVisible) {
+          isVisible = false;
+          $('#mybutton').hide();
+    }
+});
+</script> -->

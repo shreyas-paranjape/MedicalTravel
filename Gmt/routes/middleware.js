@@ -19,18 +19,16 @@ exports.initLocals = function(req, res, next) {
 		label: 'Doctors',
 		key: 'doctors',
 		href: '/doctors'
-	}, {
-		label: 'Services',
-		key: 'services',
-		href: '/services'
-	}, ];
+	},];
 
 	locals.navs = [{
-		label: 'Login/Sign Up',
+		label: ' ',
+		// label: 'Login/Sign Up',
 		key: 'login',
 		href: '/login'
 	}, {
-		label: 'Logout',
+		label: ' ',
+			// label: 'Logout',
 		key: 'logout',
 		href: '/logout'
 	}];
