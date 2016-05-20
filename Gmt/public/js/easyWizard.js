@@ -1,4 +1,3 @@
- 
 $.fn.wizard = function(config) {
   if (!config) {
     config = {};
@@ -7,10 +6,10 @@ $.fn.wizard = function(config) {
   var stepSelector = config.stepSelector || ".wizard-step";
   var steps = $(this).find(containerSelector+" "+stepSelector);
   var stepCount = steps.size();
-  var exitText = config.exit || 'Salir';
-  var backText = config.back || 'Atras';
-  var nextText = config.next || 'Adelante';
-  var finishText = config.finish || 'Finalizar';
+  var exitText = config.exit || 'Exit';
+  var backText = config.back || 'Prev';
+  var nextText = config.next || 'Next';
+  var finishText = config.finish || 'Finish';
   var isModal = config.isModal || true;
   var validateNext = config.validateNext || function(){return true;};
   var validateFinish = config.validateFinish || function(){return true;};
@@ -26,8 +25,8 @@ $.fn.wizard = function(config) {
           .removeClass("done")
           .removeClass("doing")[0])
         .toggleClass("doing");
-        
-        $($(containerSelector+" .wizard-step")
+
+$($(containerSelector+" .wizard-step")
           .hide()[0])
         .show();
 
@@ -38,13 +37,13 @@ $.fn.wizard = function(config) {
 
       });
     };
-    $(this).find(".wizard-steps-panel").remove();
-    container.prepend('<div class="wizard-steps-panel steps-quantity-'+ stepCount +'"></div>');
-    var stepsPanel = $(this).find(".wizard-steps-panel");
-    for(s=1;s<=stepCount;s++){
-      stepsPanel.append('<div class="step-number step-'+ s +'"><div class="number">'+ s +'</div></div>');
-    }
-    $(this).find(".wizard-steps-panel .step-"+step).toggleClass("doing");
+    // $(this).find(".wizard-steps-panel").remove();
+    // container.prepend('<div class="wizard-steps-panel steps-quantity-'+ stepCount +'"></div>');
+    // var stepsPanel = $(this).find(".wizard-steps-panel");
+    // for(s=1;s<=stepCount;s++){
+    //   stepsPanel.append('<div class="step-number step-'+ s +'"><div class="number">'+ s +'</div></div>');
+    // }
+    // $(this).find(".wizard-steps-panel .step-"+step).toggleClass("doing");
     //////////////////////
     var contentForModal = "";
     if(isModal){

@@ -2,7 +2,7 @@
 {{>header}}
 
 <div class="row marginAlign picture">
-	<div class="row" style="padding-top:205px;">
+	<div class="row no-margin" style="padding-top:205px;">
 		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
 			<div class="row">
 				<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
@@ -20,165 +20,165 @@
 	<div class="col-lg-8 col-sm-12 col-xs-8 col-md-8 border no-padding">
 		<!-- <div class=""> -->
 
-			<nav class="navbar navbar-default" id="navprocedure">
-				<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
-					<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
-					<li data-menuanchor="overview" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-						<a class="demo" href="#section1" style="padding-top:12px; padding-left: 10px">Overview</a>
-					</li>
-					<li data-menuanchor="providers" class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;">
-						<a class="demo" href="#section2" style="padding-top:12px;">Featured Providers</a>
-					</li>
-					<li data-menuanchor="doctors" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-						<a class="demo" href="#section3" style="margin-left:-16px;padding-top:12px;">Doctors</a>
-					</li>
-					<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
-						<a class="demo" href="#section4" style="margin-left: -11px;padding-top:12px;">Procedures</a>
-					</li>
-				</ul>
-			</nav>
+		<nav class="navbar navbar-default" id="navprocedure">
+			<ul id="myNavbar" class="nav navbar-nav row" style="padding-top: 8px;">
+				<li class="col-lg-1 col-sm-1 col-xs-1 col-md-1">&nbsp;</li>
+				<li data-menuanchor="overview" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+					<a class="demo" href="#section1" style="padding-top:12px; padding-left: 10px">Overview</a>
+				</li>
+				<li data-menuanchor="providers" class="col-lg-4 col-sm-4 col-xs-4 col-md-4" style="margin-left: 15px;">
+					<a class="demo" href="#section2" style="padding-top:12px;">Featured Providers</a>
+				</li>
+				<li data-menuanchor="doctors" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+					<a class="demo" href="#section3" style="margin-left:-16px;padding-top:12px;">Doctors</a>
+				</li>
+				<li data-menuanchor="procedures" class="col-lg-2 col-sm-2 col-xs-2 col-md-2">
+					<a class="demo" href="#section4" style="margin-left: -11px;padding-top:12px;">Procedures</a>
+				</li>
+			</ul>
+		</nav>
 
 
-			<div id="navstick">
-				<section id="section1">
-					<h4 id=""></h4>
+		<div id="navstick">
+			<section id="section1">
+				<h4 id=""></h4>
 
+				<div class="row">
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
+						{{{specialityd}}}
+					</div>
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+				</div>
+			</section>
+			<section id="section2">
+				<h4 id="over">
 					<div class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-						<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 para">
-							{{{specialityd}}}
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+							<span>Featured Providers</span>
 						</div>
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
 						</div>
 					</div>
-				</section>
-				<section id="section2">
-					<h4 id="over">
-						<div class="row">
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
-							<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-								<span>Featured Providers</span>
-							</div>
-							<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-							</div>
-						</div>
-					</h4>
+				</h4>
 
-					{{#each providers}}
-						<div class="row procedure-box ">
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
-							<div class="col-lg-3 col-sm-12 col-xs-3 col-md-3">
-								<img src="../images/nusi wockhardt goa - Copy.jpg">
-							</div>
-							<div class="col-lg-5 col-sm-12 col-xs-5 col-md-5">
-								<h3>{{name}}</h3>
-								<button type="button" class="btn btn-primary btn-md raised" onclick="location.href='/provider/{{key}}'">Know More</button>
-							</div>
-							<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2">
-							</div>
+				{{#each providers}}
+					<div class="row procedure-box ">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 						</div>
-					{{/each}}
-				</section>
-				<section id="section3">
-					<h4 id="over">
-						<div class="row">
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
+						<div class="col-lg-3 col-sm-12 col-xs-3 col-md-3">
+							<img src="../images/nusi wockhardt goa - Copy.jpg">
+						</div>
+						<div class="col-lg-5 col-sm-12 col-xs-5 col-md-5">
+							<h3>{{name}}</h3>
+							<button type="button" class="btn btn-primary btn-md raised" onclick="location.href='/provider/{{key}}'">Know More</button>
+						</div>
+						<div class="col-lg-2 col-sm-1 col-xs-2 col-md-2">
+						</div>
+					</div>
+				{{/each}}
+			</section>
+			<section id="section3">
+				<h4 id="over">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
 						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-								<span>Doctors</span>
-							</div>
-								<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-							</div>
+							<span>Doctors</span>
 						</div>
-					</h4>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						</div>
+					</div>
+				</h4>
 
-					<div class="q">
-						<div class="p">
-							{{#each doctors}}
-								<div class="row proc">
-									<div class="col-lg-1 col-sm-1 col-xs-5 col-md-1">
+				<div class="q">
+					<div class="p">
+						{{#each doctors}}
+							<div class="row proc">
+								<div class="col-lg-1 col-sm-1 col-xs-5 col-md-1">
+								</div>
+								<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
+									<img src="">
+								</div>
+								<div class="col-lg-6 col-sm-12 col-xs-6 col-md-6 procedure-doc">
+									<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
+									{{{summary}}}
+								</div>
+								<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
+									<span>
+										<input class="btn btn-primary btn-md rai" type="submit" value="View Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
+									</span>
+								</div>
+								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+								</div>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+			</section>
+			<section id="section4">
+				<h4 id="over">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
+							<span>Procedures</span>
+						</div>
+						<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
+						</div>
+					</div>
+				</h4>
+
+				<div class="row doc_proc">
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+					</div>
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							{{#each procedures}}
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingOne">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
+												<div class="row accordion">
+													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-5 title">
+														{{name}}
+														<span>+</span>
+														<!-- <span class="fa fa-plus-square-o"></span> -->
+													</div>
+
+													<div class="col-lg-4 col-sm-3 col-xs-4 col-md-4 price">
+														<span style="font-family: SourceSansPro-Regular;">starting from</span>
+														<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
+													</div>
+											</a>
+											<div class="col-lg-2 col-sm-3 col-xs-2 col-md-3">
+												<!-- <button type="submit" class="btn btn-primary btn-md procedure_btn" id="{{key}}" onclick="location.href='/data/{{key}}'">Get quotes</button> -->
+												<input class="btn btn-primary btn-md procedure_btn" type="submit" value="Get quotes" data-toggle="modal" data-target="#exampleModal" data-whatever="{{name}}">
+												<!-- onclick="location.href='/data/{{key}}'" -->
+											</div>
+											</div>
+
+										</h4>
 									</div>
-									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
-										<img src="{{cloudinaryUrl imageOuter}}">
-									</div>
-									<div class="col-lg-6 col-sm-12 col-xs-6 col-md-6 procedure-doc">
-										<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
-										{{{summary}}}
-									</div>
-									<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
-										<span>
-											<input class="btn btn-primary btn-md rai" type="submit" value="View Profile" style="outline:none;" onclick="location.href='/doctor/{{key}}'">
-										</span>
-									</div>
-									<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+									<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+										<div class="panel-body">
+											{{{description}}}
+										</div>
 									</div>
 								</div>
+
 							{{/each}}
 						</div>
 					</div>
-				</section>
-				<section id="section4">
-					<h4 id="over">
-						<div class="row">
-							<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-							</div>
-							<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8">
-								<span>Procedures</span>
-							</div>
-							<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3">
-							</div>
-						</div>
-					</h4>
-
-					<div class="row doc_proc">
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
-						<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-								{{#each procedures}}
-									<div class="panel panel-default">
-										<div class="panel-heading" role="tab" id="headingOne">
-											<h4 class="panel-title">
-												<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{key}}" aria-expanded="false" aria-controls="collapseOne">
-													<div class="row accordion">
-														<div class="col-lg-6 col-sm-6 col-xs-6 col-md-5 title">
-															{{name}}
-															<span>+</span>
-															<!-- <span class="fa fa-plus-square-o"></span> -->
-														</div>
-
-														<div class="col-lg-4 col-sm-3 col-xs-4 col-md-4 price">
-															<span style="font-family: SourceSansPro-Regular;">starting from</span>
-															<span style="font-family: SourceSansPro-Semibold;"> USD {{price}}</span>
-														</div>
-																	</a>
-														<div class="col-lg-2 col-sm-3 col-xs-2 col-md-3">
-															<!-- <button type="submit" class="btn btn-primary btn-md procedure_btn" id="{{key}}" onclick="location.href='/data/{{key}}'">Get quotes</button> -->
-															<input class="btn btn-primary btn-md procedure_btn"  type="submit" value="Get quotes" data-toggle="modal" data-target="#exampleModal" data-whatever="{{name}}"  >
-															<!-- onclick="location.href='/data/{{key}}'" -->
-														</div>
-													</div>
-
-											</h4>
-										</div>
-										<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-											<div class="panel-body">
-												{{{description}}}
-											</div>
-										</div>
-									</div>
-
-								{{/each}}
-							</div>
-						</div>
-						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-						</div>
+					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
+		</div>
 		<!-- </div> -->
 	</div>
 
@@ -228,100 +228,329 @@
 
 <!-- Modal -->
 
-<div class="modal fade" id="exampleModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<!-- <div class="modal fade" id="exampleModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document" hidden>
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<h4 id="exampleModalLabel">New message</h4>
+		</div>
+		<div class="modal-body">
+			<div class="row">
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+				<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="procedure" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Procedure:</label>
+							<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+								<input type="text" class="form-control" id="procedure" value="{{procedure.name}}" readonly>
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Hospitals:</label>
+							<div class=" col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
+								<button class="form-control btn btn-default dropdown-toggle" type="button" id="procedurebtn" data-toggle="dropdown">Hospitals
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu procedure" role="menu" aria-labelledby="menu1">
+									{{#each providers}}
+										<div class="row dropdown">
+											<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+											</div>
+											<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+												<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding no-padding">
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+											</div>
+											<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+												<button type="button" class="btn btn-default">View Profile</button>
+											</div>
+										</div>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Doctors:</label>
+							<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
+								<button class="form-control btn btn-default dropdown-toggle" type="button" id="doctor" data-toggle="dropdown">Doctors
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu doctor" role="menu" aria-labelledby="menu1">
+									{{#each doctors}}
+										<div class="row dropdown">
+											<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+											</div>
+											<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+												<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding">
+												<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+											</div>
+											<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+												<button type="button" class="btn btn-default">View Profile</button>
+											</div>
+										</div>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 no-padding">
+				</div>
+				<div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 no-padding">
+					<button type="button" class="btn btn-default" id="next" style="padding-left: 32px; padding-right: 35px; margin-top: 30px;outline:none;">Next</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Send message</button>
+		</div>
+	</div>
+</div>
+</div> -->
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 id="exampleModalLabel">New message</h4>
+				<h4 class="modal-title" id="myModalLabel">Easy Wizard</h4>
 			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
-					</div>
-					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label for="procedure" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Procedure:</label>
-								<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
-									<input type="text" class="form-control" id="procedure" value="{{procedure.name}}" readonly>
+			<div class="modal-body wizard-content">
+				<div class="wizard-step">
+					<div class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
+						<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label for="procedure" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Procedure:</label>
+									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10">
+										<input type="text" class="form-control" id="procedure" value="{{procedure.name}}" readonly>
+									</div>
 								</div>
-							</div>
-						</form>
+							</form>
 
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Hospitals:</label>
-								<div class=" col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
-									<button class="form-control btn btn-default dropdown-toggle" type="button" id="procedurebtn" data-toggle="dropdown">Hospitals
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu procedure" role="menu" aria-labelledby="menu1">
-										{{#each providers}}
-											<div class="row dropdown">
-												<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Hospitals:</label>
+									<div class=" col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
+										<button class="form-control btn btn-default dropdown-toggle" type="button" id="procedurebtn" data-toggle="dropdown">Hospitals
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu procedure" role="menu" aria-labelledby="menu1">
+											{{#each providers}}
+												<div class="row dropdown">
+													<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+													</div>
+													<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+														<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+													</div>
+													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding no-padding">
+														<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+													</div>
+													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+														<button type="button" class="btn btn-default">View Profile</button>
+													</div>
 												</div>
-												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
-													<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
-												</div>
-												<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding no-padding">
-													<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
-												</div>
-												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
-													<button type="button" class="btn btn-default" >View Profile</button>
-												</div>
-											</div>
-										{{/each}}
-									</ul>
+											{{/each}}
+										</ul>
+									</div>
 								</div>
-							</div>
-						</form>
+							</form>
 
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Doctors:</label>
-								<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
-									<button class="form-control btn btn-default dropdown-toggle" type="button" id="doctor" data-toggle="dropdown">Doctors
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu doctor" role="menu" aria-labelledby="menu1">
-										{{#each doctors}}
-											<div class="row dropdown">
-												<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label for="message-text" class="col-lg-2 col-sm-2 col-xs-2 col-md-2 control-label">Doctors:</label>
+									<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 dropdown">
+										<button class="form-control btn btn-default dropdown-toggle" type="button" id="doctor" data-toggle="dropdown">Doctors
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu doctor" role="menu" aria-labelledby="menu1">
+											{{#each doctors}}
+												<div class="row dropdown">
+													<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 no-padding">
+													</div>
+													<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
+														<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
+													</div>
+													<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding">
+														<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
+													</div>
+													<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
+														<button type="button" class="btn btn-default">View Profile</button>
+													</div>
 												</div>
-												<div class="col-lg-2 col-sm-2 col-xs-2 col-md-2 no-padding">
-													<img src="../images/dr-shekhar-salkar.jpg" style="width:70px;height:70px;border-radius:50%">
-												</div>
-												<div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-padding">
-													<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{name}}</a></li>
-												</div>
-												<div class="col-lg-3 col-sm-3 col-xs-3 col-md-3 no-padding">
-													<button type="button" class="btn btn-default" >View Profile</button>
-												</div>
-											</div>
-										{{/each}}
-									</ul>
+											{{/each}}
+										</ul>
+									</div>
 								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+							</form>
+						</div>
+						<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-5 col-sm-5 col-xs-5 col-md-5 no-padding">
-					</div>
-					<div class="col-lg-7 col-sm-7 col-xs-7 col-md-7 no-padding">
-					<button type="button" class="btn btn-default" id="next" style="padding-left: 32px; padding-right: 35px; margin-top: 30px;outline:none;">Next</button>
+				<div class="wizard-step">
+					<div class="row">
+						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+							<div class="form frm_doctor" style="margin-top: -10px;	background-color: #f6f6f6;margin-left:-1px;">
+								<div class="row">
+									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+									</div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+										<form method="post" enctype="multipart/form-data">
+											<input type="hidden" name="action" value="second">
+											<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
+											<div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
+												<div class="panel panel-default">
+													<div class="panel-heading" role="tab" id="headingOne" >
+														<a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
+															<h4 class="panel-title" style="color:black">
+																<div class="row form_accordion">
+																	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+																		<span class="medical" style="">Medical Reports</span>
+																	</div>
+																	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+																		<span style="" class="glyphicon glyphicon-chevron-down"></span>
+																	</div>
+																</div>
+															</h4>
+														</a>
+													</div>
+													<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+														<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px; ">
+															<input type="file" name="fileupload" size="80" value="Attach" multiple>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default" style="border: none;box-shadow: none;">
+													<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
+														<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
+															<h4 class="panel-title" style="color:black">
+																<div class="row form_accordion">
+																	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
+																		<span class="medical" style=""> Allergies</span>
+																	</div>
+																	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+																		<span style="" class="glyphicon glyphicon-chevron-down"></span>
+																	</div>
+																</div>
+															</h4>
+														</a>
+													</div>
+													<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+														<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+															<input type="text" class="form-control" id="exampleInputName1" placeholder="Allergies">
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default" style="border: none;box-shadow: none;">
+													<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
+														<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
+															<h4 class="panel-title" style="color:black">
+																<div class="row form_accordion">
+																	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
+																		<span class="medical" style="">Symptoms</span>
+																	</div>
+																	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
+																		<span style="" class="glyphicon glyphicon-chevron-down"></span>
+																	</div>
+																</div>
+															</h4>
+														</a>
+													</div>
+													<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+														<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="Symptoms">
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" style="margin-top: -10px;">
+											</div>
+
+											<div class="form-group row form_fields">
+												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+													<input type="text" class="form-control" id="age" placeholder="Age" name="age">
+												</div>
+												<div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
+												</div>
+												<div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
+													<label for="gender" class="gender">Sex:</label>
+													<label class="radio-inline">
+														<input type="radio" name="gender" class="value" value="Male">M</label>
+													<label class="radio-inline">
+														<input type="radio" name="gender" class="value" value="Female">F</label>
+													<label class="radio-inline">
+														<input type="radio" name="gender" class="value" value="Other">O</label>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
+											</div>
+
+											<div class="form-group">
+												<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
+											</div>
+
+											</br>
+											<div class="row">
+												<div class="col-lg-4"></div>
+												<div class="col-lg-6">
+													<button type="submit" class="btn btn-default doctor_btn" style="margin-left: 20px; padding: 3px 15px;">Submit</button>
+												</div>
+												<div class="col-lg-2"></div>
+											</div>
+										</form>
+
+									</div>
+									<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 					</div>
 				</div>
+				<!-- <div class="wizard-step"> Step 3 </div>
+				<div class="wizard-step"> Step 4 </div> -->
 			</div>
-
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Send message</button>
+			<div class="modal-footer wizard-buttons">
+				<!-- The wizard button will be inserted here. -->
 			</div>
 		</div>
 	</div>
@@ -329,158 +558,11 @@
 
 
 
-<div id="item" hidden>
-		<div class="row hello " style="padding-top: 50px;padding-bottom:50px;" >
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-			</div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<div class="form frm_doctor" style="margin-top: -10px;	background-color: #f6f6f6;margin-left:-1px;">
-			<div class="row">
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-					<form method="post" enctype="multipart/form-data">
-						<input type="hidden" name="action" value="second">
-						<textarea class="form-control" rows="5" placeholder="Case info" name="caseinfo" style="margin-top: 15px;border-radius:8px;"></textarea>
-						<div class="panel-group doc_acc" id="accordion1" class="reports" role="tablist" aria-multiselectable="true">
-							<div class="panel panel-default" style="">
-								<div class="panel-heading" role="tab" id="headingOne" style="">
-									<a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="outline:none;">
-										<h4 class="panel-title" style="color:black">
-											<div class="row form_accordion">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
-													<span class="medical" style="">Medical Reports</span>
-												</div>
-												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
-												</div>
-											</div>
-										</h4>
-									</a>
-								</div>
-								<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px; ">
-										<input type="file" name="fileupload" size="80" value="Attach" multiple>
-									</div>
-								</div>
-							</div>
-
-							<div class="panel panel-default" style="border: none;box-shadow: none;">
-								<div class="panel-heading" role="tab" id="headingTwo" style="margin-top: 5px;padding: 10px 15px;">
-									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="outline:none;">
-										<h4 class="panel-title" style="color:black">
-											<div class="row form_accordion">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="padding-top:3px">
-													<span class="medical" style=""> Allergies</span>
-												</div>
-												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
-												</div>
-											</div>
-										</h4>
-									</a>
-								</div>
-								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
-										<input type="text" class="form-control" id="exampleInputName1" placeholder="Allergies">
-									</div>
-								</div>
-							</div>
-
-							<div class="panel panel-default" style="border: none;box-shadow: none;">
-								<div class="panel-heading" role="tab" id="headingThree" style="margin-top: 5px;padding: 10px 15px;">
-									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="outline:none;">
-										<h4 class="panel-title" style="color:black">
-											<div class="row form_accordion">
-												<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 title" style="padding-top:3px">
-													<span class="medical" style="">Symptoms</span>
-												</div>
-												<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 icon">
-													<span style="" class="glyphicon glyphicon-chevron-down"></span>
-												</div>
-											</div>
-										</h4>
-									</a>
-								</div>
-								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-									<div class="panel-body" style="background-color:rgb(237,237,237);border-top-width: 0px;">
-										<input type="text" class="form-control" id="exampleInputName2" placeholder="Symptoms">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<input type="text" name="name.full" class="form-control" id="name" placeholder="Name:" style="margin-top: -10px;">
-						</div>
-
-						<div class="form-group row form_fields">
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-								<input type="text" class="form-control" id="age" placeholder="Age" name="age">
-							</div>
-							<div class="col-lg-2 col-md-2 col-sm-0 col-xs-2">
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-8 col-xs-6" style="padding-top: 10px;">
-								<label for="gender" class="gender">Sex:</label>
-								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Male">M</label>
-								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Female" >F</label>
-								<label class="radio-inline">
-									<input type="radio" name="gender" class="value" value="Other" >O</label>
-								<!-- <input type="text" class="form-control" id="gender" placeholder="Gender" name="gender" style="padding-top: 10px; padding-bottom: 10px; margin-top: 0px;"> -->
-							</div>
-						</div>
-
-						<div class="form-group">
-							<input type="email" name="email" class="form-control" id="email" placeholder="Email:">
-						</div>
-
-						<div class="form-group">
-							<input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone(Optional)">
-						</div>
-
-						</br>
-						<div class="row">
-							<div class="col-lg-4"></div>
-							<div class="col-lg-6">
-								<button type="submit" class="btn btn-default doctor_btn" style="margin-left: 20px; padding: 3px 15px;" >Submit</button>
-							</div>
-							<div class="col-lg-2"></div>
-						</div>
-					</form>
-
-				</div>
-				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-				</div>
-			</div>
-
-		</div>
-		</div>
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-		</div>
-		</div>
-	</div>
-
-
- <script>
- $(document).ready(function(){
-	 $( "#next" ).click(function() {
-	     $( "#item" ).show();
-	 });
- });
-
-</script>
 
 
 
 <!-- <script>
-	$('.dropdown-menu.doctor a').on('click', function() {
-		$('#doctor').html($(this).html() + '<span class="caret"></span>');
-	});
-	$('.dropdown-menu.procedure a').on('click', function() {
-		$('#procedurebtn').html($(this).html() + '<span class="caret"></span>');
-	});
+
 </script> -->
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -489,3 +571,7 @@
 <script src="/js/mainScript.js"></script>
 <script src="/js/navbar.js"></script>
 <script src="/js/form.js"></script>
+<script src="/js/easyWizard.js"></script>
+<script>
+	$("#exampleModal").wizard();
+</script>

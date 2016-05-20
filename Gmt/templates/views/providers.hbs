@@ -1,13 +1,13 @@
 <!-- <div class="container"> -->
 {{>header}}
-<div class="picture marginAlign">
-	<div class="row" style="padding-top:205px;">
+<div class="row marginAlign picture">
+	<div class="row no-margin" style="padding-top:205px;">
 		<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
 			<div class="row">
 				<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2">
 				</div>
 				<div class="col-md-10 col-lg-10 col-sm-10 col-xs-12" style="padding-left:12px;">
-					<span style="font-size:30px;font-family:SourceSansPro-Semibold;color:white">{{{providerCategory}}}</span>
+					<span class="category_name">{{{providerCategory}}}</span>
 				</div>
 			</div>
 		</div>
@@ -19,15 +19,13 @@
 			<div class="row provider-box">
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 no-padding"></div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding" >
-					<img class="provider-img" width="auto" height="auto" style="" src="../images/Manipal goa.jpg">
+					<img class="provider-img" width="auto" height="auto"  src="../images/Manipal goa.jpg">
 				</div>
 				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-padding provider-info">
-
 					<h3 style="">{{name}}</h3>
 					<input id="input-id" type="number" class="rating" min=1 max=10 step=2 data-size="xs" data-rtl="false" data-readonly="false" showCaption="false">
-
 					{{{summary}}}
-					<button type="button" class="btn btn-primary btn-md providers_btn"  onclick="location.href='/provider/{{key}}'" style="outline:none;float:right">Know More</button>
+					<button type="button" class="btn btn-primary btn-md providers_btn"  onclick="location.href='/provider/{{key}}'">Know More</button>
 				</div>
 			</div>
 		{{/each}}
@@ -38,7 +36,7 @@
 			{{#each providerCategories}}
 				{{#if active}}
 					<li role="presentation" class="active" style="margin-top: 0px;">
-						<a href="/providers/{{key}}" style="">
+						<a href="/providers/{{key}}">
 							<div class="row">
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 								</div>
@@ -54,7 +52,7 @@
 				{{else}}
 
 					<li role="presentation" style="margin-top: 0px;">
-						<a href="/providers/{{key}}" style="">
+						<a href="/providers/{{key}}">
 							<div class="row">
 								<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 								</div>

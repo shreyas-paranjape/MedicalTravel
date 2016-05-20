@@ -55,6 +55,7 @@
 				</li>
 			</ul>
 		</nav>
+
 		<div id="navstick">
 			<section id="section1">
 				<h4 id=""></h4>
@@ -68,6 +69,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section id="section2">
 				<h4 id="over">
 					<div class="row">
@@ -87,7 +89,7 @@
 								<div class="col-lg-1 col-sm-1 col-xs-5 col-md-1">
 								</div>
 								<div class="col-lg-2 col-sm-12 col-xs-2 col-md-2">
-									<img src="{{cloudinaryUrl imageOuter}}"  style="filter: grayscale(1);">
+									<img src="" >
 								</div>
 								<div class="col-lg-6 col-sm-12 col-xs-6 col-md-6 procedure-doc">
 									<h4><a href="/doctor/{{key}}">{{name}}</a></h4>
@@ -105,6 +107,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section id="section3">
 				<h4 id="over">
 					<div class="row">
@@ -121,7 +124,7 @@
 				<div class="row doc_proc">
 					<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1">
 					</div>
-					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border" style="">
+					<div class="col-lg-10 col-sm-10 col-xs-10 col-md-10 doc_border">
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							{{#each specialities}}
 
@@ -134,9 +137,8 @@
 														{{name}}
 													</div>
 													<div class="col-lg-1 col-sm-1 col-xs-1 col-md-1 icon" style="color: #d6d2d2;">
-														<span class="glyphicon glyphicon-chevron-down" style=""></span>
+														<span class="glyphicon glyphicon-chevron-down"></span>
 													</div>
-
 												</div>
 											</a>
 										</h4>
@@ -144,7 +146,7 @@
 									<div id="{{key}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
 										<div class="panel-body">
 											{{#each procedures}}
-												<div class="row provider_procedures" style="padding-bottom: 10px;">
+												<div class="row provider_procedures">
 													<div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 title">
 														<span>{{name}}</span>
 													</div>
@@ -166,6 +168,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section id="section4">
 				<h4 id="over">
 					<div class="row">
@@ -190,14 +193,14 @@
 		</div>
 		<!-- </div> -->
 	</div>
+
 	<div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 no-padding name">
 		<h3>{{provider.name}}</h3>
-		<!-- <br>
-		<br> -->
 
-		<div class="form frm_doctor" style="margin-top: -10px;	background-color: #f6f6f6;margin-left:-1px;">
+
+		<div class="form frm_doctor" style="margin-top:-10px;background-color: #f6f6f6;margin-left:-1px;">
 			<h5>Request a Free Quote</h5>
-			<div class="row">
+			<div class="row no-margin">
 				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
 				</div>
 				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
@@ -277,12 +280,12 @@
 						</div>
 
 						<div class="form-group row form_fields">
-							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 								<input type="text" class="form-control" id="age" placeholder="Age" name="age">
 							</div>
 							<div class="col-lg-2 col-md-0 col-sm-0 col-xs-2">
 							</div>
-							<div class="col-lg-6 col-md-8 col-sm-8 col-xs-6" style="padding-top: 10px;">
+							<div class="col-lg-7 col-md-8 col-sm-8 col-xs-6" style="padding-top: 10px;">
 								<label for="gender" class="gender">Sex:</label>
 								<label class="radio-inline">
 									<input type="radio" name="gender" class="value" value="Male">M</label>
@@ -321,7 +324,7 @@
 
 
 
-		
+
 	</div>
 
 </div>
